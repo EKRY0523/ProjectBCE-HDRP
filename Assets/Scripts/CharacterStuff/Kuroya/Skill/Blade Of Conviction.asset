@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d4140c0a5a7fc44ebd2d2160b83d4cb, type: 3}
+  m_Name: Blade Of Conviction
+  m_EditorClassIdentifier: 
+  skillObject:
+  - {fileID: 7625257352176689117, guid: 0ec77c1fc88c5eb4c8c828f8315abb2f, type: 3}
+  - {fileID: 7625257352176689117, guid: 0ec77c1fc88c5eb4c8c828f8315abb2f, type: 3}
+  - {fileID: 7625257352176689117, guid: 0ec77c1fc88c5eb4c8c828f8315abb2f, type: 3}
+  skillInstance:
+  - instances: 0
+    skillObjects:
+    - {fileID: 7551624860928833295, guid: 801107f4aded021498919a6894183536, type: 3}
+  - instances: 0
+    skillObjects:
+    - {fileID: 9042332138753590298, guid: fa22d69028808ae4e993748340ea6458, type: 3}
+  - instances: 0
+    skillObjects:
+    - {fileID: 447277177472438574, guid: 19032b56a588de843bfae27a9c09fedb, type: 3}
+    - {fileID: 7584451728861194609, guid: e9fdad8cfede32d46bcbeacc9d283411, type: 3}
+  key:
+  - {fileID: 11400000, guid: 6ab16a390b67c1f49b661a9056d84094, type: 2}
+  - {fileID: 11400000, guid: 6d7d72e82e9b31047b982b6319d9ee22, type: 2}
+  - {fileID: 11400000, guid: 9b5744c331ca53f4e9934447661754e8, type: 2}
+  characterData: {fileID: 0}
+  statIndex:
+  - {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
+  requiredUnlockLevel: 0
+  skillName: 
+  skillDescription: 
+  skillIcon: {fileID: 0}
+  cooldown:
+  - 1.2
+  - 1.3
+  - 1.6
+  movementData:
+  - {fileID: 11400000, guid: 0cd9c8b5d5c148941a4db9bd6f0a1a6a, type: 2}
+  - {fileID: 11400000, guid: d42f0b6aa7049e6419a3ae574a80316a, type: 2}
+  - {fileID: 11400000, guid: 365e3c649db72004a93ef49a5ab23db5, type: 2}
+  multiplier:
+  - 2
+  - 3
+  - 5
+  MaxCount: 2

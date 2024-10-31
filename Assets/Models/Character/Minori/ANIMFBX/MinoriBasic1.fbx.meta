@@ -1,0 +1,1899 @@
+fileFormatVersion: 2
+guid: b44b5c65e299e334096faf3849a5357c
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'BeginnerStep2' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'arm_stretch.l' has scale animation that
+      will be discarded.\n\t'forearm_stretch.l' has scale animation that will be
+      discarded.\n\t'hand.l' has scale animation that will be discarded.\n\t'arm_stretch.r'
+      has scale animation that will be discarded.\n\t'forearm_stretch.r' has scale
+      animation that will be discarded.\n\t'hand.r' has scale animation that will
+      be discarded.\n\nClip 'BeginnerStep3' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'forearm_stretch.l' has scale animation that will be
+      discarded.\n\t'hand.l' has scale animation that will be discarded.\n\t'arm_stretch.r'
+      has scale animation that will be discarded.\n\t'forearm_stretch.r' has scale
+      animation that will be discarded.\n\t'hand.r' has scale animation that will
+      be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: BeginnerStep1
+      takeName: BeginnerStep1
+      internalID: 8531056359156028128
+      firstFrame: 0
+      lastFrame: 4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body
+        weight: 0
+      - path: Face
+        weight: 0
+      - path: Hair
+        weight: 0
+      - path: root
+        weight: 1
+      - path: root/root.x
+        weight: 1
+      - path: root/root.x/spine_01.x
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/J_Sec_L_Bust1
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/J_Sec_L_Bust1/J_Sec_L_Bust2
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/J_Sec_R_Bust1
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/J_Sec_R_Bust1/J_Sec_R_Bust2
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Adj_L_FaceEye
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Adj_R_FaceEye
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_01
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_01/J_Sec_Hair2_01
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_02
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_02/J_Sec_Hair2_02
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_02/J_Sec_Hair2_02/J_Sec_Hair3_02
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_03
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_03/J_Sec_Hair2_03
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_04
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_04/J_Sec_Hair2_04
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_04/J_Sec_Hair2_04/J_Sec_Hair3_04
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_04/J_Sec_Hair2_04/J_Sec_Hair3_04/J_Sec_Hair4_04
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_05
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_05/J_Sec_Hair2_05
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_05/J_Sec_Hair2_05/J_Sec_Hair3_05
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_05/J_Sec_Hair2_05/J_Sec_Hair3_05/J_Sec_Hair4_05
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_06
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_06/J_Sec_Hair2_06
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_06/J_Sec_Hair2_06/J_Sec_Hair3_06
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_07
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_07/J_Sec_Hair2_07
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_07/J_Sec_Hair2_07/J_Sec_Hair3_07
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_08
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_08/J_Sec_Hair2_08
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_09
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_09/J_Sec_Hair2_09
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_09/J_Sec_Hair2_09/J_Sec_Hair3_09
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/arm_twist.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/forearm_twist.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_index1.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_index1.l/c_index2.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_index1.l/c_index2.l/c_index3.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_middle1.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_middle1.l/c_middle2.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_middle1.l/c_middle2.l/c_middle3.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_pinky1.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_pinky1.l/c_pinky2.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_pinky1.l/c_pinky2.l/c_pinky3.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_ring1.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_ring1.l/c_ring2.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_ring1.l/c_ring2.l/c_ring3.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_thumb1.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_thumb1.l/c_thumb2.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_thumb1.l/c_thumb2.l/c_thumb3.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/arm_twist.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/forearm_twist.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_index1.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_index1.r/c_index2.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_index1.r/c_index2.r/c_index3.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_middle1.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_middle1.r/c_middle2.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_middle1.r/c_middle2.r/c_middle3.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_pinky1.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_pinky1.r/c_pinky2.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_pinky1.r/c_pinky2.r/c_pinky3.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_ring1.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_ring1.r/c_ring2.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_ring1.r/c_ring2.r/c_ring3.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_thumb1.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_thumb1.r/c_thumb2.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_thumb1.r/c_thumb2.r/c_thumb3.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_Weapon_Rig_.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_Weapon_Rig_.r/ProtoJundo
+        weight: 0
+      - path: root/root.x/thigh_stretch.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/foot.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/foot.l/toes_01.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtBack_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtBack_01/J_Sec_L_CoatSkirtBack_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtFront_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtFront_01/J_Sec_L_CoatSkirtFront_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtSide1_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtSide1_01/J_Sec_L_CoatSkirtSide2_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtSide1_01/J_Sec_L_CoatSkirtSide2_01/J_Sec_L_CoatSkirtSide2_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/leg_twist.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/thigh_twist.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.r
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/foot.r
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/foot.r/toes_01.r
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtBack_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtBack_01/J_Sec_R_CoatSkirtBack_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtFront_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtFront_01/J_Sec_R_CoatSkirtFront_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtSide1_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtSide1_01/J_Sec_R_CoatSkirtSide2_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtSide1_01/J_Sec_R_CoatSkirtSide2_01/J_Sec_R_CoatSkirtSide2_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/leg_twist.r
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/thigh_twist.r
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: BeginnerStep2
+      takeName: BeginnerStep2
+      internalID: -676853800925929203
+      firstFrame: 0
+      lastFrame: 8
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body
+        weight: 0
+      - path: Face
+        weight: 0
+      - path: Hair
+        weight: 0
+      - path: root
+        weight: 1
+      - path: root/root.x
+        weight: 1
+      - path: root/root.x/spine_01.x
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/J_Sec_L_Bust1
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/J_Sec_L_Bust1/J_Sec_L_Bust2
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/J_Sec_R_Bust1
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/J_Sec_R_Bust1/J_Sec_R_Bust2
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Adj_L_FaceEye
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Adj_R_FaceEye
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_01
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_01/J_Sec_Hair2_01
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_02
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_02/J_Sec_Hair2_02
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_02/J_Sec_Hair2_02/J_Sec_Hair3_02
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_03
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_03/J_Sec_Hair2_03
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_04
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_04/J_Sec_Hair2_04
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_04/J_Sec_Hair2_04/J_Sec_Hair3_04
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_04/J_Sec_Hair2_04/J_Sec_Hair3_04/J_Sec_Hair4_04
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_05
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_05/J_Sec_Hair2_05
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_05/J_Sec_Hair2_05/J_Sec_Hair3_05
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_05/J_Sec_Hair2_05/J_Sec_Hair3_05/J_Sec_Hair4_05
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_06
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_06/J_Sec_Hair2_06
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_06/J_Sec_Hair2_06/J_Sec_Hair3_06
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_07
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_07/J_Sec_Hair2_07
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_07/J_Sec_Hair2_07/J_Sec_Hair3_07
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_08
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_08/J_Sec_Hair2_08
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_09
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_09/J_Sec_Hair2_09
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_09/J_Sec_Hair2_09/J_Sec_Hair3_09
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/arm_twist.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/forearm_twist.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_index1.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_index1.l/c_index2.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_index1.l/c_index2.l/c_index3.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_middle1.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_middle1.l/c_middle2.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_middle1.l/c_middle2.l/c_middle3.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_pinky1.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_pinky1.l/c_pinky2.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_pinky1.l/c_pinky2.l/c_pinky3.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_ring1.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_ring1.l/c_ring2.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_ring1.l/c_ring2.l/c_ring3.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_thumb1.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_thumb1.l/c_thumb2.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_thumb1.l/c_thumb2.l/c_thumb3.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/arm_twist.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/forearm_twist.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_index1.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_index1.r/c_index2.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_index1.r/c_index2.r/c_index3.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_middle1.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_middle1.r/c_middle2.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_middle1.r/c_middle2.r/c_middle3.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_pinky1.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_pinky1.r/c_pinky2.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_pinky1.r/c_pinky2.r/c_pinky3.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_ring1.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_ring1.r/c_ring2.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_ring1.r/c_ring2.r/c_ring3.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_thumb1.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_thumb1.r/c_thumb2.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_thumb1.r/c_thumb2.r/c_thumb3.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_Weapon_Rig_.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_Weapon_Rig_.r/ProtoJundo
+        weight: 1
+      - path: root/root.x/thigh_stretch.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/foot.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/foot.l/toes_01.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtBack_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtBack_01/J_Sec_L_CoatSkirtBack_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtFront_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtFront_01/J_Sec_L_CoatSkirtFront_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtSide1_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtSide1_01/J_Sec_L_CoatSkirtSide2_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtSide1_01/J_Sec_L_CoatSkirtSide2_01/J_Sec_L_CoatSkirtSide2_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/leg_twist.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/thigh_twist.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.r
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/foot.r
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/foot.r/toes_01.r
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtBack_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtBack_01/J_Sec_R_CoatSkirtBack_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtFront_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtFront_01/J_Sec_R_CoatSkirtFront_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtSide1_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtSide1_01/J_Sec_R_CoatSkirtSide2_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtSide1_01/J_Sec_R_CoatSkirtSide2_01/J_Sec_R_CoatSkirtSide2_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/leg_twist.r
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/thigh_twist.r
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: BeginnerStep3
+      takeName: BeginnerStep3
+      internalID: -8684734190441969036
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body
+        weight: 0
+      - path: Face
+        weight: 0
+      - path: Hair
+        weight: 0
+      - path: root
+        weight: 1
+      - path: root/root.x
+        weight: 1
+      - path: root/root.x/spine_01.x
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/J_Sec_L_Bust1
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/J_Sec_L_Bust1/J_Sec_L_Bust2
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/J_Sec_R_Bust1
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/J_Sec_R_Bust1/J_Sec_R_Bust2
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Adj_L_FaceEye
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Adj_R_FaceEye
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_01
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_01/J_Sec_Hair2_01
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_02
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_02/J_Sec_Hair2_02
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_02/J_Sec_Hair2_02/J_Sec_Hair3_02
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_03
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_03/J_Sec_Hair2_03
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_04
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_04/J_Sec_Hair2_04
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_04/J_Sec_Hair2_04/J_Sec_Hair3_04
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_04/J_Sec_Hair2_04/J_Sec_Hair3_04/J_Sec_Hair4_04
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_05
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_05/J_Sec_Hair2_05
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_05/J_Sec_Hair2_05/J_Sec_Hair3_05
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_05/J_Sec_Hair2_05/J_Sec_Hair3_05/J_Sec_Hair4_05
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_06
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_06/J_Sec_Hair2_06
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_06/J_Sec_Hair2_06/J_Sec_Hair3_06
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_07
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_07/J_Sec_Hair2_07
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_07/J_Sec_Hair2_07/J_Sec_Hair3_07
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_08
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_08/J_Sec_Hair2_08
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_09
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_09/J_Sec_Hair2_09
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/neck.x/head.x/J_Sec_Hair1_09/J_Sec_Hair2_09/J_Sec_Hair3_09
+        weight: 0
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/arm_twist.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/forearm_twist.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_index1.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_index1.l/c_index2.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_index1.l/c_index2.l/c_index3.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_middle1.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_middle1.l/c_middle2.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_middle1.l/c_middle2.l/c_middle3.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_pinky1.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_pinky1.l/c_pinky2.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_pinky1.l/c_pinky2.l/c_pinky3.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_ring1.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_ring1.l/c_ring2.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_ring1.l/c_ring2.l/c_ring3.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_thumb1.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_thumb1.l/c_thumb2.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.l/arm_stretch.l/forearm_stretch.l/hand.l/c_thumb1.l/c_thumb2.l/c_thumb3.l
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/arm_twist.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/forearm_twist.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_index1.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_index1.r/c_index2.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_index1.r/c_index2.r/c_index3.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_middle1.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_middle1.r/c_middle2.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_middle1.r/c_middle2.r/c_middle3.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_pinky1.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_pinky1.r/c_pinky2.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_pinky1.r/c_pinky2.r/c_pinky3.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_ring1.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_ring1.r/c_ring2.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_ring1.r/c_ring2.r/c_ring3.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_thumb1.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_thumb1.r/c_thumb2.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_thumb1.r/c_thumb2.r/c_thumb3.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_Weapon_Rig_.r
+        weight: 1
+      - path: root/root.x/spine_01.x/spine_02.x/spine_03.x/shoulder.r/arm_stretch.r/forearm_stretch.r/hand.r/c_Weapon_Rig_.r/ProtoJundo
+        weight: 0
+      - path: root/root.x/thigh_stretch.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/foot.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/foot.l/toes_01.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtBack_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtBack_01/J_Sec_L_CoatSkirtBack_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtFront_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtFront_01/J_Sec_L_CoatSkirtFront_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtSide1_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtSide1_01/J_Sec_L_CoatSkirtSide2_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/J_Sec_L_CoatSkirtSide1_01/J_Sec_L_CoatSkirtSide2_01/J_Sec_L_CoatSkirtSide2_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/leg_stretch.l/leg_twist.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.l/thigh_twist.l
+        weight: 1
+      - path: root/root.x/thigh_stretch.r
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/foot.r
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/foot.r/toes_01.r
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtBack_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtBack_01/J_Sec_R_CoatSkirtBack_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtFront_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtFront_01/J_Sec_R_CoatSkirtFront_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtSide1_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtSide1_01/J_Sec_R_CoatSkirtSide2_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/J_Sec_R_CoatSkirtSide1_01/J_Sec_R_CoatSkirtSide2_01/J_Sec_R_CoatSkirtSide2_end_01
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/leg_stretch.r/leg_twist.r
+        weight: 1
+      - path: root/root.x/thigh_stretch.r/thigh_twist.r
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: root.x
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: thigh_stretch.l
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: thigh_stretch.r
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: leg_stretch.l
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: leg_stretch.r
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: foot.l
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: foot.r
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: spine_01.x
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: spine_02.x
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: neck.x
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: head.x
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: shoulder.l
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: shoulder.r
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: arm_stretch.l
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: arm_stretch.r
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: forearm_stretch.l
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: forearm_stretch.r
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: hand.l
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: hand.r
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: toes_01.l
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: toes_01.r
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: J_Adj_L_FaceEye
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: J_Adj_R_FaceEye
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: J_Sec_Hair1_01
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_thumb1.l
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_thumb2.l
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_thumb3.l
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_index1.l
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_index2.l
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_index3.l
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_middle1.l
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_middle2.l
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_middle3.l
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_ring1.l
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_ring2.l
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_ring3.l
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_pinky1.l
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_pinky2.l
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_pinky3.l
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_thumb1.r
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_thumb2.r
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_thumb3.r
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_index1.r
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_index2.r
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_index3.r
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_middle1.r
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_middle2.r
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_middle3.r
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_ring1.r
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_ring2.r
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_ring3.r
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_pinky1.r
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_pinky2.r
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: c_pinky3.r
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: spine_03.x
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: MinoriTPose(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Face
+      parentName: MinoriTPose(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 2.4934215e-15, y: 0.7071068, z: 0.7071068, w: 0.000000061817246}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body
+      parentName: MinoriTPose(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 2.4934215e-15, y: 0.7071068, z: 0.7071068, w: 0.000000061817246}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hair
+      parentName: MinoriTPose(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 2.4934215e-15, y: 0.7071068, z: 0.7071068, w: 0.000000061817246}
+      scale: {x: 1, y: 1, z: 1}
+    - name: root
+      parentName: MinoriTPose(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: root.x
+      parentName: root
+      position: {x: -3.2062722e-10, y: -0.003576125, z: 0.8805801}
+      rotation: {x: 0.7854087, y: 0.0000021735757, z: 0.0000027744597, w: 0.61897755}
+      scale: {x: 0.99999994, y: 0.99999976, z: 0.99999994}
+    - name: thigh_stretch.l
+      parentName: root.x
+      position: {x: -0.06421915, y: -0.034863967, z: 0.0050637634}
+      rotation: {x: 0.82091904, y: -0.058956772, z: -0.5614138, w: 0.08620059}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000155}
+    - name: leg_stretch.l
+      parentName: thigh_stretch.l
+      position: {x: -0.0000000020861626, y: 0.3536901, z: -0.000000006854534}
+      rotation: {x: 0.005178247, y: -0.011944516, z: -0.01381092, w: 0.9998199}
+      scale: {x: 0.99999976, y: 1.0000004, z: 0.99999994}
+    - name: foot.l
+      parentName: leg_stretch.l
+      position: {x: 0.0000000011920929, y: 0.39462954, z: -2.9802322e-10}
+      rotation: {x: -0.2916251, y: 0.7051017, z: -0.41581744, w: -0.49485582}
+      scale: {x: 0.9999996, y: 0.9999999, z: 0.99999964}
+    - name: toes_01.l
+      parentName: foot.l
+      position: {x: -0.000000004833564, y: 0.103851184, z: 0.000000006130431}
+      rotation: {x: -0.000000056340614, y: 1, z: 0.00000052154695, w: 0.0001720402}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999998}
+    - name: leg_twist.l
+      parentName: leg_stretch.l
+      position: {x: 0.000000009536743, y: 0.19731458, z: 0.000000008940696}
+      rotation: {x: 0.00000001426619, y: -0.0001255175, z: 0.000000009712125, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+    - name: J_Sec_L_CoatSkirtBack_01
+      parentName: leg_stretch.l
+      position: {x: 0.14964497, y: 0.1371357, z: 0.0778154}
+      rotation: {x: 0.058452252, y: 0.54824644, z: -0.0016661879, w: 0.83427006}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: J_Sec_L_CoatSkirtBack_end_01
+      parentName: J_Sec_L_CoatSkirtBack_01
+      position: {x: -0.00000000834465, y: 0.1405831, z: -0.000000011324882}
+      rotation: {x: -0.00000016402919, y: -0.0000000027939737, z: 0.0000000349246,
+        w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: J_Sec_L_CoatSkirtFront_01
+      parentName: leg_stretch.l
+      position: {x: -0.13352089, y: 0.13991354, z: -0.032171354}
+      rotation: {x: -0.022029921, y: 0.5474707, z: 0.055926297, w: 0.8346633}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: J_Sec_L_CoatSkirtFront_end_01
+      parentName: J_Sec_L_CoatSkirtFront_01
+      position: {x: -0.0000000017881393, y: 0.1394734, z: -0.000000009536743}
+      rotation: {x: -0.00000013340856, y: -0.00016742248, z: 0.000000020233932, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: J_Sec_L_CoatSkirtSide1_01
+      parentName: leg_stretch.l
+      position: {x: -0.038968794, y: -0.01977001, z: 0.11185143}
+      rotation: {x: 0.034543995, y: 0.5237678, z: 0.05234697, w: 0.8495492}
+      scale: {x: 0.99999976, y: 0.9999995, z: 0.9999998}
+    - name: J_Sec_L_CoatSkirtSide2_01
+      parentName: J_Sec_L_CoatSkirtSide1_01
+      position: {x: -0.0000000073015687, y: 0.15236601, z: -0.0000000011920929}
+      rotation: {x: -0.00039980537, y: 0.009228403, z: -0.009676237, w: 0.99991053}
+      scale: {x: 0.99999994, y: 1, z: 0.9999998}
+    - name: J_Sec_L_CoatSkirtSide2_end_01
+      parentName: J_Sec_L_CoatSkirtSide2_01
+      position: {x: 0.0000000025331974, y: 0.13988717, z: -0.0000000023841857}
+      rotation: {x: 0.00000003585592, y: -0.00000005634501, z: 0.000000062165775,
+        w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: thigh_twist.l
+      parentName: thigh_stretch.l
+      position: {x: -0.0000000042840838, y: 0.00000006237329, z: -0.000000003678724}
+      rotation: {x: 0.000000017591859, y: -0.00012522523, z: -3.4226824e-10, w: 1}
+      scale: {x: 0.9999998, y: 1, z: 0.9999998}
+    - name: thigh_stretch.r
+      parentName: root.x
+      position: {x: 0.06421908, y: -0.034864042, z: 0.005064698}
+      rotation: {x: 0.8209148, y: 0.058960117, z: 0.5614192, w: 0.086203866}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000155}
+    - name: leg_stretch.r
+      parentName: thigh_stretch.r
+      position: {x: 0.0000000011920929, y: 0.3536901, z: -0.000000005364418}
+      rotation: {x: 0.0051784026, y: 0.011944412, z: 0.013820334, w: 0.99981976}
+      scale: {x: 0.9999998, y: 1.0000001, z: 1.0000001}
+    - name: foot.r
+      parentName: leg_stretch.r
+      position: {x: -0.0000000017881393, y: 0.39462966, z: 8.9406965e-10}
+      rotation: {x: 0.2916998, y: 0.7051859, z: -0.41576946, w: 0.49473208}
+      scale: {x: 0.99999994, y: 1, z: 0.9999998}
+    - name: toes_01.r
+      parentName: foot.r
+      position: {x: 0.0000000041653765, y: 0.10385119, z: 0.0000000020261177}
+      rotation: {x: 0.000000016276946, y: 1, z: 0.00000075995945, w: 0.0000006657903}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.9999998}
+    - name: leg_twist.r
+      parentName: leg_stretch.r
+      position: {x: 0.0000000047683715, y: 0.19731474, z: 0.000000006556511}
+      rotation: {x: 0.000000009150144, y: 0.00012539726, z: 0.00000000224485, w: 1}
+      scale: {x: 0.9999998, y: 1, z: 0.9999999}
+    - name: J_Sec_R_CoatSkirtBack_01
+      parentName: leg_stretch.r
+      position: {x: -0.14964493, y: 0.13713554, z: 0.077815436}
+      rotation: {x: 0.05845215, y: -0.5482463, z: 0.0016658925, w: 0.83427006}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: J_Sec_R_CoatSkirtBack_end_01
+      parentName: J_Sec_R_CoatSkirtBack_01
+      position: {x: -0.000000014305114, y: 0.14058308, z: -0.000000015497207}
+      rotation: {x: 0.00000010419721, y: -0.00014189213, z: 0.000000038664677, w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
+    - name: J_Sec_R_CoatSkirtFront_01
+      parentName: leg_stretch.r
+      position: {x: 0.13352084, y: 0.13991341, z: -0.032171395}
+      rotation: {x: -0.022030115, y: -0.54747045, z: -0.0559265, w: 0.83466345}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: J_Sec_R_CoatSkirtFront_end_01
+      parentName: J_Sec_R_CoatSkirtFront_01
+      position: {x: 0.000000005960464, y: 0.13947342, z: -0.000000021457671}
+      rotation: {x: 0.000000047722256, y: 0.00012432736, z: 0.00000006448815, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: J_Sec_R_CoatSkirtSide1_01
+      parentName: leg_stretch.r
+      position: {x: 0.038968857, y: -0.019770252, z: 0.11185137}
+      rotation: {x: 0.034549583, y: -0.5236783, z: -0.05234344, w: 0.8496043}
+      scale: {x: 1.0000001, y: 0.9999998, z: 1}
+    - name: J_Sec_R_CoatSkirtSide2_01
+      parentName: J_Sec_R_CoatSkirtSide1_01
+      position: {x: -0.000000010579824, y: 0.15236595, z: 0.0000000047683715}
+      rotation: {x: -0.00039981864, y: -0.009442063, z: 0.009676325, w: 0.99990857}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+    - name: J_Sec_R_CoatSkirtSide2_end_01
+      parentName: J_Sec_R_CoatSkirtSide2_01
+      position: {x: -0.000000008791685, y: 0.13988715, z: 0.0000000023841857}
+      rotation: {x: 0.000000041445468, y: 0.00019807575, z: -0.000000008157281, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: thigh_twist.r
+      parentName: thigh_stretch.r
+      position: {x: 0.000000009834766, y: -0.000000025268236, z: 0.0000000022631137}
+      rotation: {x: 0.000000007175817, y: 0.00012513007, z: -0.0000000028539833, w: 1}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.99999976}
+    - name: spine_01.x
+      parentName: root.x
+      position: {x: 2.8782664e-12, y: 0.04723641, z: -0.000000026226052}
+      rotation: {x: -0.10427778, y: -0.0000048715933, z: -0.0000002331793, w: 0.9945482}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: spine_02.x
+      parentName: spine_01.x
+      position: {x: -1.1795009e-14, y: 0.09971677, z: 0.000000001192097}
+      rotation: {x: -0.08101862, y: 0.0000012461845, z: 0.00000011441192, w: 0.9967126}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: spine_03.x
+      parentName: spine_02.x
+      position: {x: -1.3145041e-15, y: 0.09581996, z: 0.000000014305114}
+      rotation: {x: 0.000000052154075, y: 0.000000119058654, z: -5.8778455e-14, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: neck.x
+      parentName: spine_03.x
+      position: {x: 0.0000000013564678, y: 0.12017795, z: -0.01779105}
+      rotation: {x: 0.13218133, y: -0.000000041851568, z: 0.0000000066760597, w: 0.99122554}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head.x
+      parentName: neck.x
+      position: {x: 0.000000007437034, y: 0.06894017, z: 0.0000000023841848}
+      rotation: {x: -0.043632988, y: -0.002596593, z: -0.030040389, w: 0.99859256}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1}
+    - name: J_Adj_L_FaceEye
+      parentName: head.x
+      position: {x: -0.01884846, y: 0.056290977, z: 0.016971774}
+      rotation: {x: -0.020862607, y: 0.72166836, z: 0.691582, w: -0.021769596}
+      scale: {x: 0.99999994, y: 1.0000006, z: 0.99999994}
+    - name: J_Adj_R_FaceEye
+      parentName: head.x
+      position: {x: 0.0120307, y: 0.058153994, z: 0.016892465}
+      rotation: {x: -0.020862699, y: 0.72166824, z: 0.6915821, w: -0.021769691}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: J_Sec_Hair1_01
+      parentName: head.x
+      position: {x: -0.006101074, y: 0.15810053, z: 0.08334804}
+      rotation: {x: 0.9973675, y: -0.034634814, z: -0.0634847, w: -0.0053191474}
+      scale: {x: 1.0000061, y: 0.9999994, z: 1.0000001}
+    - name: J_Sec_Hair2_01
+      parentName: J_Sec_Hair1_01
+      position: {x: -0.000000010728836, y: 0.13898458, z: 0.000000002235174}
+      rotation: {x: 0.00000011734364, y: 0.000054997392, z: 0.000000055174407, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 0.9999999}
+    - name: J_Sec_Hair1_02
+      parentName: head.x
+      position: {x: -0.011527423, y: 0.23194048, z: 0.010995138}
+      rotation: {x: -0.24207488, y: 0.42953578, z: 0.44061747, w: 0.75017}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: J_Sec_Hair2_02
+      parentName: J_Sec_Hair1_02
+      position: {x: 0.00000007987022, y: 0.035070177, z: 0.000000205338}
+      rotation: {x: 0.7446699, y: -0.49439546, z: 0.27051157, w: -0.35757986}
+      scale: {x: 1, y: 1, z: 1}
+    - name: J_Sec_Hair3_02
+      parentName: J_Sec_Hair2_02
+      position: {x: -0.000000065676865, y: 0.039171293, z: 0.0000000025331974}
+      rotation: {x: 0.00000010199332, y: -0.0001557935, z: 0.00000008662888, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: J_Sec_Hair1_03
+      parentName: head.x
+      position: {x: -0.059923146, y: 0.17299147, z: -0.008114262}
+      rotation: {x: 0.9123352, y: -0.2787943, z: -0.2960675, w: -0.04756283}
+      scale: {x: 1.0000007, y: 1.0000005, z: 1.0000001}
+    - name: J_Sec_Hair2_03
+      parentName: J_Sec_Hair1_03
+      position: {x: -0.000000059604645, y: 0.18906268, z: 0.00000000834465}
+      rotation: {x: 0.000000039107178, y: 0.00010573864, z: 0.00000007915828, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: J_Sec_Hair1_04
+      parentName: head.x
+      position: {x: 0.038635783, y: 0.17897089, z: -0.008306786}
+      rotation: {x: 0.7728945, y: 0.46060956, z: 0.4141089, w: -0.13779248}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: J_Sec_Hair2_04
+      parentName: J_Sec_Hair1_04
+      position: {x: -0.0000002336502, y: 0.0644614, z: -0.000000057816504}
+      rotation: {x: -0.07810897, y: -0.20120607, z: 0.18559322, w: 0.95862937}
+      scale: {x: 1, y: 0.99999976, z: 1.0000001}
+    - name: J_Sec_Hair3_04
+      parentName: J_Sec_Hair2_04
+      position: {x: 0.000000042915342, y: 0.06464232, z: -0.000000044107438}
+      rotation: {x: -0.0086404355, y: -0.061885532, z: 0.066396505, w: 0.9958348}
+      scale: {x: 0.9999999, y: 1.0000002, z: 0.9999999}
+    - name: J_Sec_Hair4_04
+      parentName: J_Sec_Hair3_04
+      position: {x: 0.000000011920928, y: 0.06504921, z: 0.00000004529953}
+      rotation: {x: 0.00000014156102, y: 0.00000009313225, z: 0.0000000754371, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: J_Sec_Hair1_05
+      parentName: head.x
+      position: {x: -0.009769889, y: 0.15475246, z: -0.07447427}
+      rotation: {x: 0.95821404, y: 0.033473983, z: -0.0050376956, w: -0.2840422}
+      scale: {x: 1, y: 1.0000002, z: 1.000001}
+    - name: J_Sec_Hair2_05
+      parentName: J_Sec_Hair1_05
+      position: {x: 0.000000007227063, y: 0.07274674, z: 0.00000008131494}
+      rotation: {x: -0.47481704, y: 0.020167196, z: -0.046220604, w: 0.87863857}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: J_Sec_Hair3_05
+      parentName: J_Sec_Hair2_05
+      position: {x: 0.00000002324581, y: 0.07549429, z: -0.00000004712492}
+      rotation: {x: -0.064585574, y: 0.005465927, z: -0.008145852, w: 0.99786395}
+      scale: {x: 1, y: 1, z: 0.9999998}
+    - name: J_Sec_Hair4_05
+      parentName: J_Sec_Hair3_05
+      position: {x: 0.000000007152557, y: 0.07615326, z: -0.000000041648743}
+      rotation: {x: -0.00000058833905, y: 0.00018941611, z: -0.00000012654844, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: J_Sec_Hair1_06
+      parentName: head.x
+      position: {x: 0.04515524, y: 0.16446778, z: 0.022844829}
+      rotation: {x: 0.9485349, y: 0.24161233, z: 0.2035538, w: 0.021701677}
+      scale: {x: 0.9999995, y: 0.99999994, z: 1.0000002}
+    - name: J_Sec_Hair2_06
+      parentName: J_Sec_Hair1_06
+      position: {x: 0.00000007867813, y: 0.08743534, z: 0.000000009536743}
+      rotation: {x: -0.008299365, y: -0.3608726, z: 0.3514368, w: 0.8638254}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.9999998}
+    - name: J_Sec_Hair3_06
+      parentName: J_Sec_Hair2_06
+      position: {x: 0.000000042915342, y: 0.094925486, z: 0.00000002026558}
+      rotation: {x: 0.000000015832484, y: 0.00000004074536, z: -0.000000028870996,
+        w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.9999999}
+    - name: J_Sec_Hair1_07
+      parentName: head.x
+      position: {x: -0.047277756, y: 0.18066224, z: 0.013503766}
+      rotation: {x: 0.84314257, y: -0.36108834, z: -0.37533128, w: -0.13361283}
+      scale: {x: 1.000001, y: 1.0000005, z: 1.0000002}
+    - name: J_Sec_Hair2_07
+      parentName: J_Sec_Hair1_07
+      position: {x: 0.000000029951334, y: 0.0650992, z: -0.000000011697411}
+      rotation: {x: -0.15612632, y: 0.32786885, z: -0.31105152, w: 0.87827873}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: J_Sec_Hair3_07
+      parentName: J_Sec_Hair2_07
+      position: {x: 8.5681673e-10, y: 0.06888896, z: 8.9406965e-10}
+      rotation: {x: 0.00000014482066, y: -0.000000053085394, z: 0.0000000010477457,
+        w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1.0000001}
+    - name: J_Sec_Hair1_08
+      parentName: head.x
+      position: {x: -0.0021942498, y: 0.15404016, z: -0.08523015}
+      rotation: {x: 0.99657905, y: 0.027184332, z: -0.0062574865, w: -0.07779569}
+      scale: {x: 0.99999917, y: 0.9999998, z: 0.99999267}
+    - name: J_Sec_Hair2_08
+      parentName: J_Sec_Hair1_08
+      position: {x: 9.685754e-10, y: 0.2230844, z: 0.000000009785872}
+      rotation: {x: 0.0000000419077, y: -0.000000011175872, z: -0.000000010768416,
+        w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: J_Sec_Hair1_09
+      parentName: head.x
+      position: {x: 0.05982009, y: 0.1488572, z: 0.011569416}
+      rotation: {x: 0.9669287, y: 0.19706833, z: 0.15876849, w: -0.03171009}
+      scale: {x: 0.9999997, y: 1, z: 1.0000001}
+    - name: J_Sec_Hair2_09
+      parentName: J_Sec_Hair1_09
+      position: {x: 0.00000009179115, y: 0.073764496, z: 0.000000026226044}
+      rotation: {x: -0.057499968, y: -0.24815245, z: 0.2531183, w: 0.93329805}
+      scale: {x: 0.99999994, y: 0.99999976, z: 1}
+    - name: J_Sec_Hair3_09
+      parentName: J_Sec_Hair2_09
+      position: {x: 0.00000003620982, y: 0.07598502, z: 0.000000004470348}
+      rotation: {x: 0.000000039348397, y: 0.00000009845825, z: -0.00000015320256,
+        w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: shoulder.r
+      parentName: spine_03.x
+      position: {x: 0.018640287, y: 0.09593087, z: -0.013624115}
+      rotation: {x: 0.5035945, y: 0.42395124, z: 0.56592, w: -0.49637946}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: arm_stretch.r
+      parentName: shoulder.r
+      position: {x: 0.0000000026182936, y: 0.06124637, z: -0.000000020709312}
+      rotation: {x: 0.073613726, y: 0.17087314, z: 0.013057742, w: 0.9824525}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: forearm_stretch.r
+      parentName: arm_stretch.r
+      position: {x: -0.000000012218952, y: 0.19168451, z: -0.00000010338146}
+      rotation: {x: 0.0004918542, y: -0.0027396248, z: -0.0013648105, w: 0.99999523}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.99999994}
+    - name: hand.r
+      parentName: forearm_stretch.r
+      position: {x: -0.000000027418135, y: 0.17568563, z: -0.000000047273932}
+      rotation: {x: 0.036436155, y: -0.12964942, z: 0.01954606, w: 0.99069744}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: c_thumb1.r
+      parentName: hand.r
+      position: {x: 0.014794768, y: 0.0019050125, z: -0.007881489}
+      rotation: {x: -0.0630798, y: -0.090414815, z: -0.3708502, w: 0.92212594}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: c_thumb2.r
+      parentName: c_thumb1.r
+      position: {x: 0.000000015497207, y: 0.039588783, z: -0.000000052452087}
+      rotation: {x: 0.007322251, y: 0.013520805, z: 0.021591645, w: 0.99964863}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: c_thumb3.r
+      parentName: c_thumb2.r
+      position: {x: -0.000000007152557, y: 0.024280194, z: 0.00000004284084}
+      rotation: {x: -0.000001681969, y: -0.000000048427225, z: -0.0000009217766, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1}
+    - name: c_pinky1.r
+      parentName: hand.r
+      position: {x: -0.024796018, y: 0.051282253, z: 0.0005233389}
+      rotation: {x: -0.039264195, y: -0.039263517, z: -0.011922036, w: 0.99838597}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: c_pinky2.r
+      parentName: c_pinky1.r
+      position: {x: -0.0000000054700102, y: 0.025937371, z: -3.941787e-10}
+      rotation: {x: -0.000000007450647, y: 0.000000049455437, z: 0.00000048120137,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c_pinky3.r
+      parentName: c_pinky2.r
+      position: {x: 0.0000000018808806, y: 0.014948782, z: 0.000000003038405}
+      rotation: {x: -4.9183317e-14, y: -0.0000000063431176, z: 0.00000031898128, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c_ring1.r
+      parentName: hand.r
+      position: {x: -0.010993447, y: 0.054711808, z: 0.0013253945}
+      rotation: {x: -0.039264232, y: -0.03926324, z: -0.011921868, w: 0.998386}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: c_ring2.r
+      parentName: c_ring1.r
+      position: {x: 0.0000000016453122, y: 0.028356189, z: 0.0000000142285375}
+      rotation: {x: 0.00000002235156, y: -0.00000017960686, z: 0.00000045273825, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: c_ring3.r
+      parentName: c_ring2.r
+      position: {x: -5.2275023e-10, y: 0.016364355, z: 0.000000003050747}
+      rotation: {x: -2.5093868e-14, y: -0.000000027400533, z: 0.0000000728466, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c_middle1.r
+      parentName: hand.r
+      position: {x: 0.0027674257, y: 0.05504757, z: 0.0023712548}
+      rotation: {x: -0.039265502, y: -0.03926551, z: -0.011921586, w: 0.99838585}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: c_middle2.r
+      parentName: c_middle1.r
+      position: {x: -7.79346e-10, y: 0.030568665, z: -0.00000008983083}
+      rotation: {x: 0.0000032797604, y: 0.0000052272453, z: -0.00000015949846, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c_middle3.r
+      parentName: c_middle2.r
+      position: {x: 1.3690624e-10, y: 0.018858429, z: -0.000000047875254}
+      rotation: {x: 0.0000020228044, y: -0.000000040084913, z: -0.000000031593792,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c_index1.r
+      parentName: hand.r
+      position: {x: 0.018227648, y: 0.053992417, z: 0.0036604565}
+      rotation: {x: -0.039669868, y: -0.038853757, z: -0.0015528011, w: 0.99845594}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1}
+    - name: c_index2.r
+      parentName: c_index1.r
+      position: {x: 1.0742951e-10, y: 0.027444167, z: 0.0000000107879075}
+      rotation: {x: -0.015283397, y: -0.014967772, z: 0.010446393, w: 0.99971664}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1}
+    - name: c_index3.r
+      parentName: c_index2.r
+      position: {x: 0.000000004172325, y: 0.01689939, z: -0.00000018753111}
+      rotation: {x: 0.0000022949537, y: -0.00000010180528, z: -0.000000032887094,
+        w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c_Weapon_Rig_.r
+      parentName: hand.r
+      position: {x: 0.008129952, y: 0.047671963, z: -0.03653933}
+      rotation: {x: 0.4905543, y: 0.5193438, z: 0.51934296, w: -0.4689578}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: forearm_twist.r
+      parentName: forearm_stretch.r
+      position: {x: -0.000000021979213, y: 0.087842904, z: 0.00000013986602}
+      rotation: {x: 0.00000000554759, y: -0.13032219, z: -0.000000026832712, w: 0.9914717}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: arm_twist.r
+      parentName: arm_stretch.r
+      position: {x: -0.00000010078307, y: -0.00000003094059, z: -0.00000021261745}
+      rotation: {x: 0.000000048331806, y: 0.00000001990057, z: -0.00000013472712,
+        w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: shoulder.l
+      parentName: spine_03.x
+      position: {x: -0.018640319, y: 0.09593102, z: -0.0136240935}
+      rotation: {x: -0.5035943, y: 0.42395145, z: 0.56591964, w: 0.49638}
+      scale: {x: 0.9999999, y: 0.9999997, z: 0.9999998}
+    - name: arm_stretch.l
+      parentName: shoulder.l
+      position: {x: 0.000000002317481, y: 0.061246414, z: 0.000000061504544}
+      rotation: {x: 0.07361308, y: -0.17087325, z: -0.013057741, w: 0.9824525}
+      scale: {x: 1.0000004, y: 1, z: 1.0000004}
+    - name: forearm_stretch.l
+      parentName: arm_stretch.l
+      position: {x: -0.000000007785856, y: 0.19168459, z: -0.00000008455478}
+      rotation: {x: 0.00049247703, y: 0.0027396844, z: 0.0013647055, w: 0.99999523}
+      scale: {x: 0.9999999, y: 1, z: 0.9999999}
+    - name: hand.l
+      parentName: forearm_stretch.l
+      position: {x: -0.000000003799796, y: 0.1756856, z: -0.000000053681433}
+      rotation: {x: 0.036436096, y: 0.12964576, z: -0.019546203, w: 0.9906979}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: c_thumb1.l
+      parentName: hand.l
+      position: {x: -0.014794905, y: 0.0019051135, z: -0.007881238}
+      rotation: {x: -0.06307833, y: 0.09041826, z: 0.37085062, w: 0.9221256}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c_thumb2.l
+      parentName: c_thumb1.l
+      position: {x: 0.000000005960464, y: 0.039588813, z: -0.00000005595386}
+      rotation: {x: 0.0073222816, y: -0.013520742, z: -0.021591833, w: 0.99964863}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
+    - name: c_thumb3.l
+      parentName: c_thumb2.l
+      position: {x: -0.0000000023841857, y: 0.024280198, z: -0.000000035986304}
+      rotation: {x: -0.0000016931448, y: 0.00000004004503, z: 0.0000010852235, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
+    - name: c_pinky1.l
+      parentName: hand.l
+      position: {x: 0.024796013, y: 0.051282406, z: 0.00052335917}
+      rotation: {x: -0.039264165, y: 0.03926729, z: 0.011922267, w: 0.99838585}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: c_pinky2.l
+      parentName: c_pinky1.l
+      position: {x: -0.0000000012338944, y: 0.025937373, z: 0.00000000421582}
+      rotation: {x: 0.0000000037250432, y: -0.00000007925776, z: -0.0000007906355,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c_pinky3.l
+      parentName: c_pinky2.l
+      position: {x: -0.000000004019603, y: 0.01494884, z: -0.00000000697916}
+      rotation: {x: 3.844737e-14, y: 0.0000000063430927, z: 0.00000015948919, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c_ring1.l
+      parentName: hand.l
+      position: {x: 0.01099344, y: 0.054712027, z: 0.0013255152}
+      rotation: {x: -0.039264172, y: 0.039267384, z: 0.011921976, w: 0.99838585}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c_ring2.l
+      parentName: c_ring1.l
+      position: {x: 4.2255123e-11, y: 0.028356211, z: 0.000000009634461}
+      rotation: {x: 0.0000000037251398, y: -0.00000021000153, z: -0.0000005672322,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c_ring3.l
+      parentName: c_ring2.l
+      position: {x: -0.0000000016847479, y: 0.016364375, z: -0.000000008341003}
+      rotation: {x: 1.7834463e-14, y: 0.000000012499347, z: -1.2391076e-13, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c_middle1.l
+      parentName: hand.l
+      position: {x: -0.0027674448, y: 0.055047758, z: 0.0023714865}
+      rotation: {x: -0.039265428, y: 0.039269313, z: 0.011921766, w: 0.9983857}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: c_middle2.l
+      parentName: c_middle1.l
+      position: {x: 7.0906025e-10, y: 0.030568672, z: 0.000000014906718}
+      rotation: {x: 0.000003249958, y: -0.0000052272385, z: 0.00000009912816, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c_middle3.l
+      parentName: c_middle2.l
+      position: {x: -4.2300596e-10, y: 0.018858444, z: 0.000000011708407}
+      rotation: {x: 0.0000020228056, y: -0.00000005957086, z: 0.000000063199636, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c_index1.l
+      parentName: hand.l
+      position: {x: -0.018227652, y: 0.05399255, z: 0.0036608092}
+      rotation: {x: -0.039669868, y: 0.038857162, z: 0.0015529098, w: 0.9984558}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: c_index2.l
+      parentName: c_index1.l
+      position: {x: 9.249561e-10, y: 0.027444119, z: 0.000000031341713}
+      rotation: {x: -0.015283367, y: 0.014968158, z: -0.010446343, w: 0.9997166}
+      scale: {x: 1, y: 0.9999999, z: 1.0000001}
+    - name: c_index3.l
+      parentName: c_index2.l
+      position: {x: -0.0000000011920929, y: 0.01689934, z: -0.00000012887641}
+      rotation: {x: 0.0000022961171, y: 0.000000084051926, z: 0.000000025087308, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: forearm_twist.l
+      parentName: forearm_stretch.l
+      position: {x: 0.000000032112002, y: 0.08784291, z: 0.00000037176534}
+      rotation: {x: -0.0000000040927137, y: 0.13031851, z: -0.000000019003068, w: 0.9914722}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: arm_twist.l
+      parentName: arm_stretch.l
+      position: {x: -0.000000045346095, y: -0.000000008683418, z: -0.00000007669325}
+      rotation: {x: 0.00000066730115, y: -0.000000034438486, z: -0.0000000037121937,
+        w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
+    - name: J_Sec_L_Bust1
+      parentName: spine_03.x
+      position: {x: -0.045856457, y: -0.014486366, z: 0.05970641}
+      rotation: {x: 0.024542019, y: 0.62023306, z: 0.7103912, w: 0.33174232}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1}
+    - name: J_Sec_L_Bust2
+      parentName: J_Sec_L_Bust1
+      position: {x: -0.0000000500679, y: 0.027014736, z: -0.000000047683713}
+      rotation: {x: -0.00000011928748, y: 0.0003018305, z: 0.00000025894371, w: 0.99999994}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+    - name: J_Sec_R_Bust1
+      parentName: spine_03.x
+      position: {x: 0.04585639, y: -0.014486522, z: 0.059706423}
+      rotation: {x: -0.024542019, y: 0.62023306, z: 0.7103912, w: -0.33174232}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: J_Sec_R_Bust2
+      parentName: J_Sec_R_Bust1
+      position: {x: -0.000000102519984, y: 0.02701472, z: -0.00000011980534}
+      rotation: {x: -0.00000014904649, y: -0.0003018398, z: -0.00000011552899, w: 0.99999994}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: bf01daad8e83cf944a1a543215a807ef,
+    type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

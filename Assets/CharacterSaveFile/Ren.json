@@ -1,0 +1,88 @@
+{
+    "level": {
+        "lv": 1,
+        "currentExp": 0.0,
+        "expNeeded": 50.0
+    },
+    "statID": [
+        13,
+        12,
+        8,
+        10,
+        9,
+        11,
+        14
+    ],
+    "stats": [
+        {
+            "statIdentifier": {
+                "instanceID": 51300
+            },
+            "statValue": 2160.0,
+            "MinMaxValue": [
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "statIdentifier": {
+                "instanceID": 50522
+            },
+            "statValue": 0.0,
+            "MinMaxValue": [
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "statIdentifier": {
+                "instanceID": 50226
+            },
+            "statValue": 0.0,
+            "MinMaxValue": [
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "statIdentifier": {
+                "instanceID": 51710
+            },
+            "statValue": 0.0,
+            "MinMaxValue": [
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "statIdentifier": {
+                "instanceID": 51052
+            },
+            "statValue": 0.0,
+            "MinMaxValue": [
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "statIdentifier": {
+                "instanceID": 50480
+            },
+            "statValue": 0.0,
+            "MinMaxValue": [
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "statIdentifier": {
+                "instanceID": 50034
+            },
+            "statValue": 0.0,
+            "MinMaxValue": [
+                0.0,
+                0.0
+            ]
+        }
+    ]
+}

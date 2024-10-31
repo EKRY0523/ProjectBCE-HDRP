@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8461cd744bf20284bb95916a16d585a0, type: 3}
+  m_Name: Kuroya
+  m_EditorClassIdentifier: 
+  overrideController: {fileID: 0}
+  Level: 10
+  exp: 5000
+  baseMaxHP: 10000
+  baseMaxENG: 500
+  baseATK: 50
+  baseEATK: 250
+  baseSpeed: 1
+  baseCSPD: 1
+  baseDef: 250
+  baseResist: 200
+  STR: 0
+  AGI: 0
+  VIT: 0
+  ENG: 0
+  DEX: 0
+  MTL: 0
+  ability: []
+  attack: {fileID: 0}

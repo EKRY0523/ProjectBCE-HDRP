@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3b0219aee1fcc4db2c2d181a7c4e80, type: 3}
+  m_Name: Kuroya
+  m_EditorClassIdentifier: 
+  ID: 555
+  poseImage: {fileID: 8400000, guid: 4793a018396d9d24b8c32b509863a231, type: 2}
+  iconimage: {fileID: -1158756484, guid: d1d38aa6f1f94364b92284fa1a17bfc7, type: 3}
+  material: {fileID: 2100000, guid: 077f80d3c5ac70e45a5beba4b287d6a7, type: 2}
+  BasicAttack: []
+  Skills: []
+  Dodge: []
+  Ultimate: []
+  stats:
+  - statIdentifier: {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
+    statValue: 5
+    MinMaxValue:
+    - 0
+    - 2500
+  - statIdentifier: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
+    statValue: 5
+    MinMaxValue:
+    - 0
+    - 1200
+  - statIdentifier: {fileID: 11400000, guid: 97435261493b2ec44bdf032630a74db5, type: 2}
+    statValue: 5
+    MinMaxValue:
+    - 0
+    - 99999
+  - statIdentifier: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
+    statValue: 5
+    MinMaxValue:
+    - 0
+    - 99999
+  - statIdentifier: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
+    statValue: 5
+    MinMaxValue:
+    - 0
+    - 99999
+  - statIdentifier: {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}
+    statValue: 5
+    MinMaxValue:
+    - 0
+    - 99999
+  - statIdentifier: {fileID: 11400000, guid: bf0e21beacd082f45b3c20cb0f18fa31, type: 2}
+    statValue: 5
+    MinMaxValue:
+    - 100
+    - 200

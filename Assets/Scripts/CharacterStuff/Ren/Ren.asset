@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3b0219aee1fcc4db2c2d181a7c4e80, type: 3}
+  m_Name: Ren
+  m_EditorClassIdentifier: 
+  ID: 694
+  poseImage: {fileID: 8400000, guid: 39afaf0d134bc0f4ebde8f7d2d34d546, type: 2}
+  iconimage: {fileID: -889190176, guid: 48e15963821711a4db166254fb602022, type: 3}
+  material: {fileID: 2100000, guid: 665b184b288a35b41b4c38f728059372, type: 2}
+  BasicAttack: []
+  Skills: []
+  Dodge: []
+  Ultimate: []
+  stats:
+  - statIdentifier: {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
+    statValue: 0
+    MinMaxValue:
+    - 0
+    - 0
+  - statIdentifier: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
+    statValue: 0
+    MinMaxValue:
+    - 0
+    - 0
+  - statIdentifier: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
+    statValue: 0
+    MinMaxValue:
+    - 0
+    - 0
+  - statIdentifier: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
+    statValue: 0
+    MinMaxValue:
+    - 0
+    - 0
+  - statIdentifier: {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}
+    statValue: 0
+    MinMaxValue:
+    - 0
+    - 0
+  - statIdentifier: {fileID: 11400000, guid: bf0e21beacd082f45b3c20cb0f18fa31, type: 2}
+    statValue: 0
+    MinMaxValue:
+    - 0
+    - 0
+  - statIdentifier: {fileID: 11400000, guid: 97435261493b2ec44bdf032630a74db5, type: 2}
+    statValue: 0
+    MinMaxValue:
+    - 0
+    - 0
