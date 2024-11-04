@@ -27,7 +27,6 @@ public class Heal : Effect
         {
             if (target.effectDictionary[this].EotTimer >= tick)
             {
-                Debug.Log("imin");
                 target.MBEvent?.Invoke(targetedStat[i], value[i]);
                 target.effectDictionary[this].EotTimer = 0;
             }

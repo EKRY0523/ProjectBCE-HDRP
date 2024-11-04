@@ -136,6 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 850770647394576999}
   - component: {fileID: 9042332138753590298}
+  - component: {fileID: 6278478588211485385}
   m_Layer: 0
   m_Name: KRYBOC2
   m_TagString: Untagged
@@ -171,6 +172,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e70e357ebf0ad50439daa9f62a350ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: {fileID: 0}
+  SOEvent: []
+  eventListeners: []
+  eventBroadcasters: []
+  tagName: Enemy
+  originStat:
+  - {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
+  targetedStat:
+  - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   characterData: {fileID: 0}
-  multiplier: 0
-  duration: 2
+  multiplier: 4500
+  duration: 1
+--- !u!65 &6278478588211485385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3163559063897439675}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.5822392, y: 1.4628134, z: 2.3296485}
+  m_Center: {x: -0.23485774, y: 0.7385912, z: 1.2984846}

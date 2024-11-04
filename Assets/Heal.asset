@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c797463c394e9e47a39ca98ef3c980d, type: 3}
   m_Name: Heal
   m_EditorClassIdentifier: 
-  effectType: 0
+  effectType: 1
+  timeMode: 0
+  startTime: 0
   duration: 10
   tick: 0.1
   targetedStat:

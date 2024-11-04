@@ -12,6 +12,7 @@ public class BasicAttackHandler : SkillHandler
     public override void Awake()
     {
         base.Awake();
+        canExecute = true;
     }
     public void OnEnable()
     {
@@ -45,7 +46,6 @@ public class BasicAttackHandler : SkillHandler
             if(canExecute)
             {
                 executionTime = Time.time;
-                timeToExceed = basicAttack.cooldown[count];
                 canExecute = false;
                 if (firstInput)
                 {
@@ -64,10 +64,11 @@ public class BasicAttackHandler : SkillHandler
                         count = 0;
                     }
                 }
-                basicAttack.AttackCount(count, basicAttack.statIndex);
+                basicAttack.AttackCount(count, basicAttack.statAndMultiplier);
                 MBEvent?.Invoke(basicAttack.key[count], null);
                 statemachine.MBEvent?.Invoke(basicAttack.key[count], basicAttack.movementData[count]);
 
+                timeToExceed = basicAttack.cooldown[count];
             }
         }
 
@@ -95,6 +96,10 @@ public class BasicAttackHandler : SkillHandler
 
     public void SpawnSkillObject(int numTesting)
     {
-        Instantiate(basicAttack.skillInstance[count].skillObjects[numTesting],transform);
+        Debug.Log("Count"+count);
+        Debug.Log("numtesting" + numTesting);
+
+        Debug.Log((basicAttack.skillInstance[count].skillObjects[numTesting].multiplier));
+        Instantiate(basicAttack.skillInstance[count].skillObjects[numTesting],transform.parent);
     }
 }

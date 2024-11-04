@@ -9,7 +9,6 @@ public class BladeOfConviction1 : BasicAttackState
         statemachine.timeInState = 0;
         statemachine.MBEvent?.Invoke(stateKey, "AttackCount");
         statemachine.MBEvent?.Invoke(stateKey, (int)0);
-        statemachine.MBEvent?.Invoke(stateKey, PlayerMovement.StateTransitioning.inAttack);
     }
 
     public override void OnExit(Statemachine statemachine)

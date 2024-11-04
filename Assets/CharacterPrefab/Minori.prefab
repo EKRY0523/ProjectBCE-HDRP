@@ -670,7 +670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8798638905962582039
 Transform:
   m_ObjectHideFlags: 0
@@ -746,78 +746,97 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2c2dcd1867be82478b15e03168c88bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: {fileID: 0}
+  SOEvent: []
+  eventListeners: []
+  eventBroadcasters:
+  - {fileID: 364098323685177685}
   level:
     lv: 1
     currentExp: 0
     expNeeded: 50
   stats:
   - statIdentifier: {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
+    statAction: []
     statValue: 3390
     MinMaxValue:
     - 0
     - 2500
   - statIdentifier: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
+    statAction: []
     statValue: 1200
     MinMaxValue:
     - 0
     - 1200
   - statIdentifier: {fileID: 11400000, guid: 97435261493b2ec44bdf032630a74db5, type: 2}
+    statAction: []
     statValue: 10
     MinMaxValue:
     - 0
     - 10
   - statIdentifier: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
+    statAction: []
     statValue: 1500
     MinMaxValue:
     - 0
     - 1500
   - statIdentifier: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
+    statAction: []
     statValue: 1500
     MinMaxValue:
     - 0
     - 1500
   - statIdentifier: {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}
+    statAction: []
     statValue: 200
     MinMaxValue:
     - 0
     - 200
   - statIdentifier: {fileID: 11400000, guid: bf0e21beacd082f45b3c20cb0f18fa31, type: 2}
+    statAction: []
     statValue: 200
     MinMaxValue:
     - 100
     - 200
   placeholder:
   - statIdentifier: {fileID: 0}
+    statAction: []
     statValue: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
+    statAction: []
     statValue: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
+    statAction: []
     statValue: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
+    statAction: []
     statValue: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
+    statAction: []
     statValue: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
+    statAction: []
     statValue: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
+    statAction: []
     statValue: 0
     MinMaxValue:
     - 0
@@ -857,6 +876,7 @@ MonoBehaviour:
   firstInput: 1
   enterTime: 0
   maxTime: 3
+  numTesting: 0
 --- !u!114 &114289146532142811
 MonoBehaviour:
   m_ObjectHideFlags: 0

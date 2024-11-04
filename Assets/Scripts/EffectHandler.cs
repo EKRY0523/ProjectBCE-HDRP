@@ -6,6 +6,7 @@ using System;
 public class EffectHandling
 {
     public Effect effect;
+    public float startTime;
     public float duration;
     public float EotTimer;
 }
@@ -33,6 +34,8 @@ public class EffectHandler : EventHandler
             newEffect.effect = effect;
             InflictedEffects.Add(newEffect);
             effectDictionary.Add(effect,newEffect);
+
+            newEffect.effect.OnInflict(this);
         }
     }
 
@@ -41,15 +44,30 @@ public class EffectHandler : EventHandler
     {
         for (int i = 0; i < InflictedEffects.Count; i++)
         {
-            InflictedEffects[i].duration += Time.deltaTime;
-            InflictedEffects[i].EotTimer += Time.deltaTime;
-
-            effectDictionary[InflictedEffects[i].effect].effect.OverTime(this);
-            if (InflictedEffects[i].duration >= InflictedEffects[i].effect.duration)
+            if(InflictedEffects[i].effect.timeMode == Effect.TimeMode.incremented)
             {
-                effectDictionary.Remove(InflictedEffects[i].effect);
-                InflictedEffects.RemoveAt(i);
+                InflictedEffects[i].duration += Time.deltaTime;
+                InflictedEffects[i].EotTimer += Time.deltaTime;
+
+                effectDictionary[InflictedEffects[i].effect].effect?.OverTime(this);
+                if (InflictedEffects[i].duration >= InflictedEffects[i].effect.duration)
+                {
+                    effectDictionary[InflictedEffects[i].effect].effect.OnEndEffect(this);
+                    effectDictionary.Remove(InflictedEffects[i].effect);
+                    InflictedEffects.RemoveAt(i);
+                }
             }
+            else
+            {
+                if (Time.time >= InflictedEffects[i].startTime + InflictedEffects[i].duration)
+                {
+                    effectDictionary[InflictedEffects[i].effect].effect.OnEndEffect(this);
+                    effectDictionary.Remove(InflictedEffects[i].effect);
+                    InflictedEffects.RemoveAt(i);
+                }
+            }
+
+            
         }
     }
 

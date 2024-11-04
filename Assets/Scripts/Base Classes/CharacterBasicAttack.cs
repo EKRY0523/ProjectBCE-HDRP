@@ -2,9 +2,9 @@ using UnityEngine;
 using System.Collections.Generic;
 public class CharacterBasicAttack : CharacterSkill
 {
-    public float[] multiplier;
+    public float[] countMultiplier;
     public int MaxCount;
-    public virtual void AttackCount(int count,Trait[] statIndex)
+    public virtual void AttackCount(int count, StatMultiplier[] statIndex)
     {
     }
 }

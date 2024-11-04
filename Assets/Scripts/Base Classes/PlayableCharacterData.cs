@@ -79,8 +79,14 @@ public class PlayableCharacterData : Entity
 
     }
 
-    private void OnDestroy()
+    public override void OnDestroy()
     {
+        base.OnDestroy();
         GameManager.instance.SaveCharacterData(this,character);
+    }
+
+    public override void OnInvoke(Trait ID, object data)
+    {
+        base.OnInvoke(ID, data);
     }
 }

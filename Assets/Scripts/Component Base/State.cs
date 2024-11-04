@@ -8,3 +8,4 @@ public abstract class State : ScriptableObject
     public abstract void OnUpdate(Statemachine statemachine);
     public abstract void OnExit(Statemachine statemachine);
 }
+

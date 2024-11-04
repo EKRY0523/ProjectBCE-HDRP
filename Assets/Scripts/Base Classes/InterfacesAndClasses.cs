@@ -13,6 +13,7 @@ public class Stat
     public Trait statIdentifier;
     public StatAction[] statAction;
     public float statValue;
+    public float statScaling;
     public float[] MinMaxValue = new float[2];
 
 

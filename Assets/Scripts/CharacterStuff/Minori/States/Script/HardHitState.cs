@@ -1,6 +1,6 @@
 using UnityEngine;
 [CreateAssetMenu(fileName = "HardHit", menuName = "CharacterStates/Minori/Skill/HardHit")]
-public class HardHitState : MinoriSkillState
+public class HardHitState : SkillState
 {
     public override void OnEnter(Statemachine statemachine)
     {

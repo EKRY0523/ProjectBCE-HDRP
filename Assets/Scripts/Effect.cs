@@ -6,8 +6,15 @@ public class Effect : ScriptableObject
     {
         Passive,Active
     }
+
+    public enum TimeMode
+    {
+        incremented,realTime
+    }
+
     public EffectType effectType;
-    public float duration,tick;
+    public TimeMode timeMode;
+    public float startTime,duration,tick;
     public Trait[] targetedStat;
     public float[] value;
     public virtual void OnInflict(EffectHandler target)

@@ -9,7 +9,7 @@ public class CharacterSkill : ScriptableObject
     public SkillObjectInstance[] skillInstance;
     public Trait[] key;
     public PlayableCharacterData characterData;
-    public Trait[] statIndex;
+    public StatMultiplier[] statAndMultiplier;
     public int requiredUnlockLevel;
     public string skillName;
     public string skillDescription;
@@ -53,11 +53,13 @@ public class CharacterSkill : ScriptableObject
     {
 
     }
-    public virtual void SkillMultiplier(float stat1,float stat2)
+
+    public virtual void OnHold(StatMultiplier[] usedStat)
     {
 
     }
-    public virtual void SkillMultiplier(float stat1, float stat2,float stat3)
+
+    public virtual void OnRelease(StatMultiplier[] usedStat)
     {
 
     }
@@ -68,4 +70,11 @@ public class SkillObjectInstance
 {
     public int instances; // default is 0 unless stated
     public SkillObject[] skillObjects;
+}
+
+[Serializable]
+public class StatMultiplier
+{
+    public Trait statIndex;
+    public float multiplier;
 }

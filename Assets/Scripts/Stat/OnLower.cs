@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "LowerStatAction", menuName = "StatAction/LowerStatAction")]
 public class OnLower : StatAction
 {
     public float threshold;

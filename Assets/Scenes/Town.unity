@@ -4976,6 +4976,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2539271892968285073, guid: c9620df622e89d044a2b46944e8c8bf6, type: 3}
   m_PrefabInstance: {fileID: 737090513}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &790569384 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6543169868687771525, guid: 5ea0296555d5ad34fad022214a417c0a, type: 3}
+  m_PrefabInstance: {fileID: 950785206}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2675c21098b716d4782f4aa7110572c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &811314808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6814,6 +6825,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 109751301}
     m_Modifications:
+    - target: {fileID: 4304999696753725828, guid: 5ea0296555d5ad34fad022214a417c0a, type: 3}
+      propertyPath: eventBroadcasters.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304999696753725828, guid: 5ea0296555d5ad34fad022214a417c0a, type: 3}
+      propertyPath: 'eventBroadcasters.Array.data[0]'
+      value: 
+      objectReference: {fileID: 790569384}
     - target: {fileID: 6384552509618221652, guid: 5ea0296555d5ad34fad022214a417c0a, type: 3}
       propertyPath: m_Name
       value: Ren
@@ -14281,7 +14300,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa40b1a250bde443a67cf751d9cfe30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: {fileID: 0}
+  SOEvent: []
+  eventListeners: []
+  eventBroadcasters: []
   effect: {fileID: 11400000, guid: 4c540e80ac0655342b1cf4dac4e27923, type: 2}
+  dualTag: 0
+  effectedTag: Player
   type: 1
 --- !u!65 &2131606332
 BoxCollider:
@@ -14667,10 +14692,6 @@ PrefabInstance:
     - target: {fileID: 1066553446312017233, guid: bb9819a70fc6e2c43b3292d5274d75fe, type: 3}
       propertyPath: m_Name
       value: Minori
-      objectReference: {fileID: 0}
-    - target: {fileID: 1066553446312017233, guid: bb9819a70fc6e2c43b3292d5274d75fe, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8798638905962582039, guid: bb9819a70fc6e2c43b3292d5274d75fe, type: 3}
       propertyPath: m_LocalPosition.x

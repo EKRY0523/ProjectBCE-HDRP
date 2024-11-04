@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MinoriSkillState : AttackingState
+public class SkillState : AttackingState
 {
     public override void OnEnter(Statemachine statemachine)
     {

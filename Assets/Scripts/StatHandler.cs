@@ -22,6 +22,7 @@ public class StatHandler : EventHandler
             {
                 statDictionary[ID[i]].statValue += value;
                 MBEvent?.Invoke(ID[i], statDictionary[ID[i]].statValue);
+                Debug.Log(statDictionary[ID[i]].statValue);
             }
         }
         

@@ -7,6 +7,7 @@ public class AttackingState : State
         statemachine.timeInState = 0;
         statemachine.MBEvent?.Invoke(stateKey, "Attacking");
         statemachine.MBEvent?.Invoke(stateKey, true);
+        statemachine.MBEvent?.Invoke(stateKey, PlayerMovement.StateTransitioning.inAttack);
     }
 
     public override void OnExit(Statemachine statemachine)

@@ -7,6 +7,7 @@ public class FirstSkillHandler : SkillHandler
     public override void Awake()
     {
         base.Awake();
+        canExecute = true;
     }
     private void OnEnable()
     {
@@ -34,18 +35,35 @@ public class FirstSkillHandler : SkillHandler
     }
     public void OnExecute(InputAction.CallbackContext context)
     {
-        MBEvent?.Invoke(Skill1.key[0], null);
-        statemachine.MBEvent?.Invoke(Skill1.key[0], Skill1.movementData[0]);
+        if(canExecute)
+        {
+            if(context.performed)
+            {
+                Skill1.OnHold(Skill1.statAndMultiplier);
+                MBEvent?.Invoke(Skill1.key[0], null);
+                statemachine.MBEvent?.Invoke(Skill1.key[0], Skill1.movementData[0]);
 
+            }
+            if(context.canceled)
+            {
+                Skill1.OnRelease(Skill1.statAndMultiplier);
+                MBEvent?.Invoke(Skill1.key[0], null);
+                statemachine.MBEvent?.Invoke(Skill1.key[0], Skill1.movementData[0]);
+            }
+
+        }
+
+
+    }
+
+    public override void Update()
+    {
+        base.Update();
     }
     public void OnChangeSkill(CharacterSkill characterSkill)
     {
         Skill1.OnRemove(character);
         Skill1 = characterSkill;
         Skill1.OnSetup(character);
-    }
-    public override void OnGlobalEventInvoke(object data)
-    {
-        base.OnGlobalEventInvoke(data);
     }
 }

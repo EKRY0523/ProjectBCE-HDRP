@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-[CreateAssetMenu(fileName = "Blade Of Conviction", menuName = "CharacterSkill/Blade Of Conviction")]
+[CreateAssetMenu(fileName = "Blade Of Conviction", menuName = "CharacterSkill/BasicAttack/Blade Of Conviction")]
 public class BladeOfConviction : CharacterBasicAttack
 {
     public override void OnSetup(PlayableCharacterData character)
@@ -14,13 +14,13 @@ public class BladeOfConviction : CharacterBasicAttack
     {
         base.OnRemove(character);
     }
-    public override void AttackCount(int count, Trait[] statIndex)
+    public override void AttackCount(int count, StatMultiplier[] statIndex)
     {
         base.AttackCount(count,statIndex);
         float lastMultplier = 0;
         for (int i = 0; i < statIndex.Length; i++)
         {
-            lastMultplier += characterData.statDictionary[statIndex[i]].statValue;
+            lastMultplier += characterData.statDictionary[statIndex[i].statIndex].statValue * countMultiplier[count];
             SkillMultiplier(count, lastMultplier);
         }
     }
@@ -33,6 +33,6 @@ public class BladeOfConviction : CharacterBasicAttack
             skillInstance[count].skillObjects[i].multiplier = stat1/ skillInstance[count].skillObjects.Length;
         }
         
-        //Instantiate(skillObject[count], characterData.transform.parent.position, characterData.transform.parent.rotation);
     }
+
 }

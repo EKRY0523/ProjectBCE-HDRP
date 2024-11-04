@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class SkillObject : MonoBehaviour
+public class SkillObject : EventHandler
 {
-    public TagHandle tagName;
+    public string tagName;
     public Trait[] originStat; //what it derived from, so it can handle calculations properly like atk hitting hp, then it means -def then apply
     public Trait[] targetedStat;
 
@@ -29,11 +29,6 @@ public class SkillObject : MonoBehaviour
 
     public virtual void OnCast()
     {
-        
     }
 
-    public virtual void OnDestroy()
-    {
-
-    }
 }

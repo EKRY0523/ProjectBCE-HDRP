@@ -13,75 +13,112 @@
         11,
         14
     ],
+    "currentStatValue": [
+        2000.0,
+        3000.0,
+        500.0,
+        2500.0,
+        500.0,
+        2000.0,
+        10.0
+    ],
     "stats": [
         {
             "statIdentifier": {
-                "instanceID": 51300
+                "instanceID": 51344
             },
-            "statValue": 2160.0,
+            "statAction": [
+                {
+                    "instanceID": -117918
+                },
+                {
+                    "instanceID": -99924
+                }
+            ],
+            "statValue": 2000.0,
+            "statScaling": 1.100000023841858,
             "MinMaxValue": [
                 0.0,
-                0.0
+                2000.0
             ]
         },
         {
             "statIdentifier": {
-                "instanceID": 50522
+                "instanceID": 50566
             },
-            "statValue": 0.0,
+            "statAction": [
+                {
+                    "instanceID": -135992
+                },
+                {
+                    "instanceID": -117918
+                }
+            ],
+            "statValue": 3000.0,
+            "statScaling": 1.5,
             "MinMaxValue": [
                 0.0,
-                0.0
+                3000.0
             ]
         },
         {
             "statIdentifier": {
-                "instanceID": 50226
+                "instanceID": 50268
             },
-            "statValue": 0.0,
+            "statAction": [],
+            "statValue": 500.0,
+            "statScaling": 1.0499999523162842,
             "MinMaxValue": [
                 0.0,
-                0.0
+                500.0
             ]
         },
         {
             "statIdentifier": {
-                "instanceID": 51710
+                "instanceID": 51752
             },
-            "statValue": 0.0,
+            "statAction": [],
+            "statValue": 2500.0,
+            "statScaling": 1.5,
             "MinMaxValue": [
                 0.0,
-                0.0
+                2500.0
             ]
         },
         {
             "statIdentifier": {
-                "instanceID": 51052
+                "instanceID": 51098
             },
-            "statValue": 0.0,
+            "statAction": [],
+            "statValue": 500.0,
+            "statScaling": 1.100000023841858,
             "MinMaxValue": [
                 0.0,
-                0.0
+                500.0
             ]
         },
         {
             "statIdentifier": {
-                "instanceID": 50480
+                "instanceID": 50524
             },
-            "statValue": 0.0,
+            "statAction": [],
+            "statValue": 2000.0,
+            "statScaling": 1.2000000476837159,
             "MinMaxValue": [
                 0.0,
-                0.0
+                2000.0
             ]
         },
         {
             "statIdentifier": {
-                "instanceID": 50034
+                "instanceID": 50074
             },
-            "statValue": 0.0,
+            "statAction": [],
+            "statValue": 10.0,
+            "statScaling": 1.0499999523162842,
             "MinMaxValue": [
                 0.0,
-                0.0
+                10.0
             ]
         }
     ]

@@ -7,8 +7,6 @@ public class Statemachine : EventHandler
     public Dictionary<Trait, State> stateDictionary = new Dictionary<Trait, State>();
     public float timeInState;
     public StateBinder[] keyAndStates;
-    //public DictionaryKey[] key;
-    //public State[] states;
     public State currentState;
     public State previousState;
 

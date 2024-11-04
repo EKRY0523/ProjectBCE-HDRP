@@ -58,7 +58,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7940475939485728665
 Transform:
   m_ObjectHideFlags: 0
@@ -134,78 +134,97 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2c2dcd1867be82478b15e03168c88bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: {fileID: 0}
+  SOEvent: []
+  eventListeners: []
+  eventBroadcasters:
+  - {fileID: 7869384607355888865}
   level:
     lv: 1
     currentExp: 0
     expNeeded: 50
   stats:
   - statIdentifier: {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
+    statAction: []
     statValue: 5
     MinMaxValue:
     - 0
     - 2500
   - statIdentifier: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
+    statAction: []
     statValue: 5
     MinMaxValue:
     - 0
     - 1200
   - statIdentifier: {fileID: 11400000, guid: 97435261493b2ec44bdf032630a74db5, type: 2}
+    statAction: []
     statValue: 5
     MinMaxValue:
     - 0
     - 99999
   - statIdentifier: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
-    statValue: 5
+    statAction: []
+    statValue: 10
     MinMaxValue:
     - 0
     - 99999
   - statIdentifier: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
+    statAction: []
     statValue: 5
     MinMaxValue:
     - 0
     - 99999
   - statIdentifier: {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}
+    statAction: []
     statValue: 5
     MinMaxValue:
     - 0
     - 99999
   - statIdentifier: {fileID: 11400000, guid: bf0e21beacd082f45b3c20cb0f18fa31, type: 2}
+    statAction: []
     statValue: 5
     MinMaxValue:
     - 100
     - 200
   placeholder:
   - statIdentifier: {fileID: 0}
+    statAction: []
     statValue: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
+    statAction: []
     statValue: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
+    statAction: []
     statValue: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
+    statAction: []
     statValue: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
+    statAction: []
     statValue: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
+    statAction: []
     statValue: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
+    statAction: []
     statValue: 0
     MinMaxValue:
     - 0
@@ -245,6 +264,7 @@ MonoBehaviour:
   firstInput: 1
   enterTime: 0
   maxTime: 3
+  numTesting: 0
 --- !u!114 &8132090272729150886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +288,7 @@ MonoBehaviour:
   executionTime: 0
   timeToExceed: 0
   canExecute: 0
-  Skill1: {fileID: 11400000, guid: ad2ea663ee7cf464dbf61b5aed8873b3, type: 2}
+  Skill1: {fileID: 11400000, guid: bbafdfe3d9eed1149a3ff408644bc745, type: 2}
 --- !u!114 &896661190048329185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,8 +398,8 @@ MonoBehaviour:
     state: {fileID: 11400000, guid: bbb5b14714bd86a41ad5e1e1db6f3ea2, type: 2}
   - key: {fileID: 11400000, guid: 9b5744c331ca53f4e9934447661754e8, type: 2}
     state: {fileID: 11400000, guid: 992e805bed5992640912eefc5a47317c, type: 2}
-  - key: {fileID: 11400000, guid: 14fe6987db7502c4bbcdbfb586890046, type: 2}
-    state: {fileID: 11400000, guid: fcced9f89e8275040ba2c4b2c484e436, type: 2}
+  - key: {fileID: 11400000, guid: f514615bbddb8c94492172edf90cd791, type: 2}
+    state: {fileID: 11400000, guid: f7ce938aaaf89d94caa1bad3a234fbd3, type: 2}
   - key: {fileID: 11400000, guid: 80b2b5d7ba7d62e478d4099173f6a37f, type: 2}
     state: {fileID: 11400000, guid: 2fc23ad94deba9b4699e033d08366ac4, type: 2}
   - key: {fileID: 11400000, guid: 78da2e2e2639da246b8af76cd6ec5765, type: 2}
@@ -403,7 +423,8 @@ MonoBehaviour:
   ID: {fileID: 0}
   SOEvent: []
   eventListeners: []
-  eventBroadcasters: []
+  eventBroadcasters:
+  - {fileID: 4398739625467631182}
   entity: {fileID: 0}
 --- !u!114 &4398739625467631182
 MonoBehaviour:

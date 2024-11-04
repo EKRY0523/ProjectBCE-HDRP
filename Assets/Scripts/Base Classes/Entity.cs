@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
-
+[RequireComponent(typeof(StatHandler))]
 public class Entity : EventHandler
 {
     [SerializeField]public Dictionary<Trait, Stat> statDictionary = new Dictionary<Trait, Stat>();
@@ -9,10 +9,11 @@ public class Entity : EventHandler
     [SerializeField] public List<Stat> stats = new();
     [SerializeField]public Stat[] placeholder;
     public Transform[] skillOriginPoint;
-
+    [HideInInspector]public StatHandler StatHandler;
     public override void Awake()
     {
         base.Awake();
+        StatHandler = GetComponent<StatHandler>();
     }
 
     public void handleStat(Trait ID)

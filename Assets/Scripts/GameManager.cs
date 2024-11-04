@@ -117,6 +117,7 @@ public class GameManager : EventHandler
         {
             data.statID.Add(characterDictionary[character].stats[i].statIdentifier.key);
             data.stats.Add(characterDictionary[character].stats[i]);
+            data.currentStatValue.Add(Mathf.Clamp(characterDictionary[character].stats[i].statValue, characterDictionary[character].stats[i].MinMaxValue[0], characterDictionary[character].stats[i].MinMaxValue[1] * (characterDictionary[character].stats[i].statScaling * characterDictionary[character].level.lv)));
         }
 
 
@@ -178,5 +179,6 @@ public class LevelAndStats
 {
     public Level level;
     [SerializeField] public List<int> statID = new();
+    public List<float> currentStatValue = new();
     public List<Stat> stats = new();
 }

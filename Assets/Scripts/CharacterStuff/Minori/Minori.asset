@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf3b0219aee1fcc4db2c2d181a7c4e80, type: 3}
   m_Name: Minori
   m_EditorClassIdentifier: 
+  ID: 900
   poseImage: {fileID: 8400000, guid: d9d68a1d0d7f9a44ba0f2df8e175c286, type: 2}
   iconimage: {fileID: 261698405, guid: e7980fcb8648ab24e819e3bfc400229f, type: 3}
   material: {fileID: 2100000, guid: 5187197998201b04a9ef300891f17a8e, type: 2}
@@ -23,37 +24,55 @@ MonoBehaviour:
   Ultimate: []
   stats:
   - statIdentifier: {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
+    statAction:
+    - {fileID: 11400000, guid: ae06b58d519f32b47aa0cad2e9545e9b, type: 2}
+    - {fileID: 11400000, guid: a9ad695bea8176a47bba62409f67be25, type: 2}
     statValue: 2500
+    statScaling: 1.1
     MinMaxValue:
     - 0
     - 2500
   - statIdentifier: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
+    statAction:
+    - {fileID: 11400000, guid: 5f7fe19c6a5191d438a39fb9951a4076, type: 2}
+    - {fileID: 11400000, guid: ae06b58d519f32b47aa0cad2e9545e9b, type: 2}
     statValue: 1200
+    statScaling: 1.1
     MinMaxValue:
     - 0
     - 1200
   - statIdentifier: {fileID: 11400000, guid: 97435261493b2ec44bdf032630a74db5, type: 2}
+    statAction: []
     statValue: 10
+    statScaling: 1.05
     MinMaxValue:
     - 0
     - 10
   - statIdentifier: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
+    statAction: []
     statValue: 1500
+    statScaling: 1.2
     MinMaxValue:
     - 0
     - 1500
   - statIdentifier: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
+    statAction: []
     statValue: 1500
+    statScaling: 1.2
     MinMaxValue:
     - 0
     - 1500
   - statIdentifier: {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}
-    statValue: 200
+    statAction: []
+    statValue: 1500
+    statScaling: 1.2
     MinMaxValue:
     - 0
-    - 200
+    - 1500
   - statIdentifier: {fileID: 11400000, guid: bf0e21beacd082f45b3c20cb0f18fa31, type: 2}
-    statValue: 200
+    statAction: []
+    statValue: 1500
+    statScaling: 1.2
     MinMaxValue:
     - 100
-    - 200
+    - 1500

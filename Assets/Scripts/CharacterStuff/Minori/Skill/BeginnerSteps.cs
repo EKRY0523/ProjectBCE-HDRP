@@ -17,13 +17,13 @@ public class BeginnerSteps : CharacterBasicAttack
     {
         base.OnRemove(character);
     }
-    public override void AttackCount(int count, Trait[] statIndex)
+    public override void AttackCount(int count, StatMultiplier[] statIndex)
     {
         base.AttackCount(count, statIndex);
         float lastMultplier = 0;
         for (int i = 0; i < statIndex.Length; i++)
         {
-            lastMultplier += characterData.statDictionary[statIndex[i]].statValue * (multiplier[count]/i);
+            lastMultplier += characterData.statDictionary[statIndex[i].statIndex].statValue * (countMultiplier[count]/i);
         }
 
         SkillMultiplier(count, lastMultplier);

@@ -136,6 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 442307536938066840}
   - component: {fileID: 7584451728861194609}
+  - component: {fileID: 934407972509189222}
   m_Layer: 0
   m_Name: RYBOC3.2
   m_TagString: Untagged
@@ -171,6 +172,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e70e357ebf0ad50439daa9f62a350ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: {fileID: 0}
+  SOEvent: []
+  eventListeners: []
+  eventBroadcasters: []
+  tagName: Enemy
+  originStat:
+  - {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
+  targetedStat:
+  - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   characterData: {fileID: 0}
-  multiplier: 2.5
-  duration: 2
+  multiplier: 3000
+  duration: 1
+--- !u!65 &934407972509189222
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6716562710121310922}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.0925543, y: 2.0195177, z: 2.6208196}
+  m_Center: {x: 0.28606758, y: 1.0169433, z: 1.2969494}

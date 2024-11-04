@@ -19,6 +19,7 @@ public class BeginnerStep1State : BasicAttackState
     public override void OnUpdate(Statemachine statemachine)
     {
         base.OnUpdate(statemachine);
+
         //statemachine.timeInState += Time.deltaTime;
         //Debug.Log(statemachine.timeInState);
         //if(statemachine.timeInState > 5f)
