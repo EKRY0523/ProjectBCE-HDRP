@@ -14,10 +14,10 @@
         11
     ],
     "currentStatValue": [
-        3000.0,
+        340.0,
         1500.0,
         10.0,
-        4020.0,
+        3000.0,
         500.0,
         2000.0,
         1000.0
@@ -25,17 +25,17 @@
     "stats": [
         {
             "statIdentifier": {
-                "instanceID": 51344
+                "instanceID": 51982
             },
             "statAction": [
                 {
-                    "instanceID": -99924
+                    "instanceID": 51608
                 },
                 {
-                    "instanceID": -117918
+                    "instanceID": 51512
                 }
             ],
-            "statValue": 3000.0,
+            "statValue": 340.0,
             "statScaling": 1.2000000476837159,
             "MinMaxValue": [
                 0.0,
@@ -44,14 +44,11 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 50566
+                "instanceID": 51136
             },
             "statAction": [
                 {
-                    "instanceID": -135992
-                },
-                {
-                    "instanceID": -117918
+                    "instanceID": 51512
                 }
             ],
             "statValue": 1500.0,
@@ -63,7 +60,7 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 50074
+                "instanceID": 50600
             },
             "statAction": [],
             "statValue": 10.0,
@@ -75,10 +72,10 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 50268
+                "instanceID": 50818
             },
             "statAction": [],
-            "statValue": 4020.0,
+            "statValue": 3000.0,
             "statScaling": 1.5,
             "MinMaxValue": [
                 0.0,
@@ -87,7 +84,7 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 51752
+                "instanceID": 52422
             },
             "statAction": [],
             "statValue": 500.0,
@@ -99,7 +96,7 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 51098
+                "instanceID": 51710
             },
             "statAction": [],
             "statValue": 2000.0,
@@ -111,7 +108,7 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 50524
+                "instanceID": 51094
             },
             "statAction": [],
             "statValue": 1000.0,

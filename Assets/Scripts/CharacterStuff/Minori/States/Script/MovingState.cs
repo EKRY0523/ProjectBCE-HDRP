@@ -5,6 +5,10 @@ public class MovingState : State
 {
     public override void OnEnter(Statemachine statemachine)
     {
+        if(statemachine.ComponentsID.Length > 0)
+        {
+            statemachine.EnableComp?.Invoke(statemachine.ComponentsID[0], false);
+        }
         statemachine.MBEvent?.Invoke(stateKey, "Moving");
         statemachine.MBEvent?.Invoke(stateKey, true);
         

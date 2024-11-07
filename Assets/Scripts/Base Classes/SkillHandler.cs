@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using System;
 public class SkillHandler : EventHandler
 {
     public Statemachine statemachine;
     public PlayableCharacterData character;
 
     public float stat;
+    [SerializeField]public Cost cost;
     public InputActionReference input;
     public Coroutine cooldownHandler,ExitHandler;
     public float executionTime,timeToExceed; //To handle time.time stuff is running and to do cooldownChecks
@@ -59,4 +61,13 @@ public class SkillHandler : EventHandler
     {
 
     }
+
+    
+}
+
+[Serializable]
+public class Cost
+{
+    public Trait stat;
+    public float cost;
 }

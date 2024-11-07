@@ -43,6 +43,8 @@ public class PartyHandler : EventHandler
         activeCharacter = characterList[0];
         activeCharacter.gameObject.SetActive(true);
         MBEvent?.Invoke(null, activeCharacter);
+
+        SOEvent[0].globalEvent?.Invoke(activeCharacter);
     }
     private void Start()
     {
@@ -57,6 +59,8 @@ public class PartyHandler : EventHandler
             activeCharacter.gameObject.SetActive(false);
             activeCharacter = characterList[index];
             activeCharacter.gameObject.SetActive(true);
+
+            SOEvent[0].globalEvent?.Invoke(activeCharacter);
         }
         
     }
@@ -90,6 +94,7 @@ public class PartyHandler : EventHandler
             activeCharacter = characterList[0];
             activeCharacter.gameObject.SetActive(true);
             MBEvent?.Invoke(null, activeCharacter);
+            SOEvent[0].globalEvent?.Invoke(activeCharacter);
             GameManager.instance.SaveData();
         }
     }

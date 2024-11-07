@@ -8,6 +8,7 @@ public class CharacterSkill : ScriptableObject
     public SkillObject[] skillObject;
     public SkillObjectInstance[] skillInstance;
     public Trait[] key;
+    public Cost cost;
     public PlayableCharacterData characterData;
     public StatMultiplier[] statAndMultiplier;
     public int requiredUnlockLevel;

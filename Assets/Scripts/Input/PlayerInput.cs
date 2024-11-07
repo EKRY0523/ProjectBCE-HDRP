@@ -95,17 +95,23 @@ public class PlayerInput : ScriptableObject, Controls.IPlayerActions
 
     public void OnSwitchOne(InputAction.CallbackContext context)
     {
-        SwitchOne?.Invoke();
+        
+            SwitchOne?.Invoke();
+        
     }
 
     public void OnSwitchTwo(InputAction.CallbackContext context)
     {
-        SwitchTwo?.Invoke();
+        
+            SwitchTwo?.Invoke();
+        
     }
 
     public void OnSwitchThree(InputAction.CallbackContext context)
     {
-        SwitchThree?.Invoke();
+        
+            SwitchThree?.Invoke();
+        
     }
 
     public void OnWalkSwitch(InputAction.CallbackContext context)

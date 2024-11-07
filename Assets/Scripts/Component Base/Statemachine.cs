@@ -21,7 +21,6 @@ public class Statemachine : EventHandler
         for (int i = 0; i < keyAndStates.Length; i++)
         {
             stateDictionary.Add(keyAndStates[i].key,keyAndStates[i].state);
-            //stateDictionary.Add(key[i], states[i]);
         }
         currentState = keyAndStates[0].state;
         startingState = keyAndStates[0].state;
@@ -50,13 +49,12 @@ public class Statemachine : EventHandler
     public override void OnInvoke(Trait ID,object data)
     {
         base.OnInvoke(ID,data);
-        if(stateDictionary.ContainsKey(ID))
+        if(ID!=null)
         {
-            ChangeState(stateDictionary[ID]);
-        }
-        else
-        {
-            Debug.Log(ID.name);
+            if (stateDictionary.ContainsKey(ID))
+            {
+                ChangeState(stateDictionary[ID]);
+            }
         }
 
     }

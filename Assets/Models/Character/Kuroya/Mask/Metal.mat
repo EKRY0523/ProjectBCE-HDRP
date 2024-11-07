@@ -332,7 +332,7 @@ Material:
     - _ReduSha: 0
     - _RefMetallic: 1
     - _RefVal: 0
-    - _ReflectionIntensity: 1
+    - _ReflectionIntensity: 0
     - _ReflectionRoughtness: 0
     - _RimLigInt: 1
     - _RimLighThres: 900

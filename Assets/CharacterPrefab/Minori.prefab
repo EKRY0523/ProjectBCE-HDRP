@@ -724,7 +724,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d179485fa2ddec34fb6db7d4fa0a93f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: {fileID: 0}
+  HandlerID: {fileID: 11400000, guid: 55da20a579cd6e64990e195ba7d650a9, type: 2}
+  ComponentsID: []
   SOEvent: []
   eventListeners: []
   eventBroadcasters:
@@ -746,7 +747,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2c2dcd1867be82478b15e03168c88bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: {fileID: 0}
+  HandlerID: {fileID: 11400000, guid: b42250f6a126fab4b920eb9e513dfdba, type: 2}
+  ComponentsID: []
   SOEvent: []
   eventListeners: []
   eventBroadcasters:
@@ -759,42 +761,49 @@ MonoBehaviour:
   - statIdentifier: {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
     statAction: []
     statValue: 3390
+    statScaling: 0
     MinMaxValue:
     - 0
     - 2500
   - statIdentifier: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
     statAction: []
     statValue: 1200
+    statScaling: 0
     MinMaxValue:
     - 0
     - 1200
   - statIdentifier: {fileID: 11400000, guid: 97435261493b2ec44bdf032630a74db5, type: 2}
     statAction: []
     statValue: 10
+    statScaling: 0
     MinMaxValue:
     - 0
     - 10
   - statIdentifier: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
     statAction: []
     statValue: 1500
+    statScaling: 0
     MinMaxValue:
     - 0
     - 1500
   - statIdentifier: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
     statAction: []
     statValue: 1500
+    statScaling: 0
     MinMaxValue:
     - 0
     - 1500
   - statIdentifier: {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}
     statAction: []
     statValue: 200
+    statScaling: 0
     MinMaxValue:
     - 0
     - 200
   - statIdentifier: {fileID: 11400000, guid: bf0e21beacd082f45b3c20cb0f18fa31, type: 2}
     statAction: []
     statValue: 200
+    statScaling: 0
     MinMaxValue:
     - 100
     - 200
@@ -802,46 +811,54 @@ MonoBehaviour:
   - statIdentifier: {fileID: 0}
     statAction: []
     statValue: 0
+    statScaling: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
     statAction: []
     statValue: 0
+    statScaling: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
     statAction: []
     statValue: 0
+    statScaling: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
     statAction: []
     statValue: 0
+    statScaling: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
     statAction: []
     statValue: 0
+    statScaling: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
     statAction: []
     statValue: 0
+    statScaling: 0
     MinMaxValue:
     - 0
     - 0
   - statIdentifier: {fileID: 0}
     statAction: []
     statValue: 0
+    statScaling: 0
     MinMaxValue:
     - 0
     - 0
   skillOriginPoint: []
+  statHandler: {fileID: 0}
   unlocked: 1
   statemachine: {fileID: 0}
   character: {fileID: 11400000, guid: 418229fd558d7c84595bc7f3651129dc, type: 2}
@@ -860,13 +877,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edcdd073f8eb0004e8b19b547a3a8f41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: {fileID: 11400000, guid: 74f08d12ed3315d4690f7fd4b7b96998, type: 2}
+  HandlerID: {fileID: 11400000, guid: cc26019d54a195f4ba98ebe99b18b312, type: 2}
+  ComponentsID: []
   SOEvent: []
   eventListeners: []
   eventBroadcasters: []
   statemachine: {fileID: 0}
   character: {fileID: 0}
   stat: 0
+  cost:
+    stat: {fileID: 0}
+    cost: 0
   input: {fileID: -1095825230823489041, guid: 55479a59730077042a848a49c9d9349a, type: 3}
   executionTime: 0
   timeToExceed: 0
@@ -889,13 +910,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4dab13425371a34fbfcea9e53f46b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: {fileID: 0}
+  HandlerID: {fileID: 11400000, guid: d5c6c123d500293429e5a0250ee26756, type: 2}
+  ComponentsID: []
   SOEvent: []
   eventListeners: []
   eventBroadcasters: []
   statemachine: {fileID: 0}
   character: {fileID: 0}
   stat: 0
+  cost:
+    stat: {fileID: 0}
+    cost: 0
   input: {fileID: 692427726063208414, guid: 55479a59730077042a848a49c9d9349a, type: 3}
   executionTime: 0
   timeToExceed: 0
@@ -913,18 +938,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff6205eebf6dd148ba64a1b3df8a9ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: {fileID: 0}
+  HandlerID: {fileID: 11400000, guid: de641f4cf90778f4d8b6b5bd40ff4d80, type: 2}
+  ComponentsID: []
   SOEvent: []
   eventListeners: []
   eventBroadcasters: []
   statemachine: {fileID: 0}
   character: {fileID: 0}
   stat: 0
+  cost:
+    stat: {fileID: 0}
+    cost: 0
   input: {fileID: 729839826710160189, guid: 55479a59730077042a848a49c9d9349a, type: 3}
   executionTime: 0
   timeToExceed: 0
   canExecute: 0
-  Skill2: {fileID: 11400000, guid: ad2ea663ee7cf464dbf61b5aed8873b3, type: 2}
+  skill2: {fileID: 11400000, guid: bbafdfe3d9eed1149a3ff408644bc745, type: 2}
 --- !u!114 &570174126328656312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -937,13 +966,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236f6cfd4ecc90d44a2fe57f28c8e0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: {fileID: 0}
+  HandlerID: {fileID: 11400000, guid: c8c32d1bc8f3aa743a34c42714a22e5b, type: 2}
+  ComponentsID: []
   SOEvent: []
   eventListeners: []
   eventBroadcasters: []
   statemachine: {fileID: 0}
   character: {fileID: 0}
   stat: 0
+  cost:
+    stat: {fileID: 0}
+    cost: 0
   input: {fileID: 5185469654580339554, guid: 55479a59730077042a848a49c9d9349a, type: 3}
   executionTime: 0
   timeToExceed: 0
@@ -961,13 +994,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2813d1e3eaee9de4b9de4e60dd3c8358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: {fileID: 0}
+  HandlerID: {fileID: 11400000, guid: ccd2f3e4aa7e0e141aa9f660644058c6, type: 2}
+  ComponentsID: []
   SOEvent: []
   eventListeners: []
   eventBroadcasters: []
   statemachine: {fileID: 0}
   character: {fileID: 0}
   stat: 0
+  cost:
+    stat: {fileID: 0}
+    cost: 0
   input: {fileID: -1764860384439256614, guid: 55479a59730077042a848a49c9d9349a, type: 3}
   executionTime: 0
   timeToExceed: 0
@@ -985,7 +1022,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a38bbae0c4b9441b40f6b2631c1927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: {fileID: 0}
+  HandlerID: {fileID: 11400000, guid: 9b0b6b56a5da61449925ccad79a1f105, type: 2}
+  ComponentsID:
+  - {fileID: 11400000, guid: 9364c34befd8e864680cf6f828d8c993, type: 2}
+  - {fileID: 11400000, guid: 4e7127693565c8540992920a2b88a303, type: 2}
   SOEvent: []
   eventListeners: []
   eventBroadcasters:
@@ -1032,7 +1072,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2675c21098b716d4782f4aa7110572c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: {fileID: 0}
+  HandlerID: {fileID: 11400000, guid: a50f4230f852e63469a414975e716533, type: 2}
+  ComponentsID: []
   SOEvent: []
   eventListeners: []
   eventBroadcasters:
@@ -1050,12 +1091,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba489cc36f18c743af4999a3533ee87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: {fileID: 0}
+  HandlerID: {fileID: 11400000, guid: 99b2cf9efa0cf4a4897db0040f57297c, type: 2}
+  ComponentsID: []
   SOEvent: []
   eventListeners: []
   eventBroadcasters: []
+  entity: {fileID: 0}
   Immune: []
   InflictedEffects: []
+  passive:
+  - effect: {fileID: 11400000, guid: 5fc6647b492a86e4480ca3bba1547c73, type: 2}
+    conditionMet: 0
   party: {fileID: 0}
 --- !u!1 &1123178886257810307
 GameObject:

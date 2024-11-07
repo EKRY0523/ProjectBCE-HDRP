@@ -6,6 +6,7 @@ public class TargetHandling : EventHandler
     public Transform currentNearestTarget;
     public float radius;
     public LayerMask layerToHit;
+    public string tagToHit;
     public RaycastHit hit;
     public bool canGet;
     public override void Awake()
@@ -25,12 +26,11 @@ public class TargetHandling : EventHandler
         {
             if(Physics.Linecast(transform.position, colliders[i].transform.position) == colliders[i].transform)
             {
-                if(colliders[i].CompareTag("Enemy"))
+                if(colliders[i].CompareTag(tagToHit))
                 {
                     if (!targets.Contains(colliders[i].transform.parent))
                     {
                         targets.Add(colliders[i].transform.parent);
-                        Debug.Log(colliders[i].transform.parent.name);
                     }
                 }
             }
@@ -59,8 +59,11 @@ public class TargetHandling : EventHandler
                 }
             }
         }
+        if(currentNearestTarget!=null)
+        {
 
-        MBEvent?.Invoke(null,currentNearestTarget);
+            MBEvent?.Invoke(null, currentNearestTarget);
+        }
         //targets.Clear();
     }
 

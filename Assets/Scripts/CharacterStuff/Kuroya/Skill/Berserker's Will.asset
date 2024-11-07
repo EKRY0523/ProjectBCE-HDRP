@@ -19,6 +19,9 @@ MonoBehaviour:
     - {fileID: 7251938217129480846, guid: f104eacadf93e4e4cb80b922b94b405d, type: 3}
   key:
   - {fileID: 11400000, guid: f514615bbddb8c94492172edf90cd791, type: 2}
+  cost:
+    stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
+    cost: 50
   characterData: {fileID: 0}
   statAndMultiplier:
   - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}

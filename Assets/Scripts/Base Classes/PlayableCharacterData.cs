@@ -46,17 +46,18 @@ public class PlayableCharacterData : Entity
 
                 GameManager.instance.SaveCharacterData(this, character);
             }
+
+            for (int i = 0; i < character.stats.Length; i++)
+            {
+                statDictionary[character.stats[i].statIdentifier].statAction = character.stats[i].statAction;
+                statDictionary[character.stats[i].statIdentifier].statScaling = character.stats[i].statScaling;
+            }
         }
 
 
         base.Awake();
     }
 
-    private void Start()
-    {
-        
-        
-    }
 
     private void OnEnable()
     {

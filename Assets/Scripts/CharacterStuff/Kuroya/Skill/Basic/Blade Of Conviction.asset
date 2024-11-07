@@ -31,6 +31,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6ab16a390b67c1f49b661a9056d84094, type: 2}
   - {fileID: 11400000, guid: 6d7d72e82e9b31047b982b6319d9ee22, type: 2}
   - {fileID: 11400000, guid: 9b5744c331ca53f4e9934447661754e8, type: 2}
+  cost:
+    stat: {fileID: 0}
+    cost: 0
   characterData: {fileID: 0}
   statAndMultiplier:
   - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
@@ -40,9 +43,9 @@ MonoBehaviour:
   skillDescription: 
   skillIcon: {fileID: 0}
   cooldown:
-  - 1.2
+  - 0.5
   - 1
-  - 1.6
+  - 1
   movementData:
   - {fileID: 11400000, guid: 0cd9c8b5d5c148941a4db9bd6f0a1a6a, type: 2}
   - {fileID: 11400000, guid: d42f0b6aa7049e6419a3ae574a80316a, type: 2}

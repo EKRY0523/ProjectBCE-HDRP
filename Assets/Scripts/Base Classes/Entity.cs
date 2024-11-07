@@ -9,11 +9,11 @@ public class Entity : EventHandler
     [SerializeField] public List<Stat> stats = new();
     [SerializeField]public Stat[] placeholder;
     public Transform[] skillOriginPoint;
-    [HideInInspector]public StatHandler StatHandler;
+    [HideInInspector]public StatHandler statHandler;
     public override void Awake()
     {
         base.Awake();
-        StatHandler = GetComponent<StatHandler>();
+        statHandler = GetComponent<StatHandler>();
     }
 
     public void handleStat(Trait ID)

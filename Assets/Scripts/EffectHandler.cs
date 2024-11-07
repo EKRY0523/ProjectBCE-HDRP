@@ -10,20 +10,44 @@ public class EffectHandling
     public float duration;
     public float EotTimer;
 }
-
+[Serializable]
+public class PassiveHandling
+{
+    public Effect effect;
+    public bool conditionMet;
+}
 public class EffectHandler : EventHandler
 {
+    public Entity entity;
     public Effect[] Immune;
     public List<EffectHandling> InflictedEffects = new();
+
+    public List<PassiveHandling> passive = new();
+
     public Dictionary<Effect, EffectHandling> effectDictionary = new();
+    public Dictionary<Effect,PassiveHandling> passiveDictionary = new();
     public PartyHandler party;
 
     public override void Awake()
     {
         base.Awake();
+        entity = GetComponent<Entity>();
         if(GetComponent<PartyHandler>())
         {
             party = GetComponent<PartyHandler>();
+        }
+
+        for (int i = 0; i < passive.Count; i++)
+        {
+            if (!passiveDictionary.ContainsKey(passive[i].effect))
+            {
+                PassiveHandling newPassive = new();
+                newPassive.effect = passive[i].effect;
+                passiveDictionary.Add(passive[i].effect, newPassive);
+                Debug.Log(passiveDictionary[passive[i].effect].effect.name);
+                passive[i].effect.PassiveOneShot(entity, this);
+            }
+
         }
     }
     public void OnAddEffect(Effect effect)
@@ -69,7 +93,17 @@ public class EffectHandler : EventHandler
 
             
         }
+
+        for (int i = 0; i < passive.Count; i++)
+        {
+            passiveDictionary[passive[i].effect].effect.CheckForCondition(entity, this);
+            if (passiveDictionary[passive[i].effect].conditionMet)
+            {
+                passiveDictionary[passive[i].effect].effect.PassiveOverTime(entity, this);
+            }
+        }
     }
+
 
     public void OnEndEffect(Effect effect)
     {

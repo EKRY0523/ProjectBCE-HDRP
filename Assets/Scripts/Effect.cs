@@ -36,6 +36,20 @@ public class Effect : ScriptableObject
     {
 
     }
+
+    public virtual void PassiveOverTime(Entity entity,EffectHandler target)
+    {
+
+    }
+    public virtual void PassiveOneShot(Entity entity, EffectHandler target)
+    {
+
+    }
+
+    public virtual void CheckForCondition(Entity entity, EffectHandler target)
+    {
+
+    }
     //public virtual IEnumerator Overtime(EffectHandler target)
     //{
     //    yield return null;  

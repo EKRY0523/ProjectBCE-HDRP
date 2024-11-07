@@ -34,16 +34,4 @@ public class Heal : Effect
         
 
     }
-    //public override IEnumerator Overtime(EffectHandler target)
-    //{
-    //    if(target.effectDictionary.ContainsKey(this))
-    //    {
-    //        for (int i = 0; i < targetedStat.Length; i++)
-    //        {
-    //            target.MBEvent?.Invoke(targetedStat[i], value[i]);
-    //        }
-    //        yield return null;
-    //    }
-
-    //}
 }

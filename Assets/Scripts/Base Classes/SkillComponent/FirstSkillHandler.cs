@@ -7,20 +7,29 @@ public class FirstSkillHandler : SkillHandler
     public override void Awake()
     {
         base.Awake();
+        
         canExecute = true;
     }
     private void OnEnable()
     {
         Skill1.OnSetup(character);
+
+        cost = Skill1.cost;
         if (Skill1 != null)
         {
             input.action.performed += OnExecute;
+            input.action.canceled += OnExecute;
         }
     }
 
     private void OnDisable()
     {
         Skill1.OnRemove(character);
+        if (Skill1 != null)
+        {
+            input.action.performed -= OnExecute;
+            input.action.canceled -= OnExecute;
+        }
     }
     public void OnChangeSkill(CharacterBasicAttack newSkill)
     {
@@ -37,20 +46,24 @@ public class FirstSkillHandler : SkillHandler
     {
         if(canExecute)
         {
-            if(context.performed)
+            if (character.statDictionary[cost.stat].statValue >= cost.cost)
             {
-                Skill1.OnHold(Skill1.statAndMultiplier);
-                MBEvent?.Invoke(Skill1.key[0], null);
-                statemachine.MBEvent?.Invoke(Skill1.key[0], Skill1.movementData[0]);
+                if (context.performed)
+                {
+                    Skill1.OnHold(Skill1.statAndMultiplier);
+                    MBEvent?.Invoke(Skill1.key[0], null);
+                    statemachine.MBEvent?.Invoke(Skill1.key[0], Skill1.movementData[0]);
+                    MBEvent?.Invoke(cost.stat,-cost.cost);
 
+                }
+                if (context.canceled)
+                {
+                    Skill1.OnRelease(Skill1.statAndMultiplier);
+                    MBEvent?.Invoke(Skill1.key[0], null);
+                    statemachine.MBEvent?.Invoke(Skill1.key[0], Skill1.movementData[0]);
+                }
             }
-            if(context.canceled)
-            {
-                Skill1.OnRelease(Skill1.statAndMultiplier);
-                MBEvent?.Invoke(Skill1.key[0], null);
-                statemachine.MBEvent?.Invoke(Skill1.key[0], Skill1.movementData[0]);
-            }
-
+            
         }
 
 

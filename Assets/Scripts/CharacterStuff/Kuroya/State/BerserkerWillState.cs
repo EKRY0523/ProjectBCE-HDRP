@@ -7,7 +7,6 @@ public class BerserkerWillState : SkillState
         base.OnEnter(statemachine);
         statemachine.MBEvent?.Invoke(stateKey, "SkillType");
         statemachine.MBEvent?.Invoke(stateKey, (int)0);
-        statemachine.MBEvent?.Invoke(stateKey, PlayerMovement.StateTransitioning.inAttack);
     }
 
     public override void OnExit(Statemachine statemachine)

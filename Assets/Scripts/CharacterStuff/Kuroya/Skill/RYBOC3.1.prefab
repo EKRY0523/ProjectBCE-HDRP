@@ -46,18 +46,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e70e357ebf0ad50439daa9f62a350ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: {fileID: 0}
+  HandlerID: {fileID: 0}
+  ComponentsID: []
   SOEvent: []
   eventListeners: []
   eventBroadcasters: []
   tagName: Enemy
   originStat:
-  - {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
+  - {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}
   targetedStat:
   - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   characterData: {fileID: 0}
   multiplier: 3000
   duration: 1
+  target: {fileID: 0}
+  knockback: {fileID: 11400000, guid: 247a19ab0690c9642b501acf372ff9ad, type: 2}
 --- !u!65 &1263728368734212739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -105,13 +108,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8311142522429118622}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.43927124, y: -0.87840813, z: 0.16837494, w: 0.08420042}
-  m_LocalPosition: {x: -0.116, y: 1.515, z: 0.607}
-  m_LocalScale: {x: 0.33, y: 0.32999998, z: 0.32999998}
+  m_LocalRotation: {x: -0.053064324, y: -0.09562168, z: -0.0051047853, w: 0.9939893}
+  m_LocalPosition: {x: -0.274, y: 1.088, z: 2.134}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8116488475619758507}
-  m_LocalEulerAnglesHint: {x: 12.817, y: -162.338, z: 55.136}
+  m_LocalEulerAnglesHint: {x: -6.112, y: -10.99, z: 0}
 --- !u!2083052967 &1722705522623996160
 VisualEffect:
   m_ObjectHideFlags: 0
@@ -120,7 +123,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8311142522429118622}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 41326659a35a5e541ae99c8d94311a64, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: 4445f90d72485464cb98e9fee7b3f9ef, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
@@ -133,8 +136,14 @@ VisualEffect:
       - m_Value: 10
         m_Name: Speed
         m_Overridden: 1
-      - m_Value: 0.5
+      - m_Value: 3
         m_Name: vfxlife
+        m_Overridden: 1
+      - m_Value: 0.745
+        m_Name: Outline
+        m_Overridden: 1
+      - m_Value: 0.486
+        m_Name: AlphaClip
         m_Overridden: 1
     m_Vector2f:
       m_Array: []
@@ -142,11 +151,20 @@ VisualEffect:
       m_Array: []
     m_Vector4f:
       m_Array:
-      - m_Value: {x: 21.361254, y: 21.361254, z: 21.361254, w: 1}
+      - m_Value: {x: 2.155192, y: 2.0779302, z: 2.0779302, w: 1}
         m_Name: OuterColor
         m_Overridden: 1
-      - m_Value: {x: 0.42869055, y: 0.082282715, z: 0, w: 7}
+      - m_Value: {x: 0.23018861, y: 0.044348262, z: 0, w: 7}
         m_Name: DarkColor
+        m_Overridden: 1
+      - m_Value: {x: 20.865906, y: 8.159967, z: 0, w: 0}
+        m_Name: Color
+        m_Overridden: 1
+      - m_Value: {x: 74.38422, y: 24.800896, z: 0.42103663, w: 0}
+        m_Name: OutlineColor
+        m_Overridden: 1
+      - m_Value: {x: 128, y: 25.46597, z: 0, w: 1}
+        m_Name: MiddleColor
         m_Overridden: 1
     m_Uint:
       m_Array: []
@@ -159,9 +177,18 @@ VisualEffect:
     m_Gradient:
       m_Array: []
     m_NamedObject:
-      m_Array: []
+      m_Array:
+      - m_Value: {fileID: 3613567641014311022, guid: 4e11d87b0f5ea5d4bb700421bd718e70, type: 3}
+        m_Name: Mesh
+        m_Overridden: 1
+      - m_Value: {fileID: 2800000, guid: ef9d4ee0db248c041a3e7152196333d1, type: 3}
+        m_Name: Texture
+        m_Overridden: 1
     m_Bool:
-      m_Array: []
+      m_Array:
+      - m_Value: 1
+        m_Name: Voronoi
+        m_Overridden: 1
 --- !u!73398921 &7858989254419404488
 VFXRenderer:
   serializedVersion: 1

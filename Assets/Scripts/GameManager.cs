@@ -115,9 +115,11 @@ public class GameManager : EventHandler
 
         for (int i = 0; i < characterDictionary[character].stats.Count; i++)
         {
-            data.statID.Add(characterDictionary[character].stats[i].statIdentifier.key);
+
             data.stats.Add(characterDictionary[character].stats[i]);
-            data.currentStatValue.Add(Mathf.Clamp(characterDictionary[character].stats[i].statValue, characterDictionary[character].stats[i].MinMaxValue[0], characterDictionary[character].stats[i].MinMaxValue[1] * (characterDictionary[character].stats[i].statScaling * characterDictionary[character].level.lv)));
+            data.statID.Add(characterDictionary[character].stats[i].statIdentifier.key);
+            data.currentStatValue.Add(Mathf.Clamp(characterDictionary[character].stats[i].statValue, characterDictionary[character].stats[i].MinMaxValue[0], characterDictionary[character].stats[i].MinMaxValue[1] * MathF.Pow(characterDictionary[character].stats[i].statScaling, characterDictionary[character].level.lv -1)));
+           
         }
 
 
@@ -135,7 +137,7 @@ public class GameManager : EventHandler
             for (int i = 0; i < data.statID.Count; i++)
             {
                 characterDictionary[character].stats[i].statIdentifier = DictionaryStorage.TraitDictionary[characterDictionary[character].character.stats[i].statIdentifier.key];
-                characterDictionary[character].stats[i].statValue = data.stats[i].statValue;
+                characterDictionary[character].stats[i].statValue = data.currentStatValue[i];
                 characterDictionary[character].stats[i].MinMaxValue = data.stats[i].MinMaxValue;
             }
 

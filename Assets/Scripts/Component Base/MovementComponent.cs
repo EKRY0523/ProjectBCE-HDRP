@@ -6,7 +6,9 @@ public class MovementComponent : ReusableComponent
 {
     public void MoveCharacter(Rigidbody rb, Vector3 direction)
     {
+        //direction.y = -9.81f;
         rb.AddForce(direction-rb.linearVelocity,ForceMode.VelocityChange);
+        //rb.AddForce(direction - rb.linearVelocity, ForceMode.VelocityChange);
     }
     
 }

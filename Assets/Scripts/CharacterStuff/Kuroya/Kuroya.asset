@@ -32,7 +32,6 @@ MonoBehaviour:
     - 3000
   - statIdentifier: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
     statAction:
-    - {fileID: 11400000, guid: 5f7fe19c6a5191d438a39fb9951a4076, type: 2}
     - {fileID: 11400000, guid: ae06b58d519f32b47aa0cad2e9545e9b, type: 2}
     statValue: 1500
     statScaling: 1.1

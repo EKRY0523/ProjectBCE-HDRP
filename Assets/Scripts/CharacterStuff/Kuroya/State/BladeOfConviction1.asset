@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BladeOfConviction1
   m_EditorClassIdentifier: 
   stateKey: {fileID: 11400000, guid: 6ab16a390b67c1f49b661a9056d84094, type: 2}
-  maxTimeInState: 1.6
+  maxTimeInState: 1.5

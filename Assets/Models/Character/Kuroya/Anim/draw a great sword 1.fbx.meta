@@ -574,8 +574,7 @@ ModelImporter:
     - name: leg_twist.l
       parentName: leg_stretch.l
       position: {x: 0.0000000047683715, y: 0.20578761, z: -0.0000000047683715}
-      rotation: {x: 0.0000000019820612, y: -0.00025952456, z: 0.0000000010477977,
-        w: 1}
+      rotation: {x: 0.0000000019820612, y: -0.00025952456, z: 0.0000000010477977, w: 1}
       scale: {x: 0.99999994, y: 1, z: 0.9999999}
     - name: thigh_twist.l
       parentName: thigh_stretch.l
@@ -675,8 +674,7 @@ ModelImporter:
     - name: J_Sec_Hair3_02
       parentName: J_Sec_Hair2_02
       position: {x: -0, y: 0.038326424, z: 0.0000000333786}
-      rotation: {x: 0.000000052154075, y: 0.000000052154068, z: 0.00000009685755,
-        w: 1}
+      rotation: {x: 0.000000052154075, y: 0.000000052154068, z: 0.00000009685755, w: 1}
       scale: {x: 1, y: 0.99999976, z: 0.9999999}
     - name: J_Sec_Hair1_03
       parentName: head.x
@@ -691,8 +689,7 @@ ModelImporter:
     - name: J_Sec_Hair3_03
       parentName: J_Sec_Hair2_03
       position: {x: 0.000000008642673, y: 0.047236074, z: 0.0000000150688}
-      rotation: {x: -0.000000040221494, y: 0.00000004749746, z: -0.000000006519257,
-        w: 1}
+      rotation: {x: -0.000000040221494, y: 0.00000004749746, z: -0.000000006519257, w: 1}
       scale: {x: 0.9999999, y: 1, z: 1}
     - name: J_Sec_Hair1_04
       parentName: head.x
@@ -807,8 +804,7 @@ ModelImporter:
     - name: J_Sec_Hair5_10
       parentName: J_Sec_Hair4_10
       position: {x: -0.00000001952052, y: 0.010520175, z: 0.00000014109537}
-      rotation: {x: -0.00000004284084, y: -0.0000002160669, z: 0.000000009313219,
-        w: 1}
+      rotation: {x: -0.00000004284084, y: -0.0000002160669, z: 0.000000009313219, w: 1}
       scale: {x: 0.9999998, y: 0.99999994, z: 1}
     - name: J_Sec_Hair1_11
       parentName: head.x
@@ -853,8 +849,7 @@ ModelImporter:
     - name: c_thumb3.r
       parentName: c_thumb2.r
       position: {x: 0.00000007867813, y: 0.02770729, z: -0.000000062063336}
-      rotation: {x: -0.00000003073365, y: -0.0000000037252823, z: -0.000000259839,
-        w: 1}
+      rotation: {x: -0.00000003073365, y: -0.0000000037252823, z: -0.000000259839, w: 1}
       scale: {x: 1, y: 0.99999994, z: 1.0000001}
     - name: c_pinky1.r
       parentName: hand.r
@@ -864,8 +859,7 @@ ModelImporter:
     - name: c_pinky2.r
       parentName: c_pinky1.r
       position: {x: 3.4306138e-10, y: 0.03033531, z: -0.000000030918155}
-      rotation: {x: -0.0000000037254475, y: 0.00000000450156, z: 0.00000044786518,
-        w: 1}
+      rotation: {x: -0.0000000037254475, y: 0.00000000450156, z: 0.00000044786518, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: c_pinky3.r
       parentName: c_pinky2.r
@@ -915,8 +909,7 @@ ModelImporter:
     - name: c_index3.r
       parentName: c_index2.r
       position: {x: -5.9604643e-10, y: 0.019761778, z: -0.0000001319684}
-      rotation: {x: 0.000000056461435, y: -0.000000094762086, z: -0.000000041909512,
-        w: 1}
+      rotation: {x: 0.000000056461435, y: -0.000000094762086, z: -0.000000041909512, w: 1}
       scale: {x: 0.99999994, y: 0.99999994, z: 1}
     - name: forearm_twist.r
       parentName: forearm_stretch.r
@@ -961,8 +954,7 @@ ModelImporter:
     - name: c_thumb3.l
       parentName: c_thumb2.l
       position: {x: -0.000000014305114, y: 0.027707288, z: 0.00000015832484}
-      rotation: {x: -0.000000057741996, y: -0.00000002235177, z: 0.0000004334143,
-        w: 1}
+      rotation: {x: -0.000000057741996, y: -0.00000002235177, z: 0.0000004334143, w: 1}
       scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
     - name: c_pinky1.l
       parentName: hand.l
@@ -972,8 +964,7 @@ ModelImporter:
     - name: c_pinky2.l
       parentName: c_pinky1.l
       position: {x: 0.0000000032410934, y: 0.030335363, z: 0.000000024577568}
-      rotation: {x: -0.000000018626602, y: 0.000000010399599, z: -0.0000004710762,
-        w: 1}
+      rotation: {x: -0.000000018626602, y: 0.000000010399599, z: -0.0000004710762, w: 1}
       scale: {x: 0.9999999, y: 1, z: 0.99999994}
     - name: c_pinky3.l
       parentName: c_pinky2.l
@@ -1003,8 +994,7 @@ ModelImporter:
     - name: c_middle2.l
       parentName: c_middle1.l
       position: {x: -0.0000000012507098, y: 0.035751812, z: 0.000000052602747}
-      rotation: {x: 0.0000000037252943, y: -0.00000003750287, z: 0.000000051807827,
-        w: 1}
+      rotation: {x: 0.0000000037252943, y: -0.00000003750287, z: 0.000000051807827, w: 1}
       scale: {x: 0.9999999, y: 1, z: 0.9999999}
     - name: c_middle3.l
       parentName: c_middle2.l
@@ -1024,8 +1014,7 @@ ModelImporter:
     - name: c_index3.l
       parentName: c_index2.l
       position: {x: 5.9604643e-10, y: 0.01976184, z: -0.00000023689121}
-      rotation: {x: 0.000000057974827, y: 0.00000008766074, z: 0.000000053842083,
-        w: 1}
+      rotation: {x: 0.000000057974827, y: 0.00000008766074, z: 0.000000053842083, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: forearm_twist.l
       parentName: forearm_stretch.l
@@ -1035,8 +1024,7 @@ ModelImporter:
     - name: arm_twist.l
       parentName: arm_stretch.l
       position: {x: -0.000000033574178, y: -0.000000035404582, z: -0.000000055504497}
-      rotation: {x: -0.000000018604345, y: -0.00000006456267, z: 0.000000014360896,
-        w: 1}
+      rotation: {x: -0.000000018604345, y: -0.00000006456267, z: 0.000000014360896, w: 1}
       scale: {x: 0.9999999, y: 1, z: 0.9999999}
     - name: J_Sec_L_Bust1
       parentName: spine_03.x
@@ -1081,8 +1069,7 @@ ModelImporter:
     - name: J_Sec_L_HoodString2_end_01
       parentName: J_Sec_L_HoodString2_01
       position: {x: -0.00000000923872, y: 0.13318735, z: -0.000000001490116}
-      rotation: {x: -0.00000006082718, y: -0.000020514415, z: -0.000000008732396,
-        w: 1}
+      rotation: {x: -0.00000006082718, y: -0.000020514415, z: -0.000000008732396, w: 1}
       scale: {x: 1.0000001, y: 1, z: 0.9999999}
     - name: J_Sec_R_HoodString1_01
       parentName: spine_03.x
@@ -1122,8 +1109,7 @@ ModelImporter:
     - name: J_Sec_L_HoodString2_end_02
       parentName: J_Sec_L_HoodString2_02
       position: {x: -0.00000000923872, y: 0.13318735, z: -0.000000001490116}
-      rotation: {x: -0.00000006082718, y: -0.000020514415, z: -0.000000008732396,
-        w: 1}
+      rotation: {x: -0.00000006082718, y: -0.000020514415, z: -0.000000008732396, w: 1}
       scale: {x: 1.0000001, y: 1, z: 0.9999999}
     - name: J_Sec_R_HoodString1_02
       parentName: spine_03.x
@@ -1152,8 +1138,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: b6196a5fb9fd7f6499a337dd5d91d7c7,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: b6196a5fb9fd7f6499a337dd5d91d7c7, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1

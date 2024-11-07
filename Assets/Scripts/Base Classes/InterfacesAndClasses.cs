@@ -48,13 +48,15 @@ public class Level
 public class EventHandler : MonoBehaviour
 {
     //MAY CHANGE TO BEHAVIOR ETC INSTEAD OF BOOL AND MAY USE SO BASED "ACCESS" TO REPLACE STRING ID
-    public Trait ID;
+    public Trait HandlerID;
+    public Trait[] ComponentsID; //used to turn shit on and off
 
     public CustomEvent[] SOEvent; //most likely used for game states 
     public List<EventHandler> eventListeners = new();
     public List<EventHandler> eventBroadcasters = new();
 
     public Action<Trait,object> MBEvent; //Monobehavior event
+    public Action<Trait,bool> EnableComp;
     public Action<EventBroadcaster, MonoBehaviour,object> eventToExecute; //SOEvent
 
     public virtual void Awake()
@@ -75,6 +77,7 @@ public class EventHandler : MonoBehaviour
             {
                 eventBroadcasters[i].eventListeners.Add(this);
                 eventBroadcasters[i].MBEvent += OnInvoke;
+                eventBroadcasters[i].EnableComp += EnableComponent;
             }
         }
     }
@@ -94,6 +97,7 @@ public class EventHandler : MonoBehaviour
             {
                 eventBroadcasters[i].eventListeners.Remove(this);
                 eventBroadcasters[i].MBEvent -= OnInvoke;
+                eventBroadcasters[i].EnableComp -= EnableComponent;
             }
         }
     }
@@ -106,8 +110,8 @@ public class EventHandler : MonoBehaviour
         broadcaster.eventListeners.Add(this);
         eventBroadcasters.Add(broadcaster);
         broadcaster.MBEvent += OnInvoke;
-       
-        
+        broadcaster.EnableComp += EnableComponent;
+
     }
 
     public void Unsubscribe(EventHandler broadcaster)
@@ -117,13 +121,13 @@ public class EventHandler : MonoBehaviour
         broadcaster.eventListeners.Remove(this);
         eventBroadcasters.Remove(broadcaster);
         broadcaster.MBEvent -= OnInvoke;
-        
+        broadcaster.EnableComp -= EnableComponent;
+
 
     }
 
     public virtual void OnInvoke(Trait ID,object data)
     { 
-        
     }
 
     public virtual void OnGlobalEventInvoke(object data)
@@ -131,6 +135,10 @@ public class EventHandler : MonoBehaviour
 
     }
 
+    public virtual void EnableComponent(Trait ID,bool enabled)
+    {
+
+    }
 
 
 }

@@ -3,11 +3,6 @@ using UnityEngine.InputSystem;
 using System.Collections;
 public class PlayerMovement : Movement
 {
-    public enum StateTransitioning
-    {
-        inAttack,CanMove
-    }
-
     public Trait[] key;
     public PlayableCharacterData character; 
     public Statemachine statemachine;
@@ -23,56 +18,48 @@ public class PlayerMovement : Movement
     public override void Awake()
     {
         base.Awake();
+        moveMode = key[2];
 
+    }
+
+    private void OnEnable()
+    {
         if (input != null)
         {
             input.MovementInput += OnMove;
             walkSwitch.action.started += SwitchMode;
-            moveMode = key[2];
-            //speed = 5f;
-
         }
-
-
-        //statemachine = GetComponentInChildren<Statemachine>();
-    }
-
-    private void Start()
-    {
-        
-
-    }
-    private void OnEnable()
-    {
-        
 
     }
 
     private void OnDisable()
     {
+        if (input != null)
+        {
+            input.MovementInput -= OnMove;
+            walkSwitch.action.started -= SwitchMode;
+        }
     }
 
     public override void OnMove(Vector2 Direction)
     {
-        if(enableMovement)
+        if (Direction.normalized.magnitude == 0f)
         {
-            if (Direction.normalized.magnitude == 0f)
-            {
-                MBEvent?.Invoke(key[0], null);//Idle
-            }
-            else
-            {
-                MBEvent?.Invoke(moveMode, null);//walk
-            }
-
-            movementVector = camPos.forward * Direction.y + camPos.right * Direction.x;
-            movementVector.y = 0;
-            if (Direction.magnitude != 0)
-            {
-                transform.rotation = Quaternion.LookRotation(movementVector);
-            }
-            base.OnMove(Direction);
+            MBEvent?.Invoke(key[0], null);//Idle
         }
+        else
+        {
+            MBEvent?.Invoke(moveMode, null);//walk
+        }
+
+        movementVector = camPos.forward * Direction.y + camPos.right * Direction.x;
+        movementVector.y = 0;
+
+        if (Direction.magnitude != 0)
+        {
+            transform.rotation = Quaternion.LookRotation(movementVector);
+        }
+        base.OnMove(Direction);
         
     }
 
@@ -111,9 +98,8 @@ public class PlayerMovement : Movement
             statemachine?.Subscribe(this);
             Subscribe(statemachine);
 
-
-
         }
+
         else if(data is MovementData)
         {
             movementData = (MovementData)data;
@@ -128,19 +114,17 @@ public class PlayerMovement : Movement
             }
         }
         
-        if(data is StateTransitioning)
-        {
-            if((StateTransitioning)data == StateTransitioning.inAttack)
-            {
-                enableMovement = false;
-            }
-            else
-            {
-                enableMovement = true;
-            }
-        }
+    }
 
-        
+    public override void EnableComponent(Trait ID, bool enabled)
+    {
+        base.EnableComponent(ID, enabled);
+        if (ID == HandlerID)
+        {
+            this.enabled = enabled;
+            rb.linearVelocity = Vector3.zero;
+
+        }
     }
 
 

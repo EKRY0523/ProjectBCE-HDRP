@@ -41,6 +41,7 @@ public class AnimationHandler : EventHandler
         else if(data is string)
         {
             stateName = (string)data;
+            animator.SetTrigger((string)data);
         }
         else if(data is bool)
         {

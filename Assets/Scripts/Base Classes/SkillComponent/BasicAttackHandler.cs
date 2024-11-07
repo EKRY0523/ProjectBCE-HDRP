@@ -66,8 +66,6 @@ public class BasicAttackHandler : SkillHandler
                 }
                 basicAttack.AttackCount(count, basicAttack.statAndMultiplier);
                 MBEvent?.Invoke(basicAttack.key[count], null);
-                statemachine.MBEvent?.Invoke(basicAttack.key[count], basicAttack.movementData[count]);
-
                 timeToExceed = basicAttack.cooldown[count];
             }
         }
@@ -94,12 +92,18 @@ public class BasicAttackHandler : SkillHandler
         firstInput = true;
     }
 
-    public void SpawnSkillObject(int numTesting)
+    public void SpawnSkillObject(int instance)
     {
-        Debug.Log("Count"+count);
-        Debug.Log("numtesting" + numTesting);
 
-        Debug.Log((basicAttack.skillInstance[count].skillObjects[numTesting].multiplier));
-        Instantiate(basicAttack.skillInstance[count].skillObjects[numTesting],transform.parent);
+        Debug.Log((basicAttack.skillInstance[count].skillObjects[instance].multiplier));
+        Instantiate(basicAttack.skillInstance[count].skillObjects[instance],transform.parent);
+    }
+
+
+
+    public void MoveCharacter(MovementData movementData)
+    {
+        statemachine.MBEvent?.Invoke(null,movementData);
+
     }
 }

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc3bca81c5edd204facc3a820d597b9e, type: 3}
+  m_Name: EnemyDeadState
+  m_EditorClassIdentifier: 
+  activatedComponents: []
+  deactivatedComponents:
+  - {fileID: 11400000, guid: 4e7127693565c8540992920a2b88a303, type: 2}
+  - {fileID: 11400000, guid: a50f4230f852e63469a414975e716533, type: 2}
+  - {fileID: 11400000, guid: a84ff66f4faf5954eba01b9d1374ee0a, type: 2}
+  stateKey: {fileID: 0}
+  maxTimeInState: 0

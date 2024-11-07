@@ -10,6 +10,7 @@ public class Movement : EventHandler
     [SerializeField] protected float speed;
     public MovementData movementData;
 
+    public bool grounded;
     public override void Awake()
     {
         base.Awake();
@@ -19,7 +20,10 @@ public class Movement : EventHandler
     public virtual void OnMove(Vector2 Direction)
     {
         magnitudeCheck = Direction;
+        
         movementComponent.MoveCharacter(rb, movementVector * speed);
+        
+
     }
 
     public virtual void FixedUpdate()
@@ -38,5 +42,10 @@ public class Movement : EventHandler
             movementData = data as MovementData;
             movementData.MoveCharacter(rb);
         }
+    }
+
+    public override void EnableComponent(Trait ID, bool enabled)
+    {
+        base.EnableComponent(ID, enabled);
     }
 }
