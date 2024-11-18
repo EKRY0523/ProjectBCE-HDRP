@@ -3,7 +3,6 @@ using UnityEngine;
 public class StoryProgress : EventHandler
 {
     public int order;
-    public bool completed;
     public GameStoryData gameData;
     public Player player;
     public override void Awake()
@@ -28,7 +27,6 @@ public class StoryProgress : EventHandler
             GameManager.instance.gameData = gameData;
 
             GameManager.instance.SaveGameData();
-            StoryHandler.Instance.EndStory();
         }
     }
 
@@ -50,6 +48,7 @@ public class StoryProgress : EventHandler
         }
         if(data is bool)
         {
+            
             CheckComplete((bool)data);
         }
     }

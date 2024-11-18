@@ -6,7 +6,9 @@ public class StoryHandler : EventHandler
     public static StoryHandler Instance;
     public GameStoryData gameData;
     public UIControl uiControl;
-    //public StoryProgress[] storyProgresses; // use this to turn colliders on and off
+
+    //use this to check for stuff only
+
     public int StoryIndex;
     public int currentIndex;
     public GameObject[] UIOff;
@@ -15,7 +17,6 @@ public class StoryHandler : EventHandler
     {
         Instance = this;
         base.Awake();
-        flow = GetComponent<Flowchart>();
         
     }
 
@@ -24,25 +25,7 @@ public class StoryHandler : EventHandler
         GameManager.instance.LoadGameData();
         gameData = GameManager.instance.gameData;
         MBEvent?.Invoke(null, gameData.currentStoryProgress);
-
-    }
-    public void StartStory()
-    {
-        //uiControl.DisableInput();
-        for (int i = 0; i < UIOff.Length; i++)
-        {
-            UIOff[i].gameObject.SetActive(false);
-        }
-    }
-
-    public void EndStory()
-    {
-        //uiControl.EnableInput();
-        for (int i = 0; i < UIOff.Length; i++)
-        {
-            UIOff[i].gameObject.SetActive(true);
-        }
-        MBEvent?.Invoke(null, gameData.currentStoryProgress);
+        //all subscribe to this initially
     }
 
 

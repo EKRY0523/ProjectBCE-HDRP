@@ -4197,7 +4197,7 @@ MonoBehaviour:
   executionTime: 0
   timeToExceed: 0
   canExecute: 0
-  basicAttack: {fileID: 11400000, guid: 0d31334f56cef984db8851256c94b0a6, type: 2}
+  basicAttack: {fileID: 11400000, guid: 429c7fdae49769f4da3df4d055163668, type: 2}
   count: 0
   firstInput: 1
   enterTime: 0

@@ -242,6 +242,7 @@ public class GameManager : EventHandler
     {
         string json = JsonUtility.ToJson(gameData, true);
         File.WriteAllText(Application.dataPath + "/StoryProgress.json", json);
+        StoryHandler.Instance.MBEvent?.Invoke(null,gameData.currentStoryProgress);
     }
 
     public void LoadGameData()

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d4140c0a5a7fc44ebd2d2160b83d4cb, type: 3}
+  m_Name: BeginnerSteps
+  m_EditorClassIdentifier: 
+  skillObject: []
+  skillInstance:
+  - instances: 0
+    skillObjects:
+    - {fileID: 91583023038356370, guid: 1d214511b7675d349bb930517b50448a, type: 3}
+  - instances: 0
+    skillObjects:
+    - {fileID: 6803450999187338083, guid: 258b3c4b0d1c1f04db6c284ebfdc210e, type: 3}
+  - instances: 2
+    skillObjects:
+    - {fileID: 2839943295246530949, guid: 6a8cf5e52dec533499a03399343e9aa5, type: 3}
+    - {fileID: 4635207480919028492, guid: 6d8c2e63bbebdf843ae759c848ef1aa0, type: 3}
+  key:
+  - {fileID: 11400000, guid: b9cddc3f5bc1cf849b4659f0b71a4ce1, type: 2}
+  - {fileID: 11400000, guid: 2684dc6ddfbb88c408ce2567053ff233, type: 2}
+  - {fileID: 11400000, guid: 71c87973df3f35d4da3ad825bd285653, type: 2}
+  cost:
+    stat: {fileID: 0}
+    cost: 0
+  characterData: {fileID: 0}
+  statAndMultiplier:
+  - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
+    multiplier: 0.8
+  - statIndex: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
+    multiplier: 0.2
+  requiredUnlockLevel: 0
+  skillName: Beginner Steps
+  skillDescription: "1st hit: 128% of ATK & 32% of EATK\n2nd hit : 120% of ATK &
+    20% of ATK \n3rd hit: 160% of ATK & 40% of ATK"
+  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
+  cooldown:
+  - 0.4
+  - 0.5
+  - 1
+  movementData: []
+  countMultiplier:
+  - 1.6
+  - 1.5
+  - 2
+  MaxCount: 2

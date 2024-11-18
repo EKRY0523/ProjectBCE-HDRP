@@ -4,12 +4,31 @@ public class UiPauser : MonoBehaviour
 {
     public PlayerInput playerInput;
     public InputActionReference[] InputToDisable;
+    public GameObject[] gameObjectToClose;
 
+    private void Start()
+    {
+        for (int i = 0; i < InputToDisable.Length; i++)
+        {
+            InputToDisable[i].action.Disable();
+        }
+        for (int i = 0; i < gameObjectToClose.Length; i++)
+        {
+            gameObjectToClose[i].gameObject.SetActive(false);
+        }
+        playerInput.input.Player.Disable();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
     private void OnEnable()
     {
         for (int i = 0; i < InputToDisable.Length; i++)
         {
             InputToDisable[i].action.Disable();
+        }
+        for(int i = 0; i < gameObjectToClose.Length; i++)
+        {
+            gameObjectToClose[i].gameObject.SetActive(false);
         }
         playerInput.input.Player.Disable();
         Cursor.lockState = CursorLockMode.Locked;
@@ -18,12 +37,20 @@ public class UiPauser : MonoBehaviour
 
     private void OnDisable()
     {
-        for (int i = 0; i < InputToDisable.Length; i++)
+        if(gameObject!=null)
         {
-            InputToDisable[i].action.Enable();
+            for (int i = 0; i < InputToDisable.Length; i++)
+            {
+                InputToDisable[i].action.Enable();
+            }
+            for (int i = 0; i < gameObjectToClose.Length; i++)
+            {
+                gameObjectToClose[i].gameObject.SetActive(true);
+            }
+            playerInput.input.Player.Enable();
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
-        playerInput.input.Player.Enable();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        
     }
 }
