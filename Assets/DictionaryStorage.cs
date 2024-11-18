@@ -9,7 +9,11 @@ public class DictionaryStorage : MonoBehaviour
     {
         for (int i = 0; i < traits.Length; i++)
         {
-            TraitDictionary.Add(traits[i].key, traits[i]);
+            if(!TraitDictionary.ContainsKey(traits[i].key))
+            {
+
+                TraitDictionary.Add(traits[i].key, traits[i]);
+            }
         }
     }
 }
