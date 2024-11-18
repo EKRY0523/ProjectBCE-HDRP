@@ -15,7 +15,7 @@
     ],
     "currentStatValue": [
         3000.0,
-        974.7049560546875,
+        1461.126220703125,
         10.0,
         3000.0,
         500.0,
@@ -25,14 +25,14 @@
     "stats": [
         {
             "statIdentifier": {
-                "instanceID": 55050
+                "instanceID": 58090
             },
             "statAction": [
                 {
-                    "instanceID": 51992
+                    "instanceID": 55022
                 },
                 {
-                    "instanceID": 54482
+                    "instanceID": 57518
                 }
             ],
             "statValue": 3000.0,
@@ -45,14 +45,14 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 51522
+                "instanceID": 54550
             },
             "statAction": [
                 {
-                    "instanceID": 54482
+                    "instanceID": 57518
                 }
             ],
-            "statValue": 974.7049560546875,
+            "statValue": 1461.126220703125,
             "statScaling": 1.100000023841858,
             "MinMaxValue": [
                 0.0,
@@ -62,7 +62,7 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 53394
+                "instanceID": 56426
             },
             "statAction": [],
             "statValue": 10.0,
@@ -75,7 +75,7 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 53672
+                "instanceID": 56704
             },
             "statAction": [],
             "statValue": 3000.0,
@@ -88,7 +88,7 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 52920
+                "instanceID": 55950
             },
             "statAction": [],
             "statValue": 500.0,
@@ -101,7 +101,7 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 52074
+                "instanceID": 55104
             },
             "statAction": [],
             "statValue": 2000.0,
@@ -114,7 +114,7 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 51474
+                "instanceID": 54502
             },
             "statAction": [],
             "statValue": 1500.0,
