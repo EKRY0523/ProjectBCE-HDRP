@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class SecondSkillHandler : SkillHandler
 {
-    public CharacterSkill skill2;
+    public CharacterSkill Skill2;
     public override void Awake()
     {
         base.Awake();
@@ -11,9 +11,11 @@ public class SecondSkillHandler : SkillHandler
     }
     private void OnEnable()
     {
-        skill2.OnSetup(character);
-        if (skill2 != null)
+        Skill2.OnSetup(character);
+
+        if (Skill2 != null)
         {
+            cost = Skill2.cost;
             input.action.performed += OnExecute;
             input.action.canceled += OnExecute;
         }
@@ -21,8 +23,8 @@ public class SecondSkillHandler : SkillHandler
 
     private void OnDisable()
     {
-        skill2.OnRemove(character);
-        if (skill2 != null)
+        Skill2.OnRemove(character);
+        if (Skill2 != null)
         {
             input.action.performed -= OnExecute;
             input.action.canceled -= OnExecute;
@@ -30,9 +32,9 @@ public class SecondSkillHandler : SkillHandler
     }
     public void OnChangeSkill(CharacterBasicAttack newSkill)
     {
-        skill2.OnRemove(character);
-        skill2 = newSkill;
-        skill2.OnSetup(character);
+        Skill2.OnRemove(character);
+        Skill2 = newSkill;
+        Skill2.OnSetup(character);
     }
 
     public override void OnInvoke(Trait ID, object data)
@@ -43,18 +45,27 @@ public class SecondSkillHandler : SkillHandler
     {
         if (canExecute)
         {
-            if (context.performed)
+            if (character.statDictionary[cost.stat].statValue >= cost.cost)
             {
-                skill2.OnHold(skill2.statAndMultiplier);
-                MBEvent?.Invoke(skill2.key[0], null);
-                statemachine.MBEvent?.Invoke(skill2.key[0], skill2.movementData[0]);
+                executionTime = Time.time;
+                canExecute = false;
 
-            }
-            if (context.canceled)
-            {
-                skill2.OnRelease(skill2.statAndMultiplier);
-                MBEvent?.Invoke(skill2.key[0], null);
-                statemachine.MBEvent?.Invoke(skill2.key[0], skill2.movementData[0]);
+                if (context.performed)
+                {
+                    Skill2.OnHold(Skill2.statAndMultiplier);
+                    MBEvent?.Invoke(Skill2.key[0], null);
+                    statemachine.MBEvent?.Invoke(Skill2.key[0], Skill2.movementData[0]);
+                    timeToExceed = Skill2.cooldown[0];
+
+                    MBEvent?.Invoke(cost.stat, -cost.cost);
+
+                }
+                if (context.canceled)
+                {
+                    Skill2.OnRelease(Skill2.statAndMultiplier);
+                    MBEvent?.Invoke(Skill2.key[0], null);
+                    statemachine.MBEvent?.Invoke(Skill2.key[0], Skill2.movementData[0]);
+                }
             }
 
         }
@@ -68,8 +79,8 @@ public class SecondSkillHandler : SkillHandler
     }
     public void OnChangeSkill(CharacterSkill characterSkill)
     {
-        skill2.OnRemove(character);
-        skill2 = characterSkill;
-        skill2.OnSetup(character);
+        Skill2.OnRemove(character);
+        Skill2 = characterSkill;
+        Skill2.OnSetup(character);
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Berserker's Will", menuName = "CharacterSkill/Kuroya/Berserker's Will")]
 public class BerserkerWill : CharacterSkill
 {
+    public float additionalMultiplier;
     public override void OnSetup(PlayableCharacterData character)
     {
         base.OnSetup(character);
@@ -18,7 +19,7 @@ public class BerserkerWill : CharacterSkill
         base.SkillMultiplier(stat1);
         skillInstance[0].skillObjects[0].multiplier = stat1;
         Instantiate(skillInstance[0].skillObjects[0],characterData.transform.parent);
-        Debug.Log("Berserkerwill Buff: " + stat1);
+        Debug.Log(this.name + ": " + stat1);
     }
     public override void OnHold(StatMultiplier[] usedStat)
     {
@@ -29,6 +30,6 @@ public class BerserkerWill : CharacterSkill
             lastMultiplier += characterData.statDictionary[statAndMultiplier[i].statIndex].statValue * statAndMultiplier[i].multiplier;
             
         }
-       SkillMultiplier(lastMultiplier+500f);
+       SkillMultiplier(lastMultiplier+additionalMultiplier);
     }
 }

@@ -46,13 +46,18 @@ public class FirstSkillHandler : SkillHandler
     {
         if(canExecute)
         {
+           
             if (character.statDictionary[cost.stat].statValue >= cost.cost)
             {
+                executionTime = Time.time;
+                canExecute = false;
+
                 if (context.performed)
                 {
                     Skill1.OnHold(Skill1.statAndMultiplier);
                     MBEvent?.Invoke(Skill1.key[0], null);
                     statemachine.MBEvent?.Invoke(Skill1.key[0], Skill1.movementData[0]);
+                    timeToExceed = Skill1.cooldown[0];
                     MBEvent?.Invoke(cost.stat,-cost.cost);
 
                 }
@@ -72,6 +77,13 @@ public class FirstSkillHandler : SkillHandler
     public override void Update()
     {
         base.Update();
+    }
+
+    public void SpawnSkill1Object(int instance)
+    {
+
+        //Debug.Log((Skill1.skillInstance[0].skillObjects[instance].multiplier));
+        Instantiate(Skill1.skillInstance[0].skillObjects[instance], transform.parent);
     }
     public void OnChangeSkill(CharacterSkill characterSkill)
     {

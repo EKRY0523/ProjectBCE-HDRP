@@ -12,10 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d4140c0a5a7fc44ebd2d2160b83d4cb, type: 3}
   m_Name: Blade Of Conviction
   m_EditorClassIdentifier: 
-  skillObject:
-  - {fileID: 7625257352176689117, guid: 0ec77c1fc88c5eb4c8c828f8315abb2f, type: 3}
-  - {fileID: 7625257352176689117, guid: 0ec77c1fc88c5eb4c8c828f8315abb2f, type: 3}
-  - {fileID: 7625257352176689117, guid: 0ec77c1fc88c5eb4c8c828f8315abb2f, type: 3}
+  skillObject: []
   skillInstance:
   - instances: 0
     skillObjects:
@@ -26,7 +23,6 @@ MonoBehaviour:
   - instances: 0
     skillObjects:
     - {fileID: 447277177472438574, guid: 19032b56a588de843bfae27a9c09fedb, type: 3}
-    - {fileID: 7584451728861194609, guid: e9fdad8cfede32d46bcbeacc9d283411, type: 3}
   key:
   - {fileID: 11400000, guid: 6ab16a390b67c1f49b661a9056d84094, type: 2}
   - {fileID: 11400000, guid: 6d7d72e82e9b31047b982b6319d9ee22, type: 2}
@@ -39,9 +35,14 @@ MonoBehaviour:
   - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
     multiplier: 1
   requiredUnlockLevel: 0
-  skillName: 
-  skillDescription: 
-  skillIcon: {fileID: 0}
+  skillName: Blade Of Conviction
+  skillDescription: '1st hit: 100% of ATK
+
+    2nd hit: 150% of ATK
+
+    3rd hit:
+    200% of ATK'
+  skillIcon: {fileID: 1608369372, guid: 44fb5e577b2c3834090fd59025eb7a90, type: 3}
   cooldown:
   - 0.5
   - 1

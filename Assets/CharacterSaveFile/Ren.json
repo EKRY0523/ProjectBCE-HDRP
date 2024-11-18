@@ -25,14 +25,14 @@
     "stats": [
         {
             "statIdentifier": {
-                "instanceID": 58708
+                "instanceID": 58104
             },
             "statAction": [
                 {
-                    "instanceID": 58136
+                    "instanceID": 57532
                 },
                 {
-                    "instanceID": 55640
+                    "instanceID": 55034
                 }
             ],
             "statValue": 2000.0,
@@ -45,11 +45,11 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 55168
+                "instanceID": 54562
             },
             "statAction": [
                 {
-                    "instanceID": 58136
+                    "instanceID": 57532
                 }
             ],
             "statValue": 3000.0,
@@ -62,7 +62,7 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 57322
+                "instanceID": 56718
             },
             "statAction": [],
             "statValue": 500.0,
@@ -75,7 +75,7 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 56568
+                "instanceID": 55964
             },
             "statAction": [],
             "statValue": 2500.0,
@@ -88,7 +88,7 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 55722
+                "instanceID": 55116
             },
             "statAction": [],
             "statValue": 500.0,
@@ -101,7 +101,7 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 55120
+                "instanceID": 54514
             },
             "statAction": [],
             "statValue": 2000.0,
@@ -114,7 +114,7 @@
         },
         {
             "statIdentifier": {
-                "instanceID": 57044
+                "instanceID": 56440
             },
             "statAction": [],
             "statValue": 10.0,
@@ -130,5 +130,5 @@
     "skill1": 2,
     "skill2": 0,
     "dodge": 1,
-    "ultimate": 0
+    "ultimate": 1
 }

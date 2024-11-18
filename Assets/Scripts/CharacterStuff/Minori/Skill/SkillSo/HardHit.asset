@@ -12,17 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1100baeea6c03d04497a157e6dbff167, type: 3}
   m_Name: HardHit
   m_EditorClassIdentifier: 
-  skillObject:
-  - {fileID: 4749372218263779, guid: 5cd9e82a67b909d4499f89e14132b0bc, type: 3}
+  skillObject: []
+  skillInstance:
+  - instances: 0
+    skillObjects:
+    - {fileID: 5466172313364021368, guid: 6b05438aae7a98347afa7a86d17a37cf, type: 3}
   key:
   - {fileID: 11400000, guid: 14fe6987db7502c4bbcdbfb586890046, type: 2}
+  cost:
+    stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
+    cost: 70
   characterData: {fileID: 0}
-  statIndex: 3
-  identifier: 0
+  statAndMultiplier:
+  - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
+    multiplier: 3
   requiredUnlockLevel: 0
   skillName: Hard Hit
-  skillDescription: Hits very hard
-  skillIcon: {fileID: 0}
+  skillDescription: Hits the enemy hard and deals 300% of Current Attack
+  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
   cooldown:
   - 1
   movementData:

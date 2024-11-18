@@ -57,11 +57,11 @@ MonoBehaviour:
   targetedStat:
   - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   characterData: {fileID: 0}
-  multiplier: 0
+  multiplier: 3000
   duration: 0.3
   target: {fileID: 0}
   knockback: {fileID: 11400000, guid: 7d02414b8a8eb264e809b6f6181db09f, type: 2}
-  detachFromParent: 0
+  detachFromParent: 1
 --- !u!65 &7226602434847608288
 BoxCollider:
   m_ObjectHideFlags: 0

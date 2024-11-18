@@ -11,30 +11,70 @@ public class SkillObject : EventHandler
     public float duration;
     public Transform target;
     public MovementData knockback;
+    public bool detachFromParent;
     //add effect caster here
 
     private void OnEnable()
     {
+        this.tag = "SkillObject";
         Destroy(gameObject,duration);
+        if (detachFromParent)
+        {
+            transform.parent = null;
+        }
+
     }
+
+    private void Start()
+    {
+        //if (transform.parent != null)
+        //{
+        //    transform.rotation = transform.parent.rotation;
+        //}
+    }
+
     public virtual void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag(tagName))
+        if(tagName == "Enemy")
         {
-            if ( other.GetComponent<StatHandler>())
+            if (other.CompareTag(tagName))
             {
-                StatHandler stathandle = other.GetComponent<StatHandler>();
-                stathandle.ReceiveValue(targetedStat,originStat,-multiplier);
-                if(knockback!=null)
-                {
 
-                    stathandle.ReceiveKnockback(this.transform, knockback);
+                if (other.GetComponent<StatHandler>())
+                {
+                    StatHandler stathandle = other.GetComponent<StatHandler>();
+                    stathandle.ReceiveValue(targetedStat, originStat, -multiplier);
+                    if (knockback != null)
+                    {
+
+                        stathandle.ReceiveKnockback(this.transform, knockback);
+                    }
                 }
+
             }
+
         }
         
+        else if (tagName == "Player")
+        {
+            if (other.CompareTag(tagName))
+            {
+                if (other.GetComponent<PartyHandler>())
+                {
+                    StatHandler stathandle = other.GetComponent<PartyHandler>().activeCharacter.statHandler;
+                    stathandle.ReceiveValue(targetedStat, originStat, -multiplier);
+                    //Debug.Log("hit");
+                }
+            }
+
+        }
+
     }
 
+    public void Detach()
+    {
+        
+    }
     public virtual void OnCast()
     {
     }

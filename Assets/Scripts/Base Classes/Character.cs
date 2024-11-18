@@ -6,13 +6,16 @@ public class Character : ScriptableObject
 {
     public int ID;
 
+    public string characterName;
     public RenderTexture poseImage;
     public Sprite iconimage;
     public Material material;
+    public string characterDetails;
 
-    public CharacterSkill[] BasicAttack;
+    public Effect[] passive;
+    public CharacterBasicAttack[] BasicAttack;
     public CharacterSkill[] Skills;
-    public CharacterSkill[] Dodge;
-    public CharacterSkill[] Ultimate;
+    public DodgeSkill[] Dodge;
+    public UltimateSkill[] Ultimate;
     public Stat[] stats;
 }

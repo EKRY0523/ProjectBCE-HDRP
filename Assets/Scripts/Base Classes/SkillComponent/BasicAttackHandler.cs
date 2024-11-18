@@ -47,6 +47,7 @@ public class BasicAttackHandler : SkillHandler
             {
                 executionTime = Time.time;
                 canExecute = false;
+
                 if (firstInput)
                 {
                     count = 0;
@@ -95,7 +96,7 @@ public class BasicAttackHandler : SkillHandler
     public void SpawnSkillObject(int instance)
     {
 
-        Debug.Log((basicAttack.skillInstance[count].skillObjects[instance].multiplier));
+        //Debug.Log((basicAttack.skillInstance[count].skillObjects[instance].multiplier));
         Instantiate(basicAttack.skillInstance[count].skillObjects[instance],transform.parent);
     }
 

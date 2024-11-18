@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "BladeOfConviction2", menuName = "CharacterStates/Kuroya/BasicAttack/BladeOfConviction2")]
-public class BladeOfConviction2 : BasicAttackState
+public class BladeOfConviction2 : BladeOfConvictionBase
 {
     public override void OnEnter(Statemachine statemachine)
     {

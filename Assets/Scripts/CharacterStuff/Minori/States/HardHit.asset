@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9faf1f0de27bd40acf15ccc51c43a5, type: 3}
   m_Name: HardHit
   m_EditorClassIdentifier: 
+  activatedComponents: []
+  deactivatedComponents: []
+  OnEnterActivateComponent: []
+  OnEnterDeactivateComponent: []
+  OnExitActivateComponent: []
+  OnExitDeactivateComponent: []
+  SwitchUponExit: {fileID: 0}
   stateKey: {fileID: 11400000, guid: 14fe6987db7502c4bbcdbfb586890046, type: 2}
+  maxTimeInState: 2

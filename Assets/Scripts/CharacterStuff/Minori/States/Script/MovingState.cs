@@ -1,14 +1,11 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "MinoriMovingState", menuName = "CharacterStates/Minori/Moving")]
-public class MovingState : State
+public class MovingState : CharacterState
 {
     public override void OnEnter(Statemachine statemachine)
     {
-        if(statemachine.ComponentsID.Length > 0)
-        {
-            statemachine.EnableComp?.Invoke(statemachine.ComponentsID[0], false);
-        }
+        base.OnEnter(statemachine);
         statemachine.MBEvent?.Invoke(stateKey, "Moving");
         statemachine.MBEvent?.Invoke(stateKey, true);
         
@@ -16,6 +13,7 @@ public class MovingState : State
 
     public override void OnExit(Statemachine statemachine)
     {
+        base.OnExit(statemachine);
         statemachine.MBEvent?.Invoke(stateKey, "Moving");
         statemachine.MBEvent?.Invoke(stateKey, false);
     }

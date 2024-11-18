@@ -12,5 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 105f73616c6fd9844bf1def42637f00e, type: 3}
   m_Name: BeginnerStep3
   m_EditorClassIdentifier: 
+  activatedComponents: []
+  deactivatedComponents: []
+  OnEnterActivateComponent: []
+  OnEnterDeactivateComponent: []
+  OnExitActivateComponent: []
+  OnExitDeactivateComponent: []
+  SwitchUponExit: {fileID: 0}
   stateKey: {fileID: 11400000, guid: 71c87973df3f35d4da3ad825bd285653, type: 2}
-  maxTimeInState: 0.8
+  maxTimeInState: 3

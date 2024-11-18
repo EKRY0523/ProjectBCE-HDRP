@@ -16,6 +16,7 @@ public class Stat
     public float statScaling;
     public float[] MinMaxValue = new float[2];
 
+    public bool followMax;
 
 }
 [Serializable]

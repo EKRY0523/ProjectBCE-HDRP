@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d4140c0a5a7fc44ebd2d2160b83d4cb, type: 3}
+  m_Name: EnergyBlast
+  m_EditorClassIdentifier: 
+  skillObject: []
+  skillInstance:
+  - instances: 0
+    skillObjects:
+    - {fileID: 8843327938943979725, guid: 2821b7236f060564eb0d3a194819b4ef, type: 3}
+  - instances: 0
+    skillObjects:
+    - {fileID: 5087844443182521246, guid: a447d5122733b4d459e0e2793cae3e89, type: 3}
+  - instances: 0
+    skillObjects:
+    - {fileID: 2946293769607325425, guid: fea0cf76046277a478158db7016a8504, type: 3}
+  key:
+  - {fileID: 11400000, guid: 5c43aa3f454b6cb489dda8a6bd0ec4b0, type: 2}
+  - {fileID: 11400000, guid: 5c4ea83c972a6c34b99b50a133d29394, type: 2}
+  - {fileID: 11400000, guid: 92558ee8a9e2f7b4cbb5b6a1613a311a, type: 2}
+  cost:
+    stat: {fileID: 0}
+    cost: 0
+  characterData: {fileID: 0}
+  statAndMultiplier:
+  - statIndex: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
+    multiplier: 1
+  requiredUnlockLevel: 0
+  skillName: Energy Blast
+  skillDescription: '1st hit: 100% of EATK
+
+    2nd hit: 150% of EATK
+
+    3rd hit:
+    200% ofE ATK'
+  skillIcon: {fileID: 1608369372, guid: 44fb5e577b2c3834090fd59025eb7a90, type: 3}
+  cooldown:
+  - 0.5
+  - 1
+  - 1
+  movementData:
+  - {fileID: 11400000, guid: 0cd9c8b5d5c148941a4db9bd6f0a1a6a, type: 2}
+  - {fileID: 11400000, guid: d42f0b6aa7049e6419a3ae574a80316a, type: 2}
+  - {fileID: 11400000, guid: 365e3c649db72004a93ef49a5ab23db5, type: 2}
+  countMultiplier:
+  - 1
+  - 1.5
+  - 2
+  MaxCount: 2

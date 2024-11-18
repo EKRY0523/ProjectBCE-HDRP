@@ -71035,7 +71035,7 @@ AnimationClip:
   - time: 0.55
     functionName: MoveCharacter
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11400000, guid: 9be54ce2888bd9741b332d36882fa1e0, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

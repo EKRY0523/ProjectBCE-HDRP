@@ -13,8 +13,9 @@ public class CharacterSkill : ScriptableObject
     public StatMultiplier[] statAndMultiplier;
     public int requiredUnlockLevel;
     public string skillName;
+    [TextAreaAttribute(10,15)]
     public string skillDescription;
-    public Image skillIcon;
+    public Sprite skillIcon;
     public float[] cooldown;
     public MovementData[] movementData;
     public virtual void OnSetup(PlayableCharacterData character)

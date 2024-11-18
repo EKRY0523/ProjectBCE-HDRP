@@ -37,7 +37,7 @@ public class UltimateSkillHandler : SkillHandler
         statemachine.MBEvent?.Invoke(ultimate.key[0], ultimate.movementData[0]);
 
     }
-    public void OnChangeSkill(CharacterSkill characterSkill)
+    public void OnChangeSkill(UltimateSkill characterSkill)
     {
         ultimate.OnRemove(character);
         ultimate = characterSkill;

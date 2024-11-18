@@ -12,8 +12,8 @@ public class Entity : EventHandler
     [HideInInspector]public StatHandler statHandler;
     public override void Awake()
     {
-        base.Awake();
         statHandler = GetComponent<StatHandler>();
+        base.Awake();
     }
 
     public void handleStat(Trait ID)

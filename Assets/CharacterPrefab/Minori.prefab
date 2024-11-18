@@ -671,7 +671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8798638905962582039
 Transform:
   m_ObjectHideFlags: 0
@@ -804,7 +804,7 @@ MonoBehaviour:
   executionTime: 0
   timeToExceed: 0
   canExecute: 0
-  Skill2: {fileID: 11400000, guid: ad2ea663ee7cf464dbf61b5aed8873b3, type: 2}
+  Skill2: {fileID: 11400000, guid: b497583dbaeabeb49bed28d21806e228, type: 2}
 --- !u!114 &570174126328656312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,7 +885,7 @@ MonoBehaviour:
     statAction:
     - {fileID: 11400000, guid: ae06b58d519f32b47aa0cad2e9545e9b, type: 2}
     - {fileID: 11400000, guid: a9ad695bea8176a47bba62409f67be25, type: 2}
-    statValue: 1000
+    statValue: 2500
     statScaling: 1.1
     MinMaxValue:
     - 0
@@ -894,7 +894,7 @@ MonoBehaviour:
   - statIdentifier: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
     statAction:
     - {fileID: 11400000, guid: ae06b58d519f32b47aa0cad2e9545e9b, type: 2}
-    statValue: 1200
+    statValue: 77.158005
     statScaling: 1.1
     MinMaxValue:
     - 0
@@ -1081,15 +1081,15 @@ MonoBehaviour:
   - key: {fileID: 11400000, guid: 5181c1ce474495741beb791ba21cd3cb, type: 2}
     state: {fileID: 11400000, guid: 05ae19fe04ed70c4683404e6d72ef4a5, type: 2}
   - key: {fileID: 11400000, guid: b9cddc3f5bc1cf849b4659f0b71a4ce1, type: 2}
-    state: {fileID: 11400000, guid: 8f27f6efeec738942b48c8c8bd9f715e, type: 2}
+    state: {fileID: 11400000, guid: 0f54ce012f3782d49bd833622b00f62f, type: 2}
   - key: {fileID: 11400000, guid: 2684dc6ddfbb88c408ce2567053ff233, type: 2}
-    state: {fileID: 11400000, guid: da43c2a74afb67f438490c2e4447065b, type: 2}
+    state: {fileID: 11400000, guid: daffa991de93ce74ba9960ebca15f774, type: 2}
   - key: {fileID: 11400000, guid: 71c87973df3f35d4da3ad825bd285653, type: 2}
-    state: {fileID: 11400000, guid: 70d8b346dd663f847b0b17cdd1594821, type: 2}
+    state: {fileID: 11400000, guid: ad69f925e34a24b47b0ba4b9decd6f1b, type: 2}
   - key: {fileID: 11400000, guid: 14fe6987db7502c4bbcdbfb586890046, type: 2}
     state: {fileID: 11400000, guid: fcced9f89e8275040ba2c4b2c484e436, type: 2}
-  - key: {fileID: 11400000, guid: 80b2b5d7ba7d62e478d4099173f6a37f, type: 2}
-    state: {fileID: 11400000, guid: 2fc23ad94deba9b4699e033d08366ac4, type: 2}
+  - key: {fileID: 11400000, guid: 223105eda1d074e438acb020cad2d2bc, type: 2}
+    state: {fileID: 11400000, guid: b47f7c926c4668b4190a4e12ca133b40, type: 2}
   - key: {fileID: 11400000, guid: 78da2e2e2639da246b8af76cd6ec5765, type: 2}
     state: {fileID: 11400000, guid: d0c1921b5a850754d833c4c74bd37e02, type: 2}
   currentState: {fileID: 0}

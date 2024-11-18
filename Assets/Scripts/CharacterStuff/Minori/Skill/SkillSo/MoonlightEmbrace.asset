@@ -14,15 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillObject:
   - {fileID: 0}
+  skillInstance: []
   key:
   - {fileID: 11400000, guid: 78da2e2e2639da246b8af76cd6ec5765, type: 2}
+  cost:
+    stat: {fileID: 0}
+    cost: 0
   characterData: {fileID: 0}
-  statIndex: 0
-  identifier: 0
+  statAndMultiplier: []
   requiredUnlockLevel: 0
   skillName: 
   skillDescription: 
-  skillIcon: {fileID: 0}
+  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
   cooldown:
   - 5
   movementData:
