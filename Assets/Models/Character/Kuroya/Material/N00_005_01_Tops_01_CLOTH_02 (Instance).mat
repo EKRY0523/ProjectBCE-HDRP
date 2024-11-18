@@ -22,7 +22,6 @@ Material:
   - N_F_RELGI_ON
   - N_F_RL_ON
   - N_F_SS_ON
-  - N_F_TRANS_ON
   m_InvalidKeywords:
   - L_F_O_ON
   - L_F_RELGI_ON
@@ -58,9 +57,8 @@ Material:
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: 2225
+  stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
   - RayTracingPrepass
@@ -193,8 +191,8 @@ Material:
     - _AlphaBasedCutout: 1
     - _AlphaClip: 0
     - _AlphaToMask: 0
-    - _BleModDest: 10
-    - _BleModSour: 5
+    - _BleModDest: 0
+    - _BleModSour: 1
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
@@ -375,7 +373,7 @@ Material:
     - _Surface: 0
     - _TEXMCOLINT: 1
     - _TOAO: 1
-    - _TRANSMODE: 1
+    - _TRANSMODE: 0
     - _TexturePatternStyle: 0
     - _TrailSize: 1.5
     - _TransAffSha: 1
@@ -390,7 +388,7 @@ Material:
     - _VertexColorGreenControlSelfShadowThreshold: 0
     - _VertexColorRedControlSmoothObjectNormal: 0
     - _WorkflowMode: 1
-    - _ZTeForLiOpa: 4
+    - _ZTeForLiOpa: 3
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}

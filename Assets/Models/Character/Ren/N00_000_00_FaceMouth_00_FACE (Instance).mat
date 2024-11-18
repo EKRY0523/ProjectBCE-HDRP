@@ -91,6 +91,7 @@ Material:
     - _BleModDest: 10
     - _BleModSour: 5
     - _Culling: 0
+    - _EnvironmentalLightingIntensity: 0.1
     - _GIShadeThreshold: 1
     - _LightIntensity: -1
     - _MaiColPo: 0.15

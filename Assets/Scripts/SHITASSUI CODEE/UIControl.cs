@@ -19,7 +19,7 @@ public class UIControl : MonoBehaviour
 
     private void Start()
     {
-        EnableInput();
+        //EnableInput();
     }
     public void ManageInput(InputAction.CallbackContext ctx)
     {

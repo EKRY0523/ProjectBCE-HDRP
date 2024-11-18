@@ -225,7 +225,7 @@ Material:
     - _DynamicNoisyOutline: 0
     - _EnableTextureTransparent: 0
     - _EnvironmentReflections: 1
-    - _EnvironmentalLightingIntensity: 0.28
+    - _EnvironmentalLightingIntensity: 0.1
     - _FReflectionIntensity: 0
     - _FReflectionRoughtness: 0
     - _FarDistanceMaxWidth: 10

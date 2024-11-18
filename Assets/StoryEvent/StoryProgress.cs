@@ -42,7 +42,6 @@ public class StoryProgress : EventHandler
                 gameObject.SetActive(true);
                 //StoryHandler.Instance.StartStory();
                 MBEvent?.Invoke(null,null);
-                Debug.Log(order);
             }
             else
             {

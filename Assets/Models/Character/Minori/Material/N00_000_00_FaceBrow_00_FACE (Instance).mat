@@ -93,6 +93,7 @@ Material:
     m_Floats:
     - _BleModDest: 10
     - _BleModSour: 5
+    - _EnvironmentalLightingIntensity: 0.1
     - _N_F_SON: 0
     - _NoisyOutlineIntensity: 0
     - _SmoothObjectNormal: 0

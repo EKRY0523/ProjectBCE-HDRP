@@ -28,7 +28,7 @@ public class StoryHandler : EventHandler
     }
     public void StartStory()
     {
-        uiControl.DisableInput();
+        //uiControl.DisableInput();
         for (int i = 0; i < UIOff.Length; i++)
         {
             UIOff[i].gameObject.SetActive(false);
@@ -37,7 +37,7 @@ public class StoryHandler : EventHandler
 
     public void EndStory()
     {
-        uiControl.EnableInput();
+        //uiControl.EnableInput();
         for (int i = 0; i < UIOff.Length; i++)
         {
             UIOff[i].gameObject.SetActive(true);
