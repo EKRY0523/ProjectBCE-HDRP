@@ -14,7 +14,7 @@
         11
     ],
     "currentStatValue": [
-        2500.0,
+        1000.0,
         1200.0,
         10.0,
         1500.0,
@@ -25,30 +25,31 @@
     "stats": [
         {
             "statIdentifier": {
-                "instanceID": 53484
+                "instanceID": 55050
             },
             "statAction": [
                 {
-                    "instanceID": 53026
+                    "instanceID": 54482
                 },
                 {
-                    "instanceID": 53122
+                    "instanceID": 51992
                 }
             ],
-            "statValue": 2500.0,
+            "statValue": 1000.0,
             "statScaling": 1.100000023841858,
             "MinMaxValue": [
                 0.0,
                 2500.0
-            ]
+            ],
+            "followMax": false
         },
         {
             "statIdentifier": {
-                "instanceID": 52656
+                "instanceID": 51522
             },
             "statAction": [
                 {
-                    "instanceID": 53026
+                    "instanceID": 54482
                 }
             ],
             "statValue": 1200.0,
@@ -56,11 +57,12 @@
             "MinMaxValue": [
                 0.0,
                 1200.0
-            ]
+            ],
+            "followMax": false
         },
         {
             "statIdentifier": {
-                "instanceID": 52136
+                "instanceID": 53394
             },
             "statAction": [],
             "statValue": 10.0,
@@ -68,11 +70,12 @@
             "MinMaxValue": [
                 0.0,
                 10.0
-            ]
+            ],
+            "followMax": true
         },
         {
             "statIdentifier": {
-                "instanceID": 52344
+                "instanceID": 53672
             },
             "statAction": [],
             "statValue": 1500.0,
@@ -80,11 +83,12 @@
             "MinMaxValue": [
                 0.0,
                 1500.0
-            ]
+            ],
+            "followMax": true
         },
         {
             "statIdentifier": {
-                "instanceID": 53914
+                "instanceID": 52920
             },
             "statAction": [],
             "statValue": 1500.0,
@@ -92,11 +96,12 @@
             "MinMaxValue": [
                 0.0,
                 1500.0
-            ]
+            ],
+            "followMax": true
         },
         {
             "statIdentifier": {
-                "instanceID": 53224
+                "instanceID": 52074
             },
             "statAction": [],
             "statValue": 1500.0,
@@ -104,11 +109,12 @@
             "MinMaxValue": [
                 0.0,
                 1500.0
-            ]
+            ],
+            "followMax": true
         },
         {
             "statIdentifier": {
-                "instanceID": 52614
+                "instanceID": 51474
             },
             "statAction": [],
             "statValue": 1500.0,
@@ -116,7 +122,13 @@
             "MinMaxValue": [
                 100.0,
                 1500.0
-            ]
+            ],
+            "followMax": true
         }
-    ]
+    ],
+    "basicAttack": 0,
+    "skill1": 0,
+    "skill2": 0,
+    "dodge": 1,
+    "ultimate": 1
 }

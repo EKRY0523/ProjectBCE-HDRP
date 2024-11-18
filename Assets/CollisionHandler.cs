@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CollisionHandler : MonoBehaviour
+public class CollisionHandler : EventHandler
 {
     public Collider parentCollider;
     public Collider collisionCollider;
@@ -10,4 +10,14 @@ public class CollisionHandler : MonoBehaviour
         parentCollider = GetComponent<Collider>();
         Physics.IgnoreCollision(parentCollider, collisionCollider,true);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("SkillObject") && tag == "Dodge")
+        {
+            MBEvent?.Invoke(HandlerID,true);
+        }
+    }
+
+
 }

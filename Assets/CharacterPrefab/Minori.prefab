@@ -749,7 +749,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HandlerID: {fileID: 11400000, guid: b42250f6a126fab4b920eb9e513dfdba, type: 2}
   ComponentsID: []
-  SOEvent: []
+  SOEvent:
+  - {fileID: 11400000, guid: c4726a6a708a71e4089790ae9c37eac4, type: 2}
+  - {fileID: 11400000, guid: 34b36befed3bea34e8f5f242dba70731, type: 2}
   eventListeners: []
   eventBroadcasters:
   - {fileID: 364098323685177685}
@@ -765,6 +767,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 2500
+    followMax: 0
   - statIdentifier: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
     statAction: []
     statValue: 1200
@@ -772,6 +775,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 1200
+    followMax: 0
   - statIdentifier: {fileID: 11400000, guid: 97435261493b2ec44bdf032630a74db5, type: 2}
     statAction: []
     statValue: 10
@@ -779,6 +783,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 10
+    followMax: 1
   - statIdentifier: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
     statAction: []
     statValue: 1500
@@ -786,6 +791,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 1500
+    followMax: 1
   - statIdentifier: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
     statAction: []
     statValue: 1500
@@ -793,6 +799,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 1500
+    followMax: 1
   - statIdentifier: {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}
     statAction: []
     statValue: 200
@@ -800,6 +807,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 200
+    followMax: 1
   - statIdentifier: {fileID: 11400000, guid: bf0e21beacd082f45b3c20cb0f18fa31, type: 2}
     statAction: []
     statValue: 200
@@ -807,6 +815,7 @@ MonoBehaviour:
     MinMaxValue:
     - 100
     - 200
+    followMax: 1
   placeholder:
   - statIdentifier: {fileID: 0}
     statAction: []
@@ -815,6 +824,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 0
+    followMax: 0
   - statIdentifier: {fileID: 0}
     statAction: []
     statValue: 0
@@ -822,6 +832,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 0
+    followMax: 0
   - statIdentifier: {fileID: 0}
     statAction: []
     statValue: 0
@@ -829,6 +840,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 0
+    followMax: 0
   - statIdentifier: {fileID: 0}
     statAction: []
     statValue: 0
@@ -836,6 +848,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 0
+    followMax: 0
   - statIdentifier: {fileID: 0}
     statAction: []
     statValue: 0
@@ -843,6 +856,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 0
+    followMax: 0
   - statIdentifier: {fileID: 0}
     statAction: []
     statValue: 0
@@ -850,6 +864,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 0
+    followMax: 0
   - statIdentifier: {fileID: 0}
     statAction: []
     statValue: 0
@@ -857,14 +872,22 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 0
+    followMax: 0
   skillOriginPoint: []
   statHandler: {fileID: 0}
   unlocked: 1
   statemachine: {fileID: 0}
   character: {fileID: 11400000, guid: 418229fd558d7c84595bc7f3651129dc, type: 2}
-  skill: []
-  dodgeSkill: {fileID: 0}
-  Ultimate: {fileID: 0}
+  basic: {fileID: 7046284425355719146}
+  firstSkill: {fileID: 114289146532142811}
+  secondSkill: {fileID: 2786051039206609206}
+  dodgeSkill: {fileID: 2700363329970775708}
+  ultimateSkill: {fileID: 570174126328656312}
+  basicAttack: 0
+  skill1: 0
+  skill2: 0
+  dodge: 0
+  ultimate: 0
 --- !u!114 &7046284425355719146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,7 +976,7 @@ MonoBehaviour:
   executionTime: 0
   timeToExceed: 0
   canExecute: 0
-  skill2: {fileID: 11400000, guid: bbafdfe3d9eed1149a3ff408644bc745, type: 2}
+  Skill2: {fileID: 11400000, guid: ad2ea663ee7cf464dbf61b5aed8873b3, type: 2}
 --- !u!114 &570174126328656312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,7 +1018,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HandlerID: {fileID: 11400000, guid: ccd2f3e4aa7e0e141aa9f660644058c6, type: 2}
-  ComponentsID: []
+  ComponentsID:
+  - {fileID: 11400000, guid: c02726fd885ffe34a95147e7580afde5, type: 2}
   SOEvent: []
   eventListeners: []
   eventBroadcasters: []
@@ -1009,7 +1033,12 @@ MonoBehaviour:
   executionTime: 0
   timeToExceed: 0
   canExecute: 0
-  dodge: {fileID: 11400000, guid: d0aa24f701c89ee43b9b0ff43e246f8e, type: 2}
+  directionMultiplier: {fileID: 0}
+  facingDirection: {x: 0, y: 0, z: 0}
+  dodge: {fileID: 11400000, guid: 50791ccd39ff5fc45a9249ef6f1faf06, type: 2}
+  indicator: {fileID: 0}
+  collisionHandler: {fileID: 0}
+  hit: 0
 --- !u!114 &9013938447915180713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1079,6 +1108,7 @@ MonoBehaviour:
   eventBroadcasters:
   - {fileID: 9137641261275906753}
   entity: {fileID: 0}
+  canReceive: 0
 --- !u!114 &9137641261275906753
 MonoBehaviour:
   m_ObjectHideFlags: 0
