@@ -152,6 +152,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""EnableMouse"",
+                    ""type"": ""Button"",
+                    ""id"": ""f7442583-df45-4c95-b78b-9ab20167aa9e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -416,6 +425,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Save"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d14ef291-fe1f-4f33-b01e-2b96224537b1"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""EnableMouse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1017,6 +1037,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_SwitchThree = m_Player.FindAction("SwitchThree", throwIfNotFound: true);
         m_Player_WalkSwitch = m_Player.FindAction("WalkSwitch", throwIfNotFound: true);
         m_Player_Save = m_Player.FindAction("Save", throwIfNotFound: true);
+        m_Player_EnableMouse = m_Player.FindAction("EnableMouse", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1110,6 +1131,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_SwitchThree;
     private readonly InputAction m_Player_WalkSwitch;
     private readonly InputAction m_Player_Save;
+    private readonly InputAction m_Player_EnableMouse;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -1128,6 +1150,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @SwitchThree => m_Wrapper.m_Player_SwitchThree;
         public InputAction @WalkSwitch => m_Wrapper.m_Player_WalkSwitch;
         public InputAction @Save => m_Wrapper.m_Player_Save;
+        public InputAction @EnableMouse => m_Wrapper.m_Player_EnableMouse;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1179,6 +1202,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Save.started += instance.OnSave;
             @Save.performed += instance.OnSave;
             @Save.canceled += instance.OnSave;
+            @EnableMouse.started += instance.OnEnableMouse;
+            @EnableMouse.performed += instance.OnEnableMouse;
+            @EnableMouse.canceled += instance.OnEnableMouse;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1225,6 +1251,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Save.started -= instance.OnSave;
             @Save.performed -= instance.OnSave;
             @Save.canceled -= instance.OnSave;
+            @EnableMouse.started -= instance.OnEnableMouse;
+            @EnableMouse.performed -= instance.OnEnableMouse;
+            @EnableMouse.canceled -= instance.OnEnableMouse;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1421,6 +1450,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnSwitchThree(InputAction.CallbackContext context);
         void OnWalkSwitch(InputAction.CallbackContext context);
         void OnSave(InputAction.CallbackContext context);
+        void OnEnableMouse(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

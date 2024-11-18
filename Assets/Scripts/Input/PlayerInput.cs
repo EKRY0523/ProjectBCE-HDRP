@@ -122,4 +122,9 @@ public class PlayerInput : ScriptableObject, Controls.IPlayerActions
     public void OnSave(InputAction.CallbackContext context)
     {
     }
+
+    public void OnEnableMouse(InputAction.CallbackContext context)
+    {
+        //throw new NotImplementedException();
+    }
 }
