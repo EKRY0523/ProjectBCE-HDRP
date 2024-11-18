@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/OutdoorsScene.unity
     guid: 8124e5870f4fd4c779e7a5f994e84ad1
+  - enabled: 1
+    path: Assets/Scenes/Town.unity
+    guid: be9fc55de0114974c8a8eedfeba288b3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 55479a59730077042a848a49c9d9349a, type: 3}
   m_UseUCBPForAssetBundles: 0

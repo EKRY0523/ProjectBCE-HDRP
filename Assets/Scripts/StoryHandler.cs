@@ -1,16 +1,35 @@
 using UnityEngine;
-
-public class StoryHandler : MonoBehaviour
+using Fungus;
+using UnityEngine.InputSystem;
+public class StoryHandler : EventHandler
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public UIControl uiControl;
+    public int StoryIndex;
+    public int currentIndex;
+    public Flowchart[] flowchart;
+
+    public override void Awake()
     {
-        
+        base.Awake();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StartStory(int index)
     {
-        
+        //global event call this
+        uiControl.DisableInput();
+    }
+
+    public void EndStory()
+    {
+        uiControl.EnableInput();
+    }
+
+    public override void OnGlobalEventInvoke(object data)
+    {
+        base.OnGlobalEventInvoke(data);
+        if(data is int)
+        {
+
+        }
     }
 }
