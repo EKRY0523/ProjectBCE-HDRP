@@ -13,6 +13,10 @@ public class ComponentHandler : EventHandler
         {
             componentDictionary.Add(components[i].HandlerID,components[i]);
         }
+        if(GetComponentInParent<PlayerMovement>())
+        {
+            componentDictionary.Add(GetComponentInParent<PlayerMovement>().HandlerID, GetComponentInParent<PlayerMovement>());
+        }
     }
 
     public override void EnableComponent(Trait ID, bool enabled)

@@ -1,28 +1,24 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "EnemyIdleState", menuName = "CharacterStates/Enemy/EnemyIdleState")]
-public class EnemyIdleState : State
+public class EnemyIdleState : EnemyState
 {
     public override void OnEnter(Statemachine statemachine)
     {
-        for (int i = 0; i < deactivatedComponents.Length; i++)
-        {
-            statemachine.EnableComp(deactivatedComponents[i], false);
-        }
+        base.OnEnter(statemachine);
         statemachine.MBEvent?.Invoke(null, "Idling");
         statemachine.MBEvent?.Invoke(null, true);
     }
 
     public override void OnExit(Statemachine statemachine)
     {
-        //throw new System.NotImplementedException();
-        
-
+        base.OnExit(statemachine);
+        statemachine.MBEvent?.Invoke(null, "Idling");
+        statemachine.MBEvent?.Invoke(null, false);
     }
 
     public override void OnUpdate(Statemachine statemachine)
     {
-        //throw new System.NotImplementedException();
 
         if (statemachine.timeInState < maxTimeInState)
         {
@@ -30,11 +26,7 @@ public class EnemyIdleState : State
         }
         else
         {
-            for (int i = 0; i < activatedComponents.Length; i++)
-            {
-                statemachine?.EnableComp(activatedComponents[i], true);
-            }
-            //statemachine.ChangeState(statemachine.previousState);
+            statemachine.OnInvoke(SwitchUponExit,null);
         }
     }
 }

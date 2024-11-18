@@ -13,7 +13,7 @@ public class PlayerInput : ScriptableObject, Controls.IPlayerActions
 
     public Action<Vector2> MovementInput;
     public Action Skill1Input,Skill2Input,UltimateInput;
-    public Action SwitchOne,SwitchTwo,SwitchThree;
+    public Action<int> SwitchOne,SwitchTwo,SwitchThree;
 
     private void OnEnable()
     {
@@ -96,21 +96,21 @@ public class PlayerInput : ScriptableObject, Controls.IPlayerActions
     public void OnSwitchOne(InputAction.CallbackContext context)
     {
         
-            SwitchOne?.Invoke();
+            SwitchOne?.Invoke(0);
         
     }
 
     public void OnSwitchTwo(InputAction.CallbackContext context)
     {
         
-            SwitchTwo?.Invoke();
+            SwitchTwo?.Invoke(1);
         
     }
 
     public void OnSwitchThree(InputAction.CallbackContext context)
     {
         
-            SwitchThree?.Invoke();
+            SwitchThree?.Invoke(2);
         
     }
 

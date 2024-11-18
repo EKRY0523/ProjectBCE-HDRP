@@ -3,6 +3,13 @@ using UnityEngine.InputSystem;
 using System.Collections;
 public class PlayerMovement : Movement
 {
+    //steps
+    public LayerMask ignore;
+    [SerializeField] GameObject stepRayUpper;
+    [SerializeField] GameObject stepRayLower;
+    [SerializeField] float stepHeight = 0.3f;
+    [SerializeField] float stepSmooth = 2f;
+    //
     public Trait[] key;
     public PlayableCharacterData character; 
     public Statemachine statemachine;
@@ -34,6 +41,7 @@ public class PlayerMovement : Movement
 
     private void OnDisable()
     {
+        magnitudeCheck = Vector2.zero;
         if (input != null)
         {
             input.MovementInput -= OnMove;
@@ -66,6 +74,7 @@ public class PlayerMovement : Movement
     public override void FixedUpdate()
     {
         base.FixedUpdate();
+        StepClimb();
     }
 
     public void SwitchMode(InputAction.CallbackContext ctx)
@@ -126,6 +135,39 @@ public class PlayerMovement : Movement
 
         }
     }
+    void StepClimb()
+    {
+        RaycastHit hitLower;
+        if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(Vector3.forward), out hitLower, 0.1f,~ignore))
+        {
+            RaycastHit hitUpper;
+            if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(Vector3.forward), out hitUpper, 0.2f, ~ignore))
+            {
+                rb.position -= new Vector3(0f, -stepSmooth * Time.deltaTime, 0f);
+            }
+        }
 
+        RaycastHit hitLower45;
+        if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(1.5f, 0, 1), out hitLower45, 0.1f, ~ignore))
+        {
+
+            RaycastHit hitUpper45;
+            if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(1.5f, 0, 1), out hitUpper45, 0.2f, ~ignore))
+            {
+                rb.position -= new Vector3(0f, -stepSmooth * Time.deltaTime, 0f);
+            }
+        }
+
+        RaycastHit hitLowerMinus45;
+        if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(-1.5f, 0, 1), out hitLowerMinus45, 0.1f, ~ignore))
+        {
+
+            RaycastHit hitUpperMinus45;
+            if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(-1.5f, 0, 1), out hitUpperMinus45, 0.2f, ~ignore))
+            {
+                rb.position -= new Vector3(0f, -stepSmooth * Time.deltaTime, 0f);
+            }
+        }
+    }
 
 }

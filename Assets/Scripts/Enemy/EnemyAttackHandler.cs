@@ -16,10 +16,10 @@ public class EnemyAttackHandler : EventHandler
     {
         for (int i = 0; i < attacks.Length; i++)
         {
-
+            attacks[i].attack.multiplier = 0;
             for (int j = 0; j < attacks[i].UsedStats.Length; j++)
             {
-                attacks[i].attack.multiplier -= entity.statDictionary[attacks[i].UsedStats[j]].statValue;
+                attacks[i].attack.multiplier += entity.statDictionary[attacks[i].UsedStats[j]].statValue;
             }
         }
     }
@@ -31,11 +31,7 @@ public class EnemyAttackHandler : EventHandler
             {
                 if(Vector3.Distance(transform.position,target.position) <= attacks[i].range)
                 {
-                    
-
                     MBEvent?.Invoke(attacks[i].stateID,null);
-                    
-                    
                 }
             }
         }
@@ -46,7 +42,7 @@ public class EnemyAttackHandler : EventHandler
     {
         Vector3 lookAt = target.position - transform.position;
         lookAt.y = 0;
-        transform.rotation = Quaternion.LookRotation(lookAt);
+        transform.parent.rotation = Quaternion.LookRotation(lookAt);
     }
     public void SpawnSkillObject(int type)
     {

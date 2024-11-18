@@ -8,6 +8,10 @@ public class Player : MonoBehaviour
     public PlayableCharacterData activeCharacter;
     public DamageReceiver damageReceiver;
 
-
+    private void Awake()
+    {
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+    }
 
 }

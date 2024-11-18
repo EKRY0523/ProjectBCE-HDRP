@@ -6,6 +6,7 @@ public class StatHandler : EventHandler
 {
     public Dictionary<Trait,Stat> statDictionary = new();
     public Entity entity;
+    public bool canReceive;
     public override void Awake()
     {
         base.Awake();
@@ -13,10 +14,19 @@ public class StatHandler : EventHandler
         statDictionary = entity.statDictionary;
     }
 
+    private void OnEnable()
+    {
+        canReceive = true;
+    }
+
+    private void OnDisable()
+    {
+
+        canReceive = false;
+    }
     public void ReceiveValue(Trait[] ID,Trait[] counterStat,float value)
     {
         float finalValue = value;
-
         if(value < 0)
         {
             for (int i = 0; i < counterStat.Length; i++)
@@ -24,6 +34,7 @@ public class StatHandler : EventHandler
                 if (statDictionary.ContainsKey(counterStat[i]))
                 {
                     finalValue += statDictionary[counterStat[i]].statValue;
+                   
                 }
             }
 
@@ -39,7 +50,6 @@ public class StatHandler : EventHandler
             if (statDictionary.ContainsKey(ID[i]))
             {
                 statDictionary[ID[i]].statValue += finalValue;
-                Debug.Log(finalValue);
                 MBEvent?.Invoke(ID[i], statDictionary[ID[i]].statValue);
             }
         }
@@ -48,24 +58,31 @@ public class StatHandler : EventHandler
 
     public void ReceiveKnockback(Transform attackingObject,MovementData movementData)
     {
-        Vector3 lookAt = attackingObject.position - transform.position;
-        lookAt.y = 0;
-        transform.rotation = Quaternion.LookRotation(lookAt);
+        if(canReceive)
+        {
+            Vector3 lookAt = attackingObject.position - transform.position;
+            lookAt.y = 0;
+            transform.rotation = Quaternion.LookRotation(lookAt);
 
-        movementData.MoveCharacter(GetComponent<Rigidbody>());
-
-        //etComponent<Rigidbody>().AddForce(transform.);
+            movementData.MoveCharacter(GetComponent<Rigidbody>());
+            MBEvent?.Invoke(ComponentsID[0], null);
+            //etComponent<Rigidbody>().AddForce(transform.);
+        }
     }
 
     public override void OnInvoke(Trait ID, object data)
     {
         base.OnInvoke(ID, data);
-        if(statDictionary.ContainsKey(ID))
+        if(ID!=null)
         {
-            statDictionary[ID].statValue += (float)data;
-            Debug.Log(statDictionary[ID].statValue);
-            MBEvent?.Invoke(ID, statDictionary[ID].statValue);
+            if (statDictionary.ContainsKey(ID))
+            {
+                statDictionary[ID].statValue += (float)data;
+                //Debug.Log(statDictionary[ID].statValue);
+                MBEvent?.Invoke(ID, statDictionary[ID].statValue);
 
+            }
         }
+        
     }
 }

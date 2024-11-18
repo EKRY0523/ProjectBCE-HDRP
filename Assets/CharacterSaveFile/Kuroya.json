@@ -14,7 +14,7 @@
         11
     ],
     "currentStatValue": [
-        2950.0,
+        0.0,
         1500.0,
         10.0,
         3000.0,
@@ -35,7 +35,7 @@
                     "instanceID": 58136
                 }
             ],
-            "statValue": 2950.0,
+            "statValue": 0.0,
             "statScaling": 1.2000000476837159,
             "MinMaxValue": [
                 0.0,

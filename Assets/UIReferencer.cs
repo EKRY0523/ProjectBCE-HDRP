@@ -1,16 +1,37 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class UIReferencer : MonoBehaviour
+public class UIReferencer : EventHandler
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public PlayerInput input;
+    public InputActionReference[] references;
+    public override void Awake()
     {
-        
+        base.Awake();
+       
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        input.input.Player.Disable();
+        for (int i = 0; i < references.Length; i++)
+        {
+            references[i].action.Disable();
+        }
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        //input.input.UI.Enable();
+    }
+
+    private void OnDisable()
+    {
+        input.input.Player.Enable();
+        for (int i = 0; i < references.Length; i++)
+        {
+            references[i].action.Enable();
+        }
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        //input.input.UI.Disable();
     }
 }

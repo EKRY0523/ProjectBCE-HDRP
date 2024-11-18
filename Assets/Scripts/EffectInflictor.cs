@@ -56,7 +56,10 @@ public class EffectInflictor : EventHandler
         {
             if (other.CompareTag("Player"))
             {
-                Inflict(other.gameObject.GetComponent<PartyHandler>().activeCharacter.GetComponent<EffectHandler>());
+                if(other.gameObject.GetComponent<PartyHandler>())
+                {
+                    Inflict(other.gameObject.GetComponent<PartyHandler>().activeCharacter.GetComponent<EffectHandler>());
+                }
             }
         }
         else

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7625257352176689117}
   m_Layer: 0
   m_Name: SkillObjectTemplate
-  m_TagString: Untagged
+  m_TagString: SkillObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,6 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e70e357ebf0ad50439daa9f62a350ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HandlerID: {fileID: 0}
+  ComponentsID: []
+  SOEvent: []
+  eventListeners: []
+  eventBroadcasters: []
+  tagName: 
+  originStat: []
+  targetedStat: []
   characterData: {fileID: 0}
   multiplier: 0
   duration: 0
+  target: {fileID: 0}
+  knockback: {fileID: 0}

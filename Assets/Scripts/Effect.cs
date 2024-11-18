@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 public class Effect : ScriptableObject
 {
     public enum EffectType
@@ -11,7 +12,9 @@ public class Effect : ScriptableObject
     {
         incremented,realTime
     }
-
+    public Sprite Icon;
+    public string effectName;
+    public string description;
     public EffectType effectType;
     public TimeMode timeMode;
     public float startTime,duration,tick;

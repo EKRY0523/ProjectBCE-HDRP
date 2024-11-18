@@ -1,20 +1,18 @@
 using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyDetectedState", menuName = "CharacterStates/Enemy/EnemyDetectedState")]
 
-public class EnemyDetectedState : State
+public class EnemyDetectedState : EnemyState
 {
     public override void OnEnter(Statemachine statemachine)
     {
-        for (int i = 0; i < deactivatedComponents.Length; i++)
-        {
-            statemachine.EnableComp(deactivatedComponents[i], false);
-        }
+        base.OnEnter(statemachine);
         statemachine.MBEvent?.Invoke(null, "Detected");
         statemachine.MBEvent?.Invoke(null, true);
     }
 
     public override void OnExit(Statemachine statemachine)
     {
+        base.OnExit(statemachine);
         statemachine.MBEvent?.Invoke(null, "Detected");
         statemachine.MBEvent?.Invoke(null, false);
         //throw new System.NotImplementedException();
@@ -28,11 +26,7 @@ public class EnemyDetectedState : State
         }
         else
         {
-            for (int i = 0; i < activatedComponents.Length; i++)
-            {
-                statemachine?.EnableComp(activatedComponents[i], true);
-            }
-            //statemachine.ChangeState(statemachine.previousState);
+            statemachine.OnInvoke(SwitchUponExit,null);
         }
     }
 }

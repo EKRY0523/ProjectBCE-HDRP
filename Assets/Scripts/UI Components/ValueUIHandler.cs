@@ -23,7 +23,10 @@ public class ValueUIHandler : EventHandler
         if(data is PlayableCharacterData)
         {
             Entity = (PlayableCharacterData)data;
-            OnInvoke(statIndex, Entity.statDictionary[statIndex].statValue);
+            if (Entity.statDictionary.ContainsKey(statIndex))
+            {
+                OnInvoke(statIndex, Entity.statDictionary[statIndex].statValue);
+            }
         }
 
         if(data is Enemy)
@@ -34,11 +37,15 @@ public class ValueUIHandler : EventHandler
 
         if(ID == statIndex && data is float)
         {
-            image.fillAmount =  ((float)data)/ (Entity.statDictionary[statIndex].MinMaxValue[1]* MathF.Pow(Entity.statDictionary[statIndex].statScaling, Entity.level.lv - 1));
-            if(text!=null)
+            if(Entity.statDictionary.ContainsKey(ID))
             {
-                text.text = (float)data + "/" + (Entity.statDictionary[statIndex].MinMaxValue[1] * MathF.Pow(Entity.statDictionary[statIndex].statScaling, Entity.level.lv - 1));
+                image.fillAmount = ((float)data) / (Entity.statDictionary[statIndex].MinMaxValue[1] * MathF.Pow(Entity.statDictionary[statIndex].statScaling, Entity.level.lv - 1));
+                if (text != null)
+                {
+                    text.text = (float)data + "/" + (Entity.statDictionary[statIndex].MinMaxValue[1] * MathF.Pow(Entity.statDictionary[statIndex].statScaling, Entity.level.lv - 1));
+                }
             }
+            
 
         }
     }

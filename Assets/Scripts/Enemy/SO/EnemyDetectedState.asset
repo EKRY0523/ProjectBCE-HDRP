@@ -12,10 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64a35bc4812b35a449589a051f981d5f, type: 3}
   m_Name: EnemyDetectedState
   m_EditorClassIdentifier: 
-  activatedComponents:
-  - {fileID: 11400000, guid: 4e7127693565c8540992920a2b88a303, type: 2}
-  deactivatedComponents:
+  activatedComponents: []
+  deactivatedComponents: []
+  OnEnterActivateComponent: []
+  OnEnterDeactivateComponent:
   - {fileID: 11400000, guid: 3542eb5f882f7824cb65d291e81f0beb, type: 2}
   - {fileID: 11400000, guid: 4e7127693565c8540992920a2b88a303, type: 2}
+  - {fileID: 11400000, guid: a84ff66f4faf5954eba01b9d1374ee0a, type: 2}
+  OnExitActivateComponent:
+  - {fileID: 11400000, guid: 4e7127693565c8540992920a2b88a303, type: 2}
+  - {fileID: 11400000, guid: a84ff66f4faf5954eba01b9d1374ee0a, type: 2}
+  OnExitDeactivateComponent: []
+  SwitchUponExit: {fileID: 11400000, guid: de3211b42862aec4fb7ca004140cd3fd, type: 2}
   stateKey: {fileID: 0}
-  maxTimeInState: 1
+  maxTimeInState: 0.5

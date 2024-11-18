@@ -18,6 +18,9 @@ public class GameManager : EventHandler
     public PartyHandler party;
 
     public PlayableCharacterData FirstCharacter;
+    public List<PlayableCharacterData> charactersInParty = new();
+
+    public GameStoryData gameData;
     public override void Awake()
     {
         for (int i = 0; i < characters.Count; i++)
@@ -66,6 +69,7 @@ public class GameManager : EventHandler
     {
         if(File.Exists(Application.dataPath + "/SaveFile.json"))
         {
+            charactersInParty.Clear();
             string json = File.ReadAllText(Application.dataPath + "/SaveFile.json");
 
             progress = JsonUtility.FromJson<SaveProgress>(json);
@@ -84,9 +88,11 @@ public class GameManager : EventHandler
 
             for (int i = 0; i < progress.currentPartySetup.Count; i++)
             {
-                MBEvent?.Invoke(null, characterDictionary[characterIdentifier[progress.currentPartySetup[i]]]);
+                charactersInParty.Add(characterDictionary[characterIdentifier[progress.currentPartySetup[i]]]);
+                //MBEvent?.Invoke(null, characterDictionary[characterIdentifier[progress.currentPartySetup[i]]]);
                 //party.characterList.Add(Instantiate(characterDictionary[characterIdentifier[progress.currentPartySetup[i]]],party.transform));
             }
+            SOEvent[0].globalEvent?.Invoke(charactersInParty);
         }
         else
         {
@@ -110,7 +116,7 @@ public class GameManager : EventHandler
         characterDictionary[character].stats = characterData.stats;
         characterDictionary[character].level = characterData.level;
 
-        LevelAndStats data = new LevelAndStats();
+        LevelAndStats data = new ();
         data.level = characterDictionary[character].level;
 
         for (int i = 0; i < characterDictionary[character].stats.Count; i++)
@@ -122,6 +128,46 @@ public class GameManager : EventHandler
            
         }
 
+        for (int i = 0; i < character.BasicAttack.Length; i++)
+        {
+            if(character.BasicAttack[i] == characterData.basic.basicAttack)
+            {
+                data.basicAttack = i;
+                //data.skill.basicAttack = i;
+            }
+        }
+
+        for (int i = 0; i < character.Skills.Length; i++)
+        {
+            if (character.Skills[i] == characterData.firstSkill.Skill1)
+            {
+                data.skill1 = i;
+
+                //data.skill.skill1 = i;
+            }
+            else if (character.Skills[i] == characterData.secondSkill.Skill2)
+            {
+                //data.skill.skill2 = i;
+                data.skill2 = i;
+
+            }
+        }
+
+        for (int i = 0; i < character.Dodge.Length; i++)
+        {
+            if (character.Dodge[i] == characterData.dodgeSkill.dodge)
+            {
+                data.dodge = i;
+            }
+        }
+
+        for (int i = 0; i < character.Ultimate.Length; i++)
+        {
+            if (character.Ultimate[i] == characterData.ultimateSkill.ultimate)
+            {
+                data.ultimate = i;
+            }
+        }
 
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(Application.dataPath + "/CharacterSaveFile/" + character.name +".json", json);
@@ -132,18 +178,42 @@ public class GameManager : EventHandler
         if (File.Exists(Application.dataPath + "/CharacterSaveFile/" + character.name + ".json"))
         {
             string json = File.ReadAllText(Application.dataPath + "/CharacterSaveFile/" + character.name + ".json");
-            LevelAndStats data = new LevelAndStats();
+            LevelAndStats data = new();
             data = JsonUtility.FromJson<LevelAndStats>(json);
             for (int i = 0; i < data.statID.Count; i++)
             {
                 characterDictionary[character].stats[i].statIdentifier = DictionaryStorage.TraitDictionary[characterDictionary[character].character.stats[i].statIdentifier.key];
-                characterDictionary[character].stats[i].statValue = data.currentStatValue[i];
+                
+                //characterDictionary[character].stats[i].statValue = data.currentStatValue[i];
                 characterDictionary[character].stats[i].MinMaxValue = data.stats[i].MinMaxValue;
+                //testing
+                if (characterDictionary[character].stats[i].followMax)
+                {
+                    characterDictionary[character].stats[i].statValue = characterDictionary[character].stats[i].MinMaxValue[1] * MathF.Pow(characterDictionary[character].stats[i].statScaling, characterDictionary[character].level.lv - 1);
+
+                }
+                else
+                {
+                    characterDictionary[character].stats[i].statValue = data.currentStatValue[i];
+                }
+                //testing ends here
+                if (!characterDictionary[character].statDictionary.ContainsKey(characterDictionary[character].stats[i].statIdentifier))
+                {
+                    characterDictionary[character].statDictionary.Add(characterDictionary[character].stats[i].statIdentifier, characterDictionary[character].stats[i]);
+
+                }
             }
 
             characterDictionary[character].level = data.level;
             characterData.stats = characterDictionary[character].stats;
             characterData.level = data.level;
+
+            characterData.basicAttack = data.basicAttack;
+            characterData.skill1 = data.skill1;
+            characterData.skill2 = data.skill2;
+            characterData.dodge = data.dodge;
+            characterData.ultimate = data.ultimate;
+
         }
         else
         {
@@ -167,6 +237,36 @@ public class GameManager : EventHandler
     {
         base.OnInvoke(ID, data);
     }
+
+    public void SaveGameData()
+    {
+        string json = JsonUtility.ToJson(gameData, true);
+        File.WriteAllText(Application.dataPath + "/StoryProgress.json", json);
+    }
+
+    public void LoadGameData()
+    {
+        if (File.Exists(Application.dataPath + "/StoryProgress.json"))
+        {
+            string json = File.ReadAllText(Application.dataPath + "/StoryProgress.json");
+            gameData = JsonUtility.FromJson<GameStoryData>(json);
+        }
+        else
+        {
+            gameData.lastSavedPosition = new Vector3(-1.5f, 2f, 1f);
+            gameData.currentStoryProgress = 0;
+            SaveGameData();
+        }
+       
+    }
+}
+
+[Serializable]
+public class GameStoryData
+{
+    public int currentStoryProgress;
+    public Vector3 lastSavedPosition;
+
 }
 
 [Serializable]
@@ -183,4 +283,24 @@ public class LevelAndStats
     [SerializeField] public List<int> statID = new();
     public List<float> currentStatValue = new();
     public List<Stat> stats = new();
+    //public CurrentSkill skill;
+
+    public int basicAttack;
+    public int skill1;
+    public int skill2;
+    public int dodge;
+    public int ultimate;
+}
+
+[Serializable]
+public class CurrentSkill
+{
+
+    //store these in respective handlers
+    public int basicAttack;
+    public int skill1;
+    public int skill2;
+    public int dodge;
+    public int ultimate;
+
 }

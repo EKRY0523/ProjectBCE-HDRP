@@ -1,14 +1,11 @@
 using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyAttackingState", menuName = "CharacterStates/Enemy/EnemyAttackingState")]
 
-public class EnemyAttackingState : State
+public class EnemyAttackingState : EnemyState
 {
     public override void OnEnter(Statemachine statemachine)
     {
-        for (int i = 0; i < deactivatedComponents.Length; i++)
-        {
-            statemachine?.EnableComp(deactivatedComponents[i], false);
-        }
+        base.OnEnter(statemachine);
 
         statemachine.MBEvent?.Invoke(null, "Attacking");
         statemachine.MBEvent?.Invoke(null, true);
@@ -16,6 +13,7 @@ public class EnemyAttackingState : State
 
     public override void OnExit(Statemachine statemachine)
     {
+        base.OnExit(statemachine);
         statemachine.MBEvent?.Invoke(null, "Attacking");
         statemachine.MBEvent?.Invoke(null, false);
        
@@ -23,16 +21,14 @@ public class EnemyAttackingState : State
 
     public override void OnUpdate(Statemachine statemachine)
     {
+        base.OnUpdate(statemachine);
         if (statemachine.timeInState < maxTimeInState)
         {
             statemachine.timeInState += Time.deltaTime;
         }
         else
         {
-            for (int i = 0; i < activatedComponents.Length; i++)
-            {
-                statemachine?.EnableComp(activatedComponents[i], true);
-            }
+            statemachine.OnInvoke(SwitchUponExit, null);
         }
     }
 }

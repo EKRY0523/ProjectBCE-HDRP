@@ -17,5 +17,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4e7127693565c8540992920a2b88a303, type: 2}
   - {fileID: 11400000, guid: a50f4230f852e63469a414975e716533, type: 2}
   - {fileID: 11400000, guid: a84ff66f4faf5954eba01b9d1374ee0a, type: 2}
+  OnEnterActivateComponent:
+  - {fileID: 11400000, guid: 9364c34befd8e864680cf6f828d8c993, type: 2}
+  OnEnterDeactivateComponent:
+  - {fileID: 11400000, guid: 4e7127693565c8540992920a2b88a303, type: 2}
+  - {fileID: 11400000, guid: a50f4230f852e63469a414975e716533, type: 2}
+  - {fileID: 11400000, guid: a84ff66f4faf5954eba01b9d1374ee0a, type: 2}
+  OnExitActivateComponent: []
+  OnExitDeactivateComponent: []
+  SwitchUponExit: {fileID: 0}
   stateKey: {fileID: 0}
   maxTimeInState: 0

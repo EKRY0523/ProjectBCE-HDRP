@@ -35,4 +35,11 @@ public class CharacterStatusHandler : EventHandler
         
         
     }
+
+    public void EnableCharacterInstantly(PlayableCharacterData data)
+    {
+        entity = (Entity)data;
+        MBEvent?.Invoke(null,(Entity)data);
+        Subscribe(entity.statHandler);
+    }
 }

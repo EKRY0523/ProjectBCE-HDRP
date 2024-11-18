@@ -6,8 +6,8 @@ public class PartySetup : EventHandler
     
     public List<PlayableCharacterData> charactersList;
 
-    [SerializeField] public List<PlayableCharacterData> charactersInParty = new();
-    public PartyHandler handler;
+    //[SerializeField] public List<PlayableCharacterData> charactersInParty = new();
+    public PartyHandler handler; //dont use this, use json
     public Button[] characterSlot;
     public List<PartyBackgroundHandler> bgList = new();
     public CharacterSelection charSelectionMenu;
@@ -31,36 +31,28 @@ public class PartySetup : EventHandler
         ConfirmButton.onClick.AddListener(Confirm);
 
     }
-
     private void OnEnable()
     {
         if (GameManager.instance != null)
         {
+            GameManager.instance.LoadData();
+            while (charactersToSwitchIn.Count != 3)
+            {
+                charactersToSwitchIn.Add(null);
+            }
             charactersList = GameManager.instance.UnlockedCharacters;
+            
         }
-        for (int i = 0; i < handler.characterList.Count; i++)
-        {
-            charactersInParty.Add(GameManager.instance.characterDictionary[handler.characterList[i].character]);
-        }
-
-        for (int i = 0; i < charactersInParty.Count; i++)
-        {
-            charactersToSwitchIn[i] = charactersInParty[i];
-            //charactersToSwitchIn[i] = GameManager.instance.characterDictionary[charactersInParty[i].character];
-            bgList.Add(Instantiate(characterBGPrefab, characterSlot[i].transform));
-            bgList[i].mat.material = charactersInParty[i].character.material;
-            bgList[i].image.texture = charactersInParty[i].character.poseImage;
-        }
-
-        while(charactersToSwitchIn.Count != 3)
-        {
-            charactersToSwitchIn.Add(null);
-        }
+        ReloadList();
     }
 
+   
     private void OnDisable()
     {
-        charactersInParty.Clear();
+        for (int i = 0; i < bgList.Count; i++)
+        {
+            Destroy(bgList[i].gameObject);
+        }
         bgList.Clear();
     }
 
@@ -69,18 +61,44 @@ public class PartySetup : EventHandler
         this.gameObject.SetActive(false);
     }
 
+    public void ReloadList()
+    {
+        for (int i = 0; i < bgList.Count; i++)
+        {
+            Destroy(bgList[i].gameObject);
+        }
+        bgList.Clear();
+
+        for (int i = 0; i < charactersToSwitchIn.Count; i++)
+        {
+            if(charactersToSwitchIn[i] == null)
+            {
+                charactersToSwitchIn.RemoveAt(i);
+               
+            }
+        }
+        for (int i = 0; i < charactersToSwitchIn.Count; i++)
+        {
+            if (charactersToSwitchIn[i] != null)
+            {
+                bgList.Add(Instantiate(characterBGPrefab, characterSlot[i].transform));
+                bgList[i].mat.material = charactersToSwitchIn[i].character.material;
+                bgList[i].image.texture = charactersToSwitchIn[i].character.poseImage;
+            }
+
+        }
+        while (charactersToSwitchIn.Count != 3)
+        {
+            charactersToSwitchIn.Add(null);
+        }
+    }
+
     public void Confirm()
     {
-        for (int i = 0; i < handler.characterList.Count; i++)
-        {
-            Destroy(handler.characterList[i].gameObject);
-            handler.characterList.Remove(charactersInParty[i]);
-        }
-
-        MBEvent?.Invoke(null, charactersToSwitchIn);
+        SOEvent[0]?.globalEvent?.Invoke(charactersToSwitchIn);
         this.gameObject.SetActive(false);
 
-        //charactersToSwitchIn.Clear();
+        charactersToSwitchIn.Clear();
     }
 
     public void EnableCharSelection(int index)
@@ -89,17 +107,22 @@ public class PartySetup : EventHandler
         charSelectionMenu.gameObject.SetActive(true);
     }
 
-    public void RemoveCharacterFromList(PlayableCharacterData data)
+    public override void OnInvoke(Trait ID, object data)
     {
-        
+        base.OnInvoke(ID, data);
+        if(data is List<PlayableCharacterData>)
+        {
+
+        }
     }
 
-    public void AddCharacterToList(PlayableCharacterData data)
+    public override void OnGlobalEventInvoke(object data)
     {
-
-    }
-    public void OnSetup(PlayableCharacterData data)
-    {
-
+        base.OnGlobalEventInvoke(data);
+        if (data is List<PlayableCharacterData>)
+        {
+            charactersToSwitchIn = (List<PlayableCharacterData>)data;
+            ReloadList();
+        }
     }
 }

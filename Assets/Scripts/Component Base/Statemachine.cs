@@ -26,6 +26,11 @@ public class Statemachine : EventHandler
         startingState = keyAndStates[0].state;
     }
 
+    private void Start()
+    {
+        currentState?.OnEnter(this);
+    }
+
     private void Update()
     {
         currentState?.OnUpdate(this);

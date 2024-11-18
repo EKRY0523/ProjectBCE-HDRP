@@ -13,13 +13,25 @@ MonoBehaviour:
   m_Name: Ren
   m_EditorClassIdentifier: 
   ID: 694
+  characterName: Ren
   poseImage: {fileID: 8400000, guid: 39afaf0d134bc0f4ebde8f7d2d34d546, type: 2}
-  iconimage: {fileID: -889190176, guid: 48e15963821711a4db166254fb602022, type: 3}
+  iconimage: {fileID: 21300000, guid: 6c520c6f4ac237c439b784a583fd52f2, type: 3}
   material: {fileID: 2100000, guid: 665b184b288a35b41b4c38f728059372, type: 2}
-  BasicAttack: []
-  Skills: []
-  Dodge: []
-  Ultimate: []
+  characterDetails: A mysterious person who has the power of both healing and killing
+  passive: []
+  BasicAttack:
+  - {fileID: 11400000, guid: 429c7fdae49769f4da3df4d055163668, type: 2}
+  - {fileID: 11400000, guid: 28df1bac50eefe747979c4468d5bc229, type: 2}
+  Skills:
+  - {fileID: 11400000, guid: bbafdfe3d9eed1149a3ff408644bc745, type: 2}
+  - {fileID: 11400000, guid: d0aa24f701c89ee43b9b0ff43e246f8e, type: 2}
+  - {fileID: 11400000, guid: ad2ea663ee7cf464dbf61b5aed8873b3, type: 2}
+  Dodge:
+  - {fileID: 11400000, guid: 50791ccd39ff5fc45a9249ef6f1faf06, type: 2}
+  - {fileID: 11400000, guid: 50791ccd39ff5fc45a9249ef6f1faf06, type: 2}
+  Ultimate:
+  - {fileID: 11400000, guid: bf3b2ef41b4890b46a11dd08047ddc55, type: 2}
+  - {fileID: 11400000, guid: bf3b2ef41b4890b46a11dd08047ddc55, type: 2}
   stats:
   - statIdentifier: {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
     statAction:
@@ -30,6 +42,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 2000
+    followMax: 0
   - statIdentifier: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
     statAction:
     - {fileID: 11400000, guid: ae06b58d519f32b47aa0cad2e9545e9b, type: 2}
@@ -38,6 +51,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 3000
+    followMax: 0
   - statIdentifier: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
     statAction: []
     statValue: 500
@@ -45,6 +59,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 500
+    followMax: 0
   - statIdentifier: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
     statAction: []
     statValue: 2500
@@ -52,6 +67,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 2500
+    followMax: 0
   - statIdentifier: {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}
     statAction: []
     statValue: 500
@@ -59,6 +75,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 500
+    followMax: 0
   - statIdentifier: {fileID: 11400000, guid: bf0e21beacd082f45b3c20cb0f18fa31, type: 2}
     statAction: []
     statValue: 2000
@@ -66,6 +83,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 2000
+    followMax: 0
   - statIdentifier: {fileID: 11400000, guid: 97435261493b2ec44bdf032630a74db5, type: 2}
     statAction: []
     statValue: 10
@@ -73,3 +91,4 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 10
+    followMax: 0

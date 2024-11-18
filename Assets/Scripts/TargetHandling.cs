@@ -19,6 +19,10 @@ public class TargetHandling : EventHandler
         CheckTargetsValidity();
     }
 
+    public override void OnDestroy()
+    {
+        base.OnDestroy();
+    }
     public void CheckTargetsValidity()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position,radius,layerToHit);
@@ -35,21 +39,27 @@ public class TargetHandling : EventHandler
                 }
             }
         }
-
-        GetNearestTarget();
+        if (targets.Count > 0)
+        {
+            GetNearestTarget();
+        }
     }
     public void GetNearestTarget()
     {
+
         for (int i = 0; i < targets.Count; i++)
         {
             if(targets[i]==null)
             {
                 targets.RemoveAt(i);
             }
-
-            if(currentNearestTarget == null)
+            if (currentNearestTarget == null)
             {
-                currentNearestTarget = targets[i];
+                if(targets.Count>0)
+                {
+
+                    currentNearestTarget = targets[i];
+                }
             }
             else
             {
@@ -67,4 +77,15 @@ public class TargetHandling : EventHandler
         //targets.Clear();
     }
 
+    public override void OnInvoke(Trait ID, object data)
+    {
+        base.OnInvoke(ID, data);
+        if(data is float)
+        {
+            if((float)data == 50f)
+            {
+                radius = (float)data;
+            }
+        }
+    }
 }
