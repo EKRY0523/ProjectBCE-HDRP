@@ -179,15 +179,15 @@ MonoBehaviour:
   eventBroadcasters:
   - {fileID: 7869384607355888865}
   level:
-    lv: 1
-    currentExp: 0
-    expNeeded: 50
+    lv: 4
+    currentExp: 450
+    expNeeded: 800
   stats:
   - statIdentifier: {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
     statAction:
-    - {fileID: 11400000, guid: a9ad695bea8176a47bba62409f67be25, type: 2}
     - {fileID: 11400000, guid: ae06b58d519f32b47aa0cad2e9545e9b, type: 2}
-    statValue: 1760
+    - {fileID: 11400000, guid: a9ad695bea8176a47bba62409f67be25, type: 2}
+    statValue: 3510
     statScaling: 1.2
     MinMaxValue:
     - 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   - statIdentifier: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
     statAction:
     - {fileID: 11400000, guid: ae06b58d519f32b47aa0cad2e9545e9b, type: 2}
-    statValue: 1500
+    statValue: 1866.5912
     statScaling: 1.1
     MinMaxValue:
     - 0
@@ -204,7 +204,7 @@ MonoBehaviour:
     followMax: 0
   - statIdentifier: {fileID: 11400000, guid: 97435261493b2ec44bdf032630a74db5, type: 2}
     statAction: []
-    statValue: 10
+    statValue: 11.576248
     statScaling: 1.05
     MinMaxValue:
     - 0
@@ -212,7 +212,7 @@ MonoBehaviour:
     followMax: 1
   - statIdentifier: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
     statAction: []
-    statValue: 3000
+    statValue: 10125
     statScaling: 1.5
     MinMaxValue:
     - 0
@@ -220,7 +220,7 @@ MonoBehaviour:
     followMax: 1
   - statIdentifier: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
     statAction: []
-    statValue: 500
+    statValue: 665.50006
     statScaling: 1.1
     MinMaxValue:
     - 0
@@ -228,7 +228,7 @@ MonoBehaviour:
     followMax: 1
   - statIdentifier: {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}
     statAction: []
-    statValue: 2000
+    statValue: 6750
     statScaling: 1.5
     MinMaxValue:
     - 0
@@ -236,7 +236,7 @@ MonoBehaviour:
     followMax: 1
   - statIdentifier: {fileID: 11400000, guid: bf0e21beacd082f45b3c20cb0f18fa31, type: 2}
     statAction: []
-    statValue: 1500
+    statValue: 1736.4373
     statScaling: 1.05
     MinMaxValue:
     - 0

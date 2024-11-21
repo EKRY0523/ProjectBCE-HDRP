@@ -31523,16 +31523,16 @@ AnimationClip:
   m_HasMotionFloatCurves: 1
   m_Events:
   - time: 0.38333333
-    functionName: SpawnSkillObject
+    functionName: MoveCharacter
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11400000, guid: a1b1e97c7f68e504782b36eca5bdaaaf, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.38333333
-    functionName: MoveCharacter
+    functionName: ActivateBasic
     data: 
-    objectReferenceParameter: {fileID: 11400000, guid: a1b1e97c7f68e504782b36eca5bdaaaf, type: 2}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

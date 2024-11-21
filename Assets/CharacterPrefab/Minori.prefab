@@ -894,7 +894,7 @@ MonoBehaviour:
   - statIdentifier: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
     statAction:
     - {fileID: 11400000, guid: ae06b58d519f32b47aa0cad2e9545e9b, type: 2}
-    statValue: 77.158005
+    statValue: 1200
     statScaling: 1.1
     MinMaxValue:
     - 0
