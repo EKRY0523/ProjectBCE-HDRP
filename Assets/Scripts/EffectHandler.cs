@@ -104,7 +104,6 @@ public class EffectHandler : EventHandler
         }
     }
 
-
     public void OnEndEffect(Effect effect)
     {
         //if (InflictedEffects.Contains(effect))
