@@ -25,8 +25,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 42156416583b87540b9fee6fc279d3ac, type: 2}
   Skills:
   - {fileID: 11400000, guid: bbafdfe3d9eed1149a3ff408644bc745, type: 2}
+  - {fileID: 11400000, guid: 01085856eb7f5f84ab6a4f6395605654, type: 2}
   - {fileID: 11400000, guid: a77e39e912cab2d43a1b6ad3a4525c81, type: 2}
-  - {fileID: 11400000, guid: 2f5bda15685def648b454c5ceae15be3, type: 2}
   Dodge:
   - {fileID: 11400000, guid: 50791ccd39ff5fc45a9249ef6f1faf06, type: 2}
   - {fileID: 11400000, guid: 8cde1f1c353437b4d89162aca2745890, type: 2}

@@ -7,7 +7,8 @@ public class UIControl : MonoBehaviour
     public InputActionReference InputEnable;
     public InputActionReference[] InputToDisable;
 
-    private void Awake()
+
+    private void OnEnable()
     {
         InputEnable.action.performed += ManageInput;
         InputEnable.action.started += ManageInput;
@@ -17,9 +18,14 @@ public class UIControl : MonoBehaviour
         Cursor.visible = false;
     }
 
-    private void Start()
+    private void OnDisable()
     {
-        //EnableInput();
+        InputEnable.action.performed -= ManageInput;
+        InputEnable.action.started -= ManageInput;
+        InputEnable.action.canceled -= ManageInput;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     public void ManageInput(InputAction.CallbackContext ctx)
     {
@@ -38,7 +44,7 @@ public class UIControl : MonoBehaviour
             {
                 InputToDisable[i].action.Enable();
             }
-            playerInput.input.Player.Disable();
+            playerInput.input.Player.Enable();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }

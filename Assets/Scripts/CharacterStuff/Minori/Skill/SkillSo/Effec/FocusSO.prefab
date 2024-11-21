@@ -102,11 +102,13 @@ MonoBehaviour:
   originStat: []
   targetedStat: []
   characterData: {fileID: 0}
-  multiplier: 510
+  multiplier: 400
   duration: 0.5
   target: {fileID: 0}
   knockback: {fileID: 0}
   detachFromParent: 0
+  hitFX: {fileID: 0}
+  friendly: 0
 --- !u!54 &2837414635189213222
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -154,8 +156,8 @@ MonoBehaviour:
   - {fileID: 1917319864963031287}
   effect: {fileID: 11400000, guid: d6ecca2836fc7ac4188e79a72fc5c7c3, type: 2}
   dualTag: 0
-  effectedTag: 
-  type: 0
+  effectedTag: Player
+  type: 1
 --- !u!114 &5843454954300705731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,8 +178,8 @@ MonoBehaviour:
   - {fileID: 1917319864963031287}
   effect: {fileID: 11400000, guid: c8cc5b75002312c488499020ac7f7a0d, type: 2}
   dualTag: 0
-  effectedTag: 
-  type: 0
+  effectedTag: Player
+  type: 1
 --- !u!114 &859274060929720516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,5 +200,5 @@ MonoBehaviour:
   - {fileID: 1917319864963031287}
   effect: {fileID: 11400000, guid: 812d82a52552243419695829fd41498d, type: 2}
   dualTag: 0
-  effectedTag: 
-  type: 0
+  effectedTag: Player
+  type: 1

@@ -22,7 +22,7 @@ public class StoryHandler : EventHandler
 
     public void Start()
     {
-        GameManager.instance.LoadGameData();
+        //GameManager.instance.LoadGameData();
         gameData = GameManager.instance.gameData;
         MBEvent?.Invoke(null, gameData.currentStoryProgress);
         //all subscribe to this initially

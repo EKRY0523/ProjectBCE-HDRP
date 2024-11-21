@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b820673d810784b87aa117ed36a021, type: 3}
+  m_Name: ThriceSettingSun
+  m_EditorClassIdentifier: 
+  skillObject: []
+  skillInstance:
+  - instances: 0
+    skillObjects:
+    - {fileID: 7798543465975775885, guid: ef7f3920f00ceae44af1fff61be1df8e, type: 3}
+    - {fileID: 1319709828814123490, guid: 0598c3206184bc2439e9096b4224a405, type: 3}
+    - {fileID: 5435325050618191668, guid: 96e0af9ddbe88e646a6898d115af56a5, type: 3}
+  key:
+  - {fileID: 11400000, guid: 379a2a19aabafc144919fa1cca9e9ac2, type: 2}
+  cost:
+    stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
+    cost: 400
+  characterData: {fileID: 0}
+  statAndMultiplier:
+  - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
+    multiplier: 5
+  - statIndex: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
+    multiplier: 1
+  requiredUnlockLevel: 0
+  skillName: Thrice Setting Sun
+  skillDescription: Unleashing a barrage of slashes
+  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
+  cooldown:
+  - 5
+  movementData:
+  - {fileID: 11400000, guid: 46e295bc9f2092d49aef024118fe35d2, type: 2}
+  delayForInstantiate: 0
+  delayBetweenSlashes:
+  - 0.08
+  - 0.21
+  - 1
+  extraMultiplier:
+  - 1
+  - 1.5
+  - 2

@@ -16,7 +16,7 @@ MonoBehaviour:
   skillInstance:
   - instances: 0
     skillObjects:
-    - {fileID: 91583023038356370, guid: 1d214511b7675d349bb930517b50448a, type: 3}
+    - {fileID: 4898531201782523070, guid: d806e00f3af9b784c9ab087d9f97fad6, type: 3}
   - instances: 0
     skillObjects:
     - {fileID: 6803450999187338083, guid: 258b3c4b0d1c1f04db6c284ebfdc210e, type: 3}

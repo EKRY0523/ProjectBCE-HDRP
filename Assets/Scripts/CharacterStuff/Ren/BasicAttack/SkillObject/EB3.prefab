@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6734438225333005987}
   - component: {fileID: 2946293769607325425}
+  - component: {fileID: 1653543204911417953}
   m_Layer: 0
   m_Name: EB3
   m_TagString: Untagged
@@ -53,13 +54,35 @@ MonoBehaviour:
   tagName: Enemy
   originStat:
   - {fileID: 11400000, guid: bf0e21beacd082f45b3c20cb0f18fa31, type: 2}
-  targetedStat: []
+  targetedStat:
+  - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   characterData: {fileID: 0}
-  multiplier: 1000
+  multiplier: 5000
   duration: 0.5
   target: {fileID: 0}
   knockback: {fileID: 0}
   detachFromParent: 0
+--- !u!65 &1653543204911417953
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7185099307434677631}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5, y: 5, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5069420155041905436
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1040,7 +1040,15 @@ MonoBehaviour:
     range: 10
     multiplier: 1.5
     attack: {fileID: 2610798343647673867, guid: 57b157140500f244dbf718db206da937, type: 3}
+    lastTimeUsedThisAttack: 0
+    localCooldown: 0
+    inCooldown: 0
+    cooldown: 0
+    moreThanRange: 0
   target: {fileID: 0}
+  lastAttackTime: 0
+  cooldown: 0
+  canAttack: 0
 --- !u!96 &257154873
 TrailRenderer:
   serializedVersion: 3
@@ -1404,6 +1412,7 @@ MonoBehaviour:
   - {fileID: 403859227}
   entity: {fileID: 0}
   canReceive: 0
+  val: {fileID: 0}
 --- !u!114 &403859225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1704,9 +1713,11 @@ MonoBehaviour:
   affectedMesh:
   - {fileID: 1664577715}
   - {fileID: 565064123}
+  affectedSkins: []
   dissapear: 0
   dissolveTime: 0
   dissolveSpeed: 1
+  reverse: 0
 --- !u!1 &406343199
 GameObject:
   m_ObjectHideFlags: 0
@@ -2143,7 +2154,15 @@ MonoBehaviour:
     range: 10
     multiplier: 1.5
     attack: {fileID: 2610798343647673867, guid: 57b157140500f244dbf718db206da937, type: 3}
+    lastTimeUsedThisAttack: 0
+    localCooldown: 0
+    inCooldown: 0
+    cooldown: 0
+    moreThanRange: 0
   target: {fileID: 0}
+  lastAttackTime: 0
+  cooldown: 0
+  canAttack: 0
 --- !u!96 &511192174
 TrailRenderer:
   serializedVersion: 3
@@ -2746,7 +2765,15 @@ MonoBehaviour:
     range: 10
     multiplier: 1.5
     attack: {fileID: 2610798343647673867, guid: 57b157140500f244dbf718db206da937, type: 3}
+    lastTimeUsedThisAttack: 0
+    localCooldown: 0
+    inCooldown: 0
+    cooldown: 0
+    moreThanRange: 0
   target: {fileID: 0}
+  lastAttackTime: 0
+  cooldown: 0
+  canAttack: 0
 --- !u!1 &636892357
 GameObject:
   m_ObjectHideFlags: 1
@@ -5448,7 +5475,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346516292}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -5572,9 +5599,11 @@ MonoBehaviour:
   affectedMesh:
   - {fileID: 640201842}
   - {fileID: 1371278994}
+  affectedSkins: []
   dissapear: 0
   dissolveTime: 0
   dissolveSpeed: 1
+  reverse: 0
 --- !u!114 &1358902691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5790,6 +5819,7 @@ MonoBehaviour:
   - {fileID: 1358902698}
   entity: {fileID: 0}
   canReceive: 0
+  val: {fileID: 0}
 --- !u!114 &1358902700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5815,16 +5845,10 @@ MonoBehaviour:
   keyAndStates:
   - key: {fileID: 11400000, guid: e29b44b3acd4f4b4ea42671209a8e0a0, type: 2}
     state: {fileID: 11400000, guid: 0b3ffae758b2ea548b3ae2bdce50d452, type: 2}
-  - key: {fileID: 11400000, guid: f47a1c759103cd24e8a5ab97d9349719, type: 2}
-    state: {fileID: 11400000, guid: 68609417c3b01fd4ab545be1a5bc89a6, type: 2}
   - key: {fileID: 11400000, guid: 5181c1ce474495741beb791ba21cd3cb, type: 2}
     state: {fileID: 11400000, guid: 3bac70cdb6ee9d145b3c084fce93ff75, type: 2}
   - key: {fileID: 11400000, guid: eed21f08b8f3ad34f8ec3f587c345c74, type: 2}
     state: {fileID: 11400000, guid: 73b05ec1436a4bb43b60d80baf1693f9, type: 2}
-  - key: {fileID: 11400000, guid: 9f2fd32b894b5854398d459bf9102038, type: 2}
-    state: {fileID: 11400000, guid: 6a9186a0de55f8e4aa899247159f5695, type: 2}
-  - key: {fileID: 11400000, guid: de3211b42862aec4fb7ca004140cd3fd, type: 2}
-    state: {fileID: 11400000, guid: c679841de255a744aa4e90fbd9f4e198, type: 2}
   currentState: {fileID: 0}
   previousState: {fileID: 0}
   startingState: {fileID: 0}
@@ -7594,6 +7618,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2781925613309632531, guid: c062317d59558c64f82fd4b298eab6b7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781925613309632531, guid: c062317d59558c64f82fd4b298eab6b7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781925613309632531, guid: c062317d59558c64f82fd4b298eab6b7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781925613309632531, guid: c062317d59558c64f82fd4b298eab6b7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3725689067784673588, guid: c062317d59558c64f82fd4b298eab6b7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7687,6 +7727,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4110721929066004243, guid: c062317d59558c64f82fd4b298eab6b7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548606357750838342, guid: c062317d59558c64f82fd4b298eab6b7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548606357750838342, guid: c062317d59558c64f82fd4b298eab6b7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548606357750838342, guid: c062317d59558c64f82fd4b298eab6b7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548606357750838342, guid: c062317d59558c64f82fd4b298eab6b7, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -8345,12 +8401,12 @@ GameObject:
   - component: {fileID: 2125152981}
   - component: {fileID: 2125152980}
   m_Layer: 0
-  m_Name: Energy Remnant (2)
+  m_Name: Energy Remnant (Hostile)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2125152980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8371,9 +8427,11 @@ MonoBehaviour:
   affectedMesh:
   - {fileID: 979455025}
   - {fileID: 1673932842}
+  affectedSkins: []
   dissapear: 0
   dissolveTime: 0
   dissolveSpeed: 1
+  reverse: 0
 --- !u!114 &2125152981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8589,6 +8647,7 @@ MonoBehaviour:
   - {fileID: 2125152988}
   entity: {fileID: 0}
   canReceive: 0
+  val: {fileID: 0}
 --- !u!114 &2125152990
 MonoBehaviour:
   m_ObjectHideFlags: 0

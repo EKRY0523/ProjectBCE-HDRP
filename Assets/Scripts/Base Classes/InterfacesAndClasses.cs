@@ -34,13 +34,25 @@ public class Level
         {
             expNeeded = 100 * MathF.Pow(2, lv - 1);
         }
-
-        if (currentExp >= expNeeded)
+        while (currentExp>=expNeeded)
         {
-            lv += 1;
-            currentExp -= expNeeded;
+            if (lv == 1)
+            {
+                expNeeded = 100 * MathF.Pow(2, lv - 2);
+            }
+            else
+            {
+                expNeeded = 100 * MathF.Pow(2, lv - 1);
+            }
 
+            if (currentExp >= expNeeded)
+            {
+                lv += 1;
+                currentExp -= expNeeded;
+
+            }
         }
+        
     }
 
 }

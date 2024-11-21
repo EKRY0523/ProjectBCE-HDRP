@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 [CreateAssetMenu(fileName = "Berserker's Will", menuName = "CharacterSkill/Kuroya/Berserker's Will")]
 public class BerserkerWill : CharacterSkill
 {
@@ -18,8 +18,10 @@ public class BerserkerWill : CharacterSkill
     {
         base.SkillMultiplier(stat1);
         skillInstance[0].skillObjects[0].multiplier = stat1;
-        Instantiate(skillInstance[0].skillObjects[0],characterData.transform.parent);
-        Debug.Log(this.name + ": " + stat1);
+        characterData.StartCoroutine(InstantiateWithDelay());
+        //Instantiate(skillInstance[0].skillObjects[0], characterData.transform.parent);
+        
+        //Invoke(nameof(InstantiateWithDelay),delayForInstantiate);
     }
     public override void OnHold(StatMultiplier[] usedStat)
     {
@@ -32,4 +34,11 @@ public class BerserkerWill : CharacterSkill
         }
        SkillMultiplier(lastMultiplier+additionalMultiplier);
     }
+    public override IEnumerator InstantiateWithDelay()
+    {
+        yield return new WaitForSeconds(delayForInstantiate);
+        Instantiate(skillInstance[0].skillObjects[0], characterData.transform.parent);
+        yield break;
+    }
+
 }

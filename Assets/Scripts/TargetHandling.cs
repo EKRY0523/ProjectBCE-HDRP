@@ -39,13 +39,32 @@ public class TargetHandling : EventHandler
                 }
             }
         }
+         targets.RemoveAll(target => target == null);
+
+        // Update the nearest target if there are valid targets
         if (targets.Count > 0)
         {
             GetNearestTarget();
         }
+        else
+        {
+            currentNearestTarget = null; // Reset the nearest target if no targets are valid
+        }
     }
     public void GetNearestTarget()
     {
+
+        for (int i = 0; i < targets.Count; i++)
+        {
+            if(currentNearestTarget==null && targets.Count>0)
+            {
+                currentNearestTarget = targets[i];
+            }
+            else
+            {
+
+            }
+        }
 
         for (int i = 0; i < targets.Count; i++)
         {
@@ -63,9 +82,13 @@ public class TargetHandling : EventHandler
             }
             else
             {
-                if(Vector3.Distance(transform.position, currentNearestTarget.position) > Vector3.Distance(transform.position, targets[i].position))
+                if(targets[i]!=null)
                 {
-                    currentNearestTarget = targets[i];
+
+                    if (Vector3.Distance(transform.position, currentNearestTarget.position) > Vector3.Distance(transform.position, targets[i].position))
+                    {
+                        currentNearestTarget = targets[i];
+                    }
                 }
             }
         }
@@ -74,7 +97,6 @@ public class TargetHandling : EventHandler
 
             MBEvent?.Invoke(null, currentNearestTarget);
         }
-        //targets.Clear();
     }
 
     public override void OnInvoke(Trait ID, object data)

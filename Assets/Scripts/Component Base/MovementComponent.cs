@@ -10,5 +10,9 @@ public class MovementComponent : ReusableComponent
         rb.AddForce(direction-rb.linearVelocity,ForceMode.VelocityChange);
         //rb.AddForce(direction - rb.linearVelocity, ForceMode.VelocityChange);
     }
-    
+
+    public void MoveCharacter(CharacterController controller,Vector3 direction,float speed)
+    {
+        controller.Move(direction * speed* Time.deltaTime);
+    }
 }

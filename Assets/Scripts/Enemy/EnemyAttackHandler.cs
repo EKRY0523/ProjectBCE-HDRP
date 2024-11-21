@@ -5,7 +5,8 @@ public class EnemyAttackHandler : EventHandler
     public Entity entity;
     public EnemyAttackCondition[] attacks;
     public Transform target;
-
+    public float lastAttackTime,cooldown;
+    public bool canAttack;
     public override void Awake()
     {
         base.Awake();
@@ -25,17 +26,58 @@ public class EnemyAttackHandler : EventHandler
     }
     private void Update()
     {
-        if(target!=null)
+        if(canAttack)
         {
-            for (int i = 0; i < attacks.Length; i++)
+            if (target != null)
             {
-                if(Vector3.Distance(transform.position,target.position) <= attacks[i].range)
+                for (int i = 0; i < attacks.Length; i++)
                 {
-                    MBEvent?.Invoke(attacks[i].stateID,null);
+                    if(!attacks[i].inCooldown)
+                    {
+                        if (attacks[i].moreThanRange == true)
+                        {
+                            if (Vector3.Distance(transform.position, target.position) > attacks[i].range)
+                            {
+
+                                MBEvent?.Invoke(attacks[i].stateID, null);
+                                attacks[i].inCooldown = true;
+                                attacks[i].lastTimeUsedThisAttack = Time.time;
+                                canAttack = false;
+                                lastAttackTime = Time.time;
+                                cooldown = attacks[i].cooldown;
+
+                            }
+                        }
+                        else
+                        {
+                            if (Vector3.Distance(transform.position, target.position) <= attacks[i].range)
+                            {
+                                MBEvent?.Invoke(attacks[i].stateID, null);
+                                attacks[i].inCooldown = true;
+                                attacks[i].lastTimeUsedThisAttack = Time.time;
+                                canAttack = false;
+                                lastAttackTime = Time.time;
+                                cooldown = attacks[i].cooldown;
+                            }
+                        }
+
+                    }
                 }
             }
         }
-        
+        for (int i = 0; i < attacks.Length; i++)
+        {
+            if (Time.time > attacks[i].lastTimeUsedThisAttack + attacks[i].localCooldown)
+            {
+                attacks[i].inCooldown = false;
+            }
+
+        }
+
+        if (Time.time > lastAttackTime+cooldown)
+        {
+            canAttack = true;
+        }
     }
 
     public void RotateToTarget()
@@ -57,6 +99,12 @@ public class EnemyAttackHandler : EventHandler
             target = (Transform)data;
         }
     }
+
+    public void MoveCharacter(MovementData moveData)
+    {
+        MBEvent?.Invoke(null, moveData);
+
+    }
 }
 
 
@@ -69,4 +117,12 @@ public class EnemyAttackCondition
     public float range;
     public float multiplier;
     public SkillObject attack;
+
+    public float lastTimeUsedThisAttack;
+    public float localCooldown;
+
+    public bool inCooldown;
+    public float cooldown;
+    public bool moreThanRange;
+
 }

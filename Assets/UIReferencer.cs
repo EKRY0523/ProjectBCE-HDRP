@@ -5,6 +5,7 @@ public class UIReferencer : EventHandler
 {
     public PlayerInput input;
     public InputActionReference[] references;
+    public GameObject[] turnOnWhenDisable;
     public override void Awake()
     {
         base.Awake();
@@ -20,6 +21,13 @@ public class UIReferencer : EventHandler
         }
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        if (turnOnWhenDisable.Length > 0)
+        {
+            for (int i = 0; i < turnOnWhenDisable.Length; i++)
+            {
+                turnOnWhenDisable[i].SetActive(false);
+            }
+        }
         //input.input.UI.Enable();
     }
 
@@ -32,6 +40,14 @@ public class UIReferencer : EventHandler
         }
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        if(turnOnWhenDisable.Length>0)
+        {
+            for (int i = 0; i < turnOnWhenDisable.Length; i++)
+            {
+                turnOnWhenDisable[i].SetActive(true);
+            }
+        }
         //input.input.UI.Disable();
     }
 }

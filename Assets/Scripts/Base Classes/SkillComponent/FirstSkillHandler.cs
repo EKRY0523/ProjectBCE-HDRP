@@ -79,12 +79,7 @@ public class FirstSkillHandler : SkillHandler
         base.Update();
     }
 
-    public void SpawnSkill1Object(int instance)
-    {
-
-        //Debug.Log((Skill1.skillInstance[0].skillObjects[instance].multiplier));
-        Instantiate(Skill1.skillInstance[0].skillObjects[instance], transform.parent);
-    }
+    
     public void OnChangeSkill(CharacterSkill characterSkill)
     {
         Skill1.OnRemove(character);

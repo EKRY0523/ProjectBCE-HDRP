@@ -5,6 +5,9 @@ using System.Collections.Generic;
 public class Entity : EventHandler
 {
     [SerializeField]public Dictionary<Trait, Stat> statDictionary = new Dictionary<Trait, Stat>();
+    public int lv;
+    public float currentEXP;
+    public float ExpNeeded;
     public Level level;
     [SerializeField] public List<Stat> stats = new();
     [SerializeField]public Stat[] placeholder;

@@ -3,6 +3,15 @@ using UnityEngine.InputSystem;
 using System;
 public class Movement : EventHandler
 {
+    //testing
+    public CharacterController charController;
+
+    [Header("Ground Check")]
+    public Transform groundCheck;
+    public float groundDistance = 0.4f;
+    public LayerMask groundMask;
+    //
+
     protected Vector2 magnitudeCheck;
     protected Vector3 movementVector;
     [SerializeField] protected MovementComponent movementComponent;
@@ -20,14 +29,36 @@ public class Movement : EventHandler
     public virtual void OnMove(Vector2 Direction)
     {
         magnitudeCheck = Direction;
-        
-        movementComponent.MoveCharacter(rb, movementVector * speed);
-        
+
+        //movementComponent.MoveCharacter(rb, (movementVector * speed));
+
+        //test
+        movementComponent.MoveCharacter(charController,movementVector,speed);
+            //
 
     }
 
+    public virtual void Update()
+    {
+        if(charController!=null)
+        {
+            grounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+            if (!grounded)
+            {
+                charController.Move(Vector3.down * 9.81f * Time.deltaTime);
+            }
+            if (magnitudeCheck.magnitude != 0)
+            {
+                OnMove(magnitudeCheck);
+            }
+
+        }
+
+    }
     public virtual void FixedUpdate()
     {
+       
+
         if (magnitudeCheck.magnitude != 0)
         {
             OnMove(magnitudeCheck);
@@ -40,7 +71,15 @@ public class Movement : EventHandler
         if(data is MovementData)
         {
             movementData = data as MovementData;
-            movementData.MoveCharacter(rb);
+            if(rb!=null)
+            {
+
+                movementData.MoveCharacter(rb);
+            }
+            if(charController!=null)
+            {
+                movementData.MoveCharacter(charController);
+            }
         }
     }
 

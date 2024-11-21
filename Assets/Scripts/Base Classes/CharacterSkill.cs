@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
 using System;
+using System.Collections;
 public class CharacterSkill : ScriptableObject
 {
     public SkillObject[] skillObject;
@@ -18,6 +19,8 @@ public class CharacterSkill : ScriptableObject
     public Sprite skillIcon;
     public float[] cooldown;
     public MovementData[] movementData;
+
+    public float delayForInstantiate;
     public virtual void OnSetup(PlayableCharacterData character)
     {
 
@@ -65,7 +68,10 @@ public class CharacterSkill : ScriptableObject
     {
 
     }
-
+    public virtual IEnumerator InstantiateWithDelay()
+    {
+         yield return new WaitForSeconds(delayForInstantiate);
+    }
 }
 [Serializable]
 public class SkillObjectInstance

@@ -16,38 +16,68 @@ public class EffectInflictor : EventHandler
     public TargetType type;
     public virtual void Inflict(EffectHandler target)
     {
-        if (type == EffectInflictor.TargetType.Global)
-        {
-            for (int i = 0; i < target.party.characterList.Count; i++)
-            {
-                target.party.characterList[i].GetComponent<EffectHandler>().OnAddEffect(effect);
-            }
+        //if (type == EffectInflictor.TargetType.Global)
+        //{
+        //    for (int i = 0; i < target.party.party.Count; i++)
+        //    {
+        //        target.party.party[i].GetComponent<EffectHandler>().OnAddEffect(effect);
+        //    }
             
            
-        }
-        else
-        {
+        //}
+        //else
+        //{
             target.OnAddEffect(effect);
-        }
+        //}
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(effectedTag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            if (collision.collider.CompareTag("Player"))
+            Debug.Log("normal");
+            if (collision.gameObject.GetComponent<PartyHandler>())
             {
-                Inflict(collision.gameObject.GetComponent<PartyHandler>().activeCharacter.GetComponent<EffectHandler>());
+                PartyHandler party = collision.gameObject.GetComponent<PartyHandler>();
+                if (type == EffectInflictor.TargetType.Global)
+                {
+                    for (int i = 0; i < party.party.Count; i++)
+                    {
+                        Inflict(party.party[i].GetComponent<EffectHandler>());
+                    }
+                }
+                else
+                {
+                    Inflict(party.activeCharacter.GetComponent<EffectHandler>());
+
+                }
             }
         }
-        else
+
+    }
+
+    public void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("Player"))
         {
-            if(collision.collider.CompareTag("Enemy"))
+            Debug.Log("controller");
+            if (hit.gameObject.GetComponent<PartyHandler>())
             {
-                Inflict(collision.gameObject.GetComponent<EffectHandler>());
+                PartyHandler party = hit.gameObject.GetComponent<PartyHandler>();
+                if (type == EffectInflictor.TargetType.Global)
+                {
+                    for (int i = 0; i < party.party.Count; i++)
+                    {
+                        Inflict(party.party[i].GetComponent<EffectHandler>());
+                    }
+                }
+                else
+                {
+                    Inflict(party.activeCharacter.GetComponent<EffectHandler>());
+
+                }
             }
         }
-        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -56,9 +86,22 @@ public class EffectInflictor : EventHandler
         {
             if (other.CompareTag("Player"))
             {
-                if(other.gameObject.GetComponent<PartyHandler>())
+                if (other.gameObject.GetComponent<PartyHandler>())
                 {
-                    Inflict(other.gameObject.GetComponent<PartyHandler>().activeCharacter.GetComponent<EffectHandler>());
+                    Debug.Log("triggerer");
+                    PartyHandler party = other.gameObject.GetComponent<PartyHandler>();
+                    if (type == EffectInflictor.TargetType.Global)
+                    {
+                        for (int i = 0; i < party.party.Count; i++)
+                        {
+                            Inflict(party.party[i].GetComponent<EffectHandler>());
+                        }
+                    }
+                    else
+                    {
+                        Inflict(party.activeCharacter.GetComponent<EffectHandler>());
+
+                    }
                 }
             }
         }

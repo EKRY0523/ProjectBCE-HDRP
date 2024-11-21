@@ -5,7 +5,7 @@ public class Soloist : Effect
     public override void PassiveOneShot(Entity entity, EffectHandler target)
     {
         base.PassiveOneShot(entity, target);
-        if(entity.GetComponent<PartyHandler>().characterList.Count ==1)
+        if(entity.GetComponent<PartyHandler>().party.Count ==1)
         {
             target.MBEvent?.Invoke(targetedStat[0], entity.statDictionary[targetedStat[0]].statValue * 3); //atk
             target.MBEvent?.Invoke(targetedStat[1], entity.statDictionary[targetedStat[1]].statValue * 1.5); //def

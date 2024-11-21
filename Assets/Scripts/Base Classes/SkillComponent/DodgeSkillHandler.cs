@@ -64,8 +64,6 @@ public class DodgeSkillHandler : SkillHandler
             {
                 if (character.statDictionary[cost.stat].statValue >= cost.cost)
                 {
-                    executionTime = Time.time;
-                    canExecute = false;
 
                     if (context.performed)
                     {
@@ -79,6 +77,8 @@ public class DodgeSkillHandler : SkillHandler
                     }
                     if (context.canceled)
                     {
+                        executionTime = Time.time;
+                        canExecute = false;
                         dodge.OnRelease(dodge.statAndMultiplier);
                         dodge.OnHit(this);
                         MBEvent?.Invoke(indicator, null);

@@ -93,11 +93,9 @@ public class BasicAttackHandler : SkillHandler
         firstInput = true;
     }
 
-    public void SpawnSkillObject(int instance)
+    public void ActivateBasic(int instance)
     {
-
-        //Debug.Log((basicAttack.skillInstance[count].skillObjects[instance].multiplier));
-        Instantiate(basicAttack.skillInstance[count].skillObjects[instance],transform.parent);
+        Instantiate(basicAttack.skillInstance[count].skillObjects[instance], transform.parent);
     }
 
 

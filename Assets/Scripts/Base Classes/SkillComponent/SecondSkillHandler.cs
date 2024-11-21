@@ -73,6 +73,7 @@ public class SecondSkillHandler : SkillHandler
 
     }
 
+
     public override void Update()
     {
         base.Update();

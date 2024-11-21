@@ -39,10 +39,12 @@ public class ValueUIHandler : EventHandler
         {
             if(Entity.statDictionary.ContainsKey(ID))
             {
-                image.fillAmount = ((float)data) / (Entity.statDictionary[statIndex].MinMaxValue[1] * MathF.Pow(Entity.statDictionary[statIndex].statScaling, Entity.level.lv - 1));
+                image.fillAmount = ((float)data) / (Entity.statDictionary[statIndex].MinMaxValue[1]);
                 if (text != null)
                 {
-                    text.text = (float)data + "/" + (Entity.statDictionary[statIndex].MinMaxValue[1] * MathF.Pow(Entity.statDictionary[statIndex].statScaling, Entity.level.lv - 1));
+                    text.text = String.Format("{0:0}/{1:0}", (float)data, (Entity.statDictionary[statIndex].MinMaxValue[1])) ;
+                    //text.text = String.Format("{0:0}/{1:0}", (float)data, (Entity.statDictionary[statIndex].MinMaxValue[1] * MathF.Pow(Entity.statDictionary[statIndex].statScaling, Entity.lv - 1)));
+                    //text.text = String.Format("{0/1}",(float)data) + "/" + (Entity.statDictionary[statIndex].MinMaxValue[1] * MathF.Pow(Entity.statDictionary[statIndex].statScaling, Entity.level.lv - 1));
                 }
             }
             

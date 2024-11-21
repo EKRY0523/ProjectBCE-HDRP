@@ -55,9 +55,10 @@ MonoBehaviour:
   tagName: Enemy
   originStat:
   - {fileID: 11400000, guid: bf0e21beacd082f45b3c20cb0f18fa31, type: 2}
-  targetedStat: []
+  targetedStat:
+  - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   characterData: {fileID: 0}
-  multiplier: 500
+  multiplier: 2500
   duration: 5
   target: {fileID: 0}
   knockback: {fileID: 0}

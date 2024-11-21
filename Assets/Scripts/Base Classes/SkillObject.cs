@@ -12,6 +12,8 @@ public class SkillObject : EventHandler
     public Transform target;
     public MovementData knockback;
     public bool detachFromParent;
+    public GameObject hitFX;
+    public bool friendly;
     //add effect caster here
 
     private void OnEnable()
@@ -39,7 +41,14 @@ public class SkillObject : EventHandler
         {
             if (other.CompareTag(tagName))
             {
-
+                if(!friendly)
+                {
+                    if(hitFX!=null)
+                    {
+                        //Vector3 otherObjCenter = other.transform.TransformPoint(other.bounds.center);
+                        Destroy(Instantiate(hitFX, other.bounds.center, Quaternion.identity,other.transform),1f);
+                    }
+                }
                 if (other.GetComponent<StatHandler>())
                 {
                     StatHandler stathandle = other.GetComponent<StatHandler>();

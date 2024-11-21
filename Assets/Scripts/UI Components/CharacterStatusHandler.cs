@@ -8,6 +8,10 @@ public class CharacterStatusHandler : EventHandler
         base.Awake();
     }
 
+    private void Start()
+    {
+        MBEvent?.Invoke(null,entity);
+    }
     public override void OnInvoke(Trait ID, object data)
     {
         base.OnInvoke(ID, data);
@@ -16,30 +20,41 @@ public class CharacterStatusHandler : EventHandler
         {
             MBEvent.Invoke(ID, (float)data);
         }
-    }
 
-    public override void OnGlobalEventInvoke(object data)
-    {
-        base.OnGlobalEventInvoke(data);
-        if(data is Entity)
+        if (data is Entity)
         {
-            MBEvent?.Invoke(null,(Entity)data);
+            MBEvent?.Invoke(null, (Entity)data);
             if (entity != null)
             {
-                Unsubscribe(entity.statHandler);
+                Unsubscribe(entity);
             }
             entity = (Entity)data;
-            Subscribe(entity.statHandler);
+            Subscribe(entity);
         }
+    }
+
+    //public override void OnGlobalEventInvoke(object data)
+    //{
+    //    base.OnGlobalEventInvoke(data);
+    //    if(data is Entity)
+    //    {
+    //        MBEvent?.Invoke(null,(Entity)data);
+    //        if (entity != null)
+    //        {
+    //            Unsubscribe(entity.statHandler);
+    //        }
+    //        entity = (Entity)data;
+    //        Subscribe(entity.statHandler);
+    //    }
 
         
         
-    }
+    //}
 
-    public void EnableCharacterInstantly(PlayableCharacterData data)
-    {
-        entity = (Entity)data;
-        MBEvent?.Invoke(null,(Entity)data);
-        Subscribe(entity.statHandler);
-    }
+    //public void EnableCharacterInstantly(PlayableCharacterData data)
+    //{
+    //    entity = (Entity)data;
+    //    MBEvent?.Invoke(null,(Entity)data);
+    //    Subscribe(entity.statHandler);
+    //}
 }

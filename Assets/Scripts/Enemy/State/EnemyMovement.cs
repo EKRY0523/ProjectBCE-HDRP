@@ -31,13 +31,17 @@ public class EnemyMovement : Movement
         }
         else
         {
-            agent.SetDestination(waypoint[index].transform.position);
-            if (DetectDecision != null)
+            if(waypoint.Length>0)
             {
-                StopCoroutine(DetectDecision);
+                agent.SetDestination(waypoint[index].transform.position);
+                if (DetectDecision != null)
+                {
+                    StopCoroutine(DetectDecision);
 
+                }
+                DetectDecision = StartCoroutine(GetTarget());
             }
-            DetectDecision = StartCoroutine(GetTarget());
+            
         }
     }
 
@@ -92,6 +96,7 @@ public class EnemyMovement : Movement
                 transform.rotation = Quaternion.LookRotation(lookAt);
             }
         }
+       
     }
 
     public IEnumerator GetTarget()

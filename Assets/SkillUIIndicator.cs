@@ -22,6 +22,12 @@ public class SkillUIIndicator : EventHandler
     public override void OnGlobalEventInvoke(object data)
     {
         base.OnGlobalEventInvoke(data);
+        
+    }
+
+    public override void OnInvoke(Trait ID, object data)
+    {
+        base.OnInvoke(ID, data);
         if (data is PlayableCharacterData)
         {
             characterData = (PlayableCharacterData)data;
@@ -57,16 +63,15 @@ public class SkillUIIndicator : EventHandler
         }
     }
 
-    public override void OnInvoke(Trait ID, object data)
-    {
-        base.OnInvoke(ID, data);
-    }
-
     private void Update()
     {
-        if(fill!=null)
+        if(skillHandler!=null)
         {
-            fill.fillAmount = (skillHandler.timeToExceed + skillHandler.executionTime) - Time.time;
+
+            if (fill != null)
+            {
+                fill.fillAmount = (skillHandler.timeToExceed + skillHandler.executionTime) - Time.time;
+            }
         }
     }
 }

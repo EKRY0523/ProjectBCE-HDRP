@@ -26,7 +26,7 @@ public class StoryProgress : EventHandler
             }
             GameManager.instance.gameData = gameData;
 
-            GameManager.instance.SaveGameData();
+            //GameManager.instance.SaveGameData();
         }
     }
 

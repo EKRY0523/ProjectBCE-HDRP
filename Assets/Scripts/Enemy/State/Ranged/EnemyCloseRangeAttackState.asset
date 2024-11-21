@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a18f3ef3c9f072c4ea2ac62f1fe87e14, type: 3}
+  m_Name: EnemyCloseRangeAttackState
+  m_EditorClassIdentifier: 
+  activatedComponents: []
+  deactivatedComponents: []
+  OnEnterActivateComponent: []
+  OnEnterDeactivateComponent:
+  - {fileID: 11400000, guid: 4e7127693565c8540992920a2b88a303, type: 2}
+  OnExitActivateComponent: []
+  OnExitDeactivateComponent: []
+  SwitchUponExit: {fileID: 11400000, guid: ad3f2191590e202439c98a4f2449f64c, type: 2}
+  stateKey: {fileID: 0}
+  maxTimeInState: 1

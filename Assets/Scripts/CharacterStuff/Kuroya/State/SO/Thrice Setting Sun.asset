@@ -22,4 +22,4 @@ MonoBehaviour:
   OnExitDeactivateComponent: []
   SwitchUponExit: {fileID: 0}
   stateKey: {fileID: 0}
-  maxTimeInState: 2
+  maxTimeInState: 2.5

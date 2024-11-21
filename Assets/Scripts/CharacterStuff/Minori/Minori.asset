@@ -59,7 +59,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 10
-    followMax: 0
+    followMax: 1
   - statIdentifier: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
     statAction: []
     statValue: 1500
@@ -67,7 +67,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 1500
-    followMax: 0
+    followMax: 1
   - statIdentifier: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
     statAction: []
     statValue: 1500
@@ -75,7 +75,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 1500
-    followMax: 0
+    followMax: 1
   - statIdentifier: {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}
     statAction: []
     statValue: 1500
@@ -83,7 +83,7 @@ MonoBehaviour:
     MinMaxValue:
     - 0
     - 1500
-    followMax: 0
+    followMax: 1
   - statIdentifier: {fileID: 11400000, guid: bf0e21beacd082f45b3c20cb0f18fa31, type: 2}
     statAction: []
     statValue: 1500
@@ -91,4 +91,4 @@ MonoBehaviour:
     MinMaxValue:
     - 100
     - 1500
-    followMax: 0
+    followMax: 1

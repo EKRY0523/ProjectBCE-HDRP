@@ -6,7 +6,7 @@ public class ClampValue : StatAction
 {
     public override void HandleAction(Entity entity, Stat value)
     {
-        entity.statDictionary[value.statIdentifier].statValue = Mathf.Clamp(value.statValue, value.MinMaxValue[0], value.MinMaxValue[1] * MathF.Pow(value.statScaling, entity.level.lv - 1));
-        
+        entity.statDictionary[value.statIdentifier].statValue = Mathf.Clamp(value.statValue, value.MinMaxValue[0], value.MinMaxValue[1]);
+        entity.MBEvent?.Invoke(value.statIdentifier, entity.statDictionary[value.statIdentifier].statValue);
     }
 }

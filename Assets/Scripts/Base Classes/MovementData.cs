@@ -8,7 +8,7 @@ public class MovementData : ScriptableObject
 
     public enum MovementMode
     {
-        RigidBody,Transform
+        RigidBody,CharacterController
     }
 
     public Vector3 targetPosition;
@@ -21,14 +21,18 @@ public class MovementData : ScriptableObject
     {
         if(mode == MovementMode.RigidBody)
         {
-            rb.AddForce((rb.transform.right * targetPosition.x) + (rb.transform.up * targetPosition.y) + (rb.transform.forward * targetPosition.z), ForceMode.VelocityChange);
+            rb.AddForce(((rb.transform.right * targetPosition.x) + (rb.transform.up * targetPosition.y) + (rb.transform.forward * targetPosition.z))-rb.linearVelocity, ForceMode.VelocityChange);
         }
         else
         {
             rb.isKinematic = true;
             rb.transform.DOMove(targetPosition,duration);
         }
-       
+    }
+
+    public void MoveCharacter(CharacterController cc)
+    {
+        cc.Move((cc.transform.right * targetPosition.x) + (cc.transform.up * targetPosition.y) + (cc.transform.forward * targetPosition.z));
     }
 }
 
