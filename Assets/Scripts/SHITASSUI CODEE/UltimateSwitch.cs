@@ -56,6 +56,20 @@ public class UltimateSwitch : EventHandler
             skillOptionIcon[i].sprite = character.Ultimate[i].skillIcon;
         }
     }
+
+    private void OnEnable()
+    {
+        currentSkillIndex = GameManager.instance.characterLoading[character.ID].ultimate;
+        skillDescription.text = character.Ultimate[currentSkillIndex].skillDescription;
+        skillName.text = character.Ultimate[currentSkillIndex].skillName;
+        skillCost.text = character.Ultimate[currentSkillIndex].cost.stat.name + ": " + character.Ultimate[currentSkillIndex].cost.cost;
+        skillCooldown.text = "CD: " + character.Ultimate[currentSkillIndex].cooldown[0];
+
+        for (int i = 0; i < skillOptionIcon.Length; i++)
+        {
+            skillOptionIcon[i].sprite = character.Ultimate[i].skillIcon;
+        }
+    }
     private void OnDisable()
     {
         switchSkillPanel.SetActive(false);
@@ -73,26 +87,23 @@ public class UltimateSwitch : EventHandler
 
     public void ConfirmChange(int index)
     {
-        LevelAndStats stats = JsonUtility.FromJson<LevelAndStats>(File.ReadAllText(Application.dataPath + "/CharacterSaveFile/" + character.name + ".json"));
-        stats.ultimate = index;
-        string json = JsonUtility.ToJson(stats, true);
-        File.WriteAllText(Application.dataPath + "/CharacterSaveFile/" + character.name + ".json", json);
+        GameManager.instance.characterLoading[character.ID].ultimate = index;
+        GameManager.instance.characterLoading[character.ID].ultimateSkill.OnChangeSkill(character.Ultimate[index]);
 
         skillDescription.text = character.Ultimate[index].skillDescription;
         skillName.text = character.Ultimate[index].skillName;
-        currentSkllIcon.sprite = character.Ultimate[index].skillIcon;
         skillCost.text = character.Ultimate[index].cost.stat.name + ": " + character.Ultimate[index].cost.cost;
-        skillCooldown.text = "CD: " + character.Ultimate[index].cooldown[0];
+
+        currentSkllIcon.sprite = character.Ultimate[index].skillIcon;
+
 
         gameObject.SetActive(false);
 
         successText.text = "Sucessfully changed " + "<color=#FF8F85>" + character.Ultimate[currentSkillIndex].skillName + "</color>"
                             + " To " + "<color=#87FF84>" + character.Ultimate[index].skillName + "</color>";
 
-        MBEvent?.Invoke(HandlerID, index);
         switchSkillPanel.SetActive(false);
         successMenu.SetActive(true);
-        SOEvent[0].globalEvent?.Invoke(character);
 
     }
 

@@ -12,6 +12,7 @@ public class ParrySuccessState : CharacterDodgeState
     public override void OnExit(Statemachine statemachine)
     {
         base.OnExit(statemachine);
+        statemachine.transform.parent.tag = "Player";
         statemachine.MBEvent?.Invoke(stateKey, "Success");
         statemachine.MBEvent?.Invoke(stateKey, false);
     }
@@ -20,4 +21,5 @@ public class ParrySuccessState : CharacterDodgeState
     {
         base.OnUpdate(statemachine);
     }
+        
 }

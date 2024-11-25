@@ -56,6 +56,21 @@ public class DodgeSwitch : EventHandler
             skillOptionIcon[i].sprite = character.Dodge[i].skillIcon;
         }
     }
+
+    private void OnEnable()
+    {
+        currentSkillIndex = GameManager.instance.characterLoading[character.ID].dodge;
+
+        skillDescription.text = character.Dodge[currentSkillIndex].skillDescription;
+        skillName.text = character.Dodge[currentSkillIndex].skillName;
+        skillCost.text = character.Dodge[currentSkillIndex].cost.stat.name + ": " + character.Dodge[currentSkillIndex].cost.cost;
+        skillCooldown.text = "CD: " + character.Dodge[currentSkillIndex].cooldown[0];
+
+        for (int i = 0; i < skillOptionIcon.Length; i++)
+        {
+            skillOptionIcon[i].sprite = character.Dodge[i].skillIcon;
+        }
+    }
     private void OnDisable()
     {
         switchSkillPanel.SetActive(false);
@@ -73,26 +88,24 @@ public class DodgeSwitch : EventHandler
 
     public void ConfirmChange(int index)
     {
-        LevelAndStats stats = JsonUtility.FromJson<LevelAndStats>(File.ReadAllText(Application.dataPath + "/CharacterSaveFile/" + character.name + ".json"));
-        stats.dodge = index;
-        string json = JsonUtility.ToJson(stats, true);
-        File.WriteAllText(Application.dataPath + "/CharacterSaveFile/" + character.name + ".json", json);
+        GameManager.instance.characterLoading[character.ID].dodge = index;
+        GameManager.instance.characterLoading[character.ID].dodgeSkill.OnChangeSkill(character.Dodge[index]);
 
         skillDescription.text = character.Dodge[index].skillDescription;
         skillName.text = character.Dodge[index].skillName;
-        currentSkllIcon.sprite = character.Dodge[index].skillIcon;
         skillCost.text = character.Dodge[index].cost.stat.name + ": " + character.Dodge[index].cost.cost;
-        skillCooldown.text = "CD: " + character.Dodge[index].cooldown[0];
+        skillCooldown.text = "CD: " + character.Dodge[currentSkillIndex].cooldown[0];
+
+        currentSkllIcon.sprite = character.Dodge[index].skillIcon;
+
 
         gameObject.SetActive(false);
 
         successText.text = "Sucessfully changed " + "<color=#FF8F85>" + character.Dodge[currentSkillIndex].skillName + "</color>"
                             + " To " + "<color=#87FF84>" + character.Dodge[index].skillName + "</color>";
 
-        MBEvent?.Invoke(HandlerID, index);
         switchSkillPanel.SetActive(false);
         successMenu.SetActive(true);
-        SOEvent[0].globalEvent?.Invoke(character);
 
     }
 
@@ -102,7 +115,7 @@ public class DodgeSwitch : EventHandler
         newSkillDescription.text = character.Dodge[index].skillDescription;
         newSkillName.text = character.Dodge[index].skillName;
 
-        if (index == currentSkillIndex)
+        if (index == currentSkillIndex || index == GameManager.instance.characterLoading[character.ID].dodge)
         {
             confirmButton.interactable = false;
         }
@@ -121,6 +134,7 @@ public class DodgeSwitch : EventHandler
         if (data is Character)
         {
             character = (Character)data;
+            currentSkillIndex = GameManager.instance.characterLoading[character.ID].dodge;
             skillDescription.text = character.Dodge[currentSkillIndex].skillDescription;
             skillName.text = character.Dodge[currentSkillIndex].skillName;
             for (int i = 0; i < skillOptionIcon.Length; i++)

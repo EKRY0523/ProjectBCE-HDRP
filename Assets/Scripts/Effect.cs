@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 public class Effect : ScriptableObject
 {
+    public GameObject vfx;
     public enum EffectType
     {
         Passive,Active
@@ -22,7 +23,10 @@ public class Effect : ScriptableObject
     public float[] value;
     public virtual void OnInflict(EffectHandler target)
     {
-
+        if(vfx!=null)
+        {
+           Destroy(Instantiate(vfx,target.transform),duration);
+        }
     }
 
     public virtual void OnStartEffect(EffectHandler target)

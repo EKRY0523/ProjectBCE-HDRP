@@ -1,5 +1,6 @@
+using System.Collections;
 using UnityEngine;
-
+using System.Collections.Generic;
 [CreateAssetMenu(fileName = "HardHit", menuName = "CharacterSkill/Minori/HardHit")]
 public class HardHit : CharacterSkill
 {
@@ -17,7 +18,15 @@ public class HardHit : CharacterSkill
     {
         base.SkillMultiplier(stat1);
         skillInstance[0].skillObjects[0].multiplier = stat1;
-        Instantiate(skillInstance[0].skillObjects[0], characterData.transform.parent);
+        if(delayForInstantiate==0)
+        {
+
+            Instantiate(skillInstance[0].skillObjects[0], characterData.transform.parent);
+        }
+        else
+        {
+            characterData.StartCoroutine(InstantiateWithDelay());
+        }
     }
     public override void OnHold(StatMultiplier[] usedStat)
     {
@@ -29,5 +38,11 @@ public class HardHit : CharacterSkill
 
         }
         SkillMultiplier(lastMultiplier);
+    }
+
+    public override IEnumerator InstantiateWithDelay()
+    {
+        yield return new WaitForSeconds(delayForInstantiate);
+        Instantiate(skillInstance[0].skillObjects[0], characterData.transform.parent);
     }
 }

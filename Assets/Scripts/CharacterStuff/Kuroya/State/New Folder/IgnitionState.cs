@@ -6,7 +6,7 @@ public class IgnitionState : CharacterDodgeState
     public override void OnEnter(Statemachine statemachine)
     {
         base.OnEnter(statemachine);
-        statemachine.MBEvent?.Invoke(stateKey, "Dodge");
+        statemachine.MBEvent?.Invoke(stateKey, "DodgeType");
         statemachine.MBEvent?.Invoke(stateKey, (int)1);
     }
 

@@ -58,6 +58,21 @@ public class FirstSwitch : EventHandler
             skillOptionIcon[i].sprite = character.Skills[i].skillIcon;
         }
     }
+
+    private void OnEnable()
+    {
+        currentSkillIndex = GameManager.instance.characterLoading[character.ID].skill1;
+
+        skillDescription.text = character.Skills[currentSkillIndex].skillDescription;
+        skillName.text = character.Skills[currentSkillIndex].skillName;
+        skillCost.text = character.Skills[currentSkillIndex].cost.stat.name + ": " + character.Skills[currentSkillIndex].cost.cost;
+        skillCooldown.text = "CD: " + character.Skills[currentSkillIndex].cooldown[0];
+
+        for (int i = 0; i < skillOptionIcon.Length; i++)
+        {
+            skillOptionIcon[i].sprite = character.Skills[i].skillIcon;
+        }
+    }
     private void OnDisable()
     {
         switchSkillPanel.SetActive(false);
@@ -75,26 +90,24 @@ public class FirstSwitch : EventHandler
 
     public void ConfirmChange(int index)
     {
-        LevelAndStats stats = JsonUtility.FromJson<LevelAndStats>(File.ReadAllText(Application.dataPath + "/CharacterSaveFile/" + character.name + ".json"));
-        stats.skill1 = index;
-        string json = JsonUtility.ToJson(stats, true);
-        File.WriteAllText(Application.dataPath + "/CharacterSaveFile/" + character.name + ".json", json);
+        GameManager.instance.characterLoading[character.ID].skill1 = index;
+        GameManager.instance.characterLoading[character.ID].firstSkill.OnChangeSkill(character.Skills[index]);
 
         skillDescription.text = character.Skills[index].skillDescription;
         skillName.text = character.Skills[index].skillName;
-        currentSkllIcon.sprite = character.Skills[index].skillIcon;
         skillCost.text = character.Skills[index].cost.stat.name + ": " + character.Skills[index].cost.cost;
-        skillCooldown.text = "CD: " + character.Skills[index].cooldown[0];
+        skillCooldown.text = "CD: " + character.Skills[currentSkillIndex].cooldown[0];
+
+        currentSkllIcon.sprite = character.Skills[index].skillIcon;
+
 
         gameObject.SetActive(false);
 
         successText.text = "Sucessfully changed " + "<color=#FF8F85>" + character.Skills[currentSkillIndex].skillName + "</color>"
                             + " To " + "<color=#87FF84>" + character.Skills[index].skillName + "</color>";
 
-        MBEvent?.Invoke(HandlerID, index);
         switchSkillPanel.SetActive(false);
         successMenu.SetActive(true);
-        SOEvent[0].globalEvent?.Invoke(character);
 
     }
 
@@ -104,7 +117,7 @@ public class FirstSwitch : EventHandler
         newSkillDescription.text = character.Skills[index].skillDescription;
         newSkillName.text = character.Skills[index].skillName;
 
-        if (index == currentSkillIndex || index == secondary)
+        if (index == currentSkillIndex || index == GameManager.instance.characterLoading[character.ID].skill2)
         {
             confirmButton.interactable = false;
         }
@@ -123,6 +136,7 @@ public class FirstSwitch : EventHandler
         if (data is Character)
         {
             character = (Character)data;
+            currentSkillIndex = GameManager.instance.characterLoading[character.ID].skill1;
             skillDescription.text = character.Skills[currentSkillIndex].skillDescription;
             skillName.text = character.Skills[currentSkillIndex].skillName;
             for (int i = 0; i < skillOptionIcon.Length; i++)

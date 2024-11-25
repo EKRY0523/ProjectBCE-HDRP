@@ -14,14 +14,20 @@ public class HorizonCleave : UltimateSkill
     {
         base.OnRemove(character);
     }
-
+    public override void SkillMultiplier(float stat1)
+    {
+        base.SkillMultiplier(stat1);
+        skillInstance[0].skillObjects[0].multiplier = stat1;
+    }
     public override void OnHold(StatMultiplier[] usedStat)
     {
+        float lastMultiplier = 0;
         base.OnHold(usedStat);
-    }
+        for (int i = 0; i < usedStat.Length; i++)
+        {
+            lastMultiplier += characterData.statDictionary[statAndMultiplier[i].statIndex].statValue * statAndMultiplier[i].multiplier;
 
-    public override void OnRelease(StatMultiplier[] usedStat)
-    {
-        base.OnRelease(usedStat);
+        }
+        SkillMultiplier(lastMultiplier);
     }
 }

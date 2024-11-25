@@ -88,9 +88,13 @@ public class EventHandler : MonoBehaviour
         {
             for (int i = 0; i < eventBroadcasters.Count; i++)
             {
-                eventBroadcasters[i].eventListeners.Add(this);
-                eventBroadcasters[i].MBEvent += OnInvoke;
-                eventBroadcasters[i].EnableComp += EnableComponent;
+                if(!eventBroadcasters.Contains(this))
+                {
+                    eventBroadcasters[i].eventListeners.Add(this);
+                    eventBroadcasters[i].MBEvent += OnInvoke;
+                    eventBroadcasters[i].EnableComp += EnableComponent;
+
+                }
             }
         }
     }

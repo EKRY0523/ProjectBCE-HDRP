@@ -47,6 +47,18 @@ public class BasicSwitch : EventHandler
             skillOptionIcon[i].sprite = character.BasicAttack[i].skillIcon;
         }
     }
+
+    private void OnEnable()
+    {
+        currentSkillIndex = GameManager.instance.characterLoading[character.ID].basicAttack;
+        skillDescription.text = character.BasicAttack[currentSkillIndex].skillDescription;
+        skillName.text = character.BasicAttack[currentSkillIndex].skillName;
+        for (int i = 0; i < skillOptionIcon.Length; i++)
+        {
+            skillOptionIcon[i].sprite = character.BasicAttack[i].skillIcon;
+        }
+    }
+
     private void OnDisable()
     {
         switchSkillPanel.SetActive(false);
@@ -64,10 +76,9 @@ public class BasicSwitch : EventHandler
 
     public void ConfirmChange(int index)
     {
-        LevelAndStats stats = JsonUtility.FromJson<LevelAndStats>(File.ReadAllText(Application.dataPath + "/CharacterSaveFile/" + character.name + ".json"));
-        stats.basicAttack = index;
-        string json = JsonUtility.ToJson(stats, true);
-        File.WriteAllText(Application.dataPath + "/CharacterSaveFile/" + character.name + ".json", json);
+
+        GameManager.instance.characterLoading[character.ID].basicAttack = index;
+        GameManager.instance.characterLoading[character.ID].basic.OnChangeSkill(character.BasicAttack[index]);
 
         skillDescription.text = character.BasicAttack[index].skillDescription;
         skillName.text = character.BasicAttack[index].skillName;
@@ -78,10 +89,8 @@ public class BasicSwitch : EventHandler
         successText.text = "Sucessfully changed " + "<color=#FF8F85>" + character.BasicAttack[currentSkillIndex].skillName + "</color>"
                             + " To " + "<color=#87FF84>" + character.BasicAttack[index].skillName + "</color>";
 
-        MBEvent?.Invoke(HandlerID,index);
         switchSkillPanel.SetActive(false);
         successMenu.SetActive(true);
-        SOEvent[0].globalEvent?.Invoke(character);
 
     }
 

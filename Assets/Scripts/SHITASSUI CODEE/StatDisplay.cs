@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class StatDisplay : EventHandler
 {
     public PlayableCharacterData characterData;
+    Character character;
     public TextMeshProUGUI characterName;
     public TextMeshProUGUI level;
     public TextMeshProUGUI expText;
@@ -25,7 +26,8 @@ public class StatDisplay : EventHandler
         base.OnInvoke(ID, data);
         if(data is Character)
         {
-            characterData = GameManager.instance.characterDictionary[(Character)data];
+            character = (Character)data;
+            characterData = GameManager.instance.characterLoading[character.ID];
             gameObject.SetActive(false);
             gameObject.SetActive(true);
         }

@@ -15,7 +15,7 @@ public class MovementData : ScriptableObject
     public Vector3 transformPosition;
     public MovementMode mode;
     public float duration;
-
+    public bool passThrough;
 
     public void MoveCharacter(Rigidbody rb)
     {
@@ -32,8 +32,16 @@ public class MovementData : ScriptableObject
 
     public void MoveCharacter(CharacterController cc)
     {
-        cc.Move((cc.transform.right * targetPosition.x) + (cc.transform.up * targetPosition.y) + (cc.transform.forward * targetPosition.z));
+        if(!passThrough)
+        {
+            cc.Move((cc.transform.right * targetPosition.x) + (cc.transform.up * targetPosition.y) + (cc.transform.forward * targetPosition.z));
+        }
+        else
+        {
+            cc.transform.position = cc.transform.position+ (cc.transform.right * targetPosition.x) + (cc.transform.up * targetPosition.y) + (cc.transform.forward * targetPosition.z);
+        }
     }
+
 }
 
 

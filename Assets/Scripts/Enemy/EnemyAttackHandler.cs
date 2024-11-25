@@ -105,6 +105,11 @@ public class EnemyAttackHandler : EventHandler
         MBEvent?.Invoke(null, moveData);
 
     }
+
+    public void PlayWarning(GameObject warningObj)
+    {
+        Instantiate(warningObj,transform);
+    }
 }
 
 

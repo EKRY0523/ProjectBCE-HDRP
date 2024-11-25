@@ -9,31 +9,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 109b63eeec7d87940b062f9ac1c139f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b815ebc8b33df74a9a5a8f01e65527b, type: 3}
   m_Name: Ignition
   m_EditorClassIdentifier: 
   skillObject: []
   skillInstance:
   - instances: 0
     skillObjects:
-    - {fileID: 1538805329125000037, guid: d2d9d1fab97105f42889c895a86fe130, type: 3}
+    - {fileID: 358300796300750480, guid: 4fb3ff4016587534a846ec7a0bd612a1, type: 3}
   key:
-  - {fileID: 11400000, guid: 4616153231c9b0a419e3fb0074c123d8, type: 2}
-  - {fileID: 11400000, guid: 60d018ac401ca9646ad2bca68678ea04, type: 2}
-  - {fileID: 11400000, guid: 48e03c0f1da822748aa4be6c74d510e9, type: 2}
+  - {fileID: 11400000, guid: c336b80f353be9d42ba7f9a314ea1e32, type: 2}
   cost:
     stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
-    cost: 100
+    cost: 5
   characterData: {fileID: 0}
   statAndMultiplier:
-  - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
-    multiplier: 2
+  - statIndex: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
+    multiplier: 5
   requiredUnlockLevel: 0
-  skillName: 
-  skillDescription: 
-  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
+  skillName: Ignition
+  skillDescription: Passes through enemy while burning them
+  skillIcon: {fileID: 0}
   cooldown:
-  - 10
-  movementData: []
-  affectedByInput: 0
+  - 0.5
+  movementData:
+  - {fileID: 11400000, guid: 46e295bc9f2092d49aef024118fe35d2, type: 2}
+  delayForInstantiate: 0
+  affectedByInput: 1
   receiveHit: 0
+  hitIndication: {fileID: 0}
+  instantCheck: 0

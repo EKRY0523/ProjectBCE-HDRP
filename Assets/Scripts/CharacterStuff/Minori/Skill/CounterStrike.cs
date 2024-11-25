@@ -1,34 +1,54 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
-using System.Collections;
 
-[CreateAssetMenu(fileName = "CounterStrike", menuName = "CharacterSkill/CounterStrike")]
-public class CounterStrike : CharacterSkill
+[CreateAssetMenu(fileName = "CounterStrike", menuName = "CharacterSkill/Minori/DodgeBlock/CounterStrike")]
+public class CounterStrike : DodgeSkill
 {
     public override void OnSetup(PlayableCharacterData character)
     {
         base.OnSetup(character);
         characterData = character;
     }
-    public override void OnExecute(InputAction.CallbackContext context)
-    {
-        base.OnExecute(context);
-
-    }
 
     public override void OnRemove(PlayableCharacterData character)
     {
         base.OnRemove(character);
     }
-
-
     public override void SkillMultiplier(float stat1)
     {
         base.SkillMultiplier(stat1);
-        skillObject[0].multiplier = stat1;
-        Instantiate(skillObject[0], characterData.transform.parent.position, characterData.transform.parent.rotation);
+        skillInstance[0].skillObjects[0].multiplier = stat1;
+        Instantiate(skillInstance[0].skillObjects[0], characterData.transform.parent);
+    }
+    public override void OnHold(StatMultiplier[] usedStat)
+    {
+        characterData.transform.parent.tag = "Dodge";
+        float lastMultiplier = 0;
+        base.OnHold(usedStat);
+        for (int i = 0; i < usedStat.Length; i++)
+        {
+            lastMultiplier += characterData.statDictionary[statAndMultiplier[i].statIndex].statValue * statAndMultiplier[i].multiplier;
+
+        }
+        SkillMultiplier(lastMultiplier);
     }
 
-   
+    public override void OnRelease(StatMultiplier[] usedStat)
+    {
+        base.OnRelease(usedStat);
+        //characterData.transform.parent.tag = "Player";
 
+    }
+
+    public override void OnHit(DodgeSkillHandler handler)
+    {
+        base.OnHit(handler);
+        if (handler.hit)
+        {
+            handler.indicator = key[1];
+        }
+        else
+        {
+            handler.indicator = key[2];
+        }
+    }
 }

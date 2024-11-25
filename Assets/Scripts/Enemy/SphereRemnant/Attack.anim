@@ -1592,6 +1592,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.75
+    functionName: PlayWarning
+    data: 
+    objectReferenceParameter: {fileID: 777188331250333698, guid: fc6ac683b67f25e488f068463d503360, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 1.2833333
     functionName: SpawnSkillObject
     data: 

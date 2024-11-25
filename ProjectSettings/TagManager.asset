@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Dodge
   - SkillObject
+  - Road
+  - Invulnerable
   layers:
   - Default
   - TransparentFX

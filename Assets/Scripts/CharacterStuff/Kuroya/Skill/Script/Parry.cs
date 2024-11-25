@@ -35,7 +35,7 @@ public class Parry : DodgeSkill
     public override void OnRelease(StatMultiplier[] usedStat)
     {
         base.OnRelease(usedStat);
-        characterData.transform.parent.tag = "Player";
+        //characterData.transform.parent.tag = "Player";
 
     }
 

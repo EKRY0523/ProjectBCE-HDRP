@@ -377,7 +377,7 @@ MonoBehaviour:
     m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0
   maximumVelocity:
     m_OverrideState: 1
     m_Value: 200
@@ -1009,6 +1009,7 @@ MonoBehaviour:
   - {fileID: -8158082310084911037}
   - {fileID: -4733852126483752676}
   - {fileID: -1237620941112261356}
+  - {fileID: 4750789566127963630}
 --- !u!114 &448115243408767295
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1255,10 +1256,10 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.23
+    m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.217
+    m_Value: 0.2
   scatter:
     m_OverrideState: 1
     m_Value: 0.7
@@ -1420,6 +1421,22 @@ MonoBehaviour:
   gradientDiffusion:
     m_OverrideState: 1
     m_Value: 1
+--- !u!114 &4750789566127963630
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9813e3b316481448861ff983f64883, type: 3}
+  m_Name: FullScreen
+  m_EditorClassIdentifier: 
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &5315503232242033309
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1444,16 +1461,16 @@ MonoBehaviour:
     m_Value: 1
   fixedExposure:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 15
   compensation:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   limitMin:
     m_OverrideState: 1
-    m_Value: -1
+    m_Value: -1.5
   limitMax:
     m_OverrideState: 1
-    m_Value: 14
+    m_Value: 13.252831
   curveMap:
     m_OverrideState: 1
     m_Value:

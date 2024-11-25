@@ -28,15 +28,25 @@ public class ShowCharacterStats : EventHandler
         if(data is Character)
         {
             character = (Character)data;
-            charData = GameManager.instance.characterDictionary[(Character)data];
+            charData = GameManager.instance.characterLoading[character.ID];
+            if(charData!=null)
+            {
+                if(!charData.gameObject.activeSelf)
+                {
+                    charData.gameObject.SetActive(true);
+                    charData.gameObject.SetActive(false); //on off to get the damn fucking script
+                }
 
-            HPtext.text = "HP" + charData.statDictionary[HP].MinMaxValue[1]* MathF.Pow(charData.statDictionary[HP].statScaling, charData.level.lv - 1);
-            ENGtext.text = "ENG" + charData.statDictionary[ENG].MinMaxValue[1] * MathF.Pow(charData.statDictionary[ENG].statScaling, charData.level.lv - 1);
-            ATKtext.text = "ATK" + charData.statDictionary[ATK].MinMaxValue[1] * MathF.Pow(charData.statDictionary[ATK].statScaling, charData.level.lv - 1);
-            EATKtext.text = "EATK" + charData.statDictionary[EATK].MinMaxValue[1] * MathF.Pow(charData.statDictionary[EATK].statScaling, charData.level.lv - 1);
-            DEFtext.text = "DEF" + charData.statDictionary[DEF].MinMaxValue[1] * MathF.Pow(charData.statDictionary[DEF].statScaling, charData.level.lv - 1);
-            EDEFtext.text = "EDEF" + charData.statDictionary[EDEF].MinMaxValue[1] * MathF.Pow(charData.statDictionary[EDEF].statScaling, charData.level.lv - 1);
-            SPDtext.text = "SPD" + charData.statDictionary[SPD].MinMaxValue[1] * MathF.Pow(charData.statDictionary[SPD].statScaling, charData.level.lv - 1);
+                HPtext.text = "HP" + charData.statDictionary[HP].MinMaxValue[1] * MathF.Pow(charData.statDictionary[HP].statScaling, charData.level.lv - 1);
+                ENGtext.text = "ENG" + charData.statDictionary[ENG].MinMaxValue[1] * MathF.Pow(charData.statDictionary[ENG].statScaling, charData.level.lv - 1);
+                ATKtext.text = "ATK" + charData.statDictionary[ATK].MinMaxValue[1] * MathF.Pow(charData.statDictionary[ATK].statScaling, charData.level.lv - 1);
+                EATKtext.text = "EATK" + charData.statDictionary[EATK].MinMaxValue[1] * MathF.Pow(charData.statDictionary[EATK].statScaling, charData.level.lv - 1);
+                DEFtext.text = "DEF" + charData.statDictionary[DEF].MinMaxValue[1] * MathF.Pow(charData.statDictionary[DEF].statScaling, charData.level.lv - 1);
+                EDEFtext.text = "EDEF" + charData.statDictionary[EDEF].MinMaxValue[1] * MathF.Pow(charData.statDictionary[EDEF].statScaling, charData.level.lv - 1);
+                SPDtext.text = "SPD" + charData.statDictionary[SPD].MinMaxValue[1] * MathF.Pow(charData.statDictionary[SPD].statScaling, charData.level.lv - 1);
+
+            }
+
         }
 
 

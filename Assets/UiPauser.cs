@@ -37,7 +37,7 @@ public class UiPauser : MonoBehaviour
 
     private void OnDisable()
     {
-        if(gameObject!=null)
+        if (gameObject != null)
         {
             for (int i = 0; i < InputToDisable.Length; i++)
             {
@@ -45,12 +45,15 @@ public class UiPauser : MonoBehaviour
             }
             for (int i = 0; i < gameObjectToClose.Length; i++)
             {
-                gameObjectToClose[i].gameObject.SetActive(true);
+                if(!gameObjectToClose[i].gameObject.activeSelf)
+                {
+                    gameObjectToClose[i].gameObject.SetActive(true);
+                }
             }
             playerInput.input.Player.Enable();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
-        
+
     }
 }

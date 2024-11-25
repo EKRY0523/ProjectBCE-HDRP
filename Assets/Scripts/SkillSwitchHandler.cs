@@ -5,7 +5,6 @@ public class SkillSwitchHandler : EventHandler
 {
     public PlayableCharacterData characterData;
     public Character character;
-    public CurrentSkill skill;
 
     public Button basicButton;
     public Button firstSkillButton;
@@ -40,19 +39,16 @@ public class SkillSwitchHandler : EventHandler
 
     private void Start()
     {
-        if(character!=null)
-        {
-            LoadData();
-        }
+        
     }
 
     private void OnEnable()
     {
-        if(character!=null)
-        {
-
-            LoadData();
-        }
+        basic.character = character;
+        firstSkill.character = character;
+        secondSkill.character = character;
+        dodgeSkill.character = character;
+        ultimateSkill.character = character;
     }
     public void TurnOnBasic()
     {
@@ -120,66 +116,22 @@ public class SkillSwitchHandler : EventHandler
 
         closeButton.gameObject.SetActive(false);
     }
-    public void LoadData()
-    {
-        skill = JsonUtility.FromJson<CurrentSkill>(File.ReadAllText(Application.dataPath + "/CharacterSaveFile/" + character.name + ".json"));
-        MBEvent?.Invoke(null, character);
-        basic.character = character;
-        basic.currentSkillIndex = skill.basicAttack;
-
-        firstSkill.character = character;
-        firstSkill.currentSkillIndex = skill.skill1;
-        firstSkill.secondary = skill.skill2;
-
-        secondSkill.character = character;
-        secondSkill.currentSkillIndex = skill.skill2;
-        secondSkill.secondary = skill.skill1;
-
-        dodgeSkill.character = character;
-        dodgeSkill.currentSkillIndex = skill.dodge;
-
-        ultimateSkill.character = character;
-        ultimateSkill.currentSkillIndex = skill.dodge;
-    }
+   
 
     public override void OnInvoke(Trait ID, object data)
     {
         base.OnInvoke(ID, data);
         if(data is Character)
         {
-            characterData = GameManager.instance.characterDictionary[(Character)data];
             character = (Character)data;
-            LoadData();
-            //skill = JsonUtility.FromJson<CurrentSkill>(File.ReadAllText(Application.dataPath + "/CharacterSaveFile/" + character.name + ".json"));
+            characterData = GameManager.instance.characterLoading[character.ID];
 
-            basicIcon.sprite = character.BasicAttack[skill.basicAttack].skillIcon;
-            firstSkillIcon.sprite = character.Skills[skill.skill1].skillIcon;
-            secondSkillIcon.sprite = character.Skills[skill.skill2].skillIcon;
-            dodgeIcon.sprite = character.Dodge[skill.dodge].skillIcon;
-            ultimateIcon.sprite = character.Ultimate[skill.ultimate].skillIcon;
-
-            MBEvent?.Invoke(null, character);
+            basicIcon.sprite = character.BasicAttack[characterData.basicAttack].skillIcon;
+            firstSkillIcon.sprite = character.Skills[characterData.skill1].skillIcon;
+            secondSkillIcon.sprite = character.Skills[characterData.skill2].skillIcon;
+            dodgeIcon.sprite = character.Dodge[characterData.dodge].skillIcon;
+            ultimateIcon.sprite = character.Ultimate[characterData.ultimate].skillIcon;
         }
-        //if(ID == ComponentsID[0])
-        //{
-        //    skill.basicAttack = (int)data;
-        //}
-        //if (ID == ComponentsID[1])
-        //{
-
-        //}
-        //if (ID == ComponentsID[2])
-        //{
-
-        //}
-        //if (ID == ComponentsID[3])
-        //{
-
-        //}
-        //if (ID == ComponentsID[4])
-        //{
-
-        //}
     }
 
 }

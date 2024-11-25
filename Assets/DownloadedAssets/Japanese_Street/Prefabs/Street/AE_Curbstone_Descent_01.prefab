@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2072030685453007245}
   - component: {fileID: 2072030685453007244}
   - component: {fileID: 2072030685453007251}
-  - component: {fileID: 2882954794068922202}
+  - component: {fileID: 349403541910112432}
   m_Layer: 0
   m_Name: AE_Curbstone_Descent_01
   m_TagString: Untagged
@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072030685453007250}
-  m_Mesh: {fileID: -204996001161348590, guid: 88d681aaf030704478f214797458c2e0, type: 3}
+  m_Mesh: {fileID: -204996001161348590, guid: b3a3fe75e6dcd0542b2abcf7901d02fb, type: 3}
 --- !u!23 &2072030685453007244
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -104,7 +104,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2072030685453007244}
   m_Enabled: 1
---- !u!64 &2882954794068922202
+--- !u!64 &349403541910112432
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,4 +117,4 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -204996001161348590, guid: 88d681aaf030704478f214797458c2e0, type: 3}
+  m_Mesh: {fileID: -204996001161348590, guid: b3a3fe75e6dcd0542b2abcf7901d02fb, type: 3}

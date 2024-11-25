@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b815ebc8b33df74a9a5a8f01e65527b, type: 3}
+  m_Name: StrikeThrough
+  m_EditorClassIdentifier: 
+  skillObject: []
+  skillInstance:
+  - instances: 0
+    skillObjects:
+    - {fileID: 4898531201782523070, guid: 17b77a25ed232f44daaf494752004e1d, type: 3}
+  key:
+  - {fileID: 11400000, guid: 699888568c278e245a1897ef54b632f3, type: 2}
+  cost:
+    stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
+    cost: 0
+  characterData: {fileID: 0}
+  statAndMultiplier:
+  - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
+    multiplier: 0.5
+  requiredUnlockLevel: 0
+  skillName: StrikeThrough
+  skillDescription: 'An alternative dodge for evasive purposes
+
+    if hit enemy,
+    deals 50% of ATK'
+  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
+  cooldown:
+  - 0.5
+  movementData: []
+  delayForInstantiate: 0
+  affectedByInput: 1
+  receiveHit: 0
+  hitIndication: {fileID: 0}
+  instantCheck: 0

@@ -8,6 +8,7 @@ public class DodgeSkillHandler : SkillHandler
     public Trait indicator;
     public CollisionHandler collisionHandler;
     public bool hit;
+    public bool held;
     public override void Awake()
     {
         base.Awake();
@@ -60,31 +61,39 @@ public class DodgeSkillHandler : SkillHandler
     {
         if (canExecute)
         {
-            if(cost!=null)
+            if(!dodge.affectedByInput)
             {
                 if (character.statDictionary[cost.stat].statValue >= cost.cost)
                 {
 
                     if (context.performed)
                     {
+                        held = true;
                         hit = false;
                         dodge.OnHold(dodge.statAndMultiplier);
                         MBEvent?.Invoke(dodge.key[0], null);
                         timeToExceed = dodge.cooldown[0];
-                        //statemachine.MBEvent?.Invoke(dodge.key[0], dodge.movementData[0]);
                         MBEvent?.Invoke(cost.stat, -cost.cost);
 
                     }
-                    if (context.canceled)
+                    if(held)
                     {
-                        executionTime = Time.time;
-                        canExecute = false;
-                        dodge.OnRelease(dodge.statAndMultiplier);
-                        dodge.OnHit(this);
-                        MBEvent?.Invoke(indicator, null);
-                        hit = false;
-                        //statemachine.MBEvent?.Invoke(indicator, dodge.movementData[0]);
+                        if (context.canceled)
+                        {
+                            held = false;
+                            executionTime = Time.time;
+                            canExecute = false;
+                            dodge.OnRelease(dodge.statAndMultiplier);
+                            
+                                dodge.OnHit(this);
+                                MBEvent?.Invoke(indicator, null);
+
+                            
+                            hit = false;
+                            //statemachine.MBEvent?.Invoke(indicator, dodge.movementData[0]);
+                        }
                     }
+                    
                 }
             }
             else
@@ -93,20 +102,22 @@ public class DodgeSkillHandler : SkillHandler
                 {
                     dodge.OnHold(dodge.statAndMultiplier);
                     MBEvent?.Invoke(dodge.key[0], null);
-                    statemachine.MBEvent?.Invoke(dodge.key[0], dodge.movementData[0]);
+                    //statemachine.MBEvent?.Invoke(dodge.key[0], dodge.movementData[0]);
 
                 }
                 if (context.canceled)
                 {
                     dodge.OnRelease(dodge.statAndMultiplier);
                     MBEvent?.Invoke(dodge.key[0], null);
-                    statemachine.MBEvent?.Invoke(dodge.key[0], dodge.movementData[0]);
+                    //statemachine.MBEvent?.Invoke(dodge.key[0], dodge.movementData[0]);
                 }
             }
-            
+
         }
 
     }
+
+
     public void OnChangeSkill(CharacterSkill characterSkill)
     {
         dodge.OnRemove(character);
@@ -114,28 +125,33 @@ public class DodgeSkillHandler : SkillHandler
         dodge.OnSetup(character);
     }
 
-    public void MoveCharacter(MovementData movementData)
+    public void MoveDodgeCharacter(MovementData movementData)
     {
-        if(dodge.affectedByInput)
-        {
-            movementData.targetPosition.x = movementData.targetPosition.x * facingDirection.x;
-            movementData.targetPosition.z = movementData.targetPosition.z * facingDirection.z;
-        }
+        
         statemachine.MBEvent?.Invoke(null, movementData);
 
     }
 
     public void SpawnDodgeSkillObject(int instance)
     {
-        Debug.Log((dodge.skillInstance[0].skillObjects[instance].multiplier));
+        //Debug.Log((dodge.skillInstance[0].skillObjects[instance].multiplier));
         Instantiate(dodge.skillInstance[0].skillObjects[instance], transform.parent);
 
     }
 
+    public void SpawnBlink(GameObject vfx)
+    {
+       Destroy(Instantiate(vfx, transform.parent),0.7f);
+    }
+
     public void Direction(Vector2 direction)
     {
-        facingDirection.x = direction.x;
-        facingDirection.z = direction.y;
+        if(direction.magnitude!=0)
+        {
+            facingDirection.x = direction.x;
+            facingDirection.z = direction.y;
+
+        }
     }
 
     public override void OnInvoke(Trait ID, object data)

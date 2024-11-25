@@ -5,7 +5,7 @@ public class ParryStartState : CharacterDodgeState
     public override void OnEnter(Statemachine statemachine)
     {
         base.OnEnter(statemachine);
-        statemachine.MBEvent?.Invoke(stateKey, "Dodge");
+        statemachine.MBEvent?.Invoke(stateKey, "DodgeType");
         statemachine.MBEvent?.Invoke(stateKey, (int)0);
     }
 
@@ -17,5 +17,6 @@ public class ParryStartState : CharacterDodgeState
     public override void OnUpdate(Statemachine statemachine)
     {
         base.OnUpdate(statemachine);
+        
     }
 }

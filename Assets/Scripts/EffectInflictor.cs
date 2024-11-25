@@ -109,7 +109,11 @@ public class EffectInflictor : EventHandler
         {
             if (other.CompareTag("Enemy"))
             {
-                Inflict(other.gameObject.GetComponent<EffectHandler>());
+                if(other.GetComponent<EffectHandler>())
+                {
+
+                    Inflict(other.gameObject.GetComponent<EffectHandler>());
+                }
             }
         }
     }

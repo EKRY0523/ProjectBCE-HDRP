@@ -220,11 +220,13 @@ MonoBehaviour:
   targetedStat:
   - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   characterData: {fileID: 0}
-  multiplier: 1500
+  multiplier: 1700
   duration: 0.8
   target: {fileID: 0}
   knockback: {fileID: 0}
   detachFromParent: 1
+  hitFX: {fileID: 0}
+  friendly: 0
 --- !u!65 &6373416775265868260
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -16,6 +16,11 @@ public class ParryEndState : CharacterDodgeState
 
     public override void OnUpdate(Statemachine statemachine)
     {
+        if (statemachine.timeInState > maxTimeInState)
+        {
+            statemachine.transform.parent.tag = "Player";
+            statemachine.ChangeState(statemachine.startingState);
+        }
         base.OnUpdate(statemachine);
     }
 }
