@@ -54176,10 +54176,17 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.6
+    functionName: MoveCharacter
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: d42f0b6aa7049e6419a3ae574a80316a, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.8333333
     functionName: SpawnSkillObject
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 0
+    intParameter: 1
     messageOptions: 0

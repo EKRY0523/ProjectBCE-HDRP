@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c797463c394e9e47a39ca98ef3c980d, type: 3}
+  m_Name: HealHeal
+  m_EditorClassIdentifier: 
+  vfx: {fileID: 0}
+  Icon: {fileID: 0}
+  effectName: 
+  description: 
+  effectType: 1
+  timeMode: 0
+  startTime: 0
+  duration: 0
+  tick: 0
+  targetedStat:
+  - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
+  value:
+  - 500

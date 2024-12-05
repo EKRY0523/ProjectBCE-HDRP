@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System;
 public class ExpSpawner : MonoBehaviour
 {
     public ExpMat expMat;
@@ -8,7 +8,7 @@ public class ExpSpawner : MonoBehaviour
     private void Start()
     {
         expOrb = Instantiate(expMat,transform);
-        expOrb.exp = exp;
+        expOrb.exp = exp * MathF.Pow(1.5f ,GetComponent<Enemy>().lv);
         expOrb.transform.position = this.transform.position;
         expOrb.gameObject.SetActive(false);
     }

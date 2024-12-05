@@ -75390,10 +75390,10 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.46666667
-    functionName: SpawnBlink
+  - time: 0.36666667
+    functionName: SetInvul
     data: 
-    objectReferenceParameter: {fileID: 8178096633626205992, guid: 19728e490354c9e489076fc41c8ab5c4, type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
@@ -75408,6 +75408,13 @@ AnimationClip:
     functionName: MoveDodgeCharacter
     data: 
     objectReferenceParameter: {fileID: 11400000, guid: ad88b5bd2299e0847929ef6e6aadf3d8, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.0666667
+    functionName: UnSetInvul
+    data: 
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

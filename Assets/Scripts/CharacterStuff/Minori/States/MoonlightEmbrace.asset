@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94de8ef680b4c1d45a0ad7217e953044, type: 3}
   m_Name: MoonlightEmbrace
   m_EditorClassIdentifier: 
+  activatedComponents: []
+  deactivatedComponents: []
+  OnEnterActivateComponent: []
+  OnEnterDeactivateComponent: []
+  OnExitActivateComponent: []
+  OnExitDeactivateComponent: []
+  SwitchUponExit: {fileID: 0}
   stateKey: {fileID: 0}
+  maxTimeInState: 2.2

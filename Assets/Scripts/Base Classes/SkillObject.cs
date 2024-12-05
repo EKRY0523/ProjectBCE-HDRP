@@ -22,11 +22,16 @@ public class SkillObject : EventHandler
         Destroy(gameObject,duration);
         if (detachFromParent)
         {
-            transform.parent = null;
+            Invoke(nameof(Detach), 0.1f);
         }
 
     }
 
+
+    public void Detach()
+    {
+        transform.parent = null;
+    }
     private void Start()
     {
         //if (transform.parent != null)
@@ -80,10 +85,6 @@ public class SkillObject : EventHandler
 
     }
 
-    public void Detach()
-    {
-        
-    }
     public virtual void OnCast()
     {
     }

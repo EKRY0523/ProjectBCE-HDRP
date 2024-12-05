@@ -2,17 +2,17 @@ using UnityEngine;
 
 public abstract class State : ScriptableObject
 {
-    public Trait[] activatedComponents,deactivatedComponents;
+    [SerializeField] public Trait[] activatedComponents,deactivatedComponents;
     [Header("OnEnterComponents")]
-    public Trait[] OnEnterActivateComponent;
-    public Trait[] OnEnterDeactivateComponent;
+    [SerializeField]public Trait[] OnEnterActivateComponent;
+    [SerializeField] public Trait[] OnEnterDeactivateComponent;
     [Header("OnExitComponents")]
-    public Trait[] OnExitActivateComponent;
-    public Trait[] OnExitDeactivateComponent;
-    public Trait SwitchUponExit;
+    [SerializeField] public Trait[] OnExitActivateComponent;
+    [SerializeField] public Trait[] OnExitDeactivateComponent;
+    [SerializeField] public Trait SwitchUponExit;
     [Header("Value")]
-    public Trait stateKey;
-    public float maxTimeInState;
+    [SerializeField] public Trait stateKey;
+    [SerializeField] public float maxTimeInState;
     public abstract void OnEnter(Statemachine statemachine);
     public abstract void OnUpdate(Statemachine statemachine);
     public abstract void OnExit(Statemachine statemachine);

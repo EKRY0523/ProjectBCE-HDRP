@@ -6,7 +6,7 @@ public class RegenOnDeplete : Effect
     public override void PassiveOverTime(Entity entity, EffectHandler target)
     {
         base.PassiveOverTime(entity, target);
-        target.MBEvent?.Invoke(targetedStat[0], entity.statDictionary[targetedStat[0]].MinMaxValue[1] * (entity.lv) * tick);
+        target.MBEvent?.Invoke(targetedStat[0], entity.statDictionary[targetedStat[0]].MinMaxValue[1] * tick);
         
     }
 

@@ -7,6 +7,7 @@ public class EnemyAttackHandler : EventHandler
     public Transform target;
     public float lastAttackTime,cooldown;
     public bool canAttack;
+    public SkillObject placeholder;
     public override void Awake()
     {
         base.Awake();
@@ -20,7 +21,7 @@ public class EnemyAttackHandler : EventHandler
             attacks[i].attack.multiplier = 0;
             for (int j = 0; j < attacks[i].UsedStats.Length; j++)
             {
-                attacks[i].attack.multiplier += entity.statDictionary[attacks[i].UsedStats[j]].statValue;
+                attacks[i].multiplier += entity.statDictionary[attacks[i].UsedStats[j]].statValue;
             }
         }
     }
@@ -34,10 +35,9 @@ public class EnemyAttackHandler : EventHandler
                 {
                     if(!attacks[i].inCooldown)
                     {
-                        if (attacks[i].moreThanRange == true)
+                        if (attacks[i].moreThanRange && Vector3.Distance(transform.position, target.position) > attacks[i].range ||
+                            !attacks[i].moreThanRange && Vector3.Distance(transform.position, target.position) <= attacks[i].range)
                         {
-                            if (Vector3.Distance(transform.position, target.position) > attacks[i].range)
-                            {
 
                                 MBEvent?.Invoke(attacks[i].stateID, null);
                                 attacks[i].inCooldown = true;
@@ -45,20 +45,8 @@ public class EnemyAttackHandler : EventHandler
                                 canAttack = false;
                                 lastAttackTime = Time.time;
                                 cooldown = attacks[i].cooldown;
-
-                            }
-                        }
-                        else
-                        {
-                            if (Vector3.Distance(transform.position, target.position) <= attacks[i].range)
-                            {
-                                MBEvent?.Invoke(attacks[i].stateID, null);
-                                attacks[i].inCooldown = true;
-                                attacks[i].lastTimeUsedThisAttack = Time.time;
-                                canAttack = false;
-                                lastAttackTime = Time.time;
-                                cooldown = attacks[i].cooldown;
-                            }
+                            break;
+                            
                         }
 
                     }
@@ -82,15 +70,26 @@ public class EnemyAttackHandler : EventHandler
 
     public void RotateToTarget()
     {
-        Vector3 lookAt = target.position - transform.position;
-        lookAt.y = 0;
-        transform.parent.rotation = Quaternion.LookRotation(lookAt);
+        if(target!=null)
+        {
+            Vector3 lookAt = target.position - transform.position;
+            lookAt.y = 0;
+            transform.parent.rotation = Quaternion.LookRotation(lookAt);
+
+        }
     }
     public void SpawnSkillObject(int type)
     {
-        Instantiate(attacks[type].attack, transform);
+        placeholder = Instantiate(attacks[type].attack, transform);
+        placeholder.multiplier = attacks[type].multiplier;
+        placeholder.transform.position = transform.position;
+
     }
 
+    public void ForceExit(Trait trait)
+    {
+        MBEvent?.Invoke(null, trait);
+    }
     public override void OnInvoke(Trait ID, object data)
     {
         base.OnInvoke(ID, data);

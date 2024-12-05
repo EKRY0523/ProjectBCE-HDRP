@@ -34,3 +34,4 @@ MonoBehaviour:
   - 1
   movementData:
   - {fileID: 11400000, guid: c8276c1ffb5477f4884cc6ae1111ba13, type: 2}
+  delayForInstantiate: 0.35

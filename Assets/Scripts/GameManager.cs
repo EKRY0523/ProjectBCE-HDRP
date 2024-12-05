@@ -12,6 +12,7 @@ public class GameManager : EventHandler
 
     public Dictionary<Character, PlayableCharacterData> characterDictionary = new();
     public Dictionary<int, Character> characterIdentifier = new();
+
     public Dictionary<int, PlayableCharacterData> characterLoading = new();
 
     //public characters
@@ -23,6 +24,7 @@ public class GameManager : EventHandler
 
     public PlayableCharacterData FirstCharacter;
     public List<PlayableCharacterData> charactersInParty = new();
+    public List<PlayableCharacterData> deadCharacters = new();
 
     //public static GameStoryData gameData;
     public int storyProgress;
@@ -121,6 +123,10 @@ public class GameManager : EventHandler
             {
                 currentProgress.currentPartySetup.Add(charactersInParty[i].character.ID);
             }
+            for (int i = 0; i < deadCharacters.Count; i++)
+            {
+                currentProgress.deadCharacters.Add(deadCharacters[i].character.ID);
+            }
             string json = JsonUtility.ToJson(currentProgress, true);
             File.WriteAllText(Application.persistentDataPath + "/SaveFile.json", json);
         }
@@ -143,7 +149,7 @@ public class GameManager : EventHandler
             charData.unlocked = characters[i].unlocked;
             charData.lv = 1;
             charData.currentEXP = 0;
-            charData.ExpNeeded = 100 * MathF.Pow(2, 1 - 2);
+            charData.ExpNeeded = 100;
             charData.basicAttack = 0;
             charData.skill1 = 0;
             charData.skill2 = 1;
@@ -213,14 +219,16 @@ public class GameManager : EventHandler
 
                 for (int j = 0; j < characterLoading[currentProgress.characterData[i].characterID].character.stats.Length; j++)
                 {
-                    if (characterLoading[currentProgress.characterData[i].characterID].stats[j].statIdentifier.key == currentProgress.characterData[i].stats[j].statIdentifier.key)
+                    if (currentProgress.characterData[i].StatID[j] ==  DictionaryStorage.TraitDictionary[characterLoading[currentProgress.characterData[i].characterID].stats[j].statIdentifier.key].key) //get the ID
                     {
-                        characterLoading[currentProgress.characterData[i].characterID].stats[j] = currentProgress.characterData[i].stats[j];
+        
+                        characterLoading[currentProgress.characterData[i].characterID].stats[j].statIdentifier = DictionaryStorage.TraitDictionary[currentProgress.characterData[i].StatID[j]];
+                        characterLoading[currentProgress.characterData[i].characterID].stats[j].statAction = characterLoading[currentProgress.characterData[i].characterID].character.stats[j].statAction;
                         characterLoading[currentProgress.characterData[i].characterID].stats[j].statValue = currentProgress.characterData[i].currentStatValue[j];
-                        characterLoading[currentProgress.characterData[i].characterID].stats[j].MinMaxValue[1] = characterLoading[currentProgress.characterData[i].characterID].character.stats[j].MinMaxValue[1] * MathF.Pow(currentProgress.characterData[i].stats[j].statScaling, currentProgress.characterData[i].lv - 1);
+                        characterLoading[currentProgress.characterData[i].characterID].stats[j].MinMaxValue[1] = characterLoading[currentProgress.characterData[i].characterID].character.stats[j].MinMaxValue[1] * currentProgress.characterData[i].stats[j].statScaling * currentProgress.characterData[i].lv;
                         if (characterLoading[currentProgress.characterData[i].characterID].stats[j].followMax)
                         {
-                            characterLoading[currentProgress.characterData[i].characterID].stats[j].statValue = characterLoading[currentProgress.characterData[i].characterID].character.stats[j].MinMaxValue[1] * MathF.Pow(currentProgress.characterData[i].stats[j].statScaling, currentProgress.characterData[i].lv - 1);
+                            characterLoading[currentProgress.characterData[i].characterID].stats[j].statValue = characterLoading[currentProgress.characterData[i].characterID].character.stats[j].MinMaxValue[1] * currentProgress.characterData[i].stats[j].statScaling * currentProgress.characterData[i].lv;
                         }
 
                     }
@@ -241,6 +249,12 @@ public class GameManager : EventHandler
             {
 
                 charactersInParty.Add(characterLoading[currentProgress.currentPartySetup[i]]);
+            }
+
+            //DEAD CCOUNT
+            for (int i = 0; i < currentProgress.deadCharacters.Count; i++)
+            {
+                deadCharacters.Add(characterLoading[currentProgress.deadCharacters[i]]);
             }
         }
         else
@@ -276,6 +290,7 @@ public class SaveProgress
     public Vector3 savedPosition;
     public List<int> unlockedCharacterList = new(); // get minori as first, this and setup uses character ID
     public List<int> currentPartySetup = new();
+    public List<int> deadCharacters = new();
     public GameStoryData gameData;
     public List<CharacterProgressData> characterData = new();
 }

@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d4140c0a5a7fc44ebd2d2160b83d4cb, type: 3}
+  m_Name: ShockWave
+  m_EditorClassIdentifier: 
+  skillObject: []
+  skillInstance:
+  - instances: 0
+    skillObjects:
+    - {fileID: 6349614831598422575, guid: 2668d99fe7f4ac14b82a70dbe5447797, type: 3}
+  - instances: 0
+    skillObjects:
+    - {fileID: 8641006068378985415, guid: 6bf21af1b22b3af4689da82516a3b718, type: 3}
+  - instances: 0
+    skillObjects:
+    - {fileID: 2877299175666457318, guid: 4506dd2337894d3409e34c0a2c89215b, type: 3}
+  key:
+  - {fileID: 11400000, guid: f62a332e406eef649a096815b45ddf93, type: 2}
+  - {fileID: 11400000, guid: e4cf8ce948e77e54baa2bf120b6fd04a, type: 2}
+  - {fileID: 11400000, guid: e047fbb22a5bbc64ea7e4b2e6620aa94, type: 2}
+  cost:
+    stat: {fileID: 0}
+    cost: 0
+  characterData: {fileID: 0}
+  statAndMultiplier:
+  - statIndex: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
+    multiplier: 1
+  requiredUnlockLevel: 0
+  skillName: Shock Wave
+  skillDescription: '1st hit: 100% of EATK
+
+    2nd hit: 150% of EATK
+
+    3rd hit:
+    200% ofE ATK'
+  skillIcon: {fileID: 1608369372, guid: 44fb5e577b2c3834090fd59025eb7a90, type: 3}
+  cooldown:
+  - 0.5
+  - 1
+  - 1
+  movementData:
+  - {fileID: 11400000, guid: 0cd9c8b5d5c148941a4db9bd6f0a1a6a, type: 2}
+  - {fileID: 11400000, guid: d42f0b6aa7049e6419a3ae574a80316a, type: 2}
+  - {fileID: 11400000, guid: 365e3c649db72004a93ef49a5ab23db5, type: 2}
+  delayForInstantiate: 0
+  countMultiplier:
+  - 1
+  - 1.5
+  - 2
+  MaxCount: 2

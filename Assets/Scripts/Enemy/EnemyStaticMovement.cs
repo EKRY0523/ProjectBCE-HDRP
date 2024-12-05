@@ -5,6 +5,7 @@ public class EnemyStaticMovement : Movement
 {
     NavMeshAgent agent;
     Coroutine DetectDecision;
+    public bool backOffEnabled;
     public int backOff;
 
     public Transform target;
@@ -44,7 +45,15 @@ public class EnemyStaticMovement : Movement
 
     public void GoToTarget()
     {
-        backOff = Random.Range(-5, 5);
+        if(backOffEnabled)
+        {
+
+            backOff = Random.Range(-5, 5);
+        }
+        else
+        {
+            backOff = 5;
+        }
         if(backOff > 0)
         {
             agent.SetDestination(target.position);

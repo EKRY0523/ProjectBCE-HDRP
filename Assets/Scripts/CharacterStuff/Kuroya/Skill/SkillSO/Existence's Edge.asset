@@ -13,16 +13,24 @@ MonoBehaviour:
   m_Name: Existence's Edge
   m_EditorClassIdentifier: 
   skillObject: []
-  skillInstance: []
-  key: []
+  skillInstance:
+  - instances: 0
+    skillObjects:
+    - {fileID: 2608069775502921769, guid: df7608823dc37cd41981453fd6b4d464, type: 3}
+  key:
+  - {fileID: 11400000, guid: 6e3321b4f0608644db758c397d694682, type: 2}
   cost:
-    stat: {fileID: 0}
-    cost: 0
+    stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
+    cost: 500
   characterData: {fileID: 0}
-  statAndMultiplier: []
+  statAndMultiplier:
+  - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
+    multiplier: 15
   requiredUnlockLevel: 0
-  skillName: 
-  skillDescription: 
+  skillName: Existence's Edge
+  skillDescription: Deals 1500% of ATK to nearby enemies
   skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
-  cooldown: []
+  cooldown:
+  - 5
   movementData: []
+  delayForInstantiate: 0

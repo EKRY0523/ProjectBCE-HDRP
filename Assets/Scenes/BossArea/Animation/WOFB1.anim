@@ -65354,6 +65354,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.53333336
+    functionName: MoveCharacter
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 0cd9c8b5d5c148941a4db9bd6f0a1a6a, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.96666664
     functionName: SpawnSkillObject
     data: 

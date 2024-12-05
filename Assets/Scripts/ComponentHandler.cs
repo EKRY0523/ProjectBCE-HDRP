@@ -5,7 +5,7 @@ public class ComponentHandler : EventHandler
 {
     public EventHandler[] components;
     public Dictionary<Trait, EventHandler> componentDictionary = new();
-
+    public PlayableCharacterData charData;
     public override void Awake()
     {
         base.Awake();
@@ -22,6 +22,28 @@ public class ComponentHandler : EventHandler
     public override void EnableComponent(Trait ID, bool enabled)
     {
         base.EnableComponent(ID, enabled);
-        componentDictionary[ID].enabled = enabled;
+        if(ID!=null)
+        {
+            if(componentDictionary.ContainsKey(ID))
+            {
+                componentDictionary[ID].enabled = enabled;
+            }
+        }
+    }
+
+    public override void OnInvoke(Trait ID, object data)
+    {
+        base.OnInvoke(ID, data);
+        if(data is PlayableCharacterData)
+        {
+            if(charData!=null)
+            {
+                Unsubscribe(charData.statemachine);
+            }
+
+            charData = (PlayableCharacterData)data;
+            Subscribe(charData.statemachine);
+
+        }
     }
 }

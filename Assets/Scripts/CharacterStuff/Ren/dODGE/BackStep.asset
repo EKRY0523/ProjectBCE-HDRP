@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b815ebc8b33df74a9a5a8f01e65527b, type: 3}
+  m_Name: BackStep
+  m_EditorClassIdentifier: 
+  skillObject: []
+  skillInstance:
+  - instances: 0
+    skillObjects:
+    - {fileID: 5554089419683686948, guid: 4f619bad60daa9d49bb3660171253b09, type: 3}
+  key:
+  - {fileID: 11400000, guid: 41f8b218d66924140a7d09e2d6dbd234, type: 2}
+  cost:
+    stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
+    cost: 150
+  characterData: {fileID: 0}
+  statAndMultiplier:
+  - statIndex: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
+    multiplier: -0.1
+  requiredUnlockLevel: 0
+  skillName: Back Step
+  skillDescription: Leaves a mirage that heals players for 10% of EATK, then explodes
+    after 3 seconds dealing 100% of EATK
+  skillIcon: {fileID: 0}
+  cooldown:
+  - 3
+  movementData: []
+  delayForInstantiate: 0
+  affectedByInput: 1
+  receiveHit: 0
+  hitIndication: {fileID: 0}
+  instantCheck: 0

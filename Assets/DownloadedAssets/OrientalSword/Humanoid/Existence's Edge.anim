@@ -98159,4 +98159,25 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.6
+    functionName: SpawnDecoObject
+    data: 
+    objectReferenceParameter: {fileID: 1292624210045433447, guid: 686dfc6293cb2f44dad830ab5cd42fde, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.4
+    functionName: SpawnDecoObject
+    data: 
+    objectReferenceParameter: {fileID: 5171429182987897506, guid: 14be7ece623348b4f9fd1164815415a3, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.8333334
+    functionName: SpawnUltimateSkillObject
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

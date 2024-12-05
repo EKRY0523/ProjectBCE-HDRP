@@ -49,9 +49,9 @@ MonoBehaviour:
     200% of EATK'
   skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
   cooldown:
+  - 0.5
   - 1
   - 1
-  - 1.5
   movementData:
   - {fileID: 11400000, guid: 0cd9c8b5d5c148941a4db9bd6f0a1a6a, type: 2}
   - {fileID: 11400000, guid: d42f0b6aa7049e6419a3ae574a80316a, type: 2}

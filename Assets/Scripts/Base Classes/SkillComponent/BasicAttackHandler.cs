@@ -8,6 +8,7 @@ public class BasicAttackHandler : SkillHandler
     public bool firstInput = true;
     public float enterTime,maxTime;
     public int numTesting;
+    public int countFixed;
 
     public override void Awake()
     {
@@ -95,10 +96,13 @@ public class BasicAttackHandler : SkillHandler
 
     public void ActivateBasic(int instance)
     {
-        Instantiate(basicAttack.skillInstance[count].skillObjects[instance], transform.parent);
+        Instantiate(basicAttack.skillInstance[countFixed].skillObjects[instance], transform.parent);
     }
 
-
+    public void fixCount(int index)
+    {
+        countFixed = index;
+    }
 
     public void MoveCharacter(MovementData movementData)
     {

@@ -70,11 +70,11 @@ MonoBehaviour:
   targetedStat:
   - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   characterData: {fileID: 0}
-  multiplier: 117881
+  multiplier: 1.3688193e+26
   duration: 1
   target: {fileID: 0}
   knockback: {fileID: 0}
-  detachFromParent: 0
+  detachFromParent: 1
   hitFX: {fileID: 0}
   friendly: 0
 --- !u!65 &4522605462475961313

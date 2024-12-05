@@ -44,19 +44,22 @@ public class UltimateSkillHandler : SkillHandler
             {
                 if (character.statDictionary[cost.stat].statValue >= cost.cost)
                 {
-
                     if (context.performed)
                     {
+                        executionTime = Time.time;
+                        canExecute = false;
                         ultimate.OnHold(ultimate.statAndMultiplier);
                         MBEvent?.Invoke(ultimate.key[0], null);
                         timeToExceed = ultimate.cooldown[0];
                         MBEvent?.Invoke(cost.stat, -cost.cost);
 
+                        
                     }
 
                 }
 
             }
+
         }
         
     }
@@ -68,6 +71,11 @@ public class UltimateSkillHandler : SkillHandler
     public void SpawnUltimateSkillObject(int instance)
     {
         Instantiate(ultimate.skillInstance[0].skillObjects[instance], transform.parent);
+    }
+
+    public void SpawnDecoObject(GameObject obj)
+    {
+        Instantiate(obj, transform.parent);
     }
     public override void OnGlobalEventInvoke(object data)
     {

@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 766e11939319f2743981f2035d9a86f4, type: 3}
   m_Name: RegenOnDeplete
   m_EditorClassIdentifier: 
+  vfx: {fileID: 0}
+  Icon: {fileID: 0}
+  effectName: 
+  description: 
   effectType: 0
   timeMode: 0
   startTime: 0
   duration: 0
-  tick: 0.0001
+  tick: 0.00005
   targetedStat:
   - {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
   value: []

@@ -42,7 +42,7 @@ MonoBehaviour:
     ATK +  500 % EATK X 300%'
   skillIcon: {fileID: 21300000, guid: 7fca06c2ab514ae4881a289bbd86d8f0, type: 3}
   cooldown:
-  - 20
+  - 5
   movementData: []
   delayForInstantiate: 0
   extraMultiplier:

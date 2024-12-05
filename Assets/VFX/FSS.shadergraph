@@ -1248,7 +1248,7 @@
     "m_ObjectId": "c7c5fa16fd9b44b2876e1e55be967f3d",
     "m_Version": 0,
     "m_fullscreenMode": 0,
-    "m_BlendMode": 0,
+    "m_BlendMode": 3,
     "m_SrcColorBlendMode": 0,
     "m_DstColorBlendMode": 1,
     "m_ColorBlendOperation": 0,
@@ -1562,9 +1562,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -676.0001831054688,
-            "y": 148.80001831054688,
-            "width": 208.00015258789063,
+            "x": -676.7999267578125,
+            "y": 78.39999389648438,
+            "width": 208.00006103515626,
             "height": 432.0000305175781
         }
     },

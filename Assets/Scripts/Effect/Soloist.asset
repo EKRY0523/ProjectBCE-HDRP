@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a87058857aa6c4cba28b2a92f4e88f, type: 3}
+  m_Name: Soloist
+  m_EditorClassIdentifier: 
+  vfx: {fileID: 0}
+  Icon: {fileID: 0}
+  effectName: Soloist
+  description: If Codename:Edge is alone in party, his stats rises up and heals himself
+    over time
+  effectType: 0
+  timeMode: 0
+  startTime: 0
+  duration: 0
+  tick: 0.001
+  targetedStat:
+  - {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
+  - {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}
+  - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
+  value:
+  - 3
+  - 1.5

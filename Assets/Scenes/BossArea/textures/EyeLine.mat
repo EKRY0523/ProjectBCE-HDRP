@@ -293,7 +293,7 @@ Material:
     - alpha: 0.3
     m_Colors:
     - _BaseColor: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
-    - _Color: {r: 137.187, g: 42.226467, b: 0, a: 1}
+    - _Color: {r: 21.112133, g: 3.6980045, b: 0, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DissolveColor: {r: 766.99615, g: 261.01968, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}

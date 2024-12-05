@@ -62,7 +62,7 @@ MonoBehaviour:
   targetedStat:
   - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   characterData: {fileID: 0}
-  multiplier: 3000
+  multiplier: 0
   duration: 1
   target: {fileID: 0}
   knockback: {fileID: 0}
@@ -215,6 +215,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1651436286053467039, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9af17fb1fa7890d4da7f423894d462ce, type: 2}
+    - target: {fileID: 3749034221182227650, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749034221182227650, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749034221182227650, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749034221182227650, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 3e-45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683795700692005092, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6104293241839200303, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
       propertyPath: m_Name
       value: TSS1
@@ -276,6 +300,30 @@ PrefabInstance:
     - target: {fileID: 1411720224230798999, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1651436286053467039, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9af17fb1fa7890d4da7f423894d462ce, type: 2}
+    - target: {fileID: 3749034221182227650, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749034221182227650, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749034221182227650, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749034221182227650, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683795700692005092, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6104293241839200303, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
       propertyPath: m_Name
@@ -339,6 +387,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1651436286053467039, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9af17fb1fa7890d4da7f423894d462ce, type: 2}
+    - target: {fileID: 3749034221182227650, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749034221182227650, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749034221182227650, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749034221182227650, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 3e-45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683795700692005092, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6104293241839200303, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
       propertyPath: m_Name
       value: TSS1
@@ -400,6 +472,14 @@ PrefabInstance:
     - target: {fileID: 1411720224230798999, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1651436286053467039, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9af17fb1fa7890d4da7f423894d462ce, type: 2}
+    - target: {fileID: 4683795700692005092, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6104293241839200303, guid: c9016c6cea6f08c4f8db7a9eb10a1558, type: 3}
       propertyPath: m_Name

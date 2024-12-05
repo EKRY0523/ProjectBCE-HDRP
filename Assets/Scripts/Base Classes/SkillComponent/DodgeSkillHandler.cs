@@ -100,6 +100,8 @@ public class DodgeSkillHandler : SkillHandler
             {
                 if (context.performed)
                 {
+                    canExecute = false;
+                    executionTime = Time.time;
                     dodge.OnHold(dodge.statAndMultiplier);
                     MBEvent?.Invoke(dodge.key[0], null);
                     //statemachine.MBEvent?.Invoke(dodge.key[0], dodge.movementData[0]);
@@ -108,7 +110,7 @@ public class DodgeSkillHandler : SkillHandler
                 if (context.canceled)
                 {
                     dodge.OnRelease(dodge.statAndMultiplier);
-                    MBEvent?.Invoke(dodge.key[0], null);
+                    //MBEvent?.Invoke(dodge.key[0], null);
                     //statemachine.MBEvent?.Invoke(dodge.key[0], dodge.movementData[0]);
                 }
             }
@@ -142,6 +144,18 @@ public class DodgeSkillHandler : SkillHandler
     public void SpawnBlink(GameObject vfx)
     {
        Destroy(Instantiate(vfx, transform.parent),0.7f);
+    }
+
+    public void SetInvul()
+    {
+        transform.parent.tag = "Dodge";
+        Debug.Log(transform.parent.tag);
+    }
+
+    public void UnSetInvul()
+    {
+        transform.parent.tag = "Player";
+        Debug.Log(transform.parent.tag);
     }
 
     public void Direction(Vector2 direction)

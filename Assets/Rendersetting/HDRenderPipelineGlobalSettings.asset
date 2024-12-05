@@ -297,8 +297,7 @@ MonoBehaviour:
           m_CustomPostProcessTypesAsString: []
         m_AfterPostProcessCustomPostProcesses:
           m_InjectionPoint: 2
-          m_CustomPostProcessTypesAsString:
-          - FullScreen, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+          m_CustomPostProcessTypesAsString: []
     - rid: 3087368661480243206
       type: {class: RenderGraphSettings, ns: UnityEngine.Rendering.HighDefinition, asm: Unity.RenderPipelines.HighDefinition.Runtime}
       data:
@@ -348,7 +347,7 @@ MonoBehaviour:
         m_Camera:
           bitDatas:
             data1: 72198260625768269
-            data2: 13799031370044899352
+            data2: 13799031371118641176
           lodBias: 1
           lodBiasMode: 0
           lodBiasQualityLevel: 0

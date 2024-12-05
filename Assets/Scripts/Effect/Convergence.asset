@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad4c94fe494fa0a408804f4808caf0d0, type: 3}
+  m_Name: Convergence
+  m_EditorClassIdentifier: 
+  vfx: {fileID: 0}
+  Icon: {fileID: 0}
+  effectName: Copy
+  description: If both Ren and Codename:Edge is in party, adds additional 500 EATK
+    and EDEF while boosting Def and Edef by 50%
+  effectType: 0
+  timeMode: 0
+  startTime: 0
+  duration: 0
+  tick: 0
+  targetedStat:
+  - {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
+  - {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
+  - {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}
+  - {fileID: 11400000, guid: bf0e21beacd082f45b3c20cb0f18fa31, type: 2}
+  value:
+  - 1.5
+  - 1.5
+  - 1.5
+  - 1.5
+  kuroya: {fileID: 11400000, guid: 565b3aafc99c6024087024e4125bea44, type: 2}
+  ren: {fileID: 11400000, guid: 2b604dee9236a2a4f8ce3c908fd3eeac, type: 2}

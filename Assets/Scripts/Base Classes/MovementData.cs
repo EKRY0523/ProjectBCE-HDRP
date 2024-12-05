@@ -22,6 +22,8 @@ public class MovementData : ScriptableObject
         if(mode == MovementMode.RigidBody)
         {
             rb.AddForce(((rb.transform.right * targetPosition.x) + (rb.transform.up * targetPosition.y) + (rb.transform.forward * targetPosition.z))-rb.linearVelocity, ForceMode.VelocityChange);
+            //rb.DOMove((rb.transform.position + (rb.transform.right * targetPosition.x) + (rb.transform.up * targetPosition.y) + (rb.transform.forward * targetPosition.z)),duration);
+
         }
         else
         {

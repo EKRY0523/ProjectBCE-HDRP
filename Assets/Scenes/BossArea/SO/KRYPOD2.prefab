@@ -57,10 +57,10 @@ MonoBehaviour:
   targetedStat:
   - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   characterData: {fileID: 0}
-  multiplier: 4500
+  multiplier: 0
   duration: 1
   target: {fileID: 0}
-  knockback: {fileID: 11400000, guid: 97dafb9382904f34a9fa3024fa952539, type: 2}
+  knockback: {fileID: 0}
   detachFromParent: 1
   hitFX: {fileID: 1347330118340980, guid: a270d4b31a4d11a4b8302acf069f853a, type: 3}
   friendly: 0

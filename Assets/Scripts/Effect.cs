@@ -57,6 +57,11 @@ public class Effect : ScriptableObject
     {
 
     }
+
+    public virtual void StatBasedEffect(Entity entity, EffectHandler target)
+    {
+
+    }
     //public virtual IEnumerator Overtime(EffectHandler target)
     //{
     //    yield return null;  

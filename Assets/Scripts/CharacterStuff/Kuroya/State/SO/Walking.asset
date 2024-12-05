@@ -15,8 +15,7 @@ MonoBehaviour:
   activatedComponents: []
   deactivatedComponents: []
   OnEnterActivateComponent: []
-  OnEnterDeactivateComponent:
-  - {fileID: 11400000, guid: 9364c34befd8e864680cf6f828d8c993, type: 2}
+  OnEnterDeactivateComponent: []
   OnExitActivateComponent: []
   OnExitDeactivateComponent: []
   SwitchUponExit: {fileID: 0}

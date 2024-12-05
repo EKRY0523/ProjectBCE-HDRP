@@ -5,6 +5,7 @@ public class EffectInflictor : EventHandler
     public Effect effect;
     public bool dualTag;
 
+    public PlayerInput input;
     public string effectedTag;
 
 
@@ -12,8 +13,9 @@ public class EffectInflictor : EventHandler
     {
         Global,Targeted
     }
-    
     public TargetType type;
+
+
     public virtual void Inflict(EffectHandler target)
     {
         //if (type == EffectInflictor.TargetType.Global)

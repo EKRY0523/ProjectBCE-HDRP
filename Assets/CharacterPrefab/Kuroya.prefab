@@ -135,6 +135,7 @@ MonoBehaviour:
   indicator: {fileID: 0}
   collisionHandler: {fileID: 0}
   hit: 0
+  held: 0
 --- !u!114 &5703807654842825053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +179,9 @@ MonoBehaviour:
   eventListeners: []
   eventBroadcasters:
   - {fileID: 7869384607355888865}
+  lv: 0
+  currentEXP: 0
+  ExpNeeded: 0
   level:
     lv: 4
     currentExp: 450
@@ -309,6 +313,7 @@ MonoBehaviour:
   secondSkill: {fileID: 896661190048329185}
   dodgeSkill: {fileID: 2392560988924116713}
   ultimateSkill: {fileID: 2531096308389875817}
+  characterStatus: {fileID: 0}
   basicAttack: 0
   skill1: 0
   skill2: 0
@@ -526,6 +531,7 @@ MonoBehaviour:
   - {fileID: 2392560988924116713}
   entity: {fileID: 0}
   canReceive: 0
+  val: {fileID: 0}
 --- !u!114 &4398739625467631182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,6 +586,7 @@ MonoBehaviour:
   - {fileID: 7869384607355888865}
   - {fileID: 4398739625467631182}
   - {fileID: 6530361104709652387}
+  charData: {fileID: 0}
 --- !u!1 &263804752816189405
 GameObject:
   m_ObjectHideFlags: 0

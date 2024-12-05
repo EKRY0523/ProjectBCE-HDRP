@@ -214,6 +214,8 @@ MonoBehaviour:
   eventBroadcasters: []
   parentCollider: {fileID: 0}
   collisionCollider: {fileID: 1088119237673233314}
+  hitIndication: {fileID: 0}
+  dami: {fileID: 0}
 --- !u!114 &3950815375975859744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,6 +355,7 @@ MonoBehaviour:
   - {fileID: 6976985526997528577}
   - {fileID: 1903266393407111290}
   - {fileID: 7652922181026457547}
+  charData: {fileID: 0}
 --- !u!114 &6976985526997528577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,7 +833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5093358994109928741
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1234,6 +1237,7 @@ MonoBehaviour:
   lastAttackTime: 0
   cooldown: 0
   canAttack: 0
+  placeholder: {fileID: 0}
 --- !u!1 &7982968882885152905
 GameObject:
   m_ObjectHideFlags: 0

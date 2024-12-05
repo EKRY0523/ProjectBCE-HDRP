@@ -31,7 +31,7 @@ public class PlayableCharacterData : Entity
         ultimateSkill = GetComponent<UltimateSkillHandler>();
         for (int i = 0; i < stats.Count; i++)
         {
-            statDictionary.Add(stats[i].statIdentifier, stats[i]);
+            statDictionary.Add(character.stats[i].statIdentifier, stats[i]);
         }
         basic.basicAttack = character.BasicAttack[basicAttack];
         firstSkill.Skill1 = character.Skills[skill1];
@@ -62,39 +62,43 @@ public class PlayableCharacterData : Entity
 
     public void LevelUp()
     {
-        if (lv == 1)
+        ExpNeeded = 100 * MathF.Pow(1.5f,lv);
+        if(currentEXP>=ExpNeeded)
         {
-            ExpNeeded = 100 * MathF.Pow(2, lv - 2);
-        }
-        else
-        {
-            ExpNeeded = 100 * MathF.Pow(2, lv - 1);
-        }
-        while (currentEXP >= ExpNeeded)
-        {
-            if (lv == 1)
-            {
-                ExpNeeded = 100 * MathF.Pow(2, lv - 2);
-            }
-            else
-            {
-                ExpNeeded = 100 * MathF.Pow(2, lv - 1);
-            }
+            lv += 1;
+            currentEXP -= ExpNeeded;
 
-            if (currentEXP >= ExpNeeded)
+            ExpNeeded = 100 * MathF.Pow(1.5f, lv);
+            for (int i = 0; i < stats.Count; i++)
             {
-                lv += 1;
-                currentEXP -= ExpNeeded;
-                for (int i = 0; i < stats.Count; i++)
-                {
-                    stats[i].MinMaxValue[1] = character.stats[i].MinMaxValue[1] * MathF.Pow(stats[i].statScaling, lv - 1);
-                    stats[i].statValue = stats[i].MinMaxValue[1];
-                    MBEvent?.Invoke(stats[i].statIdentifier, stats[i].statValue);
-                }
+                stats[i].MinMaxValue[1] = character.stats[i].MinMaxValue[1] * stats[i].statScaling * lv;
+                stats[i].statValue = stats[i].MinMaxValue[1];
+                MBEvent?.Invoke(stats[i].statIdentifier, stats[i].statValue);
             }
+            if (currentEXP>= ExpNeeded)
+            {
+                LevelUp();
 
-            MBEvent?.Invoke(null, lv);
+            }
         }
+
+        MBEvent?.Invoke(null, lv);
+        //while (currentEXP >= ExpNeeded)
+        //{
+
+        //    if (currentEXP >= ExpNeeded)
+        //    {
+        //        lv += 1;
+        //        currentEXP -= ExpNeeded;
+        //        for (int i = 0; i < stats.Count; i++)
+        //        {
+        //            stats[i].MinMaxValue[1] = character.stats[i].MinMaxValue[1] * MathF.Pow(stats[i].statScaling, lv - 1);
+        //            stats[i].statValue = stats[i].MinMaxValue[1];
+        //            MBEvent?.Invoke(stats[i].statIdentifier, stats[i].statValue);
+        //        }
+        //    }
+
+        //}
     }
 
     public void OnUnlock()

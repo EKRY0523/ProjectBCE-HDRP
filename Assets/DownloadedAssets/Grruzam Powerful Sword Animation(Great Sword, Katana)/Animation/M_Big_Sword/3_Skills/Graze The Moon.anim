@@ -2800,15 +2800,6 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.53333336
-        value: 0.73
-        inSlope: 2.6295586
-        outSlope: 2.6295586
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
         time: 0.6666667
         value: 1.9220685
         inSlope: -0.40712506
@@ -55391,15 +55382,6 @@ AnimationClip:
         value: 1.5489428
         inSlope: 2.321609
         outSlope: 2.321609
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.53333336
-        value: 0.73
-        inSlope: 2.6295586
-        outSlope: 2.6295586
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
@@ -114964,6 +114946,13 @@ AnimationClip:
     functionName: SpawnUltimateSkillObject
     data: 
     objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.43333334
+    functionName: SpawnDecoObject
+    data: 
+    objectReferenceParameter: {fileID: 6859007444833589822, guid: 0d082a8ed0d9b274da0f6187210414a4, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

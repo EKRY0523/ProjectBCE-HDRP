@@ -18,7 +18,9 @@ MonoBehaviour:
   iconimage: {fileID: 21300000, guid: c5283195caf862b41bf5cd6b73bfff07, type: 3}
   material: {fileID: 2100000, guid: 5187197998201b04a9ef300891f17a8e, type: 2}
   characterDetails: The one who has started her journey towards the truth
-  passive: []
+  passive:
+  - {fileID: 11400000, guid: c1e3adfe12787b74793a5605019b7b9d, type: 2}
+  - {fileID: 11400000, guid: 7da0af9fdc03a2b45baf7ae4eef413bb, type: 2}
   BasicAttack:
   - {fileID: 11400000, guid: 837fae22677a2964c80f7e0755e4fd56, type: 2}
   - {fileID: 11400000, guid: 91bd807fcb9371f4a8329f50ea57beaa, type: 2}
@@ -31,7 +33,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3a97f06a28c9d694b9510f11ba2ce1ec, type: 2}
   Ultimate:
   - {fileID: 11400000, guid: 978904e2f599bf847abd7e1aab52b861, type: 2}
-  - {fileID: 11400000, guid: bf3b2ef41b4890b46a11dd08047ddc55, type: 2}
+  - {fileID: 11400000, guid: 139d76c85dfa27840b18bf549eacc2e2, type: 2}
   stats:
   - statIdentifier: {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
     statAction:

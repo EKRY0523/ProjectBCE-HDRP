@@ -22,7 +22,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4e7127693565c8540992920a2b88a303, type: 2}
   - {fileID: 11400000, guid: a84ff66f4faf5954eba01b9d1374ee0a, type: 2}
   OnExitDeactivateComponent: []
-  SwitchUponExit: {fileID: 0}
+  SwitchUponExit: {fileID: 11400000, guid: e29b44b3acd4f4b4ea42671209a8e0a0, type: 2}
   stateKey: {fileID: 0}
   maxTimeInState: 5
   count: 1

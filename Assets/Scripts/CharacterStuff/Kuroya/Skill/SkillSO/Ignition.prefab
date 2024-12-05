@@ -14683,6 +14683,7 @@ GameObject:
   - component: {fileID: 5038254490208119796}
   - component: {fileID: 2009122042847879768}
   - component: {fileID: 8386172759276826178}
+  - component: {fileID: 1359461573872042228}
   m_Layer: 0
   m_Name: Ignition
   m_TagString: Untagged
@@ -14729,12 +14730,12 @@ MonoBehaviour:
   targetedStat:
   - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   characterData: {fileID: 0}
-  multiplier: 9629.394
+  multiplier: 924727100
   duration: 1
   target: {fileID: 0}
   knockback: {fileID: 11400000, guid: 7d02414b8a8eb264e809b6f6181db09f, type: 2}
   detachFromParent: 1
-  hitFX: {fileID: 0}
+  hitFX: {fileID: 957247088401875501, guid: ebc70f63afde7b843944e0d52c4a01dc, type: 3}
   friendly: 0
 --- !u!65 &5038254490208119796
 BoxCollider:
@@ -14776,6 +14777,7 @@ MonoBehaviour:
   eventBroadcasters: []
   effect: {fileID: 11400000, guid: fcd290c6d0f04984699cb35108121224, type: 2}
   dualTag: 0
+  input: {fileID: 0}
   effectedTag: Enemy
   type: 0
 --- !u!114 &8386172759276826178
@@ -14797,8 +14799,106 @@ MonoBehaviour:
   eventBroadcasters: []
   effect: {fileID: 11400000, guid: 877a6644d3133f749a76e79025886e63, type: 2}
   dualTag: 0
+  input: {fileID: 0}
   effectedTag: Enemy
   type: 0
+--- !u!82 &1359461573872042228
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235169884114455272}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 8662634330842547458, guid: c43e50ae9863176489faafea1abe6756, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 50b8ea014c139634cb3a99a8d9ebe1de, type: 3}
+  m_Resource: {fileID: 8300000, guid: 50b8ea014c139634cb3a99a8d9ebe1de, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4619266212615920732
 GameObject:
   m_ObjectHideFlags: 0

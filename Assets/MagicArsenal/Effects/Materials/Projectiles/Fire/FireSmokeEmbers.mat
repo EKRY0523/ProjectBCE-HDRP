@@ -48,6 +48,7 @@ Material:
     - _RenderQueueType: 3
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 0, g: 4.8502445, b: 0.96835846, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &3587456193401224465

@@ -25,6 +25,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - N_F_CO_ON
   - N_F_CS_ON
   - N_F_ESSAO_ON
   - N_F_ESSGI_ON
@@ -36,6 +37,7 @@ Material:
   - N_F_RL_ON
   - N_F_SON_ON
   - N_F_SS_ON
+  - N_F_TRANS_ON
   m_InvalidKeywords:
   - L_F_O_ON
   - L_F_RELGI_ON
@@ -71,8 +73,9 @@ Material:
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2225
-  stringTagMap: {}
+  m_CustomRenderQueue: 2450
+  stringTagMap:
+    RenderType: TransparentCutout
   disabledShaderPasses:
   - MOTIONVECTORS
   - RayTracingPrepass
@@ -205,8 +208,8 @@ Material:
     - _AlphaBasedCutout: 1
     - _AlphaClip: 0
     - _AlphaToMask: 0
-    - _BleModDest: 0
-    - _BleModSour: 1
+    - _BleModDest: 10
+    - _BleModSour: 5
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
@@ -269,7 +272,7 @@ Material:
     - _N_F_ALSL: 0
     - _N_F_CA: 0
     - _N_F_CLD: 0
-    - _N_F_CO: 0
+    - _N_F_CO: 1
     - _N_F_COEDGL: 0
     - _N_F_CS: 1
     - _N_F_DCS: 0
@@ -387,7 +390,7 @@ Material:
     - _Surface: 0
     - _TEXMCOLINT: 1
     - _TOAO: 1
-    - _TRANSMODE: 0
+    - _TRANSMODE: 1
     - _TexturePatternStyle: 0
     - _TrailSize: 1.5
     - _TransAffSha: 1

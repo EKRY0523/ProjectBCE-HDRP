@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500a0b1923c229c4ca638ba7bb0d2c08, type: 3}
+  m_Name: EI
+  m_EditorClassIdentifier: 
+  skillObject: []
+  skillInstance:
+  - instances: 0
+    skillObjects:
+    - {fileID: 1607932534210104246, guid: 466ba22b7e2d38b44adf4b1143fe85af, type: 3}
+  key:
+  - {fileID: 11400000, guid: 5505c284f1ca78e41a53ec0b17193c70, type: 2}
+  cost:
+    stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
+    cost: 500
+  characterData: {fileID: 0}
+  statAndMultiplier:
+  - statIndex: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
+    multiplier: 4
+  requiredUnlockLevel: 0
+  skillName: Energy Impact
+  skillDescription: Deals 400% of EATK to nearby enemies and inflicts poison on them
+    that deals 100hp to them while debuffing them for 2000 DEF and 2000 EDEF
+  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
+  cooldown:
+  - 5
+  movementData:
+  - {fileID: 11400000, guid: 46e295bc9f2092d49aef024118fe35d2, type: 2}
+  delayForInstantiate: 0

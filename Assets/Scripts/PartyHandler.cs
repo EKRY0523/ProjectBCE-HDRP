@@ -64,8 +64,25 @@ public class PartyHandler : EventHandler
         {
             CanSwitch = true;
         }
-       
-        
+    }
+
+    public void SwitchUponDead()
+    {
+        activeCharacter.gameObject.SetActive(false);
+        if(party.Count>0)
+        {
+            activeCharacter = party[0];
+            activeCharacter.gameObject.SetActive(true);
+        }
+        else
+        {
+            activeCharacter.gameObject.SetActive(false);
+            Debug.Log("Game Over");
+            for (int i = 0; i < GameManager.instance.deadCharacters.Count; i++)
+            {
+                GameManager.instance.charactersInParty.Add(GameManager.instance.characterLoading[GameManager.instance.deadCharacters[i].character.ID]);
+            }
+        }
     }
     public void OnCharacterChange(int index)
     {

@@ -21,7 +21,6 @@ public class Parry : DodgeSkill
     }
     public override void OnHold(StatMultiplier[] usedStat)
     {
-        characterData.transform.parent.tag = "Dodge";
         float lastMultiplier = 0;
         base.OnHold(usedStat);
         for (int i = 0; i < usedStat.Length; i++)

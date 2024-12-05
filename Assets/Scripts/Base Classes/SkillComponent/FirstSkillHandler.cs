@@ -63,9 +63,12 @@ public class FirstSkillHandler : SkillHandler
                 }
                 if (context.canceled)
                 {
+                    Skill1.OnHold(Skill1.statAndMultiplier);
                     Skill1.OnRelease(Skill1.statAndMultiplier);
                     MBEvent?.Invoke(Skill1.key[0], null);
                     statemachine.MBEvent?.Invoke(Skill1.key[0], Skill1.movementData[0]);
+                    timeToExceed = Skill1.cooldown[0];
+                    MBEvent?.Invoke(cost.stat, -cost.cost);
                 }
             }
             

@@ -36,7 +36,7 @@ Material:
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap:
     MotionVector: User
     RenderType: Transparent
@@ -52,8 +52,15 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _AlphaCutoffEnable: 0
+    - _AlphaDstBlend: 10
+    - _DstBlend: 10
+    - _DstBlend2: 10
     - _EnableBlendModePreserveSpecularLighting: 0
     - _RenderQueueType: 3
+    - _SurfaceType: 1
+    - _ZTestDepthEqualForOpaque: 4
+    - _ZWrite: 0
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -14776,6 +14776,7 @@ MonoBehaviour:
   eventBroadcasters: []
   effect: {fileID: 11400000, guid: fcd290c6d0f04984699cb35108121224, type: 2}
   dualTag: 0
+  input: {fileID: 0}
   effectedTag: Enemy
   type: 0
 --- !u!114 &8386172759276826178
@@ -14797,6 +14798,7 @@ MonoBehaviour:
   eventBroadcasters: []
   effect: {fileID: 11400000, guid: 877a6644d3133f749a76e79025886e63, type: 2}
   dualTag: 0
+  input: {fileID: 0}
   effectedTag: Enemy
   type: 0
 --- !u!1 &4619266212615920732

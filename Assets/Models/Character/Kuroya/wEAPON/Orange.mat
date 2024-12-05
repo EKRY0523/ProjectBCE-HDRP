@@ -225,7 +225,7 @@ Material:
     - _CustomLightDirectionFollowObjectRotation: 0
     - _CustomLightDirectionIntensity: 0
     - _Cutoff: 0.5
-    - _Cutout: 0.5052856
+    - _Cutout: 0
     - _DepthOffsetEnable: 0
     - _DepthThreshold: 900
     - _DetailAlbedoScale: 1
@@ -406,7 +406,7 @@ Material:
     - _SelfShadowAffectedByLightShadowStrength: 0
     - _SelfShadowHardness: 1
     - _SelfShadowRealTimeShadowColorPower: 1
-    - _SelfShadowRealtimeShadowIntensity: 1
+    - _SelfShadowRealtimeShadowIntensity: 0.661
     - _SelfShadowShadowTAtViewDirection: 0
     - _SelfShadowThreshold: 0
     - _ShadowColorTexturePower: 0

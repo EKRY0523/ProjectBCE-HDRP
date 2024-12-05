@@ -13,6 +13,14 @@ public class ProjectileSkillObject : SkillObject
         transform.position = transform.position + offset + new Vector3(Random.Range(-5,5),0, Random.Range(-5, 5));
     }
 
+    private void Start()
+    {
+        if(target==null)
+        {
+
+            transform.rotation = Quaternion.LookRotation(transform.forward - transform.up);
+        }
+    }
     private void Update()
     {
         
@@ -24,7 +32,7 @@ public class ProjectileSkillObject : SkillObject
         }
         else
         {
-            transform.DOLocalMove(transform.position + transform.forward + new Vector3(0,-5,0), speed);
+            transform.DOLocalMove(transform.forward, speed);
         }
     }
 

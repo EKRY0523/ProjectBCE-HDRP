@@ -45,9 +45,19 @@ public class EffectHandler : EventHandler
                 newPassive.effect = passive[i].effect;
                 passiveDictionary.Add(passive[i].effect, newPassive);
                 Debug.Log(passiveDictionary[passive[i].effect].effect.name);
+                passive[i].effect.OnInflict(this);
                 passive[i].effect.PassiveOneShot(entity, this);
             }
 
+        }
+    }
+
+    public void ReloadPassive()
+    {
+        for (int i = 0; i < passive.Count; i++)
+        {
+            passive[i].effect.PassiveOneShot(entity, this);
+            
         }
     }
     public void OnAddEffect(Effect effect)
@@ -66,6 +76,7 @@ public class EffectHandler : EventHandler
 
     private void Update()
     {
+
         for (int i = 0; i < InflictedEffects.Count; i++)
         {
             if(InflictedEffects[i].effect.timeMode == Effect.TimeMode.incremented)
@@ -104,13 +115,13 @@ public class EffectHandler : EventHandler
         }
     }
 
-    public void OnEndEffect(Effect effect)
+    public override void OnInvoke(Trait ID, object data)
     {
-        //if (InflictedEffects.Contains(effect))
-        //{
-        //    InflictedEffects.Remove(effect);
-        //    effect.OnEndEffect(this);
-        //}
+        base.OnInvoke(ID, data);
+        for (int i = 0; i < passive.Count; i++)
+        {
+            passive[i].effect.StatBasedEffect(entity,this);
+        }
     }
 
 }

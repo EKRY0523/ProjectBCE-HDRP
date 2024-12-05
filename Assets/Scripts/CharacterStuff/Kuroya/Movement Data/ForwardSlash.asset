@@ -15,4 +15,5 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 4}
   transformPosition: {x: 0, y: 0, z: 0}
   mode: 0
-  duration: 4
+  duration: 1
+  passThrough: 0

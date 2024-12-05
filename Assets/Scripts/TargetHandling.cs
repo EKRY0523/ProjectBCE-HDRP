@@ -32,9 +32,9 @@ public class TargetHandling : EventHandler
             {
                 if(colliders[i].CompareTag(tagToHit))
                 {
-                    if (!targets.Contains(colliders[i].transform.parent))
+                    if (!targets.Contains(colliders[i].transform))
                     {
-                        targets.Add(colliders[i].transform.parent);
+                        targets.Add(colliders[i].transform);
                     }
                 }
             }
