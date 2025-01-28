@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TooFar
   m_EditorClassIdentifier: 
   moreThanRange: 1
-  range: 15
+  range: 10

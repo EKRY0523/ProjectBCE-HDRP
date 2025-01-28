@@ -63,6 +63,10 @@ public class RotateTowardsTarget : EventHandler
     public override void OnInvoke(Trait ID, object data)
     {
         base.OnInvoke(ID, data);
+        if(data is null)
+        {
+            target = null;
+        }
         if(data is Transform)
         {
             target = (Transform)data;

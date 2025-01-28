@@ -57,7 +57,6 @@ public class Movement : EventHandler
     }
     public virtual void FixedUpdate()
     {
-       
 
         if (magnitudeCheck.magnitude != 0)
         {

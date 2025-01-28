@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c797463c394e9e47a39ca98ef3c980d, type: 3}
   m_Name: NatureEmbracePoison
   m_EditorClassIdentifier: 
-  vfx: {fileID: 0}
+  vfx: {fileID: 8627688869704612544, guid: 77ea0adfc86e1e04592da5f8245c73eb, type: 3}
   Icon: {fileID: 0}
   effectName: 
   description: 
@@ -20,8 +20,11 @@ MonoBehaviour:
   timeMode: 0
   startTime: 0
   duration: 15
-  tick: 0.5
+  tick: 1
   targetedStat:
   - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   value:
-  - -75
+  - 0
+  getStatFromEntity: 1
+  DoTperTick: 0.02
+  offense: 1

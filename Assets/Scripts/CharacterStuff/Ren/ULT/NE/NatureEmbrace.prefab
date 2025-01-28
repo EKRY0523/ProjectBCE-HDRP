@@ -4909,7 +4909,7 @@ MonoBehaviour:
   originStat: []
   targetedStat: []
   characterData: {fileID: 0}
-  multiplier: 446250
+  multiplier: 48750
   duration: 3
   target: {fileID: 0}
   knockback: {fileID: 0}

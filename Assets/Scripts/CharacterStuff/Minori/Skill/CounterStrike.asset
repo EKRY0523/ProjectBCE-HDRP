@@ -29,11 +29,12 @@ MonoBehaviour:
   - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
     multiplier: 2
   requiredUnlockLevel: 0
-  skillName: 
-  skillDescription: 
-  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
+  skillName: Counter Strike
+  skillDescription: Assumes a fast defensive stance that provides a slight moment
+    of invulnerability and counterattacks attacked for 200% of ATK
+  skillIcon: {fileID: 21300000, guid: 3c501dc7fd30751469768c4411e1d796, type: 3}
   cooldown:
-  - 1
+  - 0.8
   movementData: []
   delayForInstantiate: 0
   affectedByInput: 0

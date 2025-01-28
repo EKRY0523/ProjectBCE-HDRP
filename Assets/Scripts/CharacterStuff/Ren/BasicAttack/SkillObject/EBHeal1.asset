@@ -25,3 +25,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   value:
   - 30
+  getStatFromEntity: 1
+  DoTperTick: 0.01
+  offense: 0

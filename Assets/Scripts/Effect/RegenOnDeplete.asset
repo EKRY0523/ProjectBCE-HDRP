@@ -20,7 +20,7 @@ MonoBehaviour:
   timeMode: 0
   startTime: 0
   duration: 0
-  tick: 0.00005
+  tick: 0.00001
   targetedStat:
   - {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
   value: []

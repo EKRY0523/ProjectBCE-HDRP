@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Soloist
   m_EditorClassIdentifier: 
   vfx: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 26c4e9d2678106642ad8a6c545e25805, type: 3}
   effectName: Soloist
   description: If Codename:Edge is alone in party, his stats rises up and heals himself
     over time
@@ -21,7 +21,7 @@ MonoBehaviour:
   timeMode: 0
   startTime: 0
   duration: 0
-  tick: 0.001
+  tick: 0.0001
   targetedStat:
   - {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
   - {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}

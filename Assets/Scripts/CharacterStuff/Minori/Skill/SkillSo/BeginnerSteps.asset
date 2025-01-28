@@ -39,16 +39,18 @@ MonoBehaviour:
     multiplier: 0.2
   requiredUnlockLevel: 0
   skillName: Beginner Steps
-  skillDescription: "1st hit: 128% of ATK & 32% of EATK\n2nd hit : 120% of ATK &
-    20% of ATK \n3rd hit: 160% of ATK & 40% of ATK"
-  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
+  skillDescription: "Uses 80% of ATK and 20% of EATK combined to deal ATK damage\n\n1st
+    hit: 100% of total combined damage\n2nd hit : 110% of total combined damage \n3rd
+    hit: 2x hit dealing 90% of total combined damage each"
+  skillIcon: {fileID: 21300000, guid: 1d5f7eb69af043d47b8fa4e0cd08873c, type: 3}
   cooldown:
   - 0.4
   - 0.5
   - 1
   movementData: []
+  delayForInstantiate: 0
   countMultiplier:
-  - 1.6
-  - 1.5
-  - 2
+  - 1
+  - 1.1
+  - 1.8
   MaxCount: 2

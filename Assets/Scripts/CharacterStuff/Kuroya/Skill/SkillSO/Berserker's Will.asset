@@ -27,11 +27,12 @@ MonoBehaviour:
   - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
     multiplier: 1
   requiredUnlockLevel: 0
-  skillName: 
-  skillDescription: 
+  skillName: Berserker's Will
+  skillDescription: 'Gives a buff to Codename: Edge which increases own ATK for 30%
+    and lasts for 15 seconds'
   skillIcon: {fileID: 600909675, guid: ae7f7b0f477c8bd409fba9b879d1e93b, type: 3}
   cooldown:
-  - 5
+  - 10
   movementData:
   - {fileID: 11400000, guid: 46e295bc9f2092d49aef024118fe35d2, type: 2}
   delayForInstantiate: 0.18

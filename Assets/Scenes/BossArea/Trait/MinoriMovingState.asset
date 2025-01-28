@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activatedComponents: []
   deactivatedComponents: []
-  OnEnterActivateComponent: []
+  OnEnterActivateComponent:
+  - {fileID: 11400000, guid: 4e7127693565c8540992920a2b88a303, type: 2}
   OnEnterDeactivateComponent: []
-  OnExitActivateComponent: []
+  OnExitActivateComponent:
+  - {fileID: 11400000, guid: 4e7127693565c8540992920a2b88a303, type: 2}
   OnExitDeactivateComponent: []
   SwitchUponExit: {fileID: 0}
   stateKey: {fileID: 0}
-  maxTimeInState: 3
+  maxTimeInState: 2

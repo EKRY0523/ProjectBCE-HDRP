@@ -14,13 +14,9 @@ public class ShowCharacterStats : EventHandler
         base.Awake();
 
     }
-
-    private void OnEnable()
+    public override void OnDestroy()
     {
-        if(charData!=null)
-        {
-            
-        }
+        base.OnDestroy();   
     }
     public override void OnInvoke(Trait ID, object data)
     {
@@ -37,13 +33,13 @@ public class ShowCharacterStats : EventHandler
                     charData.gameObject.SetActive(false); //on off to get the damn fucking script
                 }
 
-                HPtext.text = "HP" + charData.statDictionary[HP].MinMaxValue[1] * MathF.Pow(charData.statDictionary[HP].statScaling, charData.level.lv - 1);
-                ENGtext.text = "ENG" + charData.statDictionary[ENG].MinMaxValue[1] * MathF.Pow(charData.statDictionary[ENG].statScaling, charData.level.lv - 1);
-                ATKtext.text = "ATK" + charData.statDictionary[ATK].MinMaxValue[1] * MathF.Pow(charData.statDictionary[ATK].statScaling, charData.level.lv - 1);
-                EATKtext.text = "EATK" + charData.statDictionary[EATK].MinMaxValue[1] * MathF.Pow(charData.statDictionary[EATK].statScaling, charData.level.lv - 1);
-                DEFtext.text = "DEF" + charData.statDictionary[DEF].MinMaxValue[1] * MathF.Pow(charData.statDictionary[DEF].statScaling, charData.level.lv - 1);
-                EDEFtext.text = "EDEF" + charData.statDictionary[EDEF].MinMaxValue[1] * MathF.Pow(charData.statDictionary[EDEF].statScaling, charData.level.lv - 1);
-                SPDtext.text = "SPD" + charData.statDictionary[SPD].MinMaxValue[1] * MathF.Pow(charData.statDictionary[SPD].statScaling, charData.level.lv - 1);
+                HPtext.text = "<color=black>HP </color>" + String.Format("{0:0}",charData.statDictionary[HP].MinMaxValue[1]);
+                ENGtext.text = "<color=black>ENG </color>" + String.Format("{0:0}", charData.statDictionary[ENG].MinMaxValue[1]);
+                ATKtext.text = "<color=black>ATK </color>" + String.Format("{0:0}", charData.statDictionary[ATK].MinMaxValue[1]);
+                EATKtext.text = "<color=black>EATK </color>" + String.Format("{0:0}", charData.statDictionary[EATK].MinMaxValue[1]);
+                DEFtext.text = "<color=black>DEF </color>" + String.Format("{0:0}", charData.statDictionary[DEF].MinMaxValue[1]);
+                EDEFtext.text = "<color=black>EDEF </color>" + String.Format("{0:0}", charData.statDictionary[EDEF].MinMaxValue[1]);
+                //SPDtext.text = "SPD " + String.Format("{0:0}", charData.statDictionary[SPD].MinMaxValue[1]);
 
             }
 

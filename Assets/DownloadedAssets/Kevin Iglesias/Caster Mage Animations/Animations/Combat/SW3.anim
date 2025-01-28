@@ -102200,6 +102200,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 2
     messageOptions: 0
+  - time: 0.23333333
+    functionName: MoveCharacter
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 813ec1a190ed593408213cb2ac28d6bc, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.5
     functionName: ActivateBasic
     data: 

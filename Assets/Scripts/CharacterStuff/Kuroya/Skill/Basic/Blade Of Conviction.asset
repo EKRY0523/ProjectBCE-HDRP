@@ -36,12 +36,15 @@ MonoBehaviour:
     multiplier: 1
   requiredUnlockLevel: 0
   skillName: Blade Of Conviction
-  skillDescription: '1st hit: 100% of ATK
+  skillDescription: 'Deals pure ATK damage to enemies
 
-    2nd hit: 150% of ATK
 
-    3rd hit:
-    200% of ATK'
+    1st hit: 100% of ATK
+
+    2nd
+    hit: 150% of ATK
+
+    3rd hit: 200% of ATK'
   skillIcon: {fileID: 1608369372, guid: 44fb5e577b2c3834090fd59025eb7a90, type: 3}
   cooldown:
   - 0.5
@@ -51,6 +54,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0cd9c8b5d5c148941a4db9bd6f0a1a6a, type: 2}
   - {fileID: 11400000, guid: d42f0b6aa7049e6419a3ae574a80316a, type: 2}
   - {fileID: 11400000, guid: 365e3c649db72004a93ef49a5ab23db5, type: 2}
+  delayForInstantiate: 0
   countMultiplier:
   - 1
   - 1.5

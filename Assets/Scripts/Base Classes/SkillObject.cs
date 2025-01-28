@@ -75,6 +75,11 @@ public class SkillObject : EventHandler
             {
                 if (other.GetComponent<PartyHandler>())
                 {
+                    if (hitFX != null)
+                    {
+                        //Vector3 otherObjCenter = other.transform.TransformPoint(other.bounds.center);
+                        Destroy(Instantiate(hitFX, other.bounds.center, Quaternion.identity, other.transform), 1f);
+                    }
                     StatHandler stathandle = other.GetComponent<PartyHandler>().activeCharacter.statHandler;
                     stathandle.ReceiveValue(targetedStat, originStat, -multiplier);
                     //Debug.Log("hit");

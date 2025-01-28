@@ -92,6 +92,7 @@ public class PartySetup : EventHandler
         }
         for (int i = 0; i < GameManager.instance.charactersInParty.Count; i++)
         {
+            GameManager.instance.characterLoading[charactersInParty[i].character.ID].InitializeCharacter();
             GameManager.instance.characterLoading[charactersInParty[i].character.ID].GetComponent<EffectHandler>().ReloadPassive();
         }
         SOEvent[0].globalEvent?.Invoke(null);

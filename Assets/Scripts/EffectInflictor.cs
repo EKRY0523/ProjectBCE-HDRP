@@ -61,8 +61,7 @@ public class EffectInflictor : EventHandler
     public void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("controller");
+        { 
             if (hit.gameObject.GetComponent<PartyHandler>())
             {
                 PartyHandler party = hit.gameObject.GetComponent<PartyHandler>();
@@ -86,7 +85,7 @@ public class EffectInflictor : EventHandler
     {
         if (effectedTag == "Player")
         {
-            if (other.CompareTag("Player"))
+            if (other.CompareTag("Player") || other.CompareTag("Invulnerable"))
             {
                 if (other.gameObject.GetComponent<PartyHandler>())
                 {

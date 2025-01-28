@@ -21,7 +21,6 @@ public class Soloist : Effect
         {
             target.MBEvent?.Invoke(targetedStat[0], -entity.statDictionary[targetedStat[0]].statValue);
             target.MBEvent?.Invoke(targetedStat[0], (entity.statDictionary[targetedStat[0]].MinMaxValue[1] * value[0])); //atk
-            Debug.Log(entity.statDictionary[targetedStat[0]].statValue);
             target.MBEvent?.Invoke(targetedStat[1], -entity.statDictionary[targetedStat[1]].statValue);
             target.MBEvent?.Invoke(targetedStat[1], entity.statDictionary[targetedStat[1]].MinMaxValue[1] * value[1]); //def
         }

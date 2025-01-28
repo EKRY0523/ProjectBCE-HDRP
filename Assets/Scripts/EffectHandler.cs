@@ -36,7 +36,23 @@ public class EffectHandler : EventHandler
         {
             party = GetComponent<PartyHandler>();
         }
+        for (int i = 0; i < passive.Count; i++)
+        {
+            if (!passiveDictionary.ContainsKey(passive[i].effect))
+            {
+                PassiveHandling newPassive = new();
+                newPassive.effect = passive[i].effect;
+                passiveDictionary.Add(passive[i].effect, newPassive);
+                Debug.Log(passiveDictionary[passive[i].effect].effect.name);
+                passive[i].effect.OnInflict(this);
+                passive[i].effect.PassiveOneShot(entity, this);
+            }
 
+        }
+
+    }
+    private void Start()
+    {
         for (int i = 0; i < passive.Count; i++)
         {
             if (!passiveDictionary.ContainsKey(passive[i].effect))
@@ -51,7 +67,6 @@ public class EffectHandler : EventHandler
 
         }
     }
-
     public void ReloadPassive()
     {
         for (int i = 0; i < passive.Count; i++)
@@ -70,6 +85,11 @@ public class EffectHandler : EventHandler
             effectDictionary.Add(effect,newEffect);
 
             newEffect.effect.OnInflict(this);
+        }
+        else
+        {
+            effectDictionary[effect].duration = 0;
+            effectDictionary[effect].effect.OnInflict(this);
         }
     }
 

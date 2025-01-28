@@ -28,10 +28,11 @@ MonoBehaviour:
     multiplier: 0.5
   requiredUnlockLevel: 0
   skillName: Cover Up
-  skillDescription: Buffs the Active Character ATK and EATK by 700
-  skillIcon: {fileID: 600909675, guid: ae7f7b0f477c8bd409fba9b879d1e93b, type: 3}
+  skillDescription: Buffs the Active Character ATK and EATK by 15% with additional
+    700
+  skillIcon: {fileID: 21300000, guid: 496acceb63d87b44394997f7226c0062, type: 3}
   cooldown:
-  - 10
+  - 5
   movementData:
   - {fileID: 11400000, guid: 46e295bc9f2092d49aef024118fe35d2, type: 2}
   delayForInstantiate: 0.2

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb21c125a9f3c4949aa73d0dc7208700, type: 3}
   m_Name: DashMelee
   m_EditorClassIdentifier: 
-  targetPosition: {x: 0, y: 0, z: 3}
+  targetPosition: {x: 0, y: 0, z: 10}
   transformPosition: {x: 0, y: 0, z: 0}
   mode: 0
   duration: 0

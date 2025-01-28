@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Copy
   m_EditorClassIdentifier: 
   vfx: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 4177ef68ef4960940a5ab7059d381492, type: 3}
   effectName: Copy
   description: If Ren is in party, add 50% EATK, if Codename:Edge is in party, add
     50% ATK

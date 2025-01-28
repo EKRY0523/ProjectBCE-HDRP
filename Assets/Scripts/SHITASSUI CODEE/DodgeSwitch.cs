@@ -12,8 +12,6 @@ public class DodgeSwitch : EventHandler
     [Header("Base")]
     public TextMeshProUGUI skillDescription;
     public TextMeshProUGUI skillName;
-    public TextMeshProUGUI skillCost;
-    public TextMeshProUGUI skillCooldown;
 
     public Button SwitchButton;
     public GameObject switchSkillOption;
@@ -23,8 +21,6 @@ public class DodgeSwitch : EventHandler
     public GameObject switchSkillPanel;
     public TextMeshProUGUI newSkillDescription;
     public TextMeshProUGUI newSkillName;
-    public TextMeshProUGUI newSkillCost;
-    public TextMeshProUGUI newSkillCooldown;
 
     public Button confirmButton;
     public Button cancelButton;
@@ -48,8 +44,6 @@ public class DodgeSwitch : EventHandler
     {
         skillDescription.text = character.Dodge[currentSkillIndex].skillDescription;
         skillName.text = character.Dodge[currentSkillIndex].skillName;
-        skillCost.text = character.Dodge[currentSkillIndex].cost.stat.name + ": " + character.Dodge[currentSkillIndex].cost.cost;
-        skillCooldown.text = "CD: " + character.Dodge[currentSkillIndex].cooldown[0];
 
         for (int i = 0; i < skillOptionIcon.Length; i++)
         {
@@ -63,8 +57,6 @@ public class DodgeSwitch : EventHandler
 
         skillDescription.text = character.Dodge[currentSkillIndex].skillDescription;
         skillName.text = character.Dodge[currentSkillIndex].skillName;
-        skillCost.text = character.Dodge[currentSkillIndex].cost.stat.name + ": " + character.Dodge[currentSkillIndex].cost.cost;
-        skillCooldown.text = "CD: " + character.Dodge[currentSkillIndex].cooldown[0];
 
         for (int i = 0; i < skillOptionIcon.Length; i++)
         {
@@ -93,8 +85,6 @@ public class DodgeSwitch : EventHandler
 
         skillDescription.text = character.Dodge[index].skillDescription;
         skillName.text = character.Dodge[index].skillName;
-        skillCost.text = character.Dodge[index].cost.stat.name + ": " + character.Dodge[index].cost.cost;
-        skillCooldown.text = "CD: " + character.Dodge[currentSkillIndex].cooldown[0];
 
         currentSkllIcon.sprite = character.Dodge[index].skillIcon;
 

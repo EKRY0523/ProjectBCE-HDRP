@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66b1321afa62e9242bb64274c271fe9c, type: 3}
   m_Name: FocusEATK
   m_EditorClassIdentifier: 
+  vfx: {fileID: 5264028564523462336, guid: f7afc39f5731c4540a52b39938ff9787, type: 3}
   Icon: {fileID: 0}
   effectName: 
   description: 
@@ -23,4 +24,8 @@ MonoBehaviour:
   targetedStat:
   - {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
   value:
-  - 510
+  - 0
+  getStatFromEntity: 1
+  extraMultiplierFromStat:
+  - 0.2
+  offense: 0

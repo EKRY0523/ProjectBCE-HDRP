@@ -4,6 +4,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Heal", menuName = "Effect/Heal")]
 public class Heal : Effect
 {
+    public bool getStatFromEntity;
+    public float DoTperTick;
+    public bool offense;
     public override void OnInflict(EffectHandler target)
     {
         base.OnInflict(target);
@@ -22,16 +25,38 @@ public class Heal : Effect
     {
         base.OverTime(target);
 
-
-        for (int i = 0; i < targetedStat.Length; i++)
+        if (getStatFromEntity)
         {
-            if (target.effectDictionary[this].EotTimer >= tick)
+            for (int i = 0; i < targetedStat.Length; i++)
             {
-                target.MBEvent?.Invoke(targetedStat[i], value[i]);
-                target.effectDictionary[this].EotTimer = 0;
+                if (target.effectDictionary[this].EotTimer >= tick)
+                {
+                    if(offense)
+                    {
+                        target.MBEvent?.Invoke(targetedStat[i], -value[i] + -(target.entity.statDictionary[targetedStat[i]].MinMaxValue[1] * DoTperTick));
+
+                    }
+                    else
+                    {
+                        target.MBEvent?.Invoke(targetedStat[i], value[i] + (target.entity.statDictionary[targetedStat[i]].MinMaxValue[1] * DoTperTick));
+
+                    }
+                    target.effectDictionary[this].EotTimer = 0;
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < targetedStat.Length; i++)
+            {
+                if (target.effectDictionary[this].EotTimer >= tick)
+                {
+                    target.MBEvent?.Invoke(targetedStat[i], value[i]);
+                    target.effectDictionary[this].EotTimer = 0;
+                }
             }
         }
         
-
+        
     }
 }

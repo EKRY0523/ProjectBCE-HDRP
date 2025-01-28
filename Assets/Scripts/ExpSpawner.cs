@@ -8,13 +8,18 @@ public class ExpSpawner : MonoBehaviour
     private void Start()
     {
         expOrb = Instantiate(expMat,transform);
-        expOrb.exp = exp * MathF.Pow(1.5f ,GetComponent<Enemy>().lv);
+        expOrb.exp = exp * 1.5f* GetComponent<Enemy>().lv;
         expOrb.transform.position = this.transform.position;
         expOrb.gameObject.SetActive(false);
+        expOrb.transform.parent = null;
     }
     private void OnDestroy()
     {
-        expOrb.gameObject.SetActive(true);
-        expOrb.transform.parent = null;
+        if(expOrb!=null)
+        {
+
+            expOrb.transform.position = this.transform.position + new Vector3(0,1,0);
+            expOrb.gameObject.SetActive(true);
+        }
     }
 }

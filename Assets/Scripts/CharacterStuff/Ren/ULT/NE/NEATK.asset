@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66b1321afa62e9242bb64274c271fe9c, type: 3}
   m_Name: NEATK
   m_EditorClassIdentifier: 
-  vfx: {fileID: 0}
+  vfx: {fileID: 5686727154465376362, guid: fefb444140d7ed24bbd34a813349c23a, type: 3}
   Icon: {fileID: 0}
   effectName: 
   description: 
@@ -24,4 +24,8 @@ MonoBehaviour:
   targetedStat:
   - {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
   value:
-  - 1500
+  - 0
+  getStatFromEntity: 1
+  extraMultiplierFromStat:
+  - 0.3
+  offense: 0

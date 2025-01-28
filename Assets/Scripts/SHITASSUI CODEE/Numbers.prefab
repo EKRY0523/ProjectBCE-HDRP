@@ -267,3 +267,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmgText: {fileID: 3446692415520805640}
   offset: 0.1
+  maxY: 2

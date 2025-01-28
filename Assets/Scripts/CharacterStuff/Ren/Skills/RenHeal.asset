@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RenHeal
   m_EditorClassIdentifier: 
   vfx: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 56b4da3160480ef44bbff1e1c2e4fb12, type: 3}
   effectName: Healing Touch
   description: Heals allies and herself everytime she basic attacks
   effectType: 0

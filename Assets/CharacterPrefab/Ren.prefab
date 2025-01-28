@@ -3943,6 +3943,7 @@ GameObject:
   - component: {fileID: 2628762352315466692}
   - component: {fileID: 6543169868687771525}
   - component: {fileID: 7908699880250984444}
+  - component: {fileID: 3031372700933062495}
   m_Layer: 0
   m_Name: Ren
   m_TagString: Untagged
@@ -4034,6 +4035,9 @@ MonoBehaviour:
   eventListeners: []
   eventBroadcasters:
   - {fileID: 6543169868687771525}
+  lv: 0
+  currentEXP: 0
+  ExpNeeded: 0
   level:
     lv: 1
     currentExp: 0
@@ -4165,6 +4169,7 @@ MonoBehaviour:
   secondSkill: {fileID: 352045770426277514}
   dodgeSkill: {fileID: 876744179468555950}
   ultimateSkill: {fileID: 7137341047715603199}
+  characterStatus: {fileID: 0}
   basicAttack: 0
   skill1: 0
   skill2: 0
@@ -4203,6 +4208,7 @@ MonoBehaviour:
   enterTime: 0
   maxTime: 3
   numTesting: 0
+  countFixed: 0
 --- !u!114 &6777349963713472022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4286,7 +4292,7 @@ MonoBehaviour:
   executionTime: 0
   timeToExceed: 0
   canExecute: 0
-  ultimate: {fileID: 11400000, guid: c39bdf96d33b76a4da4c961b2edb1610, type: 2}
+  ultimate: {fileID: 0}
 --- !u!114 &876744179468555950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4321,6 +4327,7 @@ MonoBehaviour:
   indicator: {fileID: 0}
   collisionHandler: {fileID: 0}
   hit: 0
+  held: 0
 --- !u!114 &2628762352315466692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4345,6 +4352,7 @@ MonoBehaviour:
   - {fileID: 352045770426277514}
   - {fileID: 7137341047715603199}
   - {fileID: 876744179468555950}
+  - {fileID: 4304999696753725828}
   timeInState: 0
   keyAndStates:
   - key: {fileID: 11400000, guid: e29b44b3acd4f4b4ea42671209a8e0a0, type: 2}
@@ -4361,12 +4369,26 @@ MonoBehaviour:
     state: {fileID: 11400000, guid: 8ccd60a76192d1446b376081c9dfd23b, type: 2}
   - key: {fileID: 11400000, guid: 92558ee8a9e2f7b4cbb5b6a1613a311a, type: 2}
     state: {fileID: 11400000, guid: eba8ded999a3caf46bc23a45842ea149, type: 2}
-  - key: {fileID: 11400000, guid: 14fe6987db7502c4bbcdbfb586890046, type: 2}
-    state: {fileID: 11400000, guid: fcced9f89e8275040ba2c4b2c484e436, type: 2}
-  - key: {fileID: 11400000, guid: 80b2b5d7ba7d62e478d4099173f6a37f, type: 2}
-    state: {fileID: 11400000, guid: 2fc23ad94deba9b4699e033d08366ac4, type: 2}
-  - key: {fileID: 11400000, guid: 78da2e2e2639da246b8af76cd6ec5765, type: 2}
-    state: {fileID: 11400000, guid: d0c1921b5a850754d833c4c74bd37e02, type: 2}
+  - key: {fileID: 11400000, guid: 52940680fee78c440a91bdd9a555ddb3, type: 2}
+    state: {fileID: 11400000, guid: b78a7eb85d0c5f2459a7047697e4e877, type: 2}
+  - key: {fileID: 11400000, guid: 41f8b218d66924140a7d09e2d6dbd234, type: 2}
+    state: {fileID: 11400000, guid: 357b2e98444dc104ba8aa2a2473f2716, type: 2}
+  - key: {fileID: 11400000, guid: ee34497aad14d0a4f9de190bc0b7cec3, type: 2}
+    state: {fileID: 11400000, guid: caba90c3792479244843c4c9136b00e2, type: 2}
+  - key: {fileID: 11400000, guid: 393635b9dbdba584c8b2e314dbe4081a, type: 2}
+    state: {fileID: 11400000, guid: fcabdd5b7cf75c2499ed3b0e87f5c5e7, type: 2}
+  - key: {fileID: 11400000, guid: 0b3ccdb65804b3b4dbe4ac320f8b99da, type: 2}
+    state: {fileID: 11400000, guid: 3257916b6576cab488bb72e87ad2ac90, type: 2}
+  - key: {fileID: 11400000, guid: 285ee73d25e31a145a7f1b3059654d27, type: 2}
+    state: {fileID: 11400000, guid: a91cfce1b3e448b4b85a1eb66123861e, type: 2}
+  - key: {fileID: 11400000, guid: 5505c284f1ca78e41a53ec0b17193c70, type: 2}
+    state: {fileID: 11400000, guid: 979f65509bb017f4f9195bb756d2db60, type: 2}
+  - key: {fileID: 11400000, guid: f62a332e406eef649a096815b45ddf93, type: 2}
+    state: {fileID: 11400000, guid: 0e04bd9a8eb4c5e4689ffd59932396ea, type: 2}
+  - key: {fileID: 11400000, guid: e4cf8ce948e77e54baa2bf120b6fd04a, type: 2}
+    state: {fileID: 11400000, guid: 5d5e89769cf80b04684ed97570bf6683, type: 2}
+  - key: {fileID: 11400000, guid: e047fbb22a5bbc64ea7e4b2e6620aa94, type: 2}
+    state: {fileID: 11400000, guid: 09bbf805187d5c949bd824cdf694ab5c, type: 2}
   currentState: {fileID: 0}
   previousState: {fileID: 0}
   startingState: {fileID: 0}
@@ -4389,8 +4411,14 @@ MonoBehaviour:
   eventListeners: []
   eventBroadcasters:
   - {fileID: 7908699880250984444}
+  - {fileID: 710312173649795703}
+  - {fileID: 6777349963713472022}
+  - {fileID: 352045770426277514}
+  - {fileID: 7137341047715603199}
+  - {fileID: 876744179468555950}
   entity: {fileID: 0}
   canReceive: 0
+  val: {fileID: 0}
 --- !u!114 &7908699880250984444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4412,8 +4440,29 @@ MonoBehaviour:
   Immune: []
   InflictedEffects: []
   passive:
-  - effect: {fileID: 11400000, guid: 5fc6647b492a86e4480ca3bba1547c73, type: 2}
+  - effect: {fileID: 11400000, guid: 60e71b15283d34a419bedaff2efb31d4, type: 2}
     conditionMet: 0
+  party: {fileID: 0}
+--- !u!114 &3031372700933062495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6384552509618221652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a54d3ee27877f418309c28bac4e579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HandlerID: {fileID: 0}
+  ComponentsID: []
+  SOEvent: []
+  eventListeners: []
+  eventBroadcasters:
+  - {fileID: 4304999696753725828}
+  characterData: {fileID: 0}
+  deadID: {fileID: 11400000, guid: 5181c1ce474495741beb791ba21cd3cb, type: 2}
   party: {fileID: 0}
 --- !u!1 &6597893585031757476
 GameObject:

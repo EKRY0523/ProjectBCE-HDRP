@@ -21,18 +21,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5505c284f1ca78e41a53ec0b17193c70, type: 2}
   cost:
     stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
-    cost: 500
+    cost: 0
   characterData: {fileID: 0}
   statAndMultiplier:
   - statIndex: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
-    multiplier: 4
+    multiplier: 10
   requiredUnlockLevel: 0
   skillName: Energy Impact
-  skillDescription: Deals 400% of EATK to nearby enemies and inflicts poison on them
-    that deals 100hp to them while debuffing them for 2000 DEF and 2000 EDEF
-  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
+  skillDescription: Deals 1000% of EATK to nearby enemies and inflicts poison to
+    them while debuffing them for 20% DEF and 20% EDEF lasting for 10 seconds
+  skillIcon: {fileID: 21300000, guid: d91a36a2fbd58224aadd343afdb5afd0, type: 3}
   cooldown:
-  - 5
+  - 25
   movementData:
   - {fileID: 11400000, guid: 46e295bc9f2092d49aef024118fe35d2, type: 2}
   delayForInstantiate: 0

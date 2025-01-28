@@ -102,7 +102,8 @@ public class EnemySpawner : EventHandler
             }
             if (EnemyList.Count < 10)
             {
-                EnemyList.Add(Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Length)], transformPoints[Random.Range(0, transformPoints.Length)]));
+                Enemy enemy = Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Length)], transformPoints[Random.Range(0, transformPoints.Length)]);
+                EnemyList.Add(enemy);
             }
         }
         

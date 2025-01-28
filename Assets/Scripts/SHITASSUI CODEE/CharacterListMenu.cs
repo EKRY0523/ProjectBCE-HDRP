@@ -9,6 +9,7 @@ public class CharacterListMenu : EventHandler
     public Button backButton;
     public GameObject[] thingsToInitialize;
     public GameObject[] objectsToTurnOff;
+    public GameObject[] shitToTurnOffWhenSwitching;
     public override void Awake()
     {
         base.Awake();
@@ -58,6 +59,10 @@ public class CharacterListMenu : EventHandler
     public void DisplayCharacter(Character character)
     {
         MBEvent?.Invoke(null, character);
+        for (int i = 0; i < shitToTurnOffWhenSwitching.Length; i++)
+        {
+            shitToTurnOffWhenSwitching[i].SetActive(false);
+        }
     }
 
 }

@@ -6,6 +6,8 @@ public class ProjectileSkillObject : SkillObject
     public Vector3 offset;
     public Vector3 lookPos;
     public float speed;
+    public bool StopGetTarget;
+    public Vector3 markedPos;
     public override void Awake()
     {
         base.Awake();
@@ -20,15 +22,28 @@ public class ProjectileSkillObject : SkillObject
 
             transform.rotation = Quaternion.LookRotation(transform.forward - transform.up);
         }
+        else
+        {
+
+            lookPos = target.transform.position - transform.position;
+            markedPos = target.transform.position;
+        }
     }
     private void Update()
     {
-        
         if(target!=null)
         {
-            lookPos = target.transform.position- transform.position ;
-            transform.rotation = Quaternion.LookRotation(lookPos);
-            transform.DOMove(target.transform.position, speed);
+            if(StopGetTarget)
+            {
+                transform.rotation = Quaternion.LookRotation(lookPos);
+                transform.DOMove(markedPos, speed);
+            }
+            else
+            {
+                lookPos = target.transform.position - transform.position;
+                transform.rotation = Quaternion.LookRotation(lookPos);
+                transform.DOMove(target.transform.position, speed);
+            }
         }
         else
         {

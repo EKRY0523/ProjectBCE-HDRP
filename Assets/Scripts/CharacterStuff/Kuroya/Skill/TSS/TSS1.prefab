@@ -60,7 +60,7 @@ MonoBehaviour:
   multiplier: 6.8440967e+25
   duration: 1
   target: {fileID: 0}
-  knockback: {fileID: 0}
+  knockback: {fileID: 11400000, guid: 9a4d37b394344f74191976f342668d2a, type: 2}
   detachFromParent: 1
   hitFX: {fileID: 0}
   friendly: 0

@@ -60,12 +60,12 @@ MonoBehaviour:
   targetedStat:
   - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   characterData: {fileID: 0}
-  multiplier: 2500
+  multiplier: 30000
   duration: 3
   target: {fileID: 0}
   knockback: {fileID: 0}
-  detachFromParent: 0
-  hitFX: {fileID: 0}
+  detachFromParent: 1
+  hitFX: {fileID: 9218688764628759551, guid: 971a4bc2580cbf940b18c3e8bae6fbd1, type: 3}
   friendly: 0
 --- !u!65 &6129834865066451250
 BoxCollider:

@@ -24,11 +24,19 @@ public class CharacterDeathHandler : EventHandler
         base.OnInvoke(ID, data);
         if(ID == deadID)
         {
-            GameManager.instance.charactersInParty.Remove(GameManager.instance.characterLoading[characterData.character.ID]);
-            GameManager.instance.deadCharacters.Add(GameManager.instance.characterLoading[characterData.character.ID]);
+            if(!GameManager.instance.deadCharacters.Contains(GameManager.instance.characterLoading[characterData.character.ID]))
+            {
+                GameManager.instance.charactersInParty.Remove(GameManager.instance.characterLoading[characterData.character.ID]);
+                GameManager.instance.deadCharacters.Add(GameManager.instance.characterLoading[characterData.character.ID]);
+            }
 
             party.SwitchUponDead();
-
+            //test
+            for (int i = 0; i < GameManager.instance.charactersInParty.Count; i++)
+            {
+                GameManager.instance.characterLoading[GameManager.instance.charactersInParty[i].character.ID].InitializeCharacter();
+                GameManager.instance.characterLoading[GameManager.instance.charactersInParty[i].character.ID].GetComponent<EffectHandler>().ReloadPassive();
+            }
         }
     }
 

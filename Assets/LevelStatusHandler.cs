@@ -20,14 +20,14 @@ public class LevelStatusHandler : EventHandler
             Subscribe(entity);
 
             expFill.fillAmount = entity.currentEXP / entity.ExpNeeded;
-            expStatus.text = string.Format("{0:0}%", (entity.currentEXP / entity.ExpNeeded) * 100);
+            expStatus.text = "EXP: " + string.Format("{0:0}%", (entity.currentEXP / entity.ExpNeeded) * 100);
             LevelText.text = "Lv" + entity.lv;
         }
 
         if(data is float)
         {
             expFill.fillAmount = entity.currentEXP / entity.ExpNeeded;
-            expStatus.text = string.Format("{0:0}%", (entity.currentEXP / entity.ExpNeeded) * 100);
+            expStatus.text = "EXP: " + string.Format("{0:0}%", (entity.currentEXP / entity.ExpNeeded) * 100);
             LevelText.text = "Lv" + entity.lv;
         }
     }

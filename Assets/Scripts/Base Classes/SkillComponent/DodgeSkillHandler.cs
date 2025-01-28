@@ -101,6 +101,7 @@ public class DodgeSkillHandler : SkillHandler
                 if (context.performed)
                 {
                     canExecute = false;
+                    timeToExceed = dodge.cooldown[0];
                     executionTime = Time.time;
                     dodge.OnHold(dodge.statAndMultiplier);
                     MBEvent?.Invoke(dodge.key[0], null);
@@ -137,7 +138,9 @@ public class DodgeSkillHandler : SkillHandler
     public void SpawnDodgeSkillObject(int instance)
     {
         //Debug.Log((dodge.skillInstance[0].skillObjects[instance].multiplier));
-        Instantiate(dodge.skillInstance[0].skillObjects[instance], transform.parent);
+        SkillObject so = dodge.skillInstance[0].skillObjects[instance];
+        Instantiate(so,transform.parent);
+        //Instantiate(dodge.skillInstance[0].skillObjects[instance], transform.parent);
 
     }
 

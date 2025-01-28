@@ -21,16 +21,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6e3321b4f0608644db758c397d694682, type: 2}
   cost:
     stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
-    cost: 500
+    cost: 0
   characterData: {fileID: 0}
   statAndMultiplier:
   - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
-    multiplier: 15
+    multiplier: 3
   requiredUnlockLevel: 0
   skillName: Existence's Edge
-  skillDescription: Deals 1500% of ATK to nearby enemies
-  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
+  skillDescription: Charges up and deals 300% of ATK to nearby enemies bypassing
+    their defenses
+  skillIcon: {fileID: 21300000, guid: 9f628771d910df74eb4597596017e0c0, type: 3}
   cooldown:
-  - 5
+  - 20
   movementData: []
   delayForInstantiate: 0

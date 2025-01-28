@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HPDecision
   m_EditorClassIdentifier: 
   stat: {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
-  threshold: 250000
+  threshold: 500000

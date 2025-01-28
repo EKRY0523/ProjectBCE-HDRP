@@ -70,7 +70,9 @@ public class UltimateSkillHandler : SkillHandler
 
     public void SpawnUltimateSkillObject(int instance)
     {
-        Instantiate(ultimate.skillInstance[0].skillObjects[instance], transform.parent);
+        SkillObject so = ultimate.skillInstance[0].skillObjects[instance];
+        Instantiate(so, transform.parent);
+        //Instantiate(ultimate.skillInstance[0].skillObjects[instance], transform.parent);
     }
 
     public void SpawnDecoObject(GameObject obj)

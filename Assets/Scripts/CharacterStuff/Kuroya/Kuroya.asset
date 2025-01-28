@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Kuroya
   m_EditorClassIdentifier: 
   ID: 555
+  charColor: {r: 32, g: 6.5144677, b: 0, a: 0}
   characterName: Codename:Edge
   poseImage: {fileID: 8400000, guid: 4793a018396d9d24b8c32b509863a231, type: 2}
   iconimage: {fileID: 21300000, guid: 82eaa80b39fae884a9d32a808ff8956f, type: 3}
   material: {fileID: 2100000, guid: 077f80d3c5ac70e45a5beba4b287d6a7, type: 2}
-  characterDetails: The one who had forgotten his past and is working with new world
-    order to know more about himself
+  characterDetails: Reckless fighter that prefers to fight alone due to his destructive
+    power
   passive:
   - {fileID: 11400000, guid: 6721505070eb6744782f4e208960ad89, type: 2}
   - {fileID: 11400000, guid: e22a8c1952dece443834e52cdffea723, type: 2}
@@ -89,9 +90,9 @@ MonoBehaviour:
     followMax: 0
   - statIdentifier: {fileID: 11400000, guid: bf0e21beacd082f45b3c20cb0f18fa31, type: 2}
     statAction: []
-    statValue: 1000
-    statScaling: 1.05
+    statValue: 1300
+    statScaling: 1.3
     MinMaxValue:
     - 0
-    - 1500
+    - 1300
     followMax: 0

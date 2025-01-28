@@ -21,17 +21,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 14fe6987db7502c4bbcdbfb586890046, type: 2}
   cost:
     stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
-    cost: 70
+    cost: 100
   characterData: {fileID: 0}
   statAndMultiplier:
   - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
-    multiplier: 3
+    multiplier: 4.5
   requiredUnlockLevel: 0
   skillName: Hard Hit
-  skillDescription: Hits the enemy hard and deals 300% of Current Attack
-  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
+  skillDescription: Putting a large amount of physical force into attack and deals
+    450% of ATK damage
+  skillIcon: {fileID: 21300000, guid: d33e7920c23828f4390b2ab5fc039219, type: 3}
   cooldown:
-  - 1
+  - 2
   movementData:
-  - {fileID: 11400000, guid: c8276c1ffb5477f4884cc6ae1111ba13, type: 2}
+  - {fileID: 11400000, guid: e3591d0f2d195ad44ac9220b5932add1, type: 2}
   delayForInstantiate: 0.35

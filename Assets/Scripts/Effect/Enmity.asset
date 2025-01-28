@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Enmity
   m_EditorClassIdentifier: 
   vfx: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: cc28b57b47ee79941b10fd928b22f20c, type: 3}
   effectName: Drain
   description: Does not regen energy over time, but basic attacks will regen energy
+    and gets stronger as HP gets lower
   effectType: 0
   timeMode: 0
   startTime: 0

@@ -30,11 +30,11 @@ MonoBehaviour:
     multiplier: 2
   requiredUnlockLevel: 0
   skillName: Parry
-  skillDescription: Enter a defensive stance and then counter once attacked for 200%
-    ATK
-  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
+  skillDescription: Assumes a defensive stance that provides a moderate moment of
+    invulnerability and counterattacks if attacked for 200% of ATK
+  skillIcon: {fileID: 21300000, guid: e8ceb2cb4c6967346978771743e4858b, type: 3}
   cooldown:
-  - 2
+  - 1
   movementData: []
   delayForInstantiate: 0
   affectedByInput: 0

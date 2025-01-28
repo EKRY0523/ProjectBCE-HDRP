@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Convergence
   m_EditorClassIdentifier: 
   vfx: {fileID: 0}
-  Icon: {fileID: 0}
-  effectName: Copy
+  Icon: {fileID: 21300000, guid: 8cfdd980fb13db14aaedfd875e796665, type: 3}
+  effectName: Convergence
   description: If both Ren and Codename:Edge is in party, adds additional 500 EATK
     and EDEF while boosting Def and Edef by 50%
   effectType: 0

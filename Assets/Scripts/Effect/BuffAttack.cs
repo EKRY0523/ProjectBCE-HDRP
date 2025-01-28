@@ -3,11 +3,24 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BuffAttack", menuName = "Effect/BuffAttack")]
 public class BuffAttack : Effect
 {
+    public bool getStatFromEntity;
+    public float[] extraMultiplierFromStat;
+    public bool offense;
     public override void OnEndEffect(EffectHandler target)
     {
-        for (int i = 0; i < targetedStat.Length; i++)
+        if (getStatFromEntity)
         {
-            target.MBEvent?.Invoke(targetedStat[i], -value[i]);   
+            for (int i = 0; i < targetedStat.Length; i++)
+            {
+                target.MBEvent?.Invoke(targetedStat[i], -(value[i] + (target.entity.statDictionary[targetedStat[i]].MinMaxValue[1] * extraMultiplierFromStat[i])));
+            }
+        }
+        else
+        {
+            for (int i = 0; i < targetedStat.Length; i++)
+            {
+                target.MBEvent?.Invoke(targetedStat[i], -value[i]);
+            }
         }
     }
 
@@ -16,10 +29,33 @@ public class BuffAttack : Effect
         base.OnInflict(target);
         target.effectDictionary[this].startTime = Time.time;
         target.effectDictionary[this].duration = duration;
-        for (int i = 0; i < targetedStat.Length; i++)
+        if(getStatFromEntity)
         {
-            target.MBEvent?.Invoke(targetedStat[i], value[i]);
+            if(offense)
+            {
+                for (int i = 0; i < targetedStat.Length; i++)
+                {
+                    target.MBEvent?.Invoke(targetedStat[i], -value[i] + -(target.entity.statDictionary[targetedStat[i]].MinMaxValue[1] * extraMultiplierFromStat[i]));
+                }
+
+            }
+            else
+            {
+
+                for (int i = 0; i < targetedStat.Length; i++)
+                {
+                    target.MBEvent?.Invoke(targetedStat[i], value[i] + (target.entity.statDictionary[targetedStat[i]].MinMaxValue[1] * extraMultiplierFromStat[i]));
+                }
+            }
         }
+        else
+        {
+            for (int i = 0; i < targetedStat.Length; i++)
+            {
+                target.MBEvent?.Invoke(targetedStat[i], value[i]);
+            }
+        }
+        
     }
 
     public override void OnStartEffect(EffectHandler target)

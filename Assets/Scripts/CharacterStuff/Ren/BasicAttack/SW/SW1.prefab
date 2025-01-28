@@ -14461,6 +14461,7 @@ GameObject:
   - component: {fileID: 2556370680867432646}
   - component: {fileID: 3259978071708421169}
   - component: {fileID: 8232554246473600760}
+  - component: {fileID: 3397792058225989295}
   m_Layer: 0
   m_Name: SW1
   m_TagString: Untagged
@@ -14512,7 +14513,7 @@ MonoBehaviour:
   target: {fileID: 0}
   knockback: {fileID: 0}
   detachFromParent: 1
-  hitFX: {fileID: 0}
+  hitFX: {fileID: 9218688764628759551, guid: 971a4bc2580cbf940b18c3e8bae6fbd1, type: 3}
   friendly: 0
 --- !u!65 &2556370680867432646
 BoxCollider:
@@ -14655,6 +14656,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3397792058225989295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6810740329103196722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afa40b1a250bde443a67cf751d9cfe30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HandlerID: {fileID: 0}
+  ComponentsID: []
+  SOEvent: []
+  eventListeners: []
+  eventBroadcasters: []
+  effect: {fileID: 11400000, guid: 3a53daa101d42cb4f93c4f37d9d8d517, type: 2}
+  dualTag: 0
+  input: {fileID: 0}
+  effectedTag: Enemy
+  type: 1
 --- !u!1 &7025556397204675387
 GameObject:
   m_ObjectHideFlags: 0

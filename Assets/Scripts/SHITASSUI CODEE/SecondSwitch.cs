@@ -51,7 +51,7 @@ public class SecondSwitch : EventHandler
         skillDescription.text = character.Skills[currentSkillIndex].skillDescription;
         skillName.text = character.Skills[currentSkillIndex].skillName;
         skillCost.text = character.Skills[currentSkillIndex].cost.stat.name + ": " + character.Skills[currentSkillIndex].cost.cost;
-        skillCooldown.text = "CD: " + character.Skills[currentSkillIndex].cooldown[0];
+        skillCooldown.text = "CD: " + character.Skills[currentSkillIndex].cooldown[0] + "S";
 
         for (int i = 0; i < skillOptionIcon.Length; i++)
         {
@@ -66,7 +66,7 @@ public class SecondSwitch : EventHandler
         skillDescription.text = character.Skills[currentSkillIndex].skillDescription;
         skillName.text = character.Skills[currentSkillIndex].skillName;
         skillCost.text = character.Skills[currentSkillIndex].cost.stat.name + ": " + character.Skills[currentSkillIndex].cost.cost;
-        skillCooldown.text = "CD: " + character.Skills[currentSkillIndex].cooldown[0];
+        skillCooldown.text = "CD: " + character.Skills[currentSkillIndex].cooldown[0] + "S";
 
         for (int i = 0; i < skillOptionIcon.Length; i++)
         {
@@ -96,7 +96,7 @@ public class SecondSwitch : EventHandler
         skillDescription.text = character.Skills [index].skillDescription;
         skillName.text = character.Skills[index].skillName;
         skillCost.text = character.Skills[index].cost.stat.name + ": " + character.Skills[index].cost.cost;
-        skillCooldown.text = "CD: " + character.Skills[currentSkillIndex].cooldown[0];
+        skillCooldown.text = "CD: " + character.Skills[currentSkillIndex].cooldown[0]+ "S";
 
         currentSkllIcon.sprite = character.Skills[index].skillIcon;
 
@@ -116,7 +116,8 @@ public class SecondSwitch : EventHandler
         switchSkillPanel.SetActive(true);
         newSkillDescription.text = character.Skills[index].skillDescription;
         newSkillName.text = character.Skills[index].skillName;
-
+        newSkillCooldown.text = "CD: " + character.Skills[index].cooldown[0] + "S";
+        newSkillCost.text = character.Skills[index].cost.stat.name + ": " + character.Skills[index].cost.cost;
         if (index == currentSkillIndex || index == GameManager.instance.characterLoading[character.ID].skill1)
         {
             confirmButton.interactable = false;

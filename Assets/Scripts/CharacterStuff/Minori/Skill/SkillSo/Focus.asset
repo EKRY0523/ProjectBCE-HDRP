@@ -27,9 +27,9 @@ MonoBehaviour:
   - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
     multiplier: 0
   requiredUnlockLevel: 0
-  skillName: 
-  skillDescription: Focus up and increase DEF,EDEF,ATK,EATK by 400
-  skillIcon: {fileID: 600909675, guid: ae7f7b0f477c8bd409fba9b879d1e93b, type: 3}
+  skillName: Focus
+  skillDescription: Focus up and increases Minori's DEF,EDEF,ATK,EATK by 20%
+  skillIcon: {fileID: 21300000, guid: d5d6c32ed2911b44c8ff47202a098b89, type: 3}
   cooldown:
   - 10
   movementData:

@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66b1321afa62e9242bb64274c271fe9c, type: 3}
   m_Name: BerserkerWillBuffATK
   m_EditorClassIdentifier: 
+  vfx: {fileID: 2734849409540187658, guid: 42a875096d7bcc149b75f1c1c9bd1a1d, type: 3}
+  Icon: {fileID: 0}
+  effectName: 
+  description: 
   effectType: 1
   timeMode: 1
   startTime: 0
@@ -20,4 +24,7 @@ MonoBehaviour:
   targetedStat:
   - {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
   value:
-  - 510
+  - 0
+  getStatFromEntity: 1
+  extraMultiplierFromStat:
+  - 0.3

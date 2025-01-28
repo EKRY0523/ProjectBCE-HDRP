@@ -17,8 +17,10 @@ MonoBehaviour:
   OnEnterActivateComponent: []
   OnEnterDeactivateComponent:
   - {fileID: 11400000, guid: 4e7127693565c8540992920a2b88a303, type: 2}
-  OnExitActivateComponent: []
+  - {fileID: 11400000, guid: cc26019d54a195f4ba98ebe99b18b312, type: 2}
+  OnExitActivateComponent:
+  - {fileID: 11400000, guid: cc26019d54a195f4ba98ebe99b18b312, type: 2}
   OnExitDeactivateComponent: []
   SwitchUponExit: {fileID: 0}
   stateKey: {fileID: 11400000, guid: 250d7c7970efb3a46bf6e5e6a85bfc13, type: 2}
-  maxTimeInState: 0.3
+  maxTimeInState: 0.5

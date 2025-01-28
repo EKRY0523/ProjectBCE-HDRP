@@ -13,6 +13,7 @@ public class StoryHandler : EventHandler
 
     public int StoryIndex;
     public GameObject[] UIOff;
+    public StoryThing[] thing;
     public override void Awake()
     {
         base.Awake();
@@ -38,11 +39,11 @@ public class StoryHandler : EventHandler
 
     private void OnEnable()
     {
-        if (StoryIndex == 8 && SceneManager.GetActiveScene().buildIndex == 2)
-        {
-            StoryIndex = 9;
-            GameManager.instance.storyProgress = 9;
-        }
+        //if (StoryIndex == 8 && SceneManager.GetActiveScene().buildIndex == 2)
+        //{
+        //    StoryIndex = 9;
+        //    GameManager.instance.storyProgress = 9;
+        //}
         Invoke(nameof(Delay), 1f);
 
     }
@@ -54,6 +55,7 @@ public class StoryHandler : EventHandler
     }
     public void StoryChecker(int index)
     {
+        MBEvent?.Invoke(null,thing[index].text);
         if (index == 0)
         {
             MBEvent?.Invoke(null, "Wake up");
@@ -63,44 +65,48 @@ public class StoryHandler : EventHandler
                 SceneManager.LoadScene(sceneBuildIndex: 1);
             }
         }
-        else if (index == 1)
-        {
-            MBEvent?.Invoke(null, "Talk to Ren");
-
-        }
-        else if (index == 2)
-        {
-            MBEvent?.Invoke(null, "Go to Arcade");
-        }
-        else if (index == 3)
-        {
-            MBEvent?.Invoke(null, "Go to upper area shop");
-        }
-        else if (index == 4)
-        {
-            MBEvent?.Invoke(null, "Fight off NWO Agents"); // Ren gets unlocked
-            //make it so that if ren isnt added, the collider to that area isnt opened
-        }
-        else if (index == 5)
-        {
-            MBEvent?.Invoke(null, "Talk to Edge"); //Edge gets unlocked
-        }
-        else if (index == 6)
-        {
-            MBEvent?.Invoke(null, "Go to abandoned spot");
-        }
-        else if (index == 7)
-        {
-            MBEvent?.Invoke(null, "One character reaches level 15");
-        }
-        else if (index == 8)
-        {
-            MBEvent?.Invoke(null, "Defeat Will of the Forgotten");
-        }
-        else
+        if(index > thing.Length)
         {
             MBEvent?.Invoke(null, "To Be Continued");
         }
+        //else if (index == 1)
+        //{
+        //    MBEvent?.Invoke(null, "Talk to Ren");
+
+        //}
+        //else if (index == 2)
+        //{
+        //    MBEvent?.Invoke(null, "Go to Arcade");
+        //}
+        //else if (index == 3)
+        //{
+        //    MBEvent?.Invoke(null, "Go to upper area shop");
+        //}
+        //else if (index == 4)
+        //{
+        //    MBEvent?.Invoke(null, "Fight off NWO Agents"); // Ren gets unlocked
+        //    //make it so that if ren isnt added, the collider to that area isnt opened
+        //}
+        //else if (index == 5)
+        //{
+        //    MBEvent?.Invoke(null, "Talk to Edge"); //Edge gets unlocked
+        //}
+        //else if (index == 6)
+        //{
+        //    MBEvent?.Invoke(null, "Go to abandoned spot");
+        //}
+        //else if (index == 7)
+        //{
+        //    MBEvent?.Invoke(null, "One character reaches level 15");
+        //}
+        //else if (index == 8)
+        //{
+        //    MBEvent?.Invoke(null, "Defeat Will of the Forgotten");
+        //}
+        //else
+        //{
+        //    MBEvent?.Invoke(null, "To Be Continued");
+        //}
     }
 
     public static void SetIndex(int index)
@@ -119,4 +125,10 @@ public class StoryHandler : EventHandler
         
     }
 
+    [Serializable]
+    public class StoryThing
+    {
+        public int index;
+        public string text;
+    }
 }

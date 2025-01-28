@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 public class GameManager : EventHandler
 {
     public InputActionReference action;
@@ -30,6 +31,10 @@ public class GameManager : EventHandler
     public int storyProgress;
     public Vector3 savedPosition;
     public GameObject player;
+
+    public AudioMixer audioMixer;
+
+    public VolumeBind volData;
     public override void Awake()
     {
         instance = this;
@@ -40,6 +45,8 @@ public class GameManager : EventHandler
 
             LoadGame();
         }
+
+        LoadVolume();
         base.Awake();
     }
 
@@ -50,6 +57,8 @@ public class GameManager : EventHandler
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
+
+        LoadVolume();
     }
     public void LoadInCharacterDictionary()
     {
@@ -58,6 +67,7 @@ public class GameManager : EventHandler
             if(!characterLoading.ContainsKey(characters[i].character.ID))
             {
                 characterLoading.Add(characters[i].character.ID, characters[i]);
+                characterLoading[characters[i].character.ID].InitializeCharacter();
             }
         }
     }
@@ -77,10 +87,10 @@ public class GameManager : EventHandler
             {
                 currentProgress.savedPosition = player.transform.position;
             }
-            else
-            {
-                currentProgress.savedPosition = savedPosition;
-            }
+            //else
+            //{
+            //    currentProgress.savedPosition = savedPosition;
+            //}
 
             for (int i = 0; i < characters.Count; i++)
             {
@@ -138,8 +148,8 @@ public class GameManager : EventHandler
         SaveProgress currentProgress = new SaveProgress();
         //GameStoryData storyData= new();
         currentProgress.storyProgress = 0;
-        savedPosition = new Vector3(-1.5f, 2f, 0f);
-        currentProgress.savedPosition = new Vector3(-1.5f, 2f, 0f);
+        savedPosition = new Vector3(-1.5f, 2.5f, 0f);
+        currentProgress.savedPosition = new Vector3(-1.5f, 2.5f, 0f);
         //currentProgress.gameData.currentStoryProgress = 0;
         //currentProgress.gameData.lastSavedPosition; 
         for (int i = 0; i < characters.Count; i++)
@@ -196,10 +206,13 @@ public class GameManager : EventHandler
             storyProgress = currentProgress.storyProgress;
             if(SceneManager.GetActiveScene().buildIndex == 2)
             {
-                Debug.Log(currentProgress.savedPosition);
                 savedPosition = currentProgress.savedPosition;
                 if(player!=null)
                 {
+                    if (savedPosition == new Vector3(0, 0, 0))
+                    {
+                        savedPosition = new Vector3(-1.5f, 2.5f, 0f);
+                    }
                     player.transform.position = savedPosition;
                 }
             }
@@ -265,11 +278,99 @@ public class GameManager : EventHandler
 
     }
 
+    public void LoadVolume()
+    {
+        volData.volume.Clear();
+        volData.enabled.Clear();
+        if (File.Exists(Application.persistentDataPath + "/AudioSettings.json"))
+        {
+            string json = File.ReadAllText(Application.persistentDataPath + "/AudioSettings.json");
+            VolumeBind volbind = JsonUtility.FromJson<VolumeBind>(json);
+
+            for (int i = 0; i < volbind.volume.Count; i++)
+            {
+                volData.enabled.Add(volbind.enabled[i]);
+                volData.volume.Add(volbind.volume[i]);
+                float finalVol = Mathf.Log10(volbind.volume[i]) * 20;
+                if(i == 0)
+                {
+                    if(volData.enabled[i])
+                    {
+                        audioMixer.SetFloat("Master", finalVol);
+                    }
+                    else
+                    {
+                        audioMixer.SetFloat("Master", -90f);
+                    }
+                }
+                else if(i == 1)
+                {
+                    if (volData.enabled[i])
+                    {
+                        audioMixer.SetFloat("BGM", finalVol);
+                    }
+                    else
+                    {
+
+                        audioMixer.SetFloat("BGM", -90f);
+                    }
+                }
+                else
+                {
+                    if (volData.enabled[i])
+                    {
+                        audioMixer.SetFloat("SFX", finalVol);
+                    }
+                    else
+                    {
+                        audioMixer.SetFloat("SFX", -90f);
+                    }
+                    
+                }
+            }
+
+            
+        }
+        else
+        {
+            VolumeBind volbind = new();
+            for (int i = 0; i < 3; i++)
+            {
+                if(volData.volume.Count< 3)
+                {
+                    volData.volume.Add(0.5f);
+                    volData.enabled.Add(true);
+                }
+            }
+            volbind.volume = volData.volume;
+            volbind.enabled = volData.enabled;
+            string json = JsonUtility.ToJson(volbind, true);
+            File.WriteAllText(Application.persistentDataPath + "/AudioSettings.json", json);
+            LoadVolume();
+        }
+    }
+
+    public void SaveVolumeSettings()
+    {
+        if (File.Exists(Application.persistentDataPath + "/AudioSettings.json"))
+        {
+            VolumeBind volbind = new();
+            for (int i = 0; i < volData.volume.Count; i++)
+            {
+                volbind.volume.Add(volData.volume[i]);
+                volbind.enabled.Add(volData.enabled[i]);
+            }
+            string json = JsonUtility.ToJson(volbind, true);
+            File.WriteAllText(Application.persistentDataPath + "/AudioSettings.json", json);
+        }
+    }
+
     private void OnApplicationQuit()
     {
         if (SceneManager.GetActiveScene().buildIndex != 0)
         {
             SaveGame();
+            SaveVolumeSettings();
         }
     }
 }
@@ -339,5 +440,13 @@ public class CurrentSkill
     public int skill2;
     public int dodge;
     public int ultimate;
+
+}
+
+[Serializable]
+public class VolumeBind
+{ //0 is bgm, 1 is sfx
+    public List<bool> enabled = new();
+    public List<float> volume = new();
 
 }

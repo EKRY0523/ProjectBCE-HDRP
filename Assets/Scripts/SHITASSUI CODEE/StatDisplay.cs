@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 public class StatDisplay : EventHandler
 {
     public PlayableCharacterData characterData;
@@ -17,8 +18,9 @@ public class StatDisplay : EventHandler
     private void OnEnable()
     {
         characterName.text = characterData.character.characterName;
-        level.text =  "Lv." + characterData.level.lv;
-        expText.text = "Exp" + characterData.level.currentExp + "/" + characterData.level.expNeeded;
+        level.text =  "Lv." + characterData.lv;
+        expText.text = "Exp " + String.Format("{0:0}/{1:0}",characterData.currentEXP , characterData.ExpNeeded);
+        exp.fillAmount = characterData.currentEXP/characterData.ExpNeeded;
     }
 
     public override void OnInvoke(Trait ID, object data)

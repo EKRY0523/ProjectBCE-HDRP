@@ -1,7 +1,7 @@
 using UnityEngine;
 [CreateAssetMenu(fileName = "ExistenceEdgeState", menuName = "CharacterStates/Kuroya/Ultimate/ExistenceEdgeState")]
 
-public class ExistenceEdgeState : UltimateAttackState
+public class ExistenceEdgeState : CharacterUltimateState
 {
     public override void OnEnter(Statemachine statemachine)
     {

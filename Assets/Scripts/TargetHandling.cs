@@ -23,6 +23,14 @@ public class TargetHandling : EventHandler
     {
         base.OnDestroy();
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("SkillObject") && gameObject.CompareTag("Enemy"))
+        {
+            radius = 50f;
+        }
+    }
     public void CheckTargetsValidity()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position,radius,layerToHit);
@@ -41,14 +49,13 @@ public class TargetHandling : EventHandler
         }
          targets.RemoveAll(target => target == null);
 
-        // Update the nearest target if there are valid targets
         if (targets.Count > 0)
         {
             GetNearestTarget();
         }
         else
         {
-            currentNearestTarget = null; // Reset the nearest target if no targets are valid
+            currentNearestTarget = null;
         }
     }
     public void GetNearestTarget()
@@ -96,6 +103,10 @@ public class TargetHandling : EventHandler
         {
 
             MBEvent?.Invoke(null, currentNearestTarget);
+        }
+        else
+        {
+            MBEvent?.Invoke(null, null);
         }
     }
 

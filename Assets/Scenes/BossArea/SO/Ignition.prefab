@@ -14682,7 +14682,7 @@ GameObject:
   - component: {fileID: 358300796300750480}
   - component: {fileID: 5038254490208119796}
   - component: {fileID: 2009122042847879768}
-  - component: {fileID: 8386172759276826178}
+  - component: {fileID: 6118322960128634414}
   m_Layer: 0
   m_Name: Ignition
   m_TagString: Untagged
@@ -14734,7 +14734,7 @@ MonoBehaviour:
   target: {fileID: 0}
   knockback: {fileID: 11400000, guid: 7d02414b8a8eb264e809b6f6181db09f, type: 2}
   detachFromParent: 1
-  hitFX: {fileID: 0}
+  hitFX: {fileID: 957247088401875501, guid: 471f4f4cf9ebb5c458d3de57fe0eea37, type: 3}
   friendly: 0
 --- !u!65 &5038254490208119796
 BoxCollider:
@@ -14755,7 +14755,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.7, y: 2.91, z: 5.01}
+  m_Size: {x: 1.7, y: 2.91, z: 8.11}
   m_Center: {x: 0, y: 1.11, z: -0.58}
 --- !u!114 &2009122042847879768
 MonoBehaviour:
@@ -14774,33 +14774,108 @@ MonoBehaviour:
   SOEvent: []
   eventListeners: []
   eventBroadcasters: []
-  effect: {fileID: 11400000, guid: fcd290c6d0f04984699cb35108121224, type: 2}
+  effect: {fileID: 11400000, guid: 0d22d965b2d958d499c9446f4aafe92a, type: 2}
   dualTag: 0
   input: {fileID: 0}
-  effectedTag: Enemy
-  type: 0
---- !u!114 &8386172759276826178
-MonoBehaviour:
+  effectedTag: Player
+  type: 1
+--- !u!82 &6118322960128634414
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4235169884114455272}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afa40b1a250bde443a67cf751d9cfe30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HandlerID: {fileID: 0}
-  ComponentsID: []
-  SOEvent: []
-  eventListeners: []
-  eventBroadcasters: []
-  effect: {fileID: 11400000, guid: 877a6644d3133f749a76e79025886e63, type: 2}
-  dualTag: 0
-  input: {fileID: 0}
-  effectedTag: Enemy
-  type: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 8662634330842547458, guid: c43e50ae9863176489faafea1abe6756, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 50b8ea014c139634cb3a99a8d9ebe1de, type: 3}
+  m_Resource: {fileID: 8300000, guid: 50b8ea014c139634cb3a99a8d9ebe1de, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4619266212615920732
 GameObject:
   m_ObjectHideFlags: 0

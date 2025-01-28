@@ -26,6 +26,7 @@ Material:
   - N_F_RELGI_ON
   - N_F_RL_ON
   - N_F_SS_ON
+  - N_F_STIS_ON
   - N_F_ST_ON
   m_InvalidKeywords:
   - L_F_O_ON
@@ -273,7 +274,7 @@ Material:
     - _MCapIntensity: 1
     - _MVCOL: 0
     - _MVWriMas: 40
-    - _MaiColPo: 0.15
+    - _MaiColPo: 0.02
     - _MaxFadDistance: 2
     - _Metallic: 0
     - _MinFadDistance: 0
@@ -322,7 +323,7 @@ Material:
     - _N_F_SS: 1
     - _N_F_ST: 1
     - _N_F_STIAL: 0
-    - _N_F_STIS: 0
+    - _N_F_STIS: 1
     - _N_F_TP: 0
     - _NoiseSize: 100
     - _NoisyOutlineIntensity: 0
@@ -438,15 +439,15 @@ Material:
     - _ObjPosi: {r: 0, g: 0, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
-    - _OverallShadowColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OverallShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _PTCol: {r: 0, g: 0, b: 0, a: 1}
     - _PrevPosition: {r: 0, g: 0, b: 0, a: 0}
     - _RimLightColor: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
     - _SSAOColor: {r: 0, g: 0, b: 0, a: 1}
     - _SelfLitColor: {r: 1, g: 1, b: 1, a: 1}
     - _SelfShadowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SelfShadowRealTimeShadowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShadowTColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SelfShadowRealTimeShadowColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ShadowTColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _XYZPosition: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

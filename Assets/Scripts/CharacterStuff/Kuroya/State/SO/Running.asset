@@ -14,7 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activatedComponents: []
   deactivatedComponents: []
-  OnEnterActivateComponent: []
+  OnEnterActivateComponent:
+  - {fileID: 11400000, guid: cc26019d54a195f4ba98ebe99b18b312, type: 2}
+  - {fileID: 11400000, guid: d5c6c123d500293429e5a0250ee26756, type: 2}
+  - {fileID: 11400000, guid: de641f4cf90778f4d8b6b5bd40ff4d80, type: 2}
+  - {fileID: 11400000, guid: c8c32d1bc8f3aa743a34c42714a22e5b, type: 2}
+  - {fileID: 11400000, guid: ccd2f3e4aa7e0e141aa9f660644058c6, type: 2}
+  - {fileID: 11400000, guid: 4e7127693565c8540992920a2b88a303, type: 2}
   OnEnterDeactivateComponent: []
   OnExitActivateComponent: []
   OnExitDeactivateComponent: []

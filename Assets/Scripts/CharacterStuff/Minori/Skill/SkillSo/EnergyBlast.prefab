@@ -63,8 +63,8 @@ MonoBehaviour:
   duration: 5
   target: {fileID: 0}
   knockback: {fileID: 0}
-  detachFromParent: 0
-  hitFX: {fileID: 0}
+  detachFromParent: 1
+  hitFX: {fileID: 3951678169979126462, guid: b515cc0be6c5b5d42a93119bf4f3090b, type: 3}
   friendly: 0
 --- !u!65 &7973691684198844608
 BoxCollider:

@@ -21,18 +21,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b87240f848a14e342ad0b0e2c86bc12e, type: 2}
   cost:
     stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
-    cost: 50
+    cost: 150
   characterData: {fileID: 0}
   statAndMultiplier:
   - statIndex: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
     multiplier: 3
   requiredUnlockLevel: 0
-  skillName: 
-  skillDescription: 'Copied from Ren
-
-    sends out an energy blast that deals 300%
-    of EATK'
-  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
+  skillName: Improv Energy Blast
+  skillDescription: Copied attack from Ren which sends out an energy blast that deals
+    300% of EATK damage
+  skillIcon: {fileID: 21300000, guid: dde2a054e4c51d3429c2ff300dd8e3a9, type: 3}
   cooldown:
   - 5
   movementData:

@@ -95,7 +95,7 @@ Material:
     - _EnvironmentalLightingIntensity: 0.1
     - _GIShadeThreshold: 1
     - _LightIntensity: -1
-    - _MaiColPo: 0.15
+    - _MaiColPo: 1
     - _N_F_CO: 1
     - _N_F_ESSAO: 1
     - _N_F_RL: 1

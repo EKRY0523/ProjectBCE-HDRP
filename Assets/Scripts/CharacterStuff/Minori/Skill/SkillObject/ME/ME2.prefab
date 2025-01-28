@@ -24935,15 +24935,15 @@ MonoBehaviour:
   eventBroadcasters: []
   tagName: Enemy
   originStat:
-  - {fileID: 11400000, guid: bf0e21beacd082f45b3c20cb0f18fa31, type: 2}
+  - {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}
   targetedStat:
   - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   characterData: {fileID: 0}
-  multiplier: 2011800.2
+  multiplier: 642040.06
   duration: 2
   target: {fileID: 0}
-  knockback: {fileID: 0}
-  detachFromParent: 0
+  knockback: {fileID: 11400000, guid: c53e7eee4918018439f5d02905b4b504, type: 2}
+  detachFromParent: 1
   hitFX: {fileID: 0}
   friendly: 0
 --- !u!65 &2932316199782725559

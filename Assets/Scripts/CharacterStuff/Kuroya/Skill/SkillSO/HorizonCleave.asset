@@ -21,17 +21,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f98a462756e7274bad5ae936ecaafec, type: 2}
   cost:
     stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
-    cost: 500
+    cost: 0
   characterData: {fileID: 0}
   statAndMultiplier:
   - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
-    multiplier: 10
+    multiplier: 15
   requiredUnlockLevel: 0
   skillName: Horizon Cleave
-  skillDescription: Deals 1000% of ATK to all nearby enemies
-  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
+  skillDescription: Deals 1000% of ATK to all nearby enemies and inflicts 30% DEF
+    down debuff on them
+  skillIcon: {fileID: 21300000, guid: ba91c8bd2c2b8bd48a431f85c02ce822, type: 3}
   cooldown:
-  - 20
+  - 15
   movementData:
   - {fileID: 11400000, guid: 46e295bc9f2092d49aef024118fe35d2, type: 2}
   delayForInstantiate: 0

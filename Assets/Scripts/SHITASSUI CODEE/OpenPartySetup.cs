@@ -7,13 +7,16 @@ public class OpenPartySetup : EventHandler
     public GameObject[] turnOn;
     public Button button;
 
+    private void Start()
+    {
+        button.onClick.AddListener(TurnOnMenu);
+    }
     private void OnEnable()
     {
         if (input != null)
         {
             input.action.performed += TurnOnMenuViaShortcut;
         }
-        button.onClick.AddListener(TurnOnMenu);
     }
     private void OnDisable()
     {

@@ -10,6 +10,7 @@ public class PartyHandler : EventHandler
     public PlayableCharacterData activeCharacter;
     public int deadCount;
 
+
     public List<PlayableCharacterData> party = new();
     public List<PlayableCharacterData> deadCharList = new();
 
@@ -18,6 +19,8 @@ public class PartyHandler : EventHandler
     public bool CanSwitch;
     public float SwitchCD;
     public float timeSinceLastSwitch;
+
+    public GameObject gameOverMenu;
 
     //public CharacterStatusHandler mainStatusHandler;
 
@@ -32,7 +35,14 @@ public class PartyHandler : EventHandler
     private void Start()
     {
         party = GameManager.instance.charactersInParty;
-        OnInitialization();
+        if(party.Count>0)
+        {
+            OnInitialization();
+        }
+        else
+        {
+            gameOverMenu.SetActive(true);
+        }
     }
 
     public void OnInitialization()
@@ -47,6 +57,7 @@ public class PartyHandler : EventHandler
         activeCharacter = party[0];
         activeCharacter.gameObject.SetActive(true);
 
+        MBEvent?.Invoke(null, party);
         MBEvent?.Invoke(null, activeCharacter);
     }
 
@@ -68,39 +79,55 @@ public class PartyHandler : EventHandler
 
     public void SwitchUponDead()
     {
+        gameObject.tag = "Invulnerable";
+        Invoke(nameof(SwitchAndUnsetInvul),1.5f);
+
+    }
+
+    public void SwitchAndUnsetInvul()
+    {
         activeCharacter.gameObject.SetActive(false);
-        if(party.Count>0)
+        if (party.Count > 0)
         {
             activeCharacter = party[0];
             activeCharacter.gameObject.SetActive(true);
+            MBEvent?.Invoke(null, party);
+            MBEvent?.Invoke(null, activeCharacter);
         }
         else
         {
             activeCharacter.gameObject.SetActive(false);
-            Debug.Log("Game Over");
-            for (int i = 0; i < GameManager.instance.deadCharacters.Count; i++)
-            {
-                GameManager.instance.charactersInParty.Add(GameManager.instance.characterLoading[GameManager.instance.deadCharacters[i].character.ID]);
-            }
+            gameOverMenu.SetActive(true);
         }
+        Invoke(nameof(InvulOff), 1f);
+    }
+
+    public void InvulOff()
+    {
+        gameObject.tag = "Player";
     }
     public void OnCharacterChange(int index)
     {
 
         if (index < party.Count)
         {
-            if (CanSwitch)
+            if(index != party.IndexOf(activeCharacter))
             {
-                timeSinceLastSwitch = Time.time;
-                CanSwitch = false;
-                MBEvent?.Invoke(null, activeCharacter);
-                activeCharacter.gameObject.SetActive(false);
-                activeCharacter = party[index];
-                activeCharacter.gameObject.SetActive(true);
+                if (CanSwitch)
+                {
+                    timeSinceLastSwitch = Time.time;
+                    CanSwitch = false;
+                    MBEvent?.Invoke(null, party);
+                    //MBEvent?.Invoke(null, activeCharacter);
+                    activeCharacter.gameObject.SetActive(false);
+                    activeCharacter = party[index];
+                    activeCharacter.gameObject.SetActive(true);
 
-                MBEvent?.Invoke(null, activeCharacter);
-                //SOEvent[0].globalEvent?.Invoke(activeCharacter);
-                //fuck this, make it instant ref instead
+                    MBEvent?.Invoke(null, party);
+                    MBEvent?.Invoke(null, activeCharacter);
+                    //SOEvent[0].globalEvent?.Invoke(activeCharacter);
+                    //fuck this, make it instant ref instead
+                }
             }
         }
 
@@ -123,7 +150,9 @@ public class PartyHandler : EventHandler
 
             activeCharacter = party[0];
             activeCharacter.gameObject.SetActive(true);
+            MBEvent?.Invoke(null, party);
             MBEvent?.Invoke(null, activeCharacter);
+
             //change party?
             //SOEvent[0].globalEvent?.Invoke(activeCharacter);
             //fuck this, make it instant ref instead

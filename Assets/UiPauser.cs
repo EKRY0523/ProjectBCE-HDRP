@@ -5,7 +5,7 @@ public class UiPauser : MonoBehaviour
     public PlayerInput playerInput;
     public InputActionReference[] InputToDisable;
     public GameObject[] gameObjectToClose;
-
+    public bool tutorialMode;
     private void Start()
     {
         for (int i = 0; i < InputToDisable.Length; i++)
@@ -16,9 +16,15 @@ public class UiPauser : MonoBehaviour
         {
             gameObjectToClose[i].gameObject.SetActive(false);
         }
-        playerInput.input.Player.Disable();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        if (playerInput != null)
+        {
+            playerInput.input.Player.Disable();
+        }
+        if(!tutorialMode)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
     private void OnEnable()
     {
@@ -30,9 +36,17 @@ public class UiPauser : MonoBehaviour
         {
             gameObjectToClose[i].gameObject.SetActive(false);
         }
-        playerInput.input.Player.Disable();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        if(playerInput!=null)
+        {
+
+            playerInput.input.Player.Disable();
+        }
+        if(!tutorialMode)
+        {
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 
     private void OnDisable()
@@ -45,14 +59,26 @@ public class UiPauser : MonoBehaviour
             }
             for (int i = 0; i < gameObjectToClose.Length; i++)
             {
-                if(!gameObjectToClose[i].gameObject.activeSelf)
+                if(gameObjectToClose[i]!=null)
                 {
-                    gameObjectToClose[i].gameObject.SetActive(true);
+
+                    if (!gameObjectToClose[i].gameObject.activeSelf)
+                    {
+                        gameObjectToClose[i].gameObject.SetActive(true);
+                    }
                 }
             }
-            playerInput.input.Player.Enable();
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            if (playerInput != null)
+            {
+
+
+                playerInput.input.Player.Enable();
+            }
+            if (!tutorialMode)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
         }
 
     }

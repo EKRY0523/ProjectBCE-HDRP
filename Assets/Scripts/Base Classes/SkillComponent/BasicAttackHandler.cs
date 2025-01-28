@@ -96,7 +96,9 @@ public class BasicAttackHandler : SkillHandler
 
     public void ActivateBasic(int instance)
     {
-        Instantiate(basicAttack.skillInstance[countFixed].skillObjects[instance], transform.parent);
+        SkillObject so = basicAttack.skillInstance[countFixed].skillObjects[instance];
+        Instantiate(so, transform.parent);
+        //Instantiate(basicAttack.skillInstance[countFixed].skillObjects[instance], transform.parent);
     }
 
     public void fixCount(int index)

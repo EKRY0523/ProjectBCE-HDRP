@@ -21,7 +21,7 @@ public class PlayerMovement : Movement
     public InputActionReference walkSwitch;
 
     public bool enableMovement;
-
+    bool canMove;
     public override void Awake()
     {
         base.Awake();
@@ -29,19 +29,33 @@ public class PlayerMovement : Movement
 
     }
 
-    private void OnEnable()
+    private void Start()
     {
         if (input != null)
         {
             input.MovementInput += OnMove;
             walkSwitch.action.started += SwitchMode;
         }
+    }
+    private void OnEnable()
+    {
+        
 
     }
 
     private void OnDisable()
     {
-        magnitudeCheck = Vector2.zero;
+        canMove = false;
+        //magnitudeCheck = Vector2.zero;
+        //if (input != null)
+        //{
+        //    input.MovementInput -= OnMove;
+        //    walkSwitch.action.started -= SwitchMode;
+        //}
+    }
+
+    public override void OnDestroy()
+    {
         if (input != null)
         {
             input.MovementInput -= OnMove;
@@ -51,34 +65,40 @@ public class PlayerMovement : Movement
 
     public override void OnMove(Vector2 Direction)
     {
-        if (Direction.normalized.magnitude == 0f)
+        if(this.enabled)
         {
-            MBEvent?.Invoke(key[0], null);//Idle
-        }
-        else
-        {
-            MBEvent?.Invoke(moveMode, null);//walk
-        }
 
-        movementVector = camPos.forward * Direction.y + camPos.right * Direction.x;
-        movementVector.y = 0;
+            canMove = true;
+        
+            if (Direction.normalized.magnitude == 0f)
+            {
+                MBEvent?.Invoke(key[0], null);//Idle
+            }
+            else
+            {
+                MBEvent?.Invoke(moveMode, null);//walk
+            }
 
-        if (Direction.magnitude != 0)
-        {
-            transform.rotation = Quaternion.LookRotation(movementVector);
+            movementVector = camPos.forward * Direction.y + camPos.right * Direction.x;
+            movementVector.y = 0;
+
+            if (Direction.magnitude != 0)
+            {
+                transform.rotation = Quaternion.LookRotation(movementVector);
         }
-
+        }
         base.OnMove(Direction);
         
+       
     }
 
     public override void Update()
     {
-        base.Update();
-    }
-    public override void FixedUpdate()
-    {
-        base.FixedUpdate();
+        if(this.enabled)
+        {
+            base.Update();
+
+        }
     }
 
     public void SwitchMode(InputAction.CallbackContext ctx)
@@ -99,6 +119,7 @@ public class PlayerMovement : Movement
     {
         if(data is PlayableCharacterData)
         {
+            this.enabled = true;
             if (statemachine != null)
             {
                 statemachine?.Unsubscribe(this);

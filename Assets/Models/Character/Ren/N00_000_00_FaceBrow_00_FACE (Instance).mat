@@ -202,7 +202,7 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _ClipAdju: 1
+    - _ClipAdju: 1.54
     - _Compa: 4
     - _ComputeMeshIndex: 0
     - _Cull: 2
@@ -322,7 +322,7 @@ Material:
     - _PTexturePower: 1
     - _Parallax: 0.02
     - _PointSpotlightIntensity: 0
-    - _PresAdju: 1.1
+    - _PresAdju: 0.97
     - _QueueOffset: 0
     - _RELG: 1
     - _RTGIShaFallo: 0

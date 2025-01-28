@@ -29,11 +29,10 @@ MonoBehaviour:
   requiredUnlockLevel: 0
   skillName: Ki-Blast
   skillDescription: Unleashes a poisonous strike on enemy to inflict poison status
-    on them that ignores defenses, Initial hit deals 100% of EATK and poison deals
-    50 damage per 0.5 seconds
-  skillIcon: {fileID: 0}
+    on them , Initial hit deals 100% of EATK damage to enemies
+  skillIcon: {fileID: 21300000, guid: a17088080560cc7458a80dda49677072, type: 3}
   cooldown:
-  - 5
+  - 8
   movementData:
   - {fileID: 11400000, guid: 6861acd9426ba0d41a2173020a620968, type: 2}
   delayForInstantiate: 0.2

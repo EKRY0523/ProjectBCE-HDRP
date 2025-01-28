@@ -21,17 +21,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 285ee73d25e31a145a7f1b3059654d27, type: 2}
   cost:
     stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
-    cost: 2000
+    cost: 0
   characterData: {fileID: 0}
   statAndMultiplier:
   - statIndex: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
     multiplier: 1
   requiredUnlockLevel: 0
   skillName: Nature's Embrace
-  skillDescription: Gives healing over time to allies, buffs ATK, EATK, EDEF and
-    DEF by 1500, poisons all nearby enemy dealing 75 damage per second, lasts for
-    15 seconds
-  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
+  skillDescription: Gives healing over time to allies for 8% of their hp per second,
+    buffs ATK, EATK, EDEF and DEF by 30%, poisons all nearby enemy, lasts for 15
+    seconds
+  skillIcon: {fileID: 21300000, guid: 5b080ef7ee03abe4fbad1c73d08df652, type: 3}
   cooldown:
   - 20
   movementData:

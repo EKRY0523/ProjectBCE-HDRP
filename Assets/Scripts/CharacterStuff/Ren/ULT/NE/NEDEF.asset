@@ -24,4 +24,8 @@ MonoBehaviour:
   targetedStat:
   - {fileID: 11400000, guid: eb9f1ad78dbca8244bc275ab7bc50ccb, type: 2}
   value:
-  - 1500
+  - 0
+  getStatFromEntity: 1
+  extraMultiplierFromStat:
+  - 0.3
+  offense: 0

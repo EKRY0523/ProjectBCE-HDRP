@@ -28,10 +28,11 @@ MonoBehaviour:
     multiplier: 5
   requiredUnlockLevel: 0
   skillName: Ignition
-  skillDescription: Passes through enemy while burning them
-  skillIcon: {fileID: 0}
+  skillDescription: Dashes forward and provides a slight moment of invulnerability, 
+    if hit enemy, deals 50% of ATK and inflict burn on enemies that lasts for 4 seconds
+  skillIcon: {fileID: 21300000, guid: 4a10de7156142a24eb85a17c3ae84fd3, type: 3}
   cooldown:
-  - 0.5
+  - 1.1
   movementData:
   - {fileID: 11400000, guid: 46e295bc9f2092d49aef024118fe35d2, type: 2}
   delayForInstantiate: 0

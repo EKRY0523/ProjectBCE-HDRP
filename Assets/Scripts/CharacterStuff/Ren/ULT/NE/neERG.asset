@@ -12,16 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c797463c394e9e47a39ca98ef3c980d, type: 3}
   m_Name: neERG
   m_EditorClassIdentifier: 
-  vfx: {fileID: 0}
+  vfx: {fileID: 2082139125666053037, guid: b033eba068d95b34dafc1e796082facf, type: 3}
   Icon: {fileID: 0}
   effectName: 
   description: 
   effectType: 1
   timeMode: 0
-  startTime: 15
+  startTime: 0
   duration: 15
   tick: 0.1
   targetedStat:
   - {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
   value:
   - 2
+  getStatFromEntity: 0
+  DoTperTick: 0
+  offense: 0

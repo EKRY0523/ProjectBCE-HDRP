@@ -127,4 +127,21 @@ public class PlayerInput : ScriptableObject, Controls.IPlayerActions
     {
         //throw new NotImplementedException();
     }
+
+    public void OnTransferZone(InputAction.CallbackContext context)
+    {
+        //throw new NotImplementedException();
+    }
+
+    public void OnOpenCharacter(InputAction.CallbackContext context)
+    {
+    }
+
+    public void OnOpenParty(InputAction.CallbackContext context)
+    {
+    }
+
+    public void OnPause(InputAction.CallbackContext context)
+    {
+    }
 }

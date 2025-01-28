@@ -161,6 +161,42 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TransferZone"",
+                    ""type"": ""Button"",
+                    ""id"": ""53dd4fd9-c4fc-44e2-8479-73790928e66d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenCharacter"",
+                    ""type"": ""Button"",
+                    ""id"": ""e4141b07-f9e5-4aa4-8d8e-6a14f4fe5b2a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenParty"",
+                    ""type"": ""Button"",
+                    ""id"": ""a6d4f1a3-1b6e-42b1-b288-a59467bb8262"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""bc8f4338-3145-4779-b656-6c9d466ada34"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -436,6 +472,50 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""EnableMouse"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""333533bd-e80c-4a38-975d-38f2153c575a"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TransferZone"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eef0e847-d8d7-4c30-9b23-8d34926d0a53"",
+                    ""path"": ""<Keyboard>/f2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenParty"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""40982c68-9a79-4f52-8289-6bee926dcf99"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c4839216-997c-467e-8a92-5e15ead49c79"",
+                    ""path"": ""<Keyboard>/f1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenCharacter"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1038,6 +1118,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_WalkSwitch = m_Player.FindAction("WalkSwitch", throwIfNotFound: true);
         m_Player_Save = m_Player.FindAction("Save", throwIfNotFound: true);
         m_Player_EnableMouse = m_Player.FindAction("EnableMouse", throwIfNotFound: true);
+        m_Player_TransferZone = m_Player.FindAction("TransferZone", throwIfNotFound: true);
+        m_Player_OpenCharacter = m_Player.FindAction("OpenCharacter", throwIfNotFound: true);
+        m_Player_OpenParty = m_Player.FindAction("OpenParty", throwIfNotFound: true);
+        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1132,6 +1216,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_WalkSwitch;
     private readonly InputAction m_Player_Save;
     private readonly InputAction m_Player_EnableMouse;
+    private readonly InputAction m_Player_TransferZone;
+    private readonly InputAction m_Player_OpenCharacter;
+    private readonly InputAction m_Player_OpenParty;
+    private readonly InputAction m_Player_Pause;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -1151,6 +1239,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @WalkSwitch => m_Wrapper.m_Player_WalkSwitch;
         public InputAction @Save => m_Wrapper.m_Player_Save;
         public InputAction @EnableMouse => m_Wrapper.m_Player_EnableMouse;
+        public InputAction @TransferZone => m_Wrapper.m_Player_TransferZone;
+        public InputAction @OpenCharacter => m_Wrapper.m_Player_OpenCharacter;
+        public InputAction @OpenParty => m_Wrapper.m_Player_OpenParty;
+        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1205,6 +1297,18 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @EnableMouse.started += instance.OnEnableMouse;
             @EnableMouse.performed += instance.OnEnableMouse;
             @EnableMouse.canceled += instance.OnEnableMouse;
+            @TransferZone.started += instance.OnTransferZone;
+            @TransferZone.performed += instance.OnTransferZone;
+            @TransferZone.canceled += instance.OnTransferZone;
+            @OpenCharacter.started += instance.OnOpenCharacter;
+            @OpenCharacter.performed += instance.OnOpenCharacter;
+            @OpenCharacter.canceled += instance.OnOpenCharacter;
+            @OpenParty.started += instance.OnOpenParty;
+            @OpenParty.performed += instance.OnOpenParty;
+            @OpenParty.canceled += instance.OnOpenParty;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1254,6 +1358,18 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @EnableMouse.started -= instance.OnEnableMouse;
             @EnableMouse.performed -= instance.OnEnableMouse;
             @EnableMouse.canceled -= instance.OnEnableMouse;
+            @TransferZone.started -= instance.OnTransferZone;
+            @TransferZone.performed -= instance.OnTransferZone;
+            @TransferZone.canceled -= instance.OnTransferZone;
+            @OpenCharacter.started -= instance.OnOpenCharacter;
+            @OpenCharacter.performed -= instance.OnOpenCharacter;
+            @OpenCharacter.canceled -= instance.OnOpenCharacter;
+            @OpenParty.started -= instance.OnOpenParty;
+            @OpenParty.performed -= instance.OnOpenParty;
+            @OpenParty.canceled -= instance.OnOpenParty;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1451,6 +1567,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnWalkSwitch(InputAction.CallbackContext context);
         void OnSave(InputAction.CallbackContext context);
         void OnEnableMouse(InputAction.CallbackContext context);
+        void OnTransferZone(InputAction.CallbackContext context);
+        void OnOpenCharacter(InputAction.CallbackContext context);
+        void OnOpenParty(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

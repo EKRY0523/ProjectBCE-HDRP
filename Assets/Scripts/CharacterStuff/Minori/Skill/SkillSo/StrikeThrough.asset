@@ -27,14 +27,12 @@ MonoBehaviour:
   - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
     multiplier: 0.5
   requiredUnlockLevel: 0
-  skillName: StrikeThrough
-  skillDescription: 'An alternative dodge for evasive purposes
-
-    if hit enemy,
-    deals 50% of ATK'
-  skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
+  skillName: Strike Through
+  skillDescription: Dashes forward and provides a slight moment of invulnerability, 
+    if hit enemy, deals 50% of ATK and reduces enemy DEF and EDEF down by 15%
+  skillIcon: {fileID: 21300000, guid: 2e8153be65fe3d3459a70cecad1aa50b, type: 3}
   cooldown:
-  - 0.8
+  - 1.2
   movementData: []
   delayForInstantiate: 0
   affectedByInput: 1

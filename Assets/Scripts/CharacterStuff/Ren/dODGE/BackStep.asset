@@ -28,9 +28,10 @@ MonoBehaviour:
     multiplier: -0.1
   requiredUnlockLevel: 0
   skillName: Back Step
-  skillDescription: Leaves a mirage that heals players for 10% of EATK, then explodes
-    after 3 seconds dealing 100% of EATK
-  skillIcon: {fileID: 0}
+  skillDescription: Jumps backwards and provides a slight moment of invulnerability,
+    leaves a mirage that heals players for 10% of EATK, then explodes after 3 seconds
+    dealing 100% of EATK
+  skillIcon: {fileID: 21300000, guid: f76ec6ca8ead8174d8823b51979d6953, type: 3}
   cooldown:
   - 3
   movementData: []

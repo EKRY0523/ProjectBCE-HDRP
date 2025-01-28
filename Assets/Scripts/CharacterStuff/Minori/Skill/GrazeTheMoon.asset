@@ -22,7 +22,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2a0b07b541e7e06409b51f958659b355, type: 2}
   cost:
     stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
-    cost: 300
+    cost: 0
   characterData: {fileID: 0}
   statAndMultiplier:
   - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
@@ -31,18 +31,13 @@ MonoBehaviour:
     multiplier: 5
   requiredUnlockLevel: 0
   skillName: Graze The Moon
-  skillDescription: '2 hit ultimate
+  skillDescription: 'Deals a combined damage of 500% ATK and 500% EATK
 
-    Each dealing 500% of ATK and EATK
-
-    1st
-    hit multiplier = 500% ATK +  500 % EATK X 150%
-
-    1st hit multiplier = 500%
-    ATK +  500 % EATK X 300%'
+    first
+    hit deals 50% more damage and second hit deals 200% more damage'
   skillIcon: {fileID: 21300000, guid: 7fca06c2ab514ae4881a289bbd86d8f0, type: 3}
   cooldown:
-  - 5
+  - 15
   movementData: []
   delayForInstantiate: 0
   extraMultiplier:

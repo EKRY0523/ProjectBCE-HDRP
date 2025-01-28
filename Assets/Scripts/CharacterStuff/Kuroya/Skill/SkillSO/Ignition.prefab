@@ -14682,7 +14682,6 @@ GameObject:
   - component: {fileID: 358300796300750480}
   - component: {fileID: 5038254490208119796}
   - component: {fileID: 2009122042847879768}
-  - component: {fileID: 8386172759276826178}
   - component: {fileID: 1359461573872042228}
   m_Layer: 0
   m_Name: Ignition
@@ -14730,7 +14729,7 @@ MonoBehaviour:
   targetedStat:
   - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   characterData: {fileID: 0}
-  multiplier: 924727100
+  multiplier: 123750
   duration: 1
   target: {fileID: 0}
   knockback: {fileID: 11400000, guid: 7d02414b8a8eb264e809b6f6181db09f, type: 2}
@@ -14775,33 +14774,11 @@ MonoBehaviour:
   SOEvent: []
   eventListeners: []
   eventBroadcasters: []
-  effect: {fileID: 11400000, guid: fcd290c6d0f04984699cb35108121224, type: 2}
+  effect: {fileID: 11400000, guid: 0d22d965b2d958d499c9446f4aafe92a, type: 2}
   dualTag: 0
   input: {fileID: 0}
   effectedTag: Enemy
-  type: 0
---- !u!114 &8386172759276826178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4235169884114455272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afa40b1a250bde443a67cf751d9cfe30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HandlerID: {fileID: 0}
-  ComponentsID: []
-  SOEvent: []
-  eventListeners: []
-  eventBroadcasters: []
-  effect: {fileID: 11400000, guid: 877a6644d3133f749a76e79025886e63, type: 2}
-  dualTag: 0
-  input: {fileID: 0}
-  effectedTag: Enemy
-  type: 0
+  type: 1
 --- !u!82 &1359461573872042228
 AudioSource:
   m_ObjectHideFlags: 0

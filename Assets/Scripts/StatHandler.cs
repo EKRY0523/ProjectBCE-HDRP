@@ -50,7 +50,6 @@ public class StatHandler : EventHandler
             if (entity.statDictionary.ContainsKey(ID[i]))
             {
                 entity.statDictionary[ID[i]].statValue += finalValue;
-                Debug.Log(entity.name + ": " + ID[i].name + finalValue);
                 //MBEvent?.Invoke(ID[i], entity.statDictionary[ID[i]].statValue);
                 MBEvent?.Invoke(ID[i], entity.statDictionary[ID[i]].statValue);
                 if (val!=null)
@@ -97,6 +96,15 @@ public class StatHandler : EventHandler
                 entity.statDictionary[ID].statValue += (float)data;
                 //Debug.Log(entity.name + ": " + ID.name + (float)data);
                 MBEvent?.Invoke(ID, entity.statDictionary[ID].statValue);
+                if (val != null)
+                {
+                    ValueReceived values = Instantiate(val, transform);
+                    
+                    values.dmgText.color = Color.red;
+                    
+                    values.GetValue((float)data);
+
+                }
 
             }
         }

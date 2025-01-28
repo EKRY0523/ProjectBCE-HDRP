@@ -12,7 +12,6 @@ public class UltimateSwitch : EventHandler
     [Header("Base")]
     public TextMeshProUGUI skillDescription;
     public TextMeshProUGUI skillName;
-    public TextMeshProUGUI skillCost;
     public TextMeshProUGUI skillCooldown;
 
     public Button SwitchButton;
@@ -23,7 +22,6 @@ public class UltimateSwitch : EventHandler
     public GameObject switchSkillPanel;
     public TextMeshProUGUI newSkillDescription;
     public TextMeshProUGUI newSkillName;
-    public TextMeshProUGUI newSkillCost;
     public TextMeshProUGUI newSkillCooldown;
 
     public Button confirmButton;
@@ -47,9 +45,7 @@ public class UltimateSwitch : EventHandler
     private void Start()
     {
         skillDescription.text = character.Ultimate[currentSkillIndex].skillDescription;
-        skillName.text = character.Ultimate[currentSkillIndex].skillName;
-        skillCost.text = character.Ultimate[currentSkillIndex].cost.stat.name + ": " + character.Ultimate[currentSkillIndex].cost.cost;
-        skillCooldown.text = "CD: " +  character.Ultimate[currentSkillIndex].cooldown[0];
+        skillName.text = character.Ultimate[currentSkillIndex].skillName;skillCooldown.text = "CD: " +  character.Ultimate[currentSkillIndex].cooldown[0] + "S";
 
         for (int i = 0; i < skillOptionIcon.Length; i++)
         {
@@ -61,9 +57,8 @@ public class UltimateSwitch : EventHandler
     {
         currentSkillIndex = GameManager.instance.characterLoading[character.ID].ultimate;
         skillDescription.text = character.Ultimate[currentSkillIndex].skillDescription;
-        skillName.text = character.Ultimate[currentSkillIndex].skillName;
-        skillCost.text = character.Ultimate[currentSkillIndex].cost.stat.name + ": " + character.Ultimate[currentSkillIndex].cost.cost;
-        skillCooldown.text = "CD: " + character.Ultimate[currentSkillIndex].cooldown[0];
+        skillName.text = character.Ultimate[currentSkillIndex].skillName; 
+        skillCooldown.text = "CD: " + character.Ultimate[currentSkillIndex].cooldown[0] + "S";
 
         for (int i = 0; i < skillOptionIcon.Length; i++)
         {
@@ -92,7 +87,6 @@ public class UltimateSwitch : EventHandler
 
         skillDescription.text = character.Ultimate[index].skillDescription;
         skillName.text = character.Ultimate[index].skillName;
-        skillCost.text = character.Ultimate[index].cost.stat.name + ": " + character.Ultimate[index].cost.cost;
 
         currentSkllIcon.sprite = character.Ultimate[index].skillIcon;
 
@@ -112,6 +106,7 @@ public class UltimateSwitch : EventHandler
         switchSkillPanel.SetActive(true);
         newSkillDescription.text = character.Ultimate[index].skillDescription;
         newSkillName.text = character.Ultimate[index].skillName;
+        newSkillCooldown.text= "CD: " + character.Ultimate[index].cooldown[0] + "S";
 
         if (index == currentSkillIndex)
         {

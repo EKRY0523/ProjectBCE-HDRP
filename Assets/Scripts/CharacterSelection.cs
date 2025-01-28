@@ -93,19 +93,26 @@ public class CharacterSelection : EventHandler
         charData = data.character;
         characterData = data;
         characterID = data.character.ID;
-
-        if(oldCharacter!=null)
+        if (!GameManager.instance.deadCharacters.Contains(GameManager.instance.characterLoading[characterID]))
         {
-            if (oldCharacter.character.ID == characterID)
+            if (oldCharacter != null)
             {
-                confirmText.text = "Already In Party";
-                confirmButton.interactable = false;
+                if (oldCharacter.character.ID == characterID)
+                {
+                    confirmText.text = "Already In Party";
+                    confirmButton.interactable = false;
+                }
+                else
+                {
+                    confirmText.text = "Confirm";
+                    confirmButton.interactable = true;
+                }
             }
-            else
-            {
-                confirmText.text = "Confirm";
-                confirmButton.interactable = true;
-            }
+        }
+        else
+        { 
+            confirmText.text = "Fainted";
+            confirmButton.interactable = false;
         }
         
     }

@@ -92,12 +92,12 @@ MonoBehaviour:
   targetedStat:
   - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   characterData: {fileID: 0}
-  multiplier: 5000
+  multiplier: 37500
   duration: 2
   target: {fileID: 0}
-  knockback: {fileID: 0}
-  detachFromParent: 0
-  hitFX: {fileID: 0}
+  knockback: {fileID: 11400000, guid: 4aa9cbf4b94355a418da08322b85522a, type: 2}
+  detachFromParent: 1
+  hitFX: {fileID: 9218688764628759551, guid: 971a4bc2580cbf940b18c3e8bae6fbd1, type: 3}
   friendly: 0
 --- !u!65 &3141384289442554015
 BoxCollider:
@@ -138,7 +138,7 @@ MonoBehaviour:
   eventListeners: []
   eventBroadcasters:
   - {fileID: 3470052522730365138}
-  effect: {fileID: 11400000, guid: 54df02ff450b4ca40804fc0a03aa387c, type: 2}
+  effect: {fileID: 11400000, guid: b9fcd75e3d2a6b846895c461c2b30b1e, type: 2}
   dualTag: 0
   input: {fileID: 0}
   effectedTag: Enemy

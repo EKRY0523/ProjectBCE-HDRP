@@ -1,7 +1,7 @@
 using UnityEngine;
 [CreateAssetMenu(fileName = "HorizonCleaveState", menuName = "CharacterStates/Kuroya/Ultimate/HorizonCleave")]
 
-public class HorizonCleaveState : UltimateAttackState
+public class HorizonCleaveState : CharacterUltimateState
 {
     public override void OnEnter(Statemachine statemachine)
     {

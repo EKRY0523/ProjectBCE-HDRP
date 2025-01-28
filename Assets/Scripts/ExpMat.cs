@@ -1,30 +1,48 @@
 using UnityEngine;
-using DG.Tweening;
-public class ExpMat : MonoBehaviour
+using UnityEngine.Audio;
+public class ExpMat : EventHandler
 {
     public float exp;
-    public bool goToTarget;
-    public PartyHandler target;
-    private void OnTriggerEnter(Collider other)
+    public Transform target;
+    public AudioSource source;
+    public override void Awake()
     {
-        if(other.CompareTag("Player"))
+        base.Awake();
+    }
+
+    public override void OnDestroy()
+    {
+        base.OnDestroy();
+    }
+    private void Update()
+    {
+        if(target!=null)
         {
-            this.enabled = true;
-            target = other.GetComponent<PartyHandler>();
-            goToTarget = true;
+            transform.rotation = Quaternion.LookRotation(target.transform.position-transform.position);
+            transform.Translate(Vector3.forward * 2f * Time.deltaTime);
+
         }
     }
 
-    private void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if(goToTarget && target!=null)
+        if(other.CompareTag(("Player")))
         {
-            transform.position =Vector3.MoveTowards(transform.position, target.transform.position, 3f);
-            if(Vector3.Distance(transform.position,target.transform.position) <1f)
+            if(other.GetComponent<PartyHandler>())
             {
-                target.activeCharacter.ReceiveExp(exp);
-                Destroy(gameObject);
+                other.GetComponent<PartyHandler>().activeCharacter.ReceiveExp(exp);
+                source.Play();
+                Destroy(gameObject,1f);
+
             }
+        }
+    }
+    public override void OnInvoke(Trait ID, object data)
+    {
+        base.OnInvoke(ID, data);
+        if(data is Transform)
+        {
+            target = (Transform)data;
         }
     }
 }

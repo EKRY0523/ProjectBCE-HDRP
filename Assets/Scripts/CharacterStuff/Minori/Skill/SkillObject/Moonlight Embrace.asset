@@ -22,27 +22,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 78da2e2e2639da246b8af76cd6ec5765, type: 2}
   cost:
     stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
-    cost: 300
+    cost: 0
   characterData: {fileID: 0}
   statAndMultiplier:
   - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
-    multiplier: 3
+    multiplier: 7
   - statIndex: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
-    multiplier: 3
+    multiplier: 7
   requiredUnlockLevel: 0
-  skillName: Moonlight Embrace
-  skillDescription: '2 hit ultimate
+  skillName: Moonlight's Embrace
+  skillDescription: 'Deals a combined damage of 500% ATK and 500% EATK
 
-    Each dealing 500% of ATK and EATK
-
-    1st
-    hit multiplier = 500% ATK +  500 % EATK X 150%
-
-    1st hit multiplier = 500%
-    ATK +  500 % EATK X 300%'
-  skillIcon: {fileID: 21300000, guid: 7fca06c2ab514ae4881a289bbd86d8f0, type: 3}
+    first
+    hit ignores DEF and second hit ignores EDEF'
+  skillIcon: {fileID: 21300000, guid: b617c31731844ee4384249b353531878, type: 3}
   cooldown:
-  - 5
+  - 24
   movementData: []
   delayForInstantiate: 0
   extraMultiplier:

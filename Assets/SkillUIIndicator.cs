@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 public class SkillUIIndicator : EventHandler
 {
+    
     public enum SkillType
     {
         basic, S1, S2, dodge, Ult
@@ -11,6 +12,7 @@ public class SkillUIIndicator : EventHandler
     public PlayableCharacterData characterData;
     public TextMeshProUGUI costText;
     public Image icon;
+    public Image readyIndicator;
     public Image fill;
     public SkillType skillType;
 
@@ -51,13 +53,14 @@ public class SkillUIIndicator : EventHandler
             if (skillType == SkillType.dodge)
             {
                 icon.sprite = characterData.character.Dodge[characterData.dodge].skillIcon;
-                costText.text = characterData.character.Skills[characterData.dodge].cost.cost.ToString();
+                //costText.text = characterData.character.Skills[characterData.dodge].cost.cost.ToString();
                 skillHandler = characterData.dodgeSkill;
             }
             if (skillType == SkillType.Ult)
             {
+                readyIndicator.material.color = characterData.character.charColor;
                 icon.sprite = characterData.character.Ultimate[characterData.ultimate].skillIcon;
-                costText.text = characterData.character.Ultimate[characterData.ultimate].cost.cost.ToString();
+                //costText.text = characterData.character.Ultimate[characterData.ultimate].cost.cost.ToString();
                 skillHandler = characterData.ultimateSkill;
             }
         }
@@ -70,7 +73,22 @@ public class SkillUIIndicator : EventHandler
 
             if (fill != null)
             {
-                fill.fillAmount = (skillHandler.timeToExceed + skillHandler.executionTime) - Time.time;
+                float elapsedTime = Time.time - skillHandler.executionTime;
+
+                fill.fillAmount = Mathf.Clamp01(1 - (elapsedTime / skillHandler.timeToExceed));
+                //fill.fillAmount = ((skillHandler.timeToExceed + skillHandler.executionTime) - Time.time);
+                if (readyIndicator!=null)
+                {
+                    if(Time.time > skillHandler.timeToExceed + skillHandler.executionTime)
+                    {
+                        readyIndicator.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+
+                        readyIndicator.gameObject.SetActive(false);
+                    }
+                }
             }
         }
     }

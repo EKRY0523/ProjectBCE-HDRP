@@ -21,7 +21,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 250d7c7970efb3a46bf6e5e6a85bfc13, type: 2}
   cost:
     stat: {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
-    cost: 50
+    cost: 400
   characterData: {fileID: 0}
   statAndMultiplier:
   - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
@@ -29,10 +29,12 @@ MonoBehaviour:
   - statIndex: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
     multiplier: 1
   requiredUnlockLevel: 0
-  skillName: 
-  skillDescription: 
+  skillName: Sword Rain
+  skillDescription: Casts out 5 swords that seeks out nearest enemies, dealing a
+    combined damage of 60% ATK and 20% EATK to enemies each
   skillIcon: {fileID: -602068883, guid: dc3edbcc72a3c7b4b8c931e6faee48fb, type: 3}
   cooldown:
   - 3
   movementData:
   - {fileID: 11400000, guid: 46e295bc9f2092d49aef024118fe35d2, type: 2}
+  delayForInstantiate: 0

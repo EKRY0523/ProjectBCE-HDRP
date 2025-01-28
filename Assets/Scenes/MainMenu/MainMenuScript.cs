@@ -7,8 +7,17 @@ public class MainMenuScript : EventHandler
     public Button NewGame;
     public Button Continue;
     public Button Settings;
+    public Button creditbutton;
+    public Button closeSettingsButton;
+
+    public Button closecredit;
+
+
     public GameObject ConfirmationPanel;
+    public GameObject creditpanel;
+    public GameObject settingsMenu;
     public Button Confirm, Cancel;
+    public LoadingScreeen loadScreen;
     public override void Awake()
     {
         base.Awake();
@@ -18,6 +27,11 @@ public class MainMenuScript : EventHandler
         base.OnDestroy();
     }
 
+    private void OnEnable()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     private void Start()
     {
         if(!File.Exists(Application.persistentDataPath + "/SaveFile.json"))
@@ -32,8 +46,35 @@ public class MainMenuScript : EventHandler
         Continue.onClick.AddListener(ContinueGame);
         Confirm.onClick.AddListener(ConfirmationToStart);
         Cancel.onClick.AddListener(CancelNewGame);
+        Settings.onClick.AddListener(OpenSettings);
+        closeSettingsButton.onClick.AddListener(CloseSettings);
+        creditbutton.onClick.AddListener(OpenCredit);
+        closecredit.onClick.AddListener(CloseCredit);
     }
 
+    public void OpenSettings()
+    {
+        settingsMenu.SetActive(true);
+
+        creditpanel.SetActive(false);
+    }
+
+    public void CloseSettings()
+    {
+        settingsMenu.SetActive(false);
+    }
+
+    public void OpenCredit()
+    {
+        creditpanel.SetActive(true);
+
+        settingsMenu.SetActive(false);
+    }
+
+    public void CloseCredit()
+    {
+        creditpanel.SetActive(false);
+    }
     public void StartNewGame()
     {
         if (File.Exists(Application.persistentDataPath + "/SaveFile.json"))
@@ -43,14 +84,18 @@ public class MainMenuScript : EventHandler
         }
         else
         {
-            SceneManager.LoadScene(sceneBuildIndex: 1);
+            loadScreen.sceneIndex=1;
+            loadScreen.gameObject.SetActive(true);
+            //SceneManager.LoadScene(sceneBuildIndex: 1);
         }
     }
 
     public void ConfirmationToStart()
     {
         File.Delete(Application.persistentDataPath + "/SaveFile.json");
-        SceneManager.LoadScene(sceneBuildIndex: 1);
+        loadScreen.sceneIndex = 1;
+        loadScreen.gameObject.SetActive(true);
+        //SceneManager.LoadScene(sceneBuildIndex: 1);
     }
 
     public void CancelNewGame()
@@ -62,7 +107,9 @@ public class MainMenuScript : EventHandler
     {
         if (File.Exists(Application.persistentDataPath + "/SaveFile.json"))
         {
-            SceneManager.LoadScene(sceneBuildIndex:2);
+            loadScreen.sceneIndex = 2;
+            loadScreen.gameObject.SetActive(true);
+            //SceneManager.LoadScene(sceneBuildIndex:2);
         }
     }
 }

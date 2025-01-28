@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: RenRegen
   m_EditorClassIdentifier: 
   vfx: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 0e51d800363ddf346a565789fa7a955e, type: 3}
   effectName: Energy Overload
   description: Ren doubles up her energy regen speed
   effectType: 0
   timeMode: 0
   startTime: 0
   duration: 0
-  tick: 0.0001
+  tick: 0.00005
   targetedStat:
   - {fileID: 11400000, guid: 4a27e6c7d5c7d054885c5ce90f330a8d, type: 2}
   value: []

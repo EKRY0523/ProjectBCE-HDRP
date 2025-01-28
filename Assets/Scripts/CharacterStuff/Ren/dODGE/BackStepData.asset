@@ -16,4 +16,4 @@ MonoBehaviour:
   transformPosition: {x: 0, y: 0, z: 0}
   mode: 1
   duration: 0
-  passThrough: 1
+  passThrough: 0

@@ -23,6 +23,36 @@ public class PlayerTargetHandling : TargetHandling
     public void GetTarget(InputAction.CallbackContext ctx)
     {
         targets.Clear();
-        CheckTargetsValidity();
+        CheckPlayertarget();
     }
+
+    public void CheckPlayertarget()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius, layerToHit);
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (Physics.Linecast(transform.position, colliders[i].transform.position) == colliders[i].transform)
+            {
+                if (colliders[i].CompareTag(tagToHit))
+                {
+                    if (!targets.Contains(colliders[i].transform))
+                    {
+                        targets.Add(colliders[i].transform);
+                    }
+                }
+            }
+        }
+        targets.RemoveAll(target => target == null);
+
+        if (targets.Count > 0)
+        {
+            GetNearestTarget();
+        }
+        else
+        {
+            currentNearestTarget = null;
+            MBEvent?.Invoke(null,null);
+        }
+    }
+
 }

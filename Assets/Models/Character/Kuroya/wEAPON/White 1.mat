@@ -284,7 +284,7 @@ Material:
     - _Ior: 1.5
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
-    - _LigIgnoYNorDir: 1
+    - _LigIgnoYNorDir: 0
     - _LightAffectOutlineColor: 0
     - _LightAffectRimLightColor: 0
     - _LightAffectShadow: 0
@@ -406,7 +406,7 @@ Material:
     - _SelfShadowAffectedByLightShadowStrength: 0
     - _SelfShadowHardness: 1
     - _SelfShadowRealTimeShadowColorPower: 1
-    - _SelfShadowRealtimeShadowIntensity: 0
+    - _SelfShadowRealtimeShadowIntensity: 0.77
     - _SelfShadowShadowTAtViewDirection: 0
     - _SelfShadowThreshold: 0
     - _ShadowColorTexturePower: 0

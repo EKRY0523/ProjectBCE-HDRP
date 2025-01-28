@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c797463c394e9e47a39ca98ef3c980d, type: 3}
   m_Name: HealHeal
   m_EditorClassIdentifier: 
-  vfx: {fileID: 0}
+  vfx: {fileID: 3588636193069069098, guid: be7f5675e88174743b1a0d28f3ec1744, type: 3}
   Icon: {fileID: 0}
   effectName: 
   description: 
@@ -24,4 +24,7 @@ MonoBehaviour:
   targetedStat:
   - {fileID: 11400000, guid: 25d17e10eeae00a4da0d0e2ba8f5417c, type: 2}
   value:
-  - 500
+  - 0
+  getStatFromEntity: 1
+  DoTperTick: 0.2
+  offense: 0

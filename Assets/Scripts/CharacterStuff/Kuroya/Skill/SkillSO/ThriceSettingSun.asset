@@ -25,14 +25,13 @@ MonoBehaviour:
   characterData: {fileID: 0}
   statAndMultiplier:
   - statIndex: {fileID: 11400000, guid: a88755c7cc2bb4b43aa477bfb63855a7, type: 2}
-    multiplier: 3
-  - statIndex: {fileID: 11400000, guid: c1c3eb569ed6be544bdeb1e332ace0b7, type: 2}
-    multiplier: 1
+    multiplier: 5
   requiredUnlockLevel: 0
   skillName: 
-  skillDescription: 
+  skillDescription: Deals 3 series of devastating slashes to
   skillIcon: {fileID: 21300000, guid: af5b6a09f5143ec499b165663a1e89ea, type: 3}
   cooldown:
   - 3
   movementData:
   - {fileID: 11400000, guid: 46e295bc9f2092d49aef024118fe35d2, type: 2}
+  delayForInstantiate: 0

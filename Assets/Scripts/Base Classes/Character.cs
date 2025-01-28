@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class Character : ScriptableObject
 {
     public int ID;
+    [ColorUsage(true, true)]
+    public Color charColor;
 
     public string characterName;
     public RenderTexture poseImage;
